@@ -5,12 +5,12 @@ import { Phone } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="border-b bg-white/10 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
-      <div className="mx-auto px-4 max-w-[1140px]">
+    <header className="fixed z-50" style={{ top: '25px', left: '25px', right: '25px' }}>
+      <div className="mx-auto px-4 max-w-[1140px] bg-white/75 backdrop-blur-md">
         <div className="flex items-center justify-between py-4">
           {/* Logo - Animates from left */}
-          <div className="flex-shrink-0 animate-fade-in-left">
-            <Link href="/">
+          <div className="flex-shrink-0 flex items-center animate-fade-in-left">
+            <Link href="/" className="flex items-center">
               <Image
                 src="https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/logo.png"
                 alt="Logo"
@@ -23,7 +23,9 @@ export default function Header() {
           </div>
 
           {/* Navigation - Animates from top */}
-          <Navigation />
+          <div className="flex items-center">
+            <Navigation />
+          </div>
 
           {/* Phone Number - Animates from right, Hidden on mobile */}
           <div className="hidden md:flex items-center animate-fade-in-right">
