@@ -43,7 +43,7 @@ export default function Navigation() {
             >
               <Link
                 href={item.href}
-                className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors"
+                className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-all duration-300 hover:scale-[1.15]"
               >
                 {item.label}
                 {item.children && <ChevronDown className="w-4 h-4" />}
