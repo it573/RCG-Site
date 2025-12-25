@@ -51,7 +51,18 @@ export default function Navigation() {
 
               {/* Dropdown Menu */}
               {item.children && openDropdown === item.label && (
-                <ul className="absolute top-full left-[-21px] mt-[25px] w-64 bg-white shadow-lg py-2 z-50">
+                <>
+                  {/* Invisible bridge to cover the gap */}
+                  <div 
+                    className="absolute top-full left-[-21px] w-64 h-[25px] z-40"
+                    onMouseEnter={() => setOpenDropdown(item.label)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  />
+                  <ul 
+                    className="absolute top-full left-[-21px] mt-[25px] w-64 bg-white shadow-lg py-2 z-50"
+                    onMouseEnter={() => setOpenDropdown(item.label)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
                   {item.children.map((child) => (
                     <li key={child.label}>
                       <Link
@@ -62,7 +73,8 @@ export default function Navigation() {
                       </Link>
                     </li>
                   ))}
-                </ul>
+                  </ul>
+                </>
               )}
             </li>
           ))}
