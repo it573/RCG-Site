@@ -51,12 +51,12 @@ export default function Navigation() {
 
               {/* Dropdown Menu */}
               {item.children && openDropdown === item.label && (
-                <ul className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50">
+                <ul className="absolute top-full left-[-21px] mt-[25px] w-64 bg-white shadow-lg py-2 z-50">
                   {item.children.map((child) => (
                     <li key={child.label}>
                       <Link
                         href={child.href}
-                        className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+                        className="block pl-4 pr-12 py-2 text-sm hover:bg-gray-100 transition-colors"
                       >
                         {child.label}
                       </Link>

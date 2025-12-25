@@ -5,9 +5,9 @@ import { Phone } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="fixed z-50" style={{ top: '25px', left: '25px', right: '25px' }}>
-      <div className="mx-auto px-4 max-w-[1140px] bg-white/75 backdrop-blur-md">
-        <div className="flex items-center justify-between py-4">
+    <header className="fixed z-50" style={{ top: '25px', left: '25px', right: '25px', height: '64px' }}>
+      <div className="mx-auto px-4 max-w-[1140px] bg-white/75 backdrop-blur-md h-full">
+        <div className="flex items-center justify-between py-4 h-full">
           {/* Logo - Animates from left */}
           <div className="flex-shrink-0 flex items-center animate-fade-in-left">
             <Link href="/" className="flex items-center">

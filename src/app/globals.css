@@ -162,15 +162,34 @@
   .animate-fade-in-left {
     animation: fadeInLeft 0.8s ease-out forwards;
     opacity: 0;
+    will-change: transform, opacity;
+    visibility: visible;
+    min-height: fit-content;
   }
 
   .animate-fade-in-down {
     animation: fadeInDown 0.8s ease-out 0.1s forwards;
     opacity: 0;
+    will-change: transform, opacity;
+    visibility: visible;
+    min-height: fit-content;
   }
 
   .animate-fade-in-right {
     animation: fadeInRight 0.8s ease-out 0.2s forwards;
     opacity: 0;
+    will-change: transform, opacity;
+    visibility: visible;
+    min-height: fit-content;
+  }
+  
+  /* Prevent layout shifts */
+  header {
+    contain: layout style;
+  }
+  
+  /* Ensure hero section doesn't shift */
+  section:first-of-type {
+    will-change: auto;
   }
 }
