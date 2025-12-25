@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Heading from "@/components/ui/heading";
 import AppointmentForm from "@/components/forms/appointment-form";
 import Image from "next/image";
@@ -29,6 +32,19 @@ export default function Hero({
   };
 
   const isYouTube = backgroundVideo?.includes('youtube.com') || backgroundVideo?.includes('youtu.be');
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  // Fade out white overlay after video starts loading
+  useEffect(() => {
+    if (backgroundVideo && isYouTube) {
+      // Wait a bit for video to start loading, then fade out white overlay
+      const timer = setTimeout(() => {
+        setVideoLoaded(true);
+      }, 1500); // Adjust timing as needed
+
+      return () => clearTimeout(timer);
+    }
+  }, [backgroundVideo, isYouTube]);
 
   return (
     <section className="relative overflow-hidden" style={{ height: '100vh', marginTop: 0, paddingTop: 0 }}>
@@ -46,24 +62,40 @@ export default function Hero({
           />
         )}
         {backgroundVideo && isYouTube && (
-          <iframe
-            src={getYouTubeEmbedUrl(backgroundVideo)}
-            className="absolute inset-0 w-full h-full"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            style={{ 
-              pointerEvents: 'none',
-              width: '100vw',
-              height: '56.25vw',
-              minHeight: '100vh',
-              minWidth: '177.77vh',
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              zIndex: 1
-            }}
-          />
+          <>
+            {/* White background behind video */}
+            <div 
+              className="absolute inset-0 w-full h-full bg-white"
+              style={{ zIndex: 0 }}
+            />
+            <iframe
+              src={getYouTubeEmbedUrl(backgroundVideo)}
+              className="absolute inset-0 w-full h-full"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              style={{ 
+                pointerEvents: 'none',
+                width: '100vw',
+                height: '56.25vw',
+                minHeight: '100vh',
+                minWidth: '177.77vh',
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                zIndex: 1
+              }}
+            />
+            {/* White overlay on top of iframe that fades out */}
+            <div 
+              className="absolute inset-0 w-full h-full bg-white transition-opacity duration-1000"
+              style={{ 
+                zIndex: 2,
+                opacity: videoLoaded ? 0 : 1,
+                pointerEvents: 'none'
+              }}
+            />
+          </>
         )}
       </div>
       
