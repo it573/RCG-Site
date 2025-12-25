@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { usePathname } from "next/navigation";
 import Navigation from "./navigation";
 import { Phone } from "lucide-react";
@@ -23,14 +23,16 @@ export default function Header() {
           {/* Logo - Animates from left */}
           <div className="flex-shrink-0 flex items-center animate-fade-in-left">
             <Link href="/" onClick={handleLogoClick} className="flex items-center">
-              <Image
-                src="https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/logo.png"
-                alt="Logo"
-                width={140}
-                height={40}
-                className="h-10 w-auto"
-                priority
-              />
+                <CldImage
+                    src="RCG_Full_Logo_ Green" // Use this sample image or upload your own via the Media Library
+                    width="160" // Transform the image: auto-crop to square aspect_ratio
+                    height="40"
+                    crop={{
+                        type: 'auto',
+                        source: true
+                    }}
+                    alt="RCG Logo"
+                />
             </Link>
           </div>
 
