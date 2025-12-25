@@ -32,7 +32,7 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center">
+      <nav className="hidden md:flex items-center animate-fade-in-down">
         <ul className="flex items-center gap-8">
           {menuItems.map((item) => (
             <li

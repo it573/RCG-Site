@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "./navigation";
 import { Phone } from "lucide-react";
 
@@ -7,18 +8,25 @@ export default function Header() {
     <header className="border-b bg-white sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-primary">
-              Paramedic
+          {/* Logo - Animates from left */}
+          <div className="flex-shrink-0 animate-fade-in-left">
+            <Link href="/">
+              <Image
+                src="https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/logo.png"
+                alt="Logo"
+                width={140}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </Link>
           </div>
 
-          {/* Navigation */}
+          {/* Navigation - Animates from top */}
           <Navigation />
 
-          {/* Phone Number - Hidden on mobile */}
-          <div className="hidden md:flex items-center">
+          {/* Phone Number - Animates from right, Hidden on mobile */}
+          <div className="hidden md:flex items-center animate-fade-in-right">
             <a
               href="tel:+123456789"
               className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
