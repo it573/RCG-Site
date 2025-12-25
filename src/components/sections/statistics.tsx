@@ -29,10 +29,10 @@ export default function Statistics({
             <Button variant="outline">Our Services</Button>
           )}
           {statistics.map((stat, index) => (
-            <div key={index} className="flex items-center gap-8">
+            <div key={index} className="flex items-center justify-center gap-8 w-full md:w-auto">
               <Counter value={stat.value} title={stat.title} />
               {index < statistics.length - 1 && (
-                <Separator orientation="vertical" className="h-16" />
+                <Separator orientation="vertical" className="h-16 hidden md:block" />
               )}
             </div>
           ))}

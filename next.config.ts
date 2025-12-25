@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
         hostname: "demo.eightheme.com",
         pathname: "/paramedic/**",
       },
+      {
+        protocol: "https",
+        hostname: "reabilitar-em-casa.com",
+      },
+      {
+        protocol: "https",
+        hostname: "livrodeelogios.com",
+      },
     ],
   },
 };
