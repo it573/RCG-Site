@@ -12,7 +12,7 @@ import CTA from "@/components/sections/cta";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero backgroundVideo="https://www.youtube.com/watch?v=B7PfHlMl4DA" />
       <WhyChooseUs />
       <ProgramsServices />
       <Statistics />
