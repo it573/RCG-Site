@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./mobile-menu";
 
@@ -28,6 +29,14 @@ const menuItems = [
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -43,6 +52,7 @@ export default function Navigation() {
             >
               <Link
                 href={item.href}
+                onClick={item.label === "Home" ? handleHomeClick : undefined}
                 className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-all duration-300 hover:scale-[1.15]"
               >
                 {item.label}

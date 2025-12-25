@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   Sheet,
   SheetContent,
@@ -28,6 +29,17 @@ export default function MobileMenu({
   menuItems,
 }: MobileMenuProps) {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      onClose();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      onClose();
+    }
+  };
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
@@ -80,7 +92,7 @@ export default function MobileMenu({
                 ) : (
                   <Link
                     href={item.href}
-                    onClick={onClose}
+                    onClick={item.label === "Home" ? handleHomeClick : onClose}
                     className="block py-2 text-sm font-medium hover:text-primary"
                   >
                     {item.label}
