@@ -30,13 +30,13 @@ export default function Hero({
       </div>
       
       <div className="container mx-auto px-4 max-w-[1140px] relative z-10 h-full flex items-center py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="w-full">
+          <div className="space-y-6 max-w-2xl">
             <Heading as="h1">{title}</Heading>
             <p className="text-lg text-muted-foreground">{description}</p>
           </div>
           {showForm && (
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="bg-white rounded-lg shadow-lg p-8 max-w-xl mt-8">
               <AppointmentForm />
             </div>
           )}

@@ -41,7 +41,7 @@ export default function MobileMenu({
         </SheetHeader>
 
         <nav className="mt-8">
-          <ul className="space-y-2">
+          <ul className="space-y-2 pl-4">
             {menuItems.map((item) => (
               <li key={item.label}>
                 {item.children ? (
