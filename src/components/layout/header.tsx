@@ -6,7 +6,7 @@ import { Phone } from "lucide-react";
 export default function Header() {
   return (
     <header className="border-b bg-white sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-4 max-w-[1140px]">
         <div className="flex items-center justify-between py-4">
           {/* Logo - Animates from left */}
           <div className="flex-shrink-0 animate-fade-in-left">
