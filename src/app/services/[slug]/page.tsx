@@ -3,9 +3,9 @@ import ServiceContent from "@/components/sections/service-content";
 import ProgramsServices from "@/components/sections/programs-services";
 
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // This would typically come from a CMS or API
@@ -42,8 +42,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
   },
 };
 
-export default function ServicePage({ params }: ServicePageProps) {
-  const service = serviceData[params.slug] || serviceData["general-care"];
+export default async function ServicePage({ params }: ServicePageProps) {
+  const { slug } = await params;
+  const service = serviceData[slug] || serviceData["general-care"];
 
   return (
     <>

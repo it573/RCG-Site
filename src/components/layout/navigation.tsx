@@ -46,7 +46,7 @@ export default function Navigation() {
                 className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-all duration-300 hover:scale-[1.15]"
               >
                 {item.label}
-                {item.children && <ChevronDown className="w-4 h-4" />}
+                {item.children && <ChevronDown className="w-4 h-4 mr-6" />}
               </Link>
 
               {/* Dropdown Menu */}

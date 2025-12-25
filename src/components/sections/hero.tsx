@@ -29,15 +29,19 @@ export default function Hero({
         />
       </div>
       
-      <div className="container mx-auto px-4 max-w-[1140px] relative z-10 h-full flex items-center py-20">
+      <div className="container mx-auto px-4 max-w-[1140px] relative z-10 h-full flex items-center pb-32 md:pb-20 pt-[180px] md:pt-20">
         <div className="w-full">
-          <div className="space-y-6 max-w-2xl">
-            <Heading as="h1">{title}</Heading>
-            <p className="text-lg text-muted-foreground">{description}</p>
+          <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
+            <div className="space-y-6 max-w-2xl">
+              <Heading as="h1">{title}</Heading>
+              <p className="text-lg text-muted-foreground">{description}</p>
+            </div>
           </div>
           {showForm && (
-            <div className="bg-white rounded-lg shadow-lg p-8 max-w-xl mt-8">
-              <AppointmentForm />
+            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
+              <div className="bg-white rounded-lg shadow-lg p-4 md:p-8 max-w-xl mt-8">
+                <AppointmentForm />
+              </div>
             </div>
           )}
         </div>

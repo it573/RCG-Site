@@ -56,7 +56,7 @@ export default function MobileMenu({
                     >
                       {item.label}
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform ${
+                        className={`w-4 h-4 mr-6 transition-transform ${
                           openSubmenu === item.label ? "rotate-180" : ""
                         }`}
                       />
