@@ -58,7 +58,7 @@ export default function AppointmentForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Your name" className="bg-white" {...field} />
+                  <Input placeholder="Your name" className="bg-white/75" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -71,7 +71,7 @@ export default function AppointmentForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="email" placeholder="Email address" className="bg-white" {...field} />
+                  <Input type="email" placeholder="Email address" className="bg-white/75" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -84,7 +84,7 @@ export default function AppointmentForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="tel" placeholder="Phone number" className="bg-white" {...field} />
+                  <Input type="tel" placeholder="Phone number" className="bg-white/75" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -97,7 +97,7 @@ export default function AppointmentForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="date" className="bg-white" {...field} />
+                  <Input type="date" className="bg-white/75" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -112,7 +112,7 @@ export default function AppointmentForm() {
             <FormItem>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className="bg-white">
+                  <SelectTrigger className="bg-white/75">
                     <SelectValue placeholder="Select department" />
                   </SelectTrigger>
                 </FormControl>
