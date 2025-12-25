@@ -57,9 +57,8 @@ export default function AppointmentForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Your name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your name" {...field} />
+                  <Input placeholder="Your name" className="bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -71,9 +70,8 @@ export default function AppointmentForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email address</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="Email address" {...field} />
+                  <Input type="email" placeholder="Email address" className="bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -85,9 +83,8 @@ export default function AppointmentForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone number</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="Phone number" {...field} />
+                  <Input type="tel" placeholder="Phone number" className="bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -99,9 +96,8 @@ export default function AppointmentForm() {
             name="date"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Pick a date</FormLabel>
                 <FormControl>
-                  <Input type="date" {...field} />
+                  <Input type="date" className="bg-white" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -114,10 +110,9 @@ export default function AppointmentForm() {
           name="department"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Department</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger>
+                  <SelectTrigger className="bg-white">
                     <SelectValue placeholder="Select department" />
                   </SelectTrigger>
                 </FormControl>

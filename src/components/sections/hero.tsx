@@ -109,7 +109,7 @@ export default function Hero({
           </div>
           {showForm && (
             <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
-              <div className="bg-white shadow-lg p-4 md:p-8 max-w-xl mt-8 animate-fade-in-up">
+              <div className="p-4 md:p-8 max-w-xl mt-8 animate-fade-in-up">
                 <AppointmentForm />
               </div>
             </div>
