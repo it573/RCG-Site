@@ -16,9 +16,9 @@ export default function Hero({
   backgroundImage = "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/64.jpg",
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden" style={{ minHeight: '100vh', marginTop: 0, paddingTop: 0 }}>
+    <section className="relative overflow-hidden" style={{ height: '100vh', marginTop: 0, paddingTop: 0 }}>
       {/* Background Image */}
-      <div className="absolute inset-0 -z-10" style={{ minHeight: '100vh' }}>
+      <div className="absolute inset-0 -z-10">
         <Image
           src={backgroundImage}
           alt=""
@@ -29,7 +29,7 @@ export default function Hero({
         />
       </div>
       
-      <div className="container mx-auto px-4 max-w-[1140px] relative z-10 pt-[120px] pb-20 flex items-center" style={{ minHeight: '100vh' }}>
+      <div className="container mx-auto px-4 max-w-[1140px] relative z-10 h-full flex items-center py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <Heading as="h1">{title}</Heading>
