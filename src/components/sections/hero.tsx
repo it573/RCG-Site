@@ -22,20 +22,27 @@ export default function Hero({
   backgroundVideo,
   backgroundVideoMobile,
 }: HeroProps) {
-  const [isMobile, setIsMobile] = useState<boolean | null>(null); // null = not determined yet
+  const [isPortrait, setIsPortrait] = useState<boolean | null>(null); // null = not determined yet
   const [videoLoaded, setVideoLoaded] = useState(false);
 
-  // Detect if device is mobile
+  // Detect orientation based on aspect ratio (horizontal vs vertical)
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // md breakpoint
+    const checkOrientation = () => {
+      // Portrait/vertical: height > width (aspect ratio < 1)
+      // Landscape/horizontal: width >= height (aspect ratio >= 1)
+      const aspectRatio = window.innerWidth / window.innerHeight;
+      setIsPortrait(aspectRatio < 1);
     };
     
     // Check immediately
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
+    checkOrientation();
+    window.addEventListener('resize', checkOrientation);
+    window.addEventListener('orientationchange', checkOrientation);
     
-    return () => window.removeEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('resize', checkOrientation);
+      window.removeEventListener('orientationchange', checkOrientation);
+    };
   }, []);
 
   // Convert YouTube URL to embed URL
@@ -51,15 +58,15 @@ export default function Hero({
     return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&playlist=${videoId}` : '';
   };
 
-  // Determine which video to use based on device
-  // Wait for device detection before deciding
-  // Desktop: use backgroundVideo if provided
-  // Mobile: use backgroundVideoMobile if provided, otherwise show image (no video)
-  const activeVideo = isMobile === null 
-    ? null // Don't show video until we know the device type
-    : isMobile 
-      ? backgroundVideoMobile // Mobile: only use mobile video if explicitly provided
-      : backgroundVideo; // Desktop: use desktop video
+  // Determine which video to use based on orientation
+  // Wait for orientation detection before deciding
+  // Horizontal (landscape): use backgroundVideo
+  // Vertical (portrait): use backgroundVideoMobile
+  const activeVideo = isPortrait === null 
+    ? null // Don't show video until we know the orientation
+    : isPortrait 
+      ? backgroundVideoMobile // Vertical/portrait: use mobile video
+      : backgroundVideo; // Horizontal/landscape: use desktop video
   
   const isYouTube = activeVideo?.includes('youtube.com') || activeVideo?.includes('youtu.be');
 
