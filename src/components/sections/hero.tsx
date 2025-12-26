@@ -11,6 +11,7 @@ interface HeroProps {
   showForm?: boolean;
   backgroundImage?: string;
   backgroundVideo?: string;
+  backgroundVideoMobile?: string;
 }
 
 export default function Hero({
@@ -19,24 +20,52 @@ export default function Hero({
   showForm = true,
   backgroundImage = "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/64.jpg",
   backgroundVideo,
+  backgroundVideoMobile,
 }: HeroProps) {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null); // null = not determined yet
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  // Detect if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+    
+    // Check immediately
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Convert YouTube URL to embed URL
   const getYouTubeEmbedUrl = (url: string) => {
     let videoId = '';
     if (url.includes('youtube.com/watch?v=')) {
       videoId = url.split('v=')[1]?.split('&')[0] || '';
+    } else if (url.includes('youtube.com/shorts/')) {
+      videoId = url.split('shorts/')[1]?.split('?')[0] || '';
     } else if (url.includes('youtu.be/')) {
       videoId = url.split('youtu.be/')[1]?.split('?')[0] || '';
     }
     return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&playlist=${videoId}` : '';
   };
 
-  const isYouTube = backgroundVideo?.includes('youtube.com') || backgroundVideo?.includes('youtu.be');
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  // Determine which video to use based on device
+  // Wait for device detection before deciding
+  // Desktop: use backgroundVideo if provided
+  // Mobile: use backgroundVideoMobile if provided, otherwise show image (no video)
+  const activeVideo = isMobile === null 
+    ? null // Don't show video until we know the device type
+    : isMobile 
+      ? backgroundVideoMobile // Mobile: only use mobile video if explicitly provided
+      : backgroundVideo; // Desktop: use desktop video
+  
+  const isYouTube = activeVideo?.includes('youtube.com') || activeVideo?.includes('youtu.be');
 
   // Fade out white overlay after video starts loading
   useEffect(() => {
-    if (backgroundVideo && isYouTube) {
+    if (activeVideo && isYouTube) {
       // Wait a bit for video to start loading, then fade out white overlay
       const timer = setTimeout(() => {
         setVideoLoaded(true);
@@ -44,14 +73,14 @@ export default function Hero({
 
       return () => clearTimeout(timer);
     }
-  }, [backgroundVideo, isYouTube]);
+  }, [activeVideo, isYouTube]);
 
   return (
     <section className="relative overflow-hidden" style={{ height: '100vh', marginTop: 0, paddingTop: 0 }}>
       {/* Background Video or Image */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         {/* Fallback image - only shown if no video */}
-        {!backgroundVideo && (
+        {!activeVideo && (
           <Image
             src={backgroundImage}
             alt=""
@@ -61,7 +90,9 @@ export default function Hero({
             sizes="100vw"
           />
         )}
-        {backgroundVideo && isYouTube && (
+        
+        {/* Video for desktop or mobile */}
+        {activeVideo && isYouTube && (
           <>
             {/* White background behind video */}
             <div 
@@ -69,7 +100,7 @@ export default function Hero({
               style={{ zIndex: 0 }}
             />
             <iframe
-              src={getYouTubeEmbedUrl(backgroundVideo)}
+              src={getYouTubeEmbedUrl(activeVideo)}
               className="absolute inset-0 w-full h-full"
               allow="autoplay; encrypted-media"
               allowFullScreen
@@ -102,7 +133,7 @@ export default function Hero({
       <div className="container mx-auto px-4 max-w-[1140px] relative z-10 h-full flex items-center pb-32 md:pb-20 pt-[180px] md:pt-20">
         <div className="w-full">
           <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
-            <div className="space-y-6 max-w-2xl animate-fade-in-left">
+            <div className="space-y-6 max-w-2xl animate-fade-in-left-double">
               <Heading as="h1">{title}</Heading>
               <p className="text-lg text-muted-foreground">{description}</p>
             </div>

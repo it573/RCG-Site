@@ -137,6 +137,17 @@
     }
   }
 
+  @keyframes fadeInLeftDouble {
+    from {
+      opacity: 0;
+      transform: translateX(-320px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   @keyframes fadeInDown {
     from {
       opacity: 0;
@@ -187,7 +198,7 @@
   }
 
   .animate-fade-in-right {
-    animation: fadeInRight 0.8s ease-out 0.2s forwards;
+    animation: fadeInRight 0.8s ease-out forwards;
     opacity: 0;
     will-change: transform, opacity;
     visibility: visible;
@@ -198,6 +209,16 @@
     animation: fadeInUp 0.8s ease-out forwards;
     opacity: 0;
     will-change: transform, opacity;
+    visibility: visible;
+    min-height: fit-content;
+  }
+
+  .animate-fade-in-left-double {
+    animation: fadeInLeftDouble 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
     visibility: visible;
     min-height: fit-content;
   }
