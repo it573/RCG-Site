@@ -15,7 +15,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Professional Medical Care",
+  title = "Professionali Medicali Cari",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
   showForm = true,
   backgroundImage = "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/64.jpg",
