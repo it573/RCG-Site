@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -27,6 +28,10 @@ const appointmentSchema = z.object({
   phone: z.string().min(1, "Phone number is required"),
   date: z.string().min(1, "Date is required"),
   department: z.string().min(1, "Department is required"),
+  gclid: z.string().optional(),
+  gcampaign: z.string().optional(),
+  gkeywords: z.string().optional(),
+  gmatchtype: z.string().optional(),
 });
 
 type AppointmentFormValues = z.infer<typeof appointmentSchema>;
@@ -40,8 +45,43 @@ export default function AppointmentForm() {
       phone: "",
       date: "",
       department: "",
+      gclid: "",
+      gcampaign: "",
+      gkeywords: "",
+      gmatchtype: "",
     },
   });
+
+  // Populate hidden fields from query string parameters
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const params = new URLSearchParams(window.location.search);
+
+    // 1. GCLID
+    const gclid = params.get("gclid");
+    if (gclid) {
+      form.setValue("gclid", gclid);
+    }
+
+    // 2. GCAMPAIGN
+    const gcampaign = params.get("gcampaign");
+    if (gcampaign) {
+      form.setValue("gcampaign", gcampaign);
+    }
+
+    // 3. GKEYWORDS
+    const gkeywords = params.get("gkeywords");
+    if (gkeywords) {
+      form.setValue("gkeywords", gkeywords);
+    }
+
+    // 4. GMATCHTYPE
+    const gmatchtype = params.get("gmatchtype");
+    if (gmatchtype) {
+      form.setValue("gmatchtype", gmatchtype);
+    }
+  }, [form]);
 
   const onSubmit = (data: AppointmentFormValues) => {
     console.log("Form submitted:", data);
@@ -123,6 +163,52 @@ export default function AppointmentForm() {
                 </SelectContent>
               </Select>
               <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* Hidden fields for tracking parameters */}
+        <FormField
+          control={form.control}
+          name="gclid"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="gcampaign"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="gkeywords"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="gmatchtype"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
             </FormItem>
           )}
         />
