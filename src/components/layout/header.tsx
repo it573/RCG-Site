@@ -45,7 +45,7 @@ export default function Header() {
           <div className="hidden md:flex items-center animate-fade-in-right">
             <a
               href="tel:+123456789"
-              className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-teal-500 text-white text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span>+123 456 789</span>
