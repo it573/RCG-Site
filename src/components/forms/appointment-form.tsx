@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -23,11 +23,10 @@ import {
 } from "@/components/ui/select";
 
 const appointmentSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().min(1, "Phone number is required"),
-  date: z.string().min(1, "Date is required"),
-  department: z.string().min(1, "Department is required"),
+  FirstName: z.string().min(1, "Name is required"),
+  telefone: z.string().min(1, "Phone number is required"),
+  campaign: z.string().optional(),
+  source: z.string().optional(),
   gclid: z.string().optional(),
   gcampaign: z.string().optional(),
   gkeywords: z.string().optional(),
@@ -37,18 +36,26 @@ const appointmentSchema = z.object({
 type AppointmentFormValues = z.infer<typeof appointmentSchema>;
 
 export default function AppointmentForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
   const form = useForm<AppointmentFormValues>({
     resolver: zodResolver(appointmentSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      date: "",
-      department: "",
+      //to be filled in the form
+      FirstName: "",
+      telefone: "",
+      //to be instantiated depending of the page
+      campaign: "",
+      source: "",
+      //to be retrieved from the query string parameters
       gclid: "",
       gcampaign: "",
       gkeywords: "",
-      gmatchtype: "",
+      gmatchtype: ""
     },
   });
 
@@ -58,34 +65,77 @@ export default function AppointmentForm() {
 
     const params = new URLSearchParams(window.location.search);
 
-    // 1. GCLID
+    // Campaign and Source (can be set via query params or page context)
+    const campaign = params.get("campaign");
+    if (campaign) {
+      form.setValue("campaign", campaign);
+    }
+
+    const source = params.get("source");
+    if (source) {
+      form.setValue("source", source);
+    }
+
+    // Google tracking parameters
     const gclid = params.get("gclid");
     if (gclid) {
       form.setValue("gclid", gclid);
     }
 
-    // 2. GCAMPAIGN
     const gcampaign = params.get("gcampaign");
     if (gcampaign) {
       form.setValue("gcampaign", gcampaign);
     }
 
-    // 3. GKEYWORDS
     const gkeywords = params.get("gkeywords");
     if (gkeywords) {
       form.setValue("gkeywords", gkeywords);
     }
 
-    // 4. GMATCHTYPE
     const gmatchtype = params.get("gmatchtype");
     if (gmatchtype) {
       form.setValue("gmatchtype", gmatchtype);
     }
   }, [form]);
 
-  const onSubmit = (data: AppointmentFormValues) => {
-    console.log("Form submitted:", data);
-    // Handle form submission here
+  const onSubmit = async (data: AppointmentFormValues) => {
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/salesforce-webhook", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to submit form");
+      }
+
+      setSubmitStatus({
+        type: "success",
+        message: "Obrigado! Será contactado por nós nos próximos minutos.",
+      });
+
+      // Reset form after successful submission
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "An error occurred. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -94,7 +144,7 @@ export default function AppointmentForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
-            name="name"
+            name="FirstName"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
@@ -107,20 +157,7 @@ export default function AppointmentForm() {
 
           <FormField
             control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input type="email" placeholder="Email address" className="bg-white/75" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="phone"
+            name="telefone"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
@@ -130,39 +167,28 @@ export default function AppointmentForm() {
               </FormItem>
             )}
           />
-
-          <FormField
-            control={form.control}
-            name="date"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input type="date" className="bg-white/75" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
         </div>
 
+        {/* Hidden fields for campaign and source */}
         <FormField
           control={form.control}
-          name="department"
+          name="campaign"
           render={({ field }) => (
-            <FormItem>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger className="bg-white/75">
-                    <SelectValue placeholder="Select department" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="cardiology">Cardiology</SelectItem>
-                  <SelectItem value="emergency">Emergency</SelectItem>
-                  <SelectItem value="mental-health">Mental Health</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="source"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
             </FormItem>
           )}
         />
@@ -213,8 +239,20 @@ export default function AppointmentForm() {
           )}
         />
 
-        <Button type="submit" className="w-full">
-          Request Appointment
+        {submitStatus.type && (
+          <div
+            className={`p-4 rounded-md ${
+              submitStatus.type === "success"
+                ? "bg-green-50 text-green-800 border border-green-200"
+                : "bg-red-50 text-red-800 border border-red-200"
+            }`}
+          >
+            {submitStatus.message}
+          </div>
+        )}
+
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Request Appointment"}
         </Button>
       </form>
     </Form>

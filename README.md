@@ -29,8 +29,32 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+# Salesforce Webhook Configuration (optional - defaults to the configured endpoint)
+# SALESFORCE_WEBHOOK_ENDPOINT=https://reabilitaremcasa.my.salesforce-sites.com/services/apexrest/adsCaller
+
+# Optional: If Salesforce requires authentication
+# SALESFORCE_ACCESS_TOKEN=your_access_token_here
+```
+
+**Note:** The Salesforce endpoint is already configured. You only need to set `SALESFORCE_WEBHOOK_ENDPOINT` if you want to override it, or `SALESFORCE_ACCESS_TOKEN` if authentication is required.
+
+## Salesforce Webhook Integration
+
+The appointment form is configured to send data to Salesforce when submitted. The webhook endpoint is handled through `/api/salesforce-webhook` which forwards the form data to your Salesforce endpoint.
+
+To configure:
+1. Set the `SALESFORCE_WEBHOOK_ENDPOINT` environment variable with your Salesforce webhook URL
+2. If your Salesforce endpoint requires authentication, uncomment and set `SALESFORCE_ACCESS_TOKEN` in the API route (`src/app/api/salesforce-webhook/route.ts`)
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+**Note:** Make sure to add your environment variables in the Vercel dashboard under Project Settings > Environment Variables.
