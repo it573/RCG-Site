@@ -2,41 +2,36 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./mobile-menu";
 
 const menuItems = [
-  { label: "Home", href: "/" },
   {
-    label: "Pages",
+    label: "Empresa",
     href: "#",
     children: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
-      { label: "Single Service", href: "/services/general-care" },
-      { label: "Reviews", href: "/reviews" },
-      { label: "FAQ", href: "/faq" },
-      { label: "News", href: "/news" },
-      { label: "Post", href: "/post" },
+      { label: "Quem Somos", href: "/about" },
+      { label: "Recrutamento", href: "/contact" },
+      { label: "Contactos", href: "/services/general-care" },
     ],
   },
-  { label: "Services", href: "/services" },
-  { label: "Appointment", href: "/appointment" },
-  { label: "Doctors", href: "/doctors" },
+  {
+    label: "Apoio Domiciliário",
+    href: "#",
+    children: [
+      { label: "Quem Somos", href: "/about" },
+      { label: "Recrutamento", href: "/contact" },
+      { label: "Contactos", href: "/services/general-care" },
+    ],
+  },
+  { label: "Cuidados de Saúde", href: "/services" },
+  { label: "Acordos e Convenções", href: "/appointment" },
+  { label: "Equipamento Hospitalar", href: "/doctors" },
 ];
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const pathname = usePathname();
-
-  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname === "/") {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
 
   return (
     <>
@@ -46,17 +41,40 @@ export default function Navigation() {
           {menuItems.map((item) => (
             <li
               key={item.label}
-              className="relative group"
+              className="relative group flex-shrink-0"
               onMouseEnter={() => item.children && setOpenDropdown(item.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <Link
                 href={item.href}
-                onClick={item.label === "Home" ? handleHomeClick : undefined}
-                className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-all duration-300 hover:scale-[1.15]"
+                className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
+                  item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
+                    ? "whitespace-normal leading-tight" 
+                    : "whitespace-nowrap"
+                }`}
               >
-                {item.label}
-                {item.children && <ChevronDown className="w-4 h-4 mr-6" />}
+                {item.label === "Apoio Domiciliário" ? (
+                  <>
+                    Apoio<br />Domiciliário
+                  </>
+                ) : item.label === "Cuidados de Saúde" ? (
+                  <>
+                    Cuidados<br />de Saúde
+                  </>
+                ) : item.label === "Acordos e Convenções" ? (
+                  <>
+                    Acordos e<br />Convenções
+                  </>
+                ) : item.label === "Equipamento Hospitalar" ? (
+                  <>
+                    Equipamento<br />Hospitalar
+                  </>
+                ) : (
+                  item.label
+                )}
+                {item.children && (
+                  <ChevronDown className="w-4 h-4 flex-shrink-0" />
+                )}
               </Link>
 
               {/* Dropdown Menu */}
