@@ -66,36 +66,26 @@ export default function AppointmentForm() {
     const params = new URLSearchParams(window.location.search);
 
     // Campaign and Source (can be set via query params or page context)
+    // Always set to empty string if not present (Salesforce requires these fields)
     const campaign = params.get("campaign");
-    if (campaign) {
-      form.setValue("campaign", campaign);
-    }
+    form.setValue("campaign", campaign || "");
 
     const source = params.get("source");
-    if (source) {
-      form.setValue("source", source);
-    }
+    form.setValue("source", source || "");
 
     // Google tracking parameters
+    // Always set to empty string if not present (Salesforce requires these fields)
     const gclid = params.get("gclid");
-    if (gclid) {
-      form.setValue("gclid", gclid);
-    }
+    form.setValue("gclid", gclid || "");
 
     const gcampaign = params.get("gcampaign");
-    if (gcampaign) {
-      form.setValue("gcampaign", gcampaign);
-    }
+    form.setValue("gcampaign", gcampaign || "");
 
     const gkeywords = params.get("gkeywords");
-    if (gkeywords) {
-      form.setValue("gkeywords", gkeywords);
-    }
+    form.setValue("gkeywords", gkeywords || "");
 
     const gmatchtype = params.get("gmatchtype");
-    if (gmatchtype) {
-      form.setValue("gmatchtype", gmatchtype);
-    }
+    form.setValue("gmatchtype", gmatchtype || "");
   }, [form]);
 
   const onSubmit = async (data: AppointmentFormValues) => {

@@ -20,15 +20,23 @@ export async function POST(request: NextRequest) {
       }
     };
 
+    // Helper function to always add field (even if empty) - for required Salesforce fields
+    const addFieldRequired = (fieldName: string, value: string | undefined) => {
+      formData.append(`fields[${fieldName}][raw_value]`, value || "");
+    };
+
     // Map form fields to Salesforce expected format
+    // Required fields (always sent, even if empty)
     addField("FirstName", body.FirstName);
     addField("telefone", body.telefone);
-    addField("campaign", body.campaign);
-    addField("source", body.source);
-    addField("gclid", body.gclid);
-    addField("gcampaign", body.gcampaign);
-    addField("gkeywords", body.gkeywords);
-    addField("gmatchtype", body.gmatchtype);
+    
+    // Optional/hidden fields - always send (even if empty string) to prevent Salesforce exceptions
+    addFieldRequired("campaign", body.campaign);
+    addFieldRequired("source", body.source);
+    addFieldRequired("gclid", body.gclid);
+    addFieldRequired("gcampaign", body.gcampaign);
+    addFieldRequired("gkeywords", body.gkeywords);
+    addFieldRequired("gmatchtype", body.gmatchtype);
 
     // Prepare headers - Salesforce expects form-urlencoded
     const headers: HeadersInit = {
