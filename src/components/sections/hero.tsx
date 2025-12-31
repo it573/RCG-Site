@@ -200,6 +200,9 @@ export default function Hero({
                 autoPlay
                 loop
                 muted
+                transformation={{
+                  effect: "accelerate:-50"
+                }}                
                 controls={false}
                 playsinline
                 className="w-full h-full object-cover"
