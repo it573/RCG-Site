@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Heading from "@/components/ui/heading";
 import AppointmentForm from "@/components/forms/appointment-form";
 import Image from "next/image";
-import { getCldVideoUrl } from "next-cloudinary";
+import { CldVideoPlayer } from "next-cloudinary";
 
 interface HeroProps {
   title?: string;
@@ -26,7 +26,6 @@ export default function Hero({
   const [isPortrait, setIsPortrait] = useState<boolean | null>(null); // null = not determined yet
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Set mounted state to prevent hydration errors
   useEffect(() => {
@@ -81,54 +80,31 @@ export default function Hero({
   const isYouTube = activeVideo?.includes('youtube.com') || activeVideo?.includes('youtu.be');
   const isCloudinary = activeVideo && !isYouTube; // If it's not YouTube, assume it's a Cloudinary public ID
 
-  // Get Cloudinary video URL
-  const cloudinaryVideoUrl = isCloudinary && activeVideo
-    ? getCldVideoUrl({
-        src: activeVideo,
-        format: 'auto',
-        quality: 'auto',
-      })
-    : null;
-
   // Fade out white overlay after video starts loading and ensure video plays
   useEffect(() => {
-    if (activeVideo && isCloudinary && isMounted && videoRef.current) {
-      const videoElement = videoRef.current;
-
-      // Handle video loaded and playing
-      const handleCanPlay = () => {
-        videoElement.play().catch((error) => {
-          console.log('Autoplay prevented, trying again:', error);
-          // Retry after user interaction might be needed
-        });
-      };
-
-      const handlePlaying = () => {
+    if (activeVideo && isCloudinary && isMounted) {
+      // Wait a bit for video to start loading, then fade out white overlay
+      const timer = setTimeout(() => {
         setVideoLoaded(true);
-      };
+      }, 1500); // Adjust timing as needed
 
-      const handleLoadedData = () => {
-        // Video data loaded, try to play
-        setTimeout(() => {
+      // Try to play video programmatically if autoplay fails
+      const playVideo = () => {
+        // Find the video element inside CldVideoPlayer
+        const videoElement = document.querySelector('#hero-background-video video') as HTMLVideoElement;
+        if (videoElement) {
           videoElement.play().catch((error) => {
-            console.log('Autoplay error:', error);
+            console.log('Autoplay prevented:', error);
           });
-        }, 100);
+        }
       };
 
-      videoElement.addEventListener('canplay', handleCanPlay);
-      videoElement.addEventListener('playing', handlePlaying);
-      videoElement.addEventListener('loadeddata', handleLoadedData);
-
-      // Try to play immediately
-      videoElement.play().catch((error) => {
-        console.log('Initial autoplay prevented:', error);
-      });
+      // Try to play after a short delay to ensure video element is rendered
+      const playTimer = setTimeout(playVideo, 1000);
 
       return () => {
-        videoElement.removeEventListener('canplay', handleCanPlay);
-        videoElement.removeEventListener('playing', handlePlaying);
-        videoElement.removeEventListener('loadeddata', handleLoadedData);
+        clearTimeout(timer);
+        clearTimeout(playTimer);
       };
     } else if (activeVideo && isYouTube) {
       // Wait a bit for video to start loading, then fade out white overlay
@@ -138,7 +114,7 @@ export default function Hero({
 
       return () => clearTimeout(timer);
     }
-  }, [activeVideo, isCloudinary, isMounted, cloudinaryVideoUrl]);
+  }, [activeVideo, isCloudinary, isMounted]);
 
   return (
     <section className="relative overflow-hidden" style={{ height: '100vh', marginTop: 0, paddingTop: 0 }}>
@@ -195,7 +171,7 @@ export default function Hero({
         )}
 
         {/* Video for desktop or mobile - Cloudinary */}
-        {activeVideo && isCloudinary && isMounted && cloudinaryVideoUrl && (
+        {activeVideo && isCloudinary && isMounted && (
           <>
             {/* White background behind video */}
             <div 
@@ -216,19 +192,17 @@ export default function Hero({
                 pointerEvents: 'none',
               }}
             >
-              <video
-                ref={videoRef}
-                src={cloudinaryVideoUrl}
+              <CldVideoPlayer 
+                id="hero-background-video"
+                width={1080} 
+                height={1920} 
+                src={activeVideo}
                 autoPlay
                 loop
                 muted
-                playsInline
+                controls={false}
+                playsinline
                 className="w-full h-full object-cover"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                }}
               />
             </div>
             {/* White overlay on top of video that fades out */}
