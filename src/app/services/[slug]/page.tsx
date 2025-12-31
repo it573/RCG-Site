@@ -12,7 +12,7 @@ interface ServicePageProps {
 const serviceData: Record<string, any> = {
   "general-care": {
     title: "General Care",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    description: "Fisioterapia, Apoio Domiciliário 24h/7d, Terapia da Fala, Enfermagem, Podologia, Análises Clínicas. Somos o seu hub em Cuidados de Saúde",
     image: {
       src: "/services/general-care.jpg",
       alt: "General Care",
