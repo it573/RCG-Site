@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "next-cloudinary/dist/cld-video-player.css";
 
 @custom-variant dark (&:is(.dark *));
 

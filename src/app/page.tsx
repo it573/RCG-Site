@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Hero 
         backgroundVideo="https://www.youtube.com/watch?v=bs_7jWqSeIM" 
-        backgroundVideoMobile="https://www.youtube.com/shorts/_i3gGfwd9jg" />
+        backgroundVideoMobile="CareGiverVertical1" />
       <WhyChooseUs />
       <ProgramsServices />
       <Statistics />
