@@ -36,11 +36,17 @@ const appointmentSchema = z.object({
 type AppointmentFormValues = z.infer<typeof appointmentSchema>;
 
 export default function AppointmentForm() {
+  const [isMounted, setIsMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+
+  // Prevent hydration mismatch by only rendering after mount
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const form = useForm<AppointmentFormValues>({
     resolver: zodResolver(appointmentSchema),
@@ -61,7 +67,7 @@ export default function AppointmentForm() {
 
   // Populate hidden fields from query string parameters
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (!isMounted) return;
 
     const params = new URLSearchParams(window.location.search);
 
@@ -86,7 +92,20 @@ export default function AppointmentForm() {
 
     const gmatchtype = params.get("gmatchtype");
     form.setValue("gmatchtype", gmatchtype || "");
-  }, [form]);
+  }, [form, isMounted]);
+
+  // Don't render form until mounted to prevent hydration mismatch
+  if (!isMounted) {
+    return (
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="h-10 bg-white/75 rounded-md animate-pulse" />
+          <div className="h-10 bg-white/75 rounded-md animate-pulse" />
+        </div>
+        <div className="h-10 bg-white/75 rounded-md animate-pulse" />
+      </div>
+    );
+  }
 
   const onSubmit = async (data: AppointmentFormValues) => {
     setIsSubmitting(true);
