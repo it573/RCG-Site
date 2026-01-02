@@ -51,6 +51,9 @@ export default function WhyChooseUs({
             alt=""
             fill
             className="object-cover opacity-10"
+            loading="lazy"
+            sizes="100vw"
+            quality={75}
           />
         </div>
       )}
@@ -83,4 +86,3 @@ export default function WhyChooseUs({
     </section>
   );
 }
-

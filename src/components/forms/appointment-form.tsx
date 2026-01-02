@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -36,28 +36,19 @@ const appointmentSchema = z.object({
 type AppointmentFormValues = z.infer<typeof appointmentSchema>;
 
 export default function AppointmentForm() {
-  const [isMounted, setIsMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
 
-  // Prevent hydration mismatch by only rendering after mount
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   const form = useForm<AppointmentFormValues>({
     resolver: zodResolver(appointmentSchema),
     defaultValues: {
-      //to be filled in the form
       FirstName: "",
       telefone: "",
-      //to be instantiated depending of the page
       campaign: "",
       source: "",
-      //to be retrieved from the query string parameters
       gclid: "",
       gcampaign: "",
       gkeywords: "",
@@ -65,47 +56,30 @@ export default function AppointmentForm() {
     },
   });
 
-  // Populate hidden fields from query string parameters
+  // Memoize URLSearchParams to avoid re-parsing on every render
+  const queryParams = useMemo(() => {
+    if (typeof window === 'undefined') return null;
+    return new URLSearchParams(window.location.search);
+  }, []);
+
+  // Populate hidden fields from query string parameters - optimized
   useEffect(() => {
-    if (!isMounted) return;
+    if (!queryParams) return;
 
-    const params = new URLSearchParams(window.location.search);
+    // Batch setValue calls to reduce re-renders
+    const updates: Partial<AppointmentFormValues> = {
+      campaign: queryParams.get("campaign") || "",
+      source: queryParams.get("source") || "",
+      gclid: queryParams.get("gclid") || "",
+      gcampaign: queryParams.get("gcampaign") || "",
+      gkeywords: queryParams.get("gkeywords") || "",
+      gmatchtype: queryParams.get("gmatchtype") || "",
+    };
 
-    // Campaign and Source (can be set via query params or page context)
-    // Always set to empty string if not present (Salesforce requires these fields)
-    const campaign = params.get("campaign");
-    form.setValue("campaign", campaign || "");
-
-    const source = params.get("source");
-    form.setValue("source", source || "");
-
-    // Google tracking parameters
-    // Always set to empty string if not present (Salesforce requires these fields)
-    const gclid = params.get("gclid");
-    form.setValue("gclid", gclid || "");
-
-    const gcampaign = params.get("gcampaign");
-    form.setValue("gcampaign", gcampaign || "");
-
-    const gkeywords = params.get("gkeywords");
-    form.setValue("gkeywords", gkeywords || "");
-
-    const gmatchtype = params.get("gmatchtype");
-    form.setValue("gmatchtype", gmatchtype || "");
-  }, [form, isMounted]);
-
-  // Don't render form until mounted to prevent hydration mismatch
-  if (!isMounted) {
-    return (
-      <div className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="h-10 bg-white/75 rounded-md animate-pulse" />
-          <div className="h-10 bg-white/75 rounded-md animate-pulse" />
-        </div>
-        <div className="h-10 bg-white/75 rounded-md animate-pulse" />
-      </div>
-    );
-  }
+    Object.entries(updates).forEach(([key, value]) => {
+      form.setValue(key as keyof AppointmentFormValues, value);
+    });
+  }, [form, queryParams]);
 
   const onSubmit = async (data: AppointmentFormValues) => {
     setIsSubmitting(true);

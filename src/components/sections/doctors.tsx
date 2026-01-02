@@ -83,6 +83,9 @@ export default function Doctors({
                 width={sideImage.width || 500}
                 height={sideImage.height || 750}
                 className="h-full w-full object-cover rounded-lg"
+                loading="lazy"
+                sizes="(max-width: 1024px) 0vw, 25vw"
+                quality={80}
               />
             </div>
           )}
@@ -94,4 +97,3 @@ export default function Doctors({
     </section>
   );
 }
-

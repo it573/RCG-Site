@@ -24,14 +24,17 @@ export default function Header() {
           <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10">
             <Link href="/" onClick={handleLogoClick} className="flex items-center">
                 <CldImage
-                    src="RCG_Full_Logo_ Green" // Use this sample image or upload your own via the Media Library
-                    width="160" // Transform the image: auto-crop to square aspect_ratio
+                    src="RCG_Full_Logo_ Green"
+                    width="160"
                     height="35"
                     crop={{
                         type: 'scale',
                         source: true
                     }}
                     alt="RCG Logo"
+                    priority
+                    sizes="160px"
+                    quality={90}
                 />
             </Link>
           </div>
@@ -66,4 +69,3 @@ export default function Header() {
     </header>
   );
 }
-

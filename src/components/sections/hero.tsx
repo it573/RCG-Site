@@ -1,10 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Heading from "@/components/ui/heading";
 import AppointmentForm from "@/components/forms/appointment-form";
 import Image from "next/image";
-import { CldVideoPlayer } from "next-cloudinary";
+import dynamic from "next/dynamic";
+
+// Dynamically import CldVideoPlayer to reduce initial bundle size
+const CldVideoPlayer = dynamic(
+  () => import("next-cloudinary").then((mod) => mod.CldVideoPlayer),
+  { ssr: false }
+);
 
 interface HeroProps {
   title?: string;
@@ -23,104 +29,92 @@ export default function Hero({
   backgroundVideo,
   backgroundVideoMobile,
 }: HeroProps) {
-  const [isPortrait, setIsPortrait] = useState<boolean | null>(null); // null = not determined yet
+  const [isPortrait, setIsPortrait] = useState<boolean | null>(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
 
-  // Set mounted state to prevent hydration errors
+  // Detect orientation - optimized with debouncing
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  // Detect orientation based on aspect ratio (horizontal vs vertical)
-  useEffect(() => {
-    if (!isMounted) return;
+    let timeoutId: NodeJS.Timeout;
     
     const checkOrientation = () => {
-      // Portrait/vertical: height > width (aspect ratio < 1)
-      // Landscape/horizontal: width >= height (aspect ratio >= 1)
-      const aspectRatio = window.innerWidth / window.innerHeight;
-      setIsPortrait(aspectRatio < 1);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const aspectRatio = window.innerWidth / window.innerHeight;
+        setIsPortrait(aspectRatio < 1);
+      }, 100); // Debounce orientation changes
     };
     
     // Check immediately
     checkOrientation();
-    window.addEventListener('resize', checkOrientation);
-    window.addEventListener('orientationchange', checkOrientation);
+    
+    // Use passive listeners for better performance
+    window.addEventListener('resize', checkOrientation, { passive: true });
+    window.addEventListener('orientationchange', checkOrientation, { passive: true });
     
     return () => {
+      clearTimeout(timeoutId);
       window.removeEventListener('resize', checkOrientation);
       window.removeEventListener('orientationchange', checkOrientation);
     };
-  }, [isMounted]);
+  }, []);
 
-  // Convert YouTube URL to embed URL
-  const getYouTubeEmbedUrl = (url: string) => {
-    let videoId = '';
-    if (url.includes('youtube.com/watch?v=')) {
-      videoId = url.split('v=')[1]?.split('&')[0] || '';
-    } else if (url.includes('youtube.com/shorts/')) {
-      videoId = url.split('shorts/')[1]?.split('?')[0] || '';
-    } else if (url.includes('youtu.be/')) {
-      videoId = url.split('youtu.be/')[1]?.split('?')[0] || '';
-    }
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&playlist=${videoId}` : '';
-  };
+  // Memoize YouTube URL conversion
+  const getYouTubeEmbedUrl = useMemo(() => {
+    return (url: string) => {
+      let videoId = '';
+      if (url.includes('youtube.com/watch?v=')) {
+        videoId = url.split('v=')[1]?.split('&')[0] || '';
+      } else if (url.includes('youtube.com/shorts/')) {
+        videoId = url.split('shorts/')[1]?.split('?')[0] || '';
+      } else if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1]?.split('?')[0] || '';
+      }
+      return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1` : '';
+    };
+  }, []);
 
-  // Determine which video to use based on orientation
-  // Wait for orientation detection before deciding
-  // Horizontal (landscape): use backgroundVideo
-  // Vertical (portrait): use backgroundVideoMobile
+  // Determine active video based on orientation
   const activeVideo = isPortrait === null 
-    ? null // Don't show video until we know the orientation
+    ? null
     : isPortrait 
-      ? backgroundVideoMobile // Vertical/portrait: use mobile video
-      : backgroundVideo; // Horizontal/landscape: use desktop video
+      ? backgroundVideoMobile
+      : backgroundVideo;
   
   const isYouTube = activeVideo?.includes('youtube.com') || activeVideo?.includes('youtu.be');
-  const isCloudinary = activeVideo && !isYouTube; // If it's not YouTube, assume it's a Cloudinary public ID
+  const isCloudinary = activeVideo && !isYouTube;
 
-  // Fade out white overlay after video starts loading and ensure video plays
+  // Optimized video loading effect
   useEffect(() => {
-    if (activeVideo && isCloudinary && isMounted) {
-      // Wait a bit for video to start loading, then fade out white overlay
-      const timer = setTimeout(() => {
-        setVideoLoaded(true);
-      }, 1500); // Adjust timing as needed
+    if (!activeVideo) return;
 
-      // Try to play video programmatically if autoplay fails
-      const playVideo = () => {
-        // Find the video element inside CldVideoPlayer
+    const timer = setTimeout(() => {
+      setVideoLoaded(true);
+    }, 800); // Reduced from 1500ms
+
+    if (isCloudinary) {
+      const playTimer = setTimeout(() => {
         const videoElement = document.querySelector('#hero-background-video video') as HTMLVideoElement;
         if (videoElement) {
-          videoElement.play().catch((error) => {
-            console.log('Autoplay prevented:', error);
+          videoElement.play().catch(() => {
+            // Silently handle autoplay prevention
           });
         }
-      };
-
-      // Try to play after a short delay to ensure video element is rendered
-      const playTimer = setTimeout(playVideo, 1000);
+      }, 500); // Reduced from 1000ms
 
       return () => {
         clearTimeout(timer);
         clearTimeout(playTimer);
       };
-    } else if (activeVideo && isYouTube) {
-      // Wait a bit for video to start loading, then fade out white overlay
-      const timer = setTimeout(() => {
-        setVideoLoaded(true);
-      }, 1500);
-
-      return () => clearTimeout(timer);
     }
-  }, [activeVideo, isCloudinary, isMounted]);
+
+    return () => clearTimeout(timer);
+  }, [activeVideo, isCloudinary]);
 
   return (
     <section className="relative overflow-hidden" style={{ height: '100vh', marginTop: 0, paddingTop: 0 }}>
       {/* Background Video or Image */}
       <div className="absolute inset-0 -z-10 w-full h-full">
-        {/* Fallback image - only shown if no video */}
+        {/* Fallback image - shown while video loads or if no video */}
         {!activeVideo && (
           <Image
             src={backgroundImage}
@@ -129,6 +123,7 @@ export default function Hero({
             className="object-cover"
             priority
             sizes="100vw"
+            quality={85}
           />
         )}
         
@@ -144,7 +139,8 @@ export default function Hero({
               src={getYouTubeEmbedUrl(activeVideo)}
               className="absolute inset-0 w-full h-full"
               allow="autoplay; encrypted-media"
-              allowFullScreen
+              loading="lazy"
+              title="Background video"
               style={{ 
                 pointerEvents: 'none',
                 width: '100vw',
@@ -160,7 +156,7 @@ export default function Hero({
             />
             {/* White overlay on top of iframe that fades out */}
             <div 
-              className="absolute inset-0 w-full h-full bg-white transition-opacity duration-1000"
+              className="absolute inset-0 w-full h-full bg-white transition-opacity duration-700"
               style={{ 
                 zIndex: 2,
                 opacity: videoLoaded ? 0 : 1,
@@ -171,7 +167,7 @@ export default function Hero({
         )}
 
         {/* Video for desktop or mobile - Cloudinary */}
-        {activeVideo && isCloudinary && isMounted && (
+        {activeVideo && isCloudinary && (
           <>
             {/* White background behind video */}
             <div 
@@ -182,9 +178,9 @@ export default function Hero({
               style={{ 
                 zIndex: 1,
                 width: '100vw',
-                height: '177.78vw', // 9:16 portrait aspect ratio (height = width * 16/9)
+                height: '177.78vw',
                 minHeight: '100vh',
-                minWidth: '56.25vh', // For landscape viewports, maintain aspect ratio
+                minWidth: '56.25vh',
                 position: 'absolute',
                 top: '50%',
                 left: '50%',
@@ -201,7 +197,8 @@ export default function Hero({
                 loop
                 muted
                 transformation={{
-                  effect: "accelerate:-50"
+                  quality: "auto:low",
+                  fetch_format: "auto"
                 }}                
                 controls={false}
                 playsinline
@@ -210,7 +207,7 @@ export default function Hero({
             </div>
             {/* White overlay on top of video that fades out */}
             <div 
-              className="absolute inset-0 w-full h-full bg-white transition-opacity duration-1000"
+              className="absolute inset-0 w-full h-full bg-white transition-opacity duration-700"
               style={{ 
                 zIndex: 2,
                 opacity: videoLoaded ? 0 : 1,
@@ -241,4 +238,3 @@ export default function Hero({
     </section>
   );
 }
-
