@@ -19,7 +19,8 @@ export default function Hero({
   title = "Todos os serviços de Saúde",
   description = "Fisioterapia, Apoio Domiciliário 24h/7d, Terapia da Fala, Enfermagem, Podologia, Análises Clínicas. Somos o seu hub em Cuidados de Saúde",
   showForm = true,
-  backgroundImage = "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/64.jpg",
+  //backgroundImage = "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/64.jpg",
+  backgroundImage = "/images/hero/oldman.jpg",
   backgroundVideo,
   backgroundVideoMobile,
 }: HeroProps) {

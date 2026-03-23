@@ -7,23 +7,16 @@ import Doctors from "@/components/sections/doctors";
 import HealthcareServices from "@/components/sections/healthcare-services";
 import Testimonials from "@/components/sections/testimonials";
 import HealthNews from "@/components/sections/health-news";
+import News2 from "@/components/sections/news2";
 import CTA from "@/components/sections/cta";
 
 export default function Home() {
   return (
     <>
-      <Hero 
-        backgroundVideo="https://www.youtube.com/watch?v=bs_7jWqSeIM" 
+      <Hero
+        //backgroundVideo="https://www.youtube.com/watch?v=bs_7jWqSeIM"
         backgroundVideoMobile="CareGiverVertical1" />
-      <WhyChooseUs />
-      <ProgramsServices />
-      <Statistics />
-      <LatestTechnology />
-      <Doctors />
-      <HealthcareServices />
-      <Testimonials />
-      <HealthNews />
-      <CTA />
+      <News2 />
     </>
   );
 }

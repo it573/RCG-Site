@@ -7,24 +7,24 @@ import MobileMenu from "./mobile-menu";
 
 const menuItems = [
   {
-    label: "Empresa",
+    label: "Institucional",
     href: "#",
     children: [
-      { label: "Quem Somos", href: "/about" },
-      { label: "Recrutamento", href: "/contact" },
-      { label: "Contactos", href: "/services/general-care" },
+      { label: "Quem Somos", href: "/quem-somos" },
+      { label: "Recrutamento", href: "/recrutamento" },
+      { label: "Contactos", href: "/contactos" },
     ],
   },
+  { label: "Cuidados de Saúde", href: "/services" },
   {
     label: "Apoio Domiciliário",
     href: "#",
     children: [
-      { label: "Quem Somos", href: "/about" },
-      { label: "Recrutamento", href: "/contact" },
-      { label: "Contactos", href: "/services/general-care" },
+      { label: "Apoio Domiciliário", href: "/about" },
+      { label: "Cuidados Continuados", href: "/contact" },
+      { label: "Hospitalização Domiciliária", href: "/services/general-care" },
     ],
   },
-  { label: "Cuidados de Saúde", href: "/services" },
   { label: "Acordos e Convenções", href: "/appointment" },
   { label: "Equipamento Hospitalar", href: "/doctors" },
 ];
