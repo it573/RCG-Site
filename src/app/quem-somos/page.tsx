@@ -1,5 +1,4 @@
 import Hero from "@/components/sections/hero";
-import About2 from "@/components/sections/about2";
 import About4 from "@/components/sections/about4";
 
 export const metadata = {
