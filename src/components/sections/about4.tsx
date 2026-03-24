@@ -64,7 +64,7 @@ export default function About4({
               />
             </div>
 
-            <div className="relative z-10 space-y-6 p-8">
+            <div className="relative z-10 space-y-6 p-4 md:p-8">
               <div className="animate-fade-in-left">
                 <h6 className="text-primary font-semibold text-sm uppercase tracking-wider">
                   {subtitle}
@@ -82,7 +82,7 @@ export default function About4({
           </div>
 
           {/* Right Column - Features */}
-          <div className="space-y-8 p-8">
+          <div className="space-y-8 p-4 md:p-8">
             {features.map((feature, index) => (
               <div
                 key={index}

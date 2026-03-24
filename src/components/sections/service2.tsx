@@ -28,14 +28,21 @@ export default function Service2({
       <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary">
           {/* Left Column - Title */}
-          <div className="pr-8 flex items-center animate-fade-in-left">
+          <div className="px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left">
             <h2 className="text-5xl font-bold text-foreground">
-              {title}
+              {title === "Cuidados Continuados" ? (
+                <>
+                  <span className="md:hidden">Cuidados<br />Continuados</span>
+                  <span className="hidden md:inline">Cuidados Continuados</span>
+                </>
+              ) : (
+                title
+              )}
             </h2>
           </div>
 
           {/* Center Column - First Service */}
-          <div className="px-8 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <div className="px-8 pt-4 pb-8 md:pt-0 md:pb-0 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             <h4 className="text-2xl font-semibold text-primary mb-4">
               {services[0].title}
             </h4>
@@ -45,7 +52,7 @@ export default function Service2({
           </div>
 
           {/* Right Column - Second Service */}
-          <div className="pl-8 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+          <div className="pl-8 pt-4 md:pt-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             <h4 className="text-2xl font-semibold text-primary mb-4">
               {services[1].title}
             </h4>

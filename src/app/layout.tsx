@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Paramedic - Professional Medical Care",
+  title: "Gostamos de Cuidar - Professional Medical Care",
   description: "Professional medical care services",
 };
 

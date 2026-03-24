@@ -27,8 +27,15 @@ export default function Service2Inverted({
     <section className="py-20" style={{ background: 'rgba(16, 155, 130, 0.85)' }}>
       <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white">
+          {/* Title - Mobile Top, Desktop Right */}
+          <div className="px-8 md:pl-8 md:pr-0 pb-8 md:pb-0 flex items-center md:order-3 animate-fade-in-right">
+            <h2 className="text-5xl font-bold text-white">
+              {title}
+            </h2>
+          </div>
+
           {/* Left Column - First Service */}
-          <div className="pr-8 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <div className="px-8 pt-4 pb-8 md:pt-0 md:pb-0 animate-fade-in-up md:order-1" style={{ animationDelay: '100ms' }}>
             <h4 className="text-2xl font-semibold text-white mb-4">
               {services[0].title}
             </h4>
@@ -38,20 +45,13 @@ export default function Service2Inverted({
           </div>
 
           {/* Center Column - Second Service */}
-          <div className="px-8 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+          <div className="px-8 pt-4 pb-8 md:pt-0 md:pb-0 animate-fade-in-up md:order-2" style={{ animationDelay: '200ms' }}>
             <h4 className="text-2xl font-semibold text-white mb-4">
               {services[1].title}
             </h4>
             <p className="text-white text-lg text-justify">
               {services[1].description}
             </p>
-          </div>
-
-          {/* Right Column - Title */}
-          <div className="pl-8 flex items-center animate-fade-in-right">
-            <h2 className="text-5xl font-bold text-white">
-              {title}
-            </h2>
           </div>
         </div>
       </div>

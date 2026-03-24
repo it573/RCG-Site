@@ -43,11 +43,11 @@ export default function MobileMenu({
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="right" className="w-80">
+      <SheetContent side="right" className="w-80 min-w-80 max-w-80 overflow-y-auto">
         <SheetHeader>
           <SheetTitle>
             <Link href="/" onClick={onClose} className="text-xl font-bold">
-              Paramedic
+              Gostamos de Cuidar
             </Link>
           </SheetTitle>
         </SheetHeader>
