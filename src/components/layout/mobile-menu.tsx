@@ -59,7 +59,7 @@ export default function MobileMenu({
                 {item.children ? (
                   <>
                     <button
-                      className="w-full flex items-center justify-between py-2 text-lg font-medium"
+                      className="w-full flex items-center justify-between py-2 text-xl font-medium"
                       onClick={() =>
                         setOpenSubmenu(
                           openSubmenu === item.label ? null : item.label
@@ -80,7 +80,7 @@ export default function MobileMenu({
                             <Link
                               href={child.href}
                               onClick={onClose}
-                              className="block py-2 text-base text-muted-foreground hover:text-primary"
+                              className="block py-2 text-lg text-muted-foreground hover:text-primary"
                             >
                               {child.label}
                             </Link>
@@ -93,7 +93,7 @@ export default function MobileMenu({
                   <Link
                     href={item.href}
                     onClick={item.label === "Home" ? handleHomeClick : onClose}
-                    className="block py-2 text-lg font-medium hover:text-primary"
+                    className="block py-2 text-xl font-medium hover:text-primary"
                   >
                     {item.label}
                   </Link>
