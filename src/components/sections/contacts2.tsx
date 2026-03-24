@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import AppointmentForm from "@/components/forms/appointment-form";
 
 interface ContactItem {
   icon: React.ReactNode;
@@ -91,48 +92,9 @@ export default function Contacts2({
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-4 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Nome"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Apelido"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  required
-                />
-              </div>
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Assunto"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  required
-                />
-              </div>
-              <textarea
-                placeholder="A sua mensagem"
-                rows={5}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                required
-              />
-              <button
-                type="submit"
-                className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-              >
-                Enviar Mensagem
-              </button>
-            </form>
+            <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+              <AppointmentForm />
+            </div>
           </div>
 
           {/* Right Column - Image */}
