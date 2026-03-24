@@ -49,27 +49,27 @@ export default function Contacts2({
   },
 }: Contacts2Props) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white overflow-x-hidden">
       <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Column - Contact Info & Form */}
           <div className="space-y-8">
             {/* Subtitle */}
-            <div className="animate-fade-in-left">
+            <div className="animate-fade-in-left overflow-x-hidden">
               <h6 className="text-primary font-semibold text-sm uppercase tracking-wider">
                 {subtitle}
               </h6>
             </div>
 
             {/* Description */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <div className="animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '100ms' }}>
               <p className="text-muted-foreground text-lg text-justify">
                 {description}
               </p>
             </div>
 
             {/* Contact Items */}
-            <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            <div className="space-y-4 animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '200ms' }}>
               {contactItems.map((item, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
@@ -92,13 +92,13 @@ export default function Contacts2({
             </div>
 
             {/* Contact Form */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+            <div className="animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '300ms' }}>
               <AppointmentForm />
             </div>
           </div>
 
           {/* Right Column - Image */}
-          <div className="animate-fade-in-right">
+          <div className="animate-fade-in-right overflow-x-hidden">
             <div className="overflow-hidden rounded-lg w-2/3 mx-auto">
               <img
                 src={image.src}
