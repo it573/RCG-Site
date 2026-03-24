@@ -56,11 +56,11 @@ export default function About2(props: About2Props) {
   const history = props.history ?? defaultProps.history!;
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white overflow-x-hidden">
       <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Mission Column */}
-          <div className="space-y-6 animate-fade-in-left">
+          <div className="space-y-6 animate-fade-in-left overflow-x-hidden">
             <div>
               <h6 className="text-primary font-semibold text-sm uppercase tracking-wider mb-6">
               </h6>
@@ -81,7 +81,7 @@ export default function About2(props: About2Props) {
           </div>
 
           {/* Doctors Column */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+          <div className="animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '150ms' }}>
             <div className="overflow-hidden rounded-lg">
               <img
                 src={doctors.image.src}
@@ -92,7 +92,7 @@ export default function About2(props: About2Props) {
           </div>
 
           {/* History Column */}
-          <div className="space-y-6 animate-fade-in-right" style={{ animationDelay: '300ms' }}>
+          <div className="space-y-6 animate-fade-in-right overflow-x-hidden" style={{ animationDelay: '300ms' }}>
             <div>
               <Heading as="h3">{history.title}</Heading>
             </div>

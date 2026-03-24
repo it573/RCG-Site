@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/hero";
+import About2 from "@/components/sections/about2";
 import About4 from "@/components/sections/about4";
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function QuemSomosPage() {
         description="Cuidados de saúde de excelência ao domicílio, comprometidos com o bem-estar e qualidade de vida dos nossos doentes"
         showForm={false}
       />
+      <About2 />
       <About4 />
     </>
   );

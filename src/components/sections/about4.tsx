@@ -46,7 +46,7 @@ export default function About4({
   features = defaultFeatures,
 }: About2Props) {
   return (
-    <section className="py-20" style={{ background: 'linear-gradient(to right, #fed7aa 0%, #fed7aa 50%, #dcfce7 50%, #dcfce7 100%)' }}>
+    <section className="py-20 overflow-x-hidden" style={{ background: 'linear-gradient(to right, #fed7aa 0%, #fed7aa 50%, #dcfce7 50%, #dcfce7 100%)' }}>
       <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
@@ -65,15 +65,15 @@ export default function About4({
             </div>
 
             <div className="relative z-10 space-y-6 p-4 md:p-8">
-              <div className="animate-fade-in-left">
+              <div className="animate-fade-in-left overflow-x-hidden">
                 <h6 className="text-primary font-semibold text-sm uppercase tracking-wider">
                   {subtitle}
                 </h6>
               </div>
-              <div className="animate-fade-in-left" style={{ animationDelay: '100ms' }}>
+              <div className="animate-fade-in-left overflow-x-hidden" style={{ animationDelay: '100ms' }}>
                 <Heading as="h2">{title}</Heading>
               </div>
-              <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+              <div className="animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '200ms' }}>
                 <p className="text-muted-foreground text-lg text-justify">
                   {description}
                 </p>
@@ -86,7 +86,7 @@ export default function About4({
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex gap-6 items-start animate-fade-in-right"
+                className="flex gap-6 items-start animate-fade-in-right overflow-x-hidden"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="flex-shrink-0">
