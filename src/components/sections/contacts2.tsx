@@ -99,7 +99,7 @@ export default function Contacts2({
 
           {/* Right Column - Image */}
           <div className="animate-fade-in-right">
-            <div className="overflow-hidden rounded-lg">
+            <div className="overflow-hidden rounded-lg w-2/3 mx-auto">
               <img
                 src={image.src}
                 alt={image.alt}
