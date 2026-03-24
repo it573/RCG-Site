@@ -15,18 +15,18 @@ const menuItems = [
       { label: "Contactos", href: "/contactos" },
     ],
   },
-  { label: "Cuidados de Saúde", href: "/services" },
+  { label: "Cuidados de Saúde", href: "/cuidados-de-saude" },
   {
     label: "Apoio Domiciliário",
     href: "#",
     children: [
-      { label: "Apoio Domiciliário", href: "/about" },
-      { label: "Cuidados Continuados", href: "/contact" },
-      { label: "Hospitalização Domiciliária", href: "/services/general-care" },
+      { label: "Apoio Domiciliário", href: "/apoio-domiciliario" },
+      { label: "Cuidados Continuados", href: "/cuidados-continuados-hospitalizacao" },
+      { label: "Hospitalização Domiciliária", href: "/cuidados-continuados-hospitalizacao" },
     ],
   },
-  { label: "Acordos e Convenções", href: "/appointment" },
-  { label: "Equipamento Hospitalar", href: "/doctors" },
+  { label: "Acordos e Convenções", href: "/acordos-convencoes" },
+  { label: "Equipamento Hospitalar", href: "/equipamento-hospitalar" },
 ];
 
 export default function Navigation() {
@@ -35,8 +35,8 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center animate-fade-in-down">
+      {/* Desktop Navigation - Normal */}
+      <nav className="hidden xl:flex items-center animate-fade-in-down">
         <ul className="flex items-center gap-[2.66rem]">
           {menuItems.map((item) => (
             <li
@@ -49,7 +49,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
                   item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
-                    ? "whitespace-normal leading-tight" 
+                    ? "whitespace-normal leading-tight"
                     : "whitespace-nowrap"
                 }`}
               >
@@ -81,12 +81,86 @@ export default function Navigation() {
               {item.children && openDropdown === item.label && (
                 <>
                   {/* Invisible bridge to cover the gap */}
-                  <div 
+                  <div
                     className="absolute top-full left-[-21px] w-64 h-[25px] z-40"
                     onMouseEnter={() => setOpenDropdown(item.label)}
                     onMouseLeave={() => setOpenDropdown(null)}
                   />
-                  <ul 
+                  <ul
+                    className="absolute top-full left-[-21px] mt-[25px] w-64 bg-white shadow-lg py-2 z-50"
+                    onMouseEnter={() => setOpenDropdown(item.label)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
+                  {item.children.map((child) => (
+                    <li key={child.label}>
+                      <Link
+                        href={child.href}
+                        className="block pl-4 pr-12 py-2 text-sm hover:bg-gray-100 transition-colors"
+                      >
+                        {child.label}
+                      </Link>
+                    </li>
+                  ))}
+                  </ul>
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Desktop Navigation - Compact */}
+      <nav className="hidden lg:flex xl:hidden items-center animate-fade-in-down">
+        <ul className="flex items-center gap-5">
+          {menuItems.map((item) => (
+            <li
+              key={item.label}
+              className="relative group flex-shrink-0"
+              onMouseEnter={() => item.children && setOpenDropdown(item.label)}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <Link
+                href={item.href}
+                className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
+                  item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
+                    ? "whitespace-normal leading-tight"
+                    : "whitespace-nowrap"
+                }`}
+              >
+                {item.label === "Apoio Domiciliário" ? (
+                  <>
+                    Apoio<br />Domiciliário
+                  </>
+                ) : item.label === "Cuidados de Saúde" ? (
+                  <>
+                    Cuidados<br />de Saúde
+                  </>
+                ) : item.label === "Acordos e Convenções" ? (
+                  <>
+                    Acordos e<br />Convenções
+                  </>
+                ) : item.label === "Equipamento Hospitalar" ? (
+                  <>
+                    Equipamento<br />Hospitalar
+                  </>
+                ) : (
+                  item.label
+                )}
+                {item.children && (
+                  <ChevronDown className="w-4 h-4 flex-shrink-0" />
+                )}
+              </Link>
+
+              {/* Dropdown Menu */}
+              {item.children && openDropdown === item.label && (
+                <>
+                  {/* Invisible bridge to cover the gap */}
+                  <div
+                    className="absolute top-full left-[-21px] w-64 h-[25px] z-40"
+                    onMouseEnter={() => setOpenDropdown(item.label)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  />
+                  <ul
                     className="absolute top-full left-[-21px] mt-[25px] w-64 bg-white shadow-lg py-2 z-50"
                     onMouseEnter={() => setOpenDropdown(item.label)}
                     onMouseLeave={() => setOpenDropdown(null)}
@@ -111,7 +185,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden p-2"
+        className="lg:hidden p-2"
         onClick={() => setIsMobileMenuOpen(true)}
         aria-label="Open menu"
       >

@@ -50,7 +50,7 @@ export default function About4({
       <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
-          <div className="relative min-h-[400px]">
+          <div className="relative min-h-[400px] flex items-center">
             {/* Background image */}
             <div
               className="absolute inset-0 rounded-lg overflow-hidden hidden md:block"
@@ -59,7 +59,7 @@ export default function About4({
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 style={{ opacity: 0.7 }}
               />
             </div>
