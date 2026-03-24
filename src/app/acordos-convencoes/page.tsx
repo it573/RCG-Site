@@ -16,7 +16,7 @@ export default function AcordosConvencoesPage() {
         showForm={false}
       />
       <Reviews3 />
-      <section className="py-20" style={{ background: '#fed7aa' }}>
+      <section className="py-20 overflow-x-hidden" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
             <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Contacte-nos!</h2>
