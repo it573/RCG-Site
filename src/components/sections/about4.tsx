@@ -46,11 +46,16 @@ export default function About4({
   features = defaultFeatures,
 }: About2Props) {
   return (
-    <section className="py-20 overflow-x-hidden" style={{ background: 'linear-gradient(to right, #fed7aa 0%, #fed7aa 50%, #dcfce7 50%, #dcfce7 100%)' }}>
+    <section className="overflow-x-hidden md:py-20 md:bg-gradient-to-r md:from-orange-200 md:to-green-200" style={{ background: 'linear-gradient(to right, #fed7aa 0%, #fed7aa 50%, #dcfce7 50%, #dcfce7 100%)' }}>
+      <style>{`
+        @media (max-width: 768px) {
+          section { background: transparent !important; }
+        }
+      `}</style>
       <div className="container mx-auto px-4 max-w-[1140px]">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-0 md:gap-12 items-center">
           {/* Left Column */}
-          <div className="relative min-h-[400px] flex items-center">
+          <div className="relative min-h-[400px] flex items-center py-12 px-4 md:py-0 md:px-0 md:bg-transparent -mx-4 md:mx-0" style={{ backgroundColor: '#fed7aa' }}>
             {/* Background image */}
             <div
               className="absolute inset-0 rounded-lg overflow-hidden hidden md:block"
@@ -64,7 +69,7 @@ export default function About4({
               />
             </div>
 
-            <div className="relative z-10 space-y-6 p-4 md:p-8">
+            <div className="relative z-10 space-y-6 w-full px-4 md:px-0">
               <div className="animate-fade-in-left overflow-x-hidden">
                 <h6 className="text-primary font-semibold text-sm uppercase tracking-wider">
                   {subtitle}
@@ -82,7 +87,7 @@ export default function About4({
           </div>
 
           {/* Right Column - Features */}
-          <div className="space-y-8 p-4 md:p-8">
+          <div className="space-y-8 py-12 px-4 md:py-0 md:px-0 md:bg-transparent -mx-4 md:mx-0" style={{ backgroundColor: '#dcfce7' }}>
             {features.map((feature, index) => (
               <div
                 key={index}
