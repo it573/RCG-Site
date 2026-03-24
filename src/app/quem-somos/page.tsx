@@ -15,7 +15,6 @@ export default function QuemSomosPage() {
         description="Cuidados de saúde de excelência ao domicílio, comprometidos com o bem-estar e qualidade de vida dos nossos doentes"
         showForm={false}
       />
-      <About2 />
       <About4 />
     </>
   );
