@@ -237,14 +237,14 @@
   /* White text outline/border */
   .text-outline-white {
     text-shadow:
-      -1px -1px 0 white,
-      1px -1px 0 white,
-      -1px 1px 0 white,
-      1px 1px 0 white,
-      -1px 0 0 white,
-      1px 0 0 white,
-      0 -1px 0 white,
-      0 1px 0 white;
+      -0.5px -0.5px 0 white,
+      0.5px -0.5px 0 white,
+      -0.5px 0.5px 0 white,
+      0.5px 0.5px 0 white,
+      -0.5px 0 0 white,
+      0.5px 0 0 white,
+      0 -0.5px 0 white,
+      0 0.5px 0 white;
     color: oklch(0.6 0.15 180) !important;
   }
 }
