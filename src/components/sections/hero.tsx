@@ -226,7 +226,7 @@ export default function Hero({
         <div className="w-full">
           <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
             <div className="space-y-6 max-w-2xl animate-fade-in-left-double">
-              <Heading as="h1" className="text-primary">{title}</Heading>
+              <Heading as="h1" className="text-primary text-outline-white">{title}</Heading>
               <p className="text-3xl text-black font-bold">{description}</p>
             </div>
           </div>
