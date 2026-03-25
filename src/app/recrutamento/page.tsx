@@ -18,9 +18,9 @@ export default function RecrutamentoPage() {
           <div className="w-full">
             <iframe
               src="https://reabilitaremcasa.my.salesforce-sites.com/applicant"
-              className="w-full border-0 rounded-lg h-[1500px] md:h-[1300px]"
+              className="w-full border-0 rounded-lg h-[1700px] md:h-[1500px]"
               title="Formulário de Candidatura"
-              scrolling="no"
+              scrolling="yes"
             />
           </div>
         </div>

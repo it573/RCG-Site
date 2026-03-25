@@ -25,7 +25,7 @@ const defaultPosts: BlogPost[] = [
       src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/56-768x512.jpg",
       alt: "SAÚDE - Serviços Especializados",
     },
-    href: "https://demo.eightheme.com/paramedic/2022/05/28/mental-health-tips-during-summer/",
+    href: "/cuidados-de-saude",
   },
   {
     title: "Análises Clínicas",
@@ -33,45 +33,45 @@ const defaultPosts: BlogPost[] = [
       src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/58-768x512.jpg",
       alt: "Análises Clínicas",
     },
-    href: "https://demo.eightheme.com/paramedic/2022/05/28/mental-health-issues-can-strike-anyone/",
+    href: "/analises-clinicas",
   },
   {
-    title: "Apoio Domiciário 24H",
+    title: "Apoio Domiciário",
     image: {
       src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/59-768x512.jpg",
       alt: "Separating stigma from health advice",
     },
-    href: "https://demo.eightheme.com/paramedic/2022/05/28/separating-stigma-from-health-advice/",
+    href: "/apoio-domiciliario",
   },
   {
     title: "Cuidados Continuados",
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/47-768x512.jpg",
+      src: "/images/CuidadosContinuados-Maos.jpg",
       alt: "Cuidados Continuados",
     },
-    href: "https://demo.eightheme.com/paramedic/2022/05/28/how-ai-is-transforming-health-care/",
+    href: "/cuidados-continuados-hospitalizacao",
   },
   {
     title: "Hospitalização Domiciliária",
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/60-768x511.jpg",
+      src: "/images/hospital-at-home.jpg",
       alt: "Hospitalização Domiciliária",
     },
-    href: "https://demo.eightheme.com/paramedic/2022/05/28/awards-for-contributions-to-public-health/",
+    href: "/cuidados-continuados-hospitalizacao",
   },
   {
     title: "Equipamentos Hospitalares",
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/46-768x513.jpg",
+      src: "/images/wheel-chair.png",
       alt: "Equipamentos Hospitalares",
     },
-    href: "https://demo.eightheme.com/paramedic/2022/05/26/social-series-highlights-importance-of-mental-health/",
+    href: "/equipamento-hospitalar",
   },
 ];
 
 export default function News2({
   badge = "",
-  title = "Especialidades",
+  title = "Especialidades Médicas e Serviços",
   description = "",
   posts = defaultPosts,
 }: News2Props) {
@@ -82,7 +82,7 @@ export default function News2({
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm">
             {badge}
           </div>
-          <Heading as="h1">{title}</Heading>
+          <Heading as="h2" className="text-3xl font-normal">{title}</Heading>
           <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
         </div>
 

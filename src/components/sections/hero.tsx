@@ -16,8 +16,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Todos os serviços de Saúde",
-  description = "Fisioterapia, Apoio Domiciliário 24h/7d, Terapia da Fala, Enfermagem, Podologia, Análises Clínicas. Somos o seu hub em Cuidados de Saúde",
+  title = "Cuidados Especializados no Domícilio",
+  description = "O melhor lugar para Cuidar, Curar e Viver",
   showForm = true,
   //backgroundImage = "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/64.jpg",
   backgroundImage = "/images/hero/oldman.jpg",
@@ -226,8 +226,8 @@ export default function Hero({
         <div className="w-full">
           <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
             <div className="space-y-6 max-w-2xl animate-fade-in-left-double">
-              <Heading as="h1" className="text-white">{title}</Heading>
-              <p className="text-lg text-white">{description}</p>
+              <Heading as="h1" className="text-primary">{title}</Heading>
+              <p className="text-3xl text-black font-bold">{description}</p>
             </div>
           </div>
           {showForm && (

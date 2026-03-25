@@ -25,16 +25,16 @@ interface About2Props {
 
 const defaultProps: About2Props = {
   mission: {
-    title: "Cuidados de qualidade para cada doente",
-    description: "Proporcionamos cuidados de saúde personalizados e de excelência, adaptados às necessidades específicas de cada doente. A nossa equipa multidisciplinar está disponível 24 horas por dia, 7 dias por semana, para garantir o bem-estar e a recuperação no conforto do seu lar.",
+    title: "Pioneiros em Cuidados de Saúde no Domícilio em Portugal",
+    description: "Com quase duas décadas de dedicação, a Reabilitar em Casa nasceu de uma visão clara: transformar o domicílio no melhor lugar para cuidar, curar e viver. Somos pioneiros em Portugal na prestação de cuidados de saúde personalizados, acreditando que o bem-estar físico e emocional é indissociável do ambiente familiar.",
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/60.jpg",
+      src: "/images/fachada.jpg",
       alt: "Cuidados de qualidade",
     },
   },
   doctors: {
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/51.jpg",
+      src: "/images/rita.jpg",
       alt: "A nossa equipa",
     },
     buttonText: "Nossos Médicos",
@@ -43,9 +43,7 @@ const defaultProps: About2Props = {
   history: {
     title: "A Nossa História",
     description: [
-      "Somos uma empresa especializada em cuidados de saúde ao domicílio, com anos de experiência no setor. A nossa trajetória começou com a visão de proporcionar cuidados de excelência no ambiente familiar do doente.",
-      "Ao longo dos anos, expandimos a nossa gama de serviços para incluir fisioterapia, enfermagem, terapia da fala, podologia e análises clínicas. Colaboramos com as melhores instituições de saúde e profissionais altamente qualificados.",
-      "O nosso compromisso mantém-se inabalável: garantir que cada doente receba os melhores cuidados possíveis, com dignidade, respeito e profissionalismo. Acreditamos que a recuperação é mais eficaz num ambiente familiar e acolhedor.",
+      "Somos uma empresa especializada em cuidados de saúde ao domicílio, com quase duas décadas de experiência no setor. A nossa trajetória começou com a visão de proporcionar cuidados de excelência no ambiente familiar de cada pessoa. A Reabilitar em Casa é pioneira na prestação de Cuidados de Saúde e Serviços de Apoio Domiciliário (SAD) em Portugal. Esta organização foi a primeira no país a celebrar convenções com múltiplos subsistemas públicos e privados, assegurando uma resposta nacional e estruturada às necessidades das pessoas no conforto do(s) seu(s) domicílio(s). Desde a nossa fundação, o nosso percurso tem sido pautado pela excelência clínica levada ao ambiente familiar. O que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual. Ao longo dos anos, expandimos os nossos serviços com o intuito de satisfazer as necessidades dos nossos utentes e famílias. Colaboramos com as melhores instituições de saúde, criámos parcerias e, os profissionais  que connosco colaboram são altamente qualificados. O nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo. Acreditamos que a recuperação é mais eficaz num ambiente familiar, seguro e acolhedor."
     ],
   },
 };
@@ -58,7 +56,7 @@ export default function About2(props: About2Props) {
   return (
     <section className="py-20 bg-white overflow-x-hidden">
       <div className="container mx-auto px-4 max-w-[1140px]">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Mission Column */}
           <div className="space-y-6 animate-fade-in-left overflow-x-hidden">
             <div>

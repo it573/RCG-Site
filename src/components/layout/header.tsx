@@ -49,10 +49,13 @@ export default function Header() {
             <div className="flex items-center animate-fade-in-right">
               <a
                 href="tel:+351"
-                className="flex items-center gap-2 px-3 md:px-4 py-2 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
+                className="flex items-center gap-2 px-3 md:px-4 py-0.5 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
               >
-                <Phone className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="hidden sm:inline">210 136 676</span>
+                <Phone className="w-5 h-5 md:w-6 md:h-6" />
+                <div className="hidden sm:flex flex-col gap-px">
+                  <span className="font-bold">210 136 676</span>
+                  <span className="font-bold">917 861 795</span>
+                </div>
               </a>
             </div>
 
