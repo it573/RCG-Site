@@ -260,7 +260,7 @@ export default function AppointmentForm() {
           </div>
         )}
 
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button type="submit" className="w-full bg-teal-500 hover:bg-teal-600 text-white" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Pedido de Contacto"}
         </Button>
       </form>
