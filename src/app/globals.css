@@ -237,14 +237,27 @@
   /* White text outline/border */
   .text-outline-white {
     text-shadow:
-      -0.5px -0.5px 0 white,
-      0.5px -0.5px 0 white,
-      -0.5px 0.5px 0 white,
-      0.5px 0.5px 0 white,
-      -0.5px 0 0 white,
-      0.5px 0 0 white,
-      0 -0.5px 0 white,
-      0 0.5px 0 white;
+      -0.5px -0.5px 0 lightgreen,
+      0.5px -0.5px 0 lightgreen,
+      -0.5px 0.5px 0 lightgreen,
+      0.5px 0.5px 0 lightgreen,
+      -0.5px 0 0 lightgreen,
+      0.5px 0 0 lightgreen,
+      0 -0.5px 0 lightgreen,
+      0 0.5px 0 lightgreen;
     color: oklch(0.6 0.15 180) !important;
+  }
+
+  /* Grey text outline/border - 1px */
+  .text-outline-grey {
+    text-shadow:
+      -1px -1px 0 gray,
+      1px -1px 0 gray,
+      -1px 1px 0 gray,
+      1px 1px 0 gray,
+      -1px 0 0 gray,
+      1px 0 0 gray,
+      0 -1px 0 gray,
+      0 1px 0 gray;
   }
 }
