@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-teal-500 text-white">
       <div className="container mx-auto px-4 py-12">
         {/* Footer Widgets - Three Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -19,7 +19,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold">REABILITAR EM CASA</h4>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="space-y-2">
-                <Link href="/quemsomos" className="block hover:text-white/80 transition-colors">
+                <Link href="/quem-somos" className="block hover:text-white/80 transition-colors">
                   Quem Somos
                 </Link>
                 <Link href="/testemunhos" className="block hover:text-white/80 transition-colors">

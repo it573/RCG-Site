@@ -12,6 +12,7 @@ export default function RecrutamentoPage() {
         title="Recrutamento"
         description="Estamos sempre à procura de profissionais dedicados que queiram fazer parte da nossa missão de proporcionar cuidados de saúde de excelência"
         showForm={false}
+        backgroundImage="/images/hero-recruitment.png"
       />
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-[1140px]">

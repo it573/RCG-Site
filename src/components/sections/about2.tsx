@@ -28,7 +28,7 @@ const defaultProps: About2Props = {
     title: "Pioneiros em Cuidados de Saúde no Domícilio em Portugal",
     description: "Com quase duas décadas de dedicação, a Reabilitar em Casa nasceu de uma visão clara: transformar o domicílio no melhor lugar para cuidar, curar e viver. Somos pioneiros em Portugal na prestação de cuidados de saúde personalizados, acreditando que o bem-estar físico e emocional é indissociável do ambiente familiar.",
     image: {
-      src: "/images/fachada.jpg",
+      src: "/images/fachada2.jpg",
       alt: "Cuidados de qualidade",
     },
   },

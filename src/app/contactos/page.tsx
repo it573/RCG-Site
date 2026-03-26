@@ -13,6 +13,7 @@ export default function ContactosPage() {
         title="Contactos"
         description="Estamos disponíveis para responder a todas as suas questões e fornecer-lhe as informações de que necessita sobre os nossos cuidados de saúde"
         showForm={false}
+        backgroundImage="/images/hero/contacts.png"
       />
       <Contacts2 />
     </>

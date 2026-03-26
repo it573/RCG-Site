@@ -22,7 +22,7 @@ const defaultPosts: BlogPost[] = [
   {
     title: "SAÚDE - Serviços Especializados",
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/56-768x512.jpg",
+      src: "/images/health-service.jpg",
       alt: "SAÚDE - Serviços Especializados",
     },
     href: "/cuidados-de-saude",
@@ -30,7 +30,7 @@ const defaultPosts: BlogPost[] = [
   {
     title: "Análises Clínicas",
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/58-768x512.jpg",
+      src: "/images/blood-test.jpg",
       alt: "Análises Clínicas",
     },
     href: "/analises-clinicas",
@@ -38,7 +38,7 @@ const defaultPosts: BlogPost[] = [
   {
     title: "Apoio Domiciário",
     image: {
-      src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/59-768x512.jpg",
+      src: "/images/caregiver.jpg",
       alt: "Separating stigma from health advice",
     },
     href: "/apoio-domiciliario",

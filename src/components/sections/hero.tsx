@@ -118,7 +118,7 @@ export default function Hero({
   }, [activeVideo, isCloudinary, isMounted]);
 
   return (
-    <section className="relative overflow-hidden" style={{ height: '100vh', marginTop: 0, paddingTop: 0 }}>
+    <section className="relative overflow-hidden" style={{ height: '80vh', marginTop: 0, paddingTop: 0 }}>
       {/* Background Video or Image */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         {/* Fallback image - only shown if no video */}

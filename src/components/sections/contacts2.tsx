@@ -20,22 +20,22 @@ interface Contacts2Props {
 const defaultContactItems: ContactItem[] = [
   {
     icon: <Phone className="w-5 h-5" />,
-    text: "+351 210 000 000",
-    href: "tel:+351210000000",
+    text: "+351 210 136 676",
+    href: "tel:+351210136760",
   },
   {
     icon: <Mail className="w-5 h-5" />,
-    text: "geral@rcg.pt",
-    href: "mailto:geral@rcg.pt",
+    text: "geral@reabilitar-em-casa.com",
+    href: "mailto:geral@reabilitar-em-casa.com",
   },
   {
     icon: <MapPin className="w-5 h-5" />,
-    text: "Lisboa, Portugal",
+    text: "Rua Itália, nº1, Piso 1, Escritório 6, 2775-407 Carcavelos, Portugal",
     href: "#",
   },
   {
     icon: <Clock className="w-5 h-5" />,
-    text: "Segunda a Sexta (8h - 17h)",
+    text: "Segunda a Sexta (8h - 19h)\nSábado (9h - 17h)",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Contacts2({
   description = "Estamos disponíveis para responder a todas as suas questões e fornecer-lhe as informações de que necessita sobre os nossos cuidados de saúde. Não hesite em contactar-nos.",
   contactItems = defaultContactItems,
   image = {
-    src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/51.jpg",
+    src: "/images/google-earth.png",
     alt: "A nossa equipa",
   },
 }: Contacts2Props) {
@@ -84,7 +84,7 @@ export default function Contacts2({
                         {item.text}
                       </a>
                     ) : (
-                      <span className="text-foreground">{item.text}</span>
+                      <span className="text-foreground whitespace-pre-line">{item.text}</span>
                     )}
                   </div>
                 </div>

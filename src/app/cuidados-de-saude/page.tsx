@@ -14,6 +14,7 @@ export default function CuidadosDeSaudePage() {
         title="Cuidados de Saúde"
         description="Proporcionamos cuidados de saúde personalizados e de excelência, adaptados às necessidades específicas de cada doente"
         showForm={false}
+        backgroundImage="/images/hero/healthcare.png"
       />
       <Services4 />
       <section className="py-20" style={{ background: '#fed7aa' }}>
