@@ -54,7 +54,7 @@ const defaultPosts: BlogPost[] = [
   {
     title: "Hospitalização Domiciliária",
     image: {
-      src: "/images/hospital.jpg",
+      src: "/images/hospital-at-home.jpg",
       alt: "Hospitalização Domiciliária",
     },
     href: "/cuidados-continuados-hospitalizacao",
