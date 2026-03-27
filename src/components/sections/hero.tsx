@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Heading from "@/components/ui/heading";
 import AppointmentForm from "@/components/forms/appointment-form";
-import Image from "next/image";
 import { CldVideoPlayer } from "next-cloudinary";
 
 interface HeroProps {
@@ -123,13 +122,11 @@ export default function Hero({
       <div className="absolute inset-0 -z-10 w-full h-full">
         {/* Fallback image - only shown if no video */}
         {!activeVideo && (
-          <Image
+          <img
             src={backgroundImage}
             alt=""
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectFit: 'cover' }}
           />
         )}
         

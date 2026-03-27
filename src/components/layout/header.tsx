@@ -48,7 +48,7 @@ export default function Header() {
             {/* Phone Number - Visible on all screens, appears before mobile menu */}
             <div className="flex items-center animate-fade-in-right">
               <a
-                href="tel:+351"
+                href="tel:+351210136276"
                 className="hidden sm:flex items-center px-3 md:px-4 py-1 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
               >
                 <table className="border-collapse">
@@ -59,8 +59,8 @@ export default function Header() {
                       </td>
                       <td className="align-middle">
                         <div className="flex flex-col leading-none">
-                          <span className="font-bold">210 136 676</span>
-                          <span className="font-bold">917 861 795</span>
+                          <span className="font-bold tracking-tighter">210 136 676</span>
+                          <span className="font-bold tracking-tighter">917 861 795</span>
                         </div>
                       </td>
                     </tr>
@@ -69,7 +69,7 @@ export default function Header() {
               </a>
               {/* Mobile: Show just icon */}
               <a
-                href="tel:+351"
+                href="tel:+351210136276"
                 className="sm:hidden flex items-center px-3 md:px-4 py-0.5 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
               >
                 <Phone className="w-5 h-5 md:w-6 md:h-6" />

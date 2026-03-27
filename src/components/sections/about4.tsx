@@ -19,17 +19,17 @@ interface About2Props {
 
 const defaultFeatures: Feature[] = [
   {
-    number: "01",
+    number: "",
     title: "Propósito e Visão",
     description: "Com duas décadas de dedicação, a Reabilitar em Casa nasceu de uma visão clara: transformar o Domicílio no melhor lugar para cuidar, reabilitar, curar e viver. Sempre acreditámos que a para uma boa recuperação, o bem-estar físico e emocional é indissociável do ambiente familiar. Consolidar um futuro onde os cuidados no domicílio, independentemente da idade, sejam sinónimos de dignidade, permitindo que cada pessoa receba cuidados de excelência no lugar onde se sente mais segura, a sua casa. Dignificar os cuidados domiciliários em Portugal, através da colaboração com Entidades Associativas e representativas do sector.",
   },
   {
-    number: "02",
+    number: "",
     title: "Missão",
     description: "Prestar Cuidados de Saúde e Apoio Domiciliário de elevada especialização, através de uma rede estruturada e convencionada, garantindo que a recuperação e promoção da autonomia, a qualidade de vida e o conforto dos nossos utentes em ambiente familiar, com o máximo rigor clínico e humanismo.",
   },
   {
-    number: "03",
+    number: "",
     title: "Valores",
     description: "Colocamos o utente no centro de todas as decisões, tratando cada indivíduo com a máxima humanidade e preservando a sua integridade no seu espaço pessoal. Excelência Clínica, Inovação, Integridade e Transparência, Proximidade Familiar e Compromisso Social",
   },

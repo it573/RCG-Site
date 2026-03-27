@@ -16,37 +16,37 @@ const defaultServices: ServiceCard[] = [
   {
     image: "/images/higiene.jpg",
     title: "Higiene e Conforto\nPessoal",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing eliti.",
+    description: "",
     link: "#",
   },
   {
     image: "/images/refeicoes.jpg",
     title: "Preparação e Acompanhamento de Refeições",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    description: "",
     link: "#",
   },
   {
     image: "/images/acompanhamentoconsultas.jpg",
     title: "Acompanhamento a Consultas Médicas",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    description: "",
     link: "#",
   },
  {
-    image: "/images/pills.png",
+    image: "/images/medicamentos.jpg",
     title: "Assistência\nMedicamentosa",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    description: "",
     link: "#",
   },
   {
     image: "/images/conversacaocompanhia.jpg",
     title: "Companhia, Conversação e Estimulação Cognitiva",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    description: "",
     link: "#",
   },
   {
     image: "/images/24h.jpg",
     title: "Acompanhamento Permanente (até 24 horas)",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    description: "",
     link: "#",
   },  
 ];
@@ -88,11 +88,12 @@ export default function Services5({
                       {service.description}
                     </p>
 
-                    {/* Button */}
+                    {/* Button 
                     <div className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
                       <span>Saiba mais</span>
                       <ArrowRight className="w-4 h-4" />
                     </div>
+                    */}
                   </div>
                 </div>
               </Link>

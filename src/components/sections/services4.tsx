@@ -14,22 +14,22 @@ interface Services4Props {
 }
 
 const defaultServicesLeft: ServiceItem[] = [
-  { text: "Nutritional support" },
-  { text: "Prenatal care" },
-  { text: "Cancer center" },
-  { text: "Women's health" },
+  { text: "Consultas Médicas" },
+  { text: "Análises Clínicas" },
+  { text: "Enfermagem" },
+  { text: "Fisioterapia" },
 ];
 
 const defaultServicesRight: ServiceItem[] = [
-  { text: "Neurosurgery" },
-  { text: "Outpatient care" },
-  { text: "Orthopedics" },
-  { text: "Nutritional support" },
+  { text: "Terapia da Fala" },
+  { text: "Terapia Ocupacional" },
+  { text: "Podologia" },
+  { text: "Nutrição" },
 ];
 
 export default function Services4({
-  title = "Programs & Services",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  title = "Serviços Especializados",
+  description = "Cuidados de Saúde no Domicílio",
   servicesLeft = defaultServicesLeft,
   servicesRight = defaultServicesRight,
   backgroundImage = "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133",
@@ -94,7 +94,7 @@ export default function Services4({
       </div>
 
       {/* Video Play Button - Centered */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <Link
           href="https://www.youtube.com/watch?v=w6lqLoSOcLI"
           target="_blank"
@@ -104,7 +104,7 @@ export default function Services4({
         >
           <Play className="w-8 h-8 ml-1" />
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }

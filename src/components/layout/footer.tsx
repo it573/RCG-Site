@@ -25,9 +25,6 @@ export default function Footer() {
                 <Link href="/testemunhos" className="block hover:text-white/80 transition-colors">
                   Testemunhos
                 </Link>
-                <Link href="/covid-19" className="block hover:text-white/80 transition-colors">
-                  COVID-19
-                </Link>
                 <Link href="/contactos" className="block hover:text-white/80 transition-colors">
                   Contactos
                 </Link>
@@ -36,10 +33,10 @@ export default function Footer() {
                 <Link href="/politica-de-privacidade" className="block hover:text-white/80 transition-colors">
                   Política de Privacidade
                 </Link>
-                <Link href="/faqs" className="block hover:text-white/80 transition-colors">
+                <Link href="/perguntas-frequentes" className="block hover:text-white/80 transition-colors">
                   Perguntas Frequentes
                 </Link>
-                <Link href="/contactos" className="block hover:text-white/80 transition-colors">
+                <Link href="https://www.livroreclamacoes.pt/inicio/" className="block hover:text-white/80 transition-colors">
                   Livro de Reclamações
                 </Link>
                 <div className="mt-4">

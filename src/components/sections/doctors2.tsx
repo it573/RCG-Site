@@ -46,7 +46,7 @@ export default function Doctors2({
           {doctors.map((doc, index) => (
             <div
               key={index}
-              className="animate-fade-in-up border-2 border-primary rounded-2xl p-8"
+              className="animate-fade-in-up border-2 border-primary rounded-2xl px-2 py-4"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <div className="flex flex-col items-center gap-4 overflow-hidden">
