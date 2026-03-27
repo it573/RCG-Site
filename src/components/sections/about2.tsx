@@ -57,13 +57,17 @@ export default function About2(props: About2Props) {
     <section className="py-20 bg-white overflow-x-hidden">
       <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="grid md:grid-cols-3 gap-8 items-start">
-          {/* Mission Column */}
+          {/* History Column */}
           <div className="space-y-6 animate-fade-in-left overflow-x-hidden">
+            <div>
+              <Heading as="h3">{history.title}</Heading>
+            </div>
             <div className="space-y-4">
-              <div>
-                <h4 className="text-xl font-semibold mb-2">{mission.title}</h4>
-                <p className="text-muted-foreground text-lg text-justify leading-[1.2] whitespace-pre-line">{mission.description}</p>
-              </div>
+              {history.description.map((paragraph, index) => (
+                <p key={index} className="text-muted-foreground text-lg text-justify leading-[1.2] whitespace-pre-line">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
 
@@ -78,17 +82,13 @@ export default function About2(props: About2Props) {
             </div>
           </div>
 
-          {/* History Column */}
+          {/* Mission Column */}
           <div className="space-y-6 animate-fade-in-right overflow-x-hidden" style={{ animationDelay: '300ms' }}>
-            <div>
-              <Heading as="h3">{history.title}</Heading>
-            </div>
             <div className="space-y-4">
-              {history.description.map((paragraph, index) => (
-                <p key={index} className="text-muted-foreground text-lg text-justify leading-[1.2] whitespace-pre-line">
-                  {paragraph}
-                </p>
-              ))}
+              <div>
+                <h4 className="text-xl font-semibold mb-2">{mission.title}</h4>
+                <p className="text-muted-foreground text-lg text-justify leading-[1.2] whitespace-pre-line">{mission.description}</p>
+              </div>
             </div>
           </div>
         </div>
