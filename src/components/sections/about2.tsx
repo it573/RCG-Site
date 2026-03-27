@@ -43,7 +43,7 @@ const defaultProps: About2Props = {
   history: {
     title: "A Nossa História",
     description: [
-      "Somos uma empresa especializada em cuidados de saúde ao domicílio, com quase duas décadas de experiência no setor. A nossa trajetória começou com a visão de proporcionar cuidados de excelência no ambiente familiar de cada pessoa. A Reabilitar em Casa é pioneira na prestação de Cuidados de Saúde e Serviços de Apoio Domiciliário (SAD) em Portugal. Esta organização foi a primeira no país a celebrar convenções com múltiplos subsistemas públicos e privados, assegurando uma resposta nacional e estruturada às necessidades das pessoas no conforto do(s) seu(s) domicílio(s). Desde a nossa fundação, o nosso percurso tem sido pautado pela excelência clínica levada ao ambiente familiar. O que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual. Ao longo dos anos, expandimos os nossos serviços com o intuito de satisfazer as necessidades dos nossos utentes e famílias. Colaboramos com as melhores instituições de saúde, criámos parcerias e, os profissionais  que connosco colaboram são altamente qualificados. O nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo. Acreditamos que a recuperação é mais eficaz num ambiente familiar, seguro e acolhedor."
+     "Somos uma empresa especializada em Cuidados de Saúde no Domicílio, com duas décadas de experiência no setor. A nossa trajetória começou em 2006, com a visão de proporcionar cuidados de excelência em ambiente familiar, onde já acreditávamos que a recuperação de cada indivíduo seria  mais eficaz, comparativamente à institucionalização.\n\n O que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual. Ao longo dos anos, expandimos os nossos serviços para a resposta em Serviços de Apoio Domiciliário (SAD) com o intuito de satisfazer as necessidades dos nossos utentes e famílias, clientes e parceiros.\n\n Somos parceiros de algumas das mais importantes Instituições em Portugal, colaboramos em diversos projetos e mais recentemente a Reabilitar em Casa tornou-se cofundadora de uma associação setorial, a AEPAD- Associação de empresas privadas de Apoio Domiciliário.  Este projeto nasce com o propósito fundamental de dignificar e profissionalizar o setor dos cuidados ao domicílio, estabelecendo novos padrões de excelência e reconhecimento para a área.\n\n O nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo."
     ],
   },
 };
@@ -73,7 +73,7 @@ export default function About2(props: About2Props) {
               </div>
               <div>
                 <h4 className="text-xl font-semibold mb-2">{mission.title}</h4>
-                <p className="text-muted-foreground text-lg text-justify">{mission.description}</p>
+                <p className="text-muted-foreground text-lg text-justify leading-[1.2]">{mission.description}</p>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function About2(props: About2Props) {
             </div>
             <div className="space-y-4">
               {history.description.map((paragraph, index) => (
-                <p key={index} className="text-muted-foreground text-lg text-justify">
+                <p key={index} className="text-muted-foreground text-lg text-justify leading-[1.2] whitespace-pre-line">
                   {paragraph}
                 </p>
               ))}
