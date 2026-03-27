@@ -26,7 +26,7 @@ interface About2Props {
 const defaultProps: About2Props = {
   mission: {
     title: "Pioneiros em Cuidados de Saúde no Domícilio em Portugal",
-    description: "Com quase duas décadas de dedicação, a Reabilitar em Casa nasceu de uma visão clara: transformar o domicílio no melhor lugar para cuidar, curar e viver. Somos pioneiros em Portugal na prestação de cuidados de saúde personalizados, acreditando que o bem-estar físico e emocional é indissociável do ambiente familiar.",
+    description: "A Reabilitar em Casa foi pioneira na prestação de Cuidados de Saúde no Domicílio, por ser a primeira empresa no país a celebrar convenções com múltiplos subsistemas públicos e privados, em cuidados especializados, assegurando uma resposta nacional, estruturada às necessidades das pessoas no conforto do(s) seu(s) domicílio(s).\n\n Primeiramente com os Serviços Sociais da Portugal Telecom, depois com a Imprensa Nacional Casa da Moeda, seguiram-se os Serviços Sociais da Caixa Geral de Depósitos, várias Companhias de Seguros, Forças Armadas, ACP e muitas mais.\n\n Somos parceiros de algumas das mais importantes Instituições em Portugal, colaboramos em diversos projetos e mais recentemente a Reabilitar em Casa tornou-se cofundadora de uma associação setorial, a AEPAD- Associação de empresas privadas de Apoio Domiciliário.  Este projeto nasce com o propósito fundamental de dignificar e profissionalizar o setor dos cuidados ao domicílio, estabelecendo novos padrões de excelência e reconhecimento para a área.",
     image: {
       src: "/images/fachada2.jpg",
       alt: "Cuidados de qualidade",
@@ -43,7 +43,7 @@ const defaultProps: About2Props = {
   history: {
     title: "A Nossa História",
     description: [
-     "Somos uma empresa especializada em Cuidados de Saúde no Domicílio, com duas décadas de experiência no setor. A nossa trajetória começou em 2006, com a visão de proporcionar cuidados de excelência em ambiente familiar, onde já acreditávamos que a recuperação de cada indivíduo seria  mais eficaz, comparativamente à institucionalização.\n\n O que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual. Ao longo dos anos, expandimos os nossos serviços para a resposta em Serviços de Apoio Domiciliário (SAD) com o intuito de satisfazer as necessidades dos nossos utentes e famílias, clientes e parceiros.\n\n Somos parceiros de algumas das mais importantes Instituições em Portugal, colaboramos em diversos projetos e mais recentemente a Reabilitar em Casa tornou-se cofundadora de uma associação setorial, a AEPAD- Associação de empresas privadas de Apoio Domiciliário.  Este projeto nasce com o propósito fundamental de dignificar e profissionalizar o setor dos cuidados ao domicílio, estabelecendo novos padrões de excelência e reconhecimento para a área.\n\n O nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo."
+     "Somos uma empresa especializada em Cuidados de Saúde no Domicílio, com duas décadas de experiência no setor. A nossa trajetória começou em 2006, com a visão de proporcionar cuidados de excelência em ambiente familiar, onde já acreditávamos que a recuperação de cada indivíduo seria  mais eficaz, comparativamente à institucionalização.\n\n O que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual. Ao longo dos anos, expandimos os nossos serviços para a resposta em Serviços de Apoio Domiciliário (SAD) com o intuito de satisfazer as necessidades dos nossos utentes e famílias, clientes e parceiros.\n\nO nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo."
     ],
   },
 };
@@ -56,30 +56,19 @@ export default function About2(props: About2Props) {
   return (
     <section className="py-20 bg-white overflow-x-hidden">
       <div className="container mx-auto px-4 max-w-[1140px]">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
+        <div className="grid md:grid-cols-3 gap-8 items-start">
           {/* Mission Column */}
           <div className="space-y-6 animate-fade-in-left overflow-x-hidden">
-            <div>
-              <h6 className="text-primary font-semibold text-sm uppercase tracking-wider mb-6">
-              </h6>
-            </div>
             <div className="space-y-4">
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={mission.image.src}
-                  alt={mission.image.alt}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
               <div>
                 <h4 className="text-xl font-semibold mb-2">{mission.title}</h4>
-                <p className="text-muted-foreground text-lg text-justify leading-[1.2]">{mission.description}</p>
+                <p className="text-muted-foreground text-lg text-justify leading-[1.2] whitespace-pre-line">{mission.description}</p>
               </div>
             </div>
           </div>
 
           {/* Doctors Column */}
-          <div className="animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '150ms' }}>
+          <div className="self-center animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '150ms' }}>
             <div className="overflow-hidden rounded-lg">
               <img
                 src={doctors.image.src}
