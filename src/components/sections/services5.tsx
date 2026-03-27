@@ -15,8 +15,8 @@ interface Services5Props {
 const defaultServices: ServiceCard[] = [
   {
     image: "/images/higiene.jpg",
-    title: "Higiene e Conforto Pessoal",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    title: "Higiene e Conforto\nPessoal",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing eliti.",
     link: "#",
   },
   {
@@ -33,7 +33,7 @@ const defaultServices: ServiceCard[] = [
   },
  {
     image: "/images/pills.png",
-    title: "Assistência Medicamentosa",
+    title: "Assistência\nMedicamentosa",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     link: "#",
   },
@@ -79,7 +79,7 @@ export default function Services5({
                   {/* Content */}
                   <div className="p-6 text-center">
                     {/* Title */}
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors whitespace-pre-line">
                       {service.title}
                     </h3>
 
