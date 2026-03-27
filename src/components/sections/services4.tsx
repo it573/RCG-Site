@@ -99,7 +99,7 @@ export default function Services4({
           href="https://www.youtube.com/watch?v=w6lqLoSOcLI"
           target="_blank"
           rel="noopener noreferrer"
-          className="pointer-events-auto w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 hover:scale-110 transition-all duration-300 animate-fade-in-up shadow-lg"
+          className="pointer-events-auto w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center text-white hover:bg-teal-600 hover:scale-110 transition-all duration-300 animate-fade-in-up shadow-lg"
           style={{ animationDelay: '300ms' }}
         >
           <Play className="w-8 h-8 ml-1" />

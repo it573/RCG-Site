@@ -51,10 +51,10 @@ const defaultLogos: LogoItem[] = [
 
 export default function Reviews3({
   mainImage = {
-    src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/62.jpg",
+    src: "/images/acordos-save.png",
     alt: "Featured image",
   },
-  title = "Featured in",
+  title = "Acordos com:",
   logos = defaultLogos,
 }: Reviews3Props) {
   return (

@@ -14,6 +14,7 @@ export default function EquipamentoHospitalarPage() {
         title="Equipamento Hospitalar"
         description="Uma equipa dedicada de profissionais altamente qualificados ao seu serviço"
         showForm={false}
+        backgroundImage="/images/hero/equipamentos.jpg"
       />
       <Doctors2 />
       <section className="py-20" style={{ background: '#fed7aa' }}>

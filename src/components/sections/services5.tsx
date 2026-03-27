@@ -14,23 +14,41 @@ interface Services5Props {
 
 const defaultServices: ServiceCard[] = [
   {
-    image: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/56.jpg",
-    title: "Orthopedic Services",
+    image: "/images/higiene.jpg",
+    title: "Higiene e Conforto Pessoal",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     link: "#",
   },
   {
-    image: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/57.jpg",
-    title: "Intensive Care",
+    image: "/images/refeicoes.jpg",
+    title: "Preparação e Acompanhamento de Refeições",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     link: "#",
   },
   {
-    image: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/58.jpg",
-    title: "Vision Care",
+    image: "/images/acompanhamentoconsultas.jpg",
+    title: "Acompanhamento a Consultas Médicas",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     link: "#",
   },
+ {
+    image: "/images/pills.png",
+    title: "Assistência Medicamentosa",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    link: "#",
+  },
+  {
+    image: "/images/conversacaocompanhia.jpg",
+    title: "Companhia, Conversação e Estimulação Cognitiva",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    link: "#",
+  },
+  {
+    image: "/images/24h.jpg",
+    title: "Acompanhamento Permanente (até 24 horas)",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    link: "#",
+  },  
 ];
 
 export default function Services5({
@@ -50,11 +68,11 @@ export default function Services5({
               <Link href={service.link} className="block group">
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
                   {/* Image */}
-                  <div className="overflow-hidden">
+                  <div className="overflow-hidden aspect-[4/3]">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 

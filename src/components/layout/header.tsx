@@ -49,13 +49,30 @@ export default function Header() {
             <div className="flex items-center animate-fade-in-right">
               <a
                 href="tel:+351"
-                className="flex items-center gap-2 px-3 md:px-4 py-0.5 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
+                className="hidden sm:flex items-center px-3 md:px-4 py-1 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
+              >
+                <table className="border-collapse">
+                  <tbody>
+                    <tr>
+                      <td className="align-middle pr-2">
+                        <Phone className="w-6 h-6" />
+                      </td>
+                      <td className="align-middle">
+                        <div className="flex flex-col leading-none">
+                          <span className="font-bold">210 136 676</span>
+                          <span className="font-bold">917 861 795</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </a>
+              {/* Mobile: Show just icon */}
+              <a
+                href="tel:+351"
+                className="sm:hidden flex items-center px-3 md:px-4 py-0.5 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
               >
                 <Phone className="w-5 h-5 md:w-6 md:h-6" />
-                <div className="hidden sm:flex flex-col gap-px">
-                  <span className="font-bold">210 136 676</span>
-                  <span className="font-bold">917 861 795</span>
-                </div>
               </a>
             </div>
 

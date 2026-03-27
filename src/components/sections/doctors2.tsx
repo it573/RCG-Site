@@ -11,24 +11,24 @@ interface Doctors2Props {
 
 const defaultDoctors: Doctor[] = [
   {
-    image: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/48.jpg",
-    name: "Dr. Adam Lewis",
-    specialty: "Cardiology",
+    image: "/images/wheel-chair2.png",
+    name: "Cadeira de Rodas",
+    specialty: "",
   },
   {
-    image: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/49.jpg",
-    name: "Dr. John Doe",
-    specialty: "Neurology",
+    image: "/images/beds.jpg",
+    name: "Camas Articuladas",
+    specialty: "",
   },
   {
-    image: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/50.jpg",
-    name: "Dr. Mike Corp",
-    specialty: "Urology",
+    image: "/images/andarilho.jpg",
+    name: "Auxiliares de Marcha",
+    specialty: "",
   },
 ];
 
 export default function Doctors2({
-  title = "Equipamentos Disponiveis",
+  title = "Equipamentos Disponíveis",
   doctors = defaultDoctors,
 }: Doctors2Props) {
   return (
@@ -42,37 +42,33 @@ export default function Doctors2({
         </div>
 
         {/* Doctors Grid - 3 Columns */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {doctors.map((doctor, columnIndex) => (
-            <div key={columnIndex} className="space-y-8">
-              {defaultDoctors.map((doc, doctorIndex) => (
-                <div
-                  key={`${columnIndex}-${doctorIndex}`}
-                  className="animate-fade-in-up"
-                  style={{ animationDelay: `${(columnIndex * 3 + doctorIndex) * 50}ms` }}
-                >
-                  <div className="flex items-start gap-4">
-                    {/* Doctor Image */}
-                    <div className="flex-shrink-0">
-                      <img
-                        src={doc.image}
-                        alt={doc.name}
-                        className="w-24 h-36 object-cover rounded-lg"
-                      />
-                    </div>
-
-                    {/* Doctor Info */}
-                    <div className="flex-1">
-                      <h5 className="text-lg font-semibold text-foreground mb-1">
-                        {doc.name}
-                      </h5>
-                      <p className="text-muted-foreground">
-                        {doc.specialty}
-                      </p>
-                    </div>
-                  </div>
+        <div className="grid md:grid-cols-3 gap-16">
+          {doctors.map((doc, index) => (
+            <div
+              key={index}
+              className="animate-fade-in-up border-2 border-primary rounded-2xl p-8"
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              <div className="flex flex-col items-center gap-4 overflow-hidden">
+                {/* Doctor Image */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={doc.image}
+                    alt={doc.name}
+                    className="w-56 h-72 object-cover rounded-lg"
+                  />
                 </div>
-              ))}
+
+                {/* Doctor Info */}
+                <div className="text-center">
+                  <h5 className="text-lg font-semibold text-foreground mb-1">
+                    {doc.name}
+                  </h5>
+                  <p className="text-muted-foreground">
+                    {doc.specialty}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

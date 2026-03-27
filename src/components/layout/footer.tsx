@@ -154,9 +154,9 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8 mt-8">
           <div className="text-center text-sm text-white/80">
             <p>
-              ©2004 Reabilitar em Casa | Prestação de Cuidados de Saúde | Todos os direitos reservados
+              ©2026 Reabilitar em Casa | Prestação de Cuidados de Saúde | Todos os direitos reservados
               <br />
-              Powered by Responsive4 Ltd
+              Powered by <a href="https://responsive4.com/" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-white transition-colors">Responsive4 Ltd</a>
             </p>
           </div>
         </div>

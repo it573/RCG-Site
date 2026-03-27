@@ -14,6 +14,7 @@ export default function ApoioDomiciliarioPage() {
         title="Apoio Domiciliário"
         description="Proporcionamos cuidados de saúde personalizados no conforto do seu lar, com uma equipa dedicada e disponível 24 horas por dia"
         showForm={false}
+        backgroundImage="/images/hero/caregiver.png"
       />
       <Services5 />
       <section className="py-20" style={{ background: '#fed7aa' }}>

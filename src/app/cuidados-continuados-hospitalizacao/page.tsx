@@ -15,6 +15,7 @@ export default function CuidadosContinuadosHospitalizacaoPage() {
         title="Cuidados Continuados e Hospitalização"
         description="Cuidados especializados de longa duração e hospitalização ao domicílio com equipa médica disponível 24 horas"
         showForm={false}
+        backgroundImage="/images/hero/hospital.jpg"
       />
       <Service2 />
       <Service2Inverted />

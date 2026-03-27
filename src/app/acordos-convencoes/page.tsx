@@ -14,6 +14,7 @@ export default function AcordosConvencoesPage() {
         title="Acordos e Convenções"
         description="Colaboramos com as principais entidades de saúde para proporcionar os melhores cuidados aos nossos doentes"
         showForm={false}
+        backgroundImage="/images/hero/convencoes.jpg"
       />
       <Reviews3 />
       <section className="py-20 overflow-x-hidden" style={{ background: '#fed7aa' }}>
