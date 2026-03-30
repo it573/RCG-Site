@@ -3,6 +3,7 @@ import WhyChooseUs from "@/components/sections/why-choose-us";
 import AppointmentForm from "@/components/forms/appointment-form";
 import Services3 from "@/components/sections/service3";
 import ServiceContent from "@/components/sections/service-content";
+import SynlabDeals from "@/components/sections/synlabdeals";
 
 export const metadata = {
   title: "Análises Clínicas - RCG",
@@ -31,15 +32,14 @@ export default function AnalisesClinicasPage() {
           
           {
             title: "",
-            content: `A Reabilitar em Casa continua em expansão e, em 2026, coloca ao serviço dos seus clientes, em Carcavelos, um posto de colheitas de Análises Clínicas, em parceria com a Synlab, laboratório líder europeu em serviços de laboratório médico e diagnósticos clínicos.
-
-Independentemente do seu subsistema pode fazer as suas análises clínicas no nosso posto de colheitas (Carcavelos) ou no conforto do seu lar.
-
+            content: `A Reabilitar em Casa continua em expansão e, em 2026, coloca ao serviço dos seus clientes, em Carcavelos, um posto de colheitas de Análises Clínicas, em parceria com a Synlab, laboratório líder europeu em serviços de laboratório médico e diagnósticos clínicos.<br><br>
+Independentemente do seu <a href="/synlab-acordos" class="text-primary hover:underline font-semibold">subsistema de saúde</a>, pode fazer as suas análises clínicas no nosso posto de colheitas (Carcavelos) ou no conforto do seu lar.<br><br>
 Para marcar as suas Análises Clínicas ou o seu check-up pode obter mais informações sobre os nossos perfis de análises clínicas, contacte-nos.`
           },
         ]}
       />
       <Services3 />
+      <SynlabDeals />
       <section className="py-20" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">

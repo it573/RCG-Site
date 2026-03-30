@@ -45,7 +45,7 @@ export default function ServiceContent({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 mb-12 items-center">
           {/* Top row spanning all columns */}
           <div className="lg:col-span-3 text-center">
-            <h2 className="text-4xl md:text-5xl">Análises Clínicas com Acordos</h2>
+            <h2 className="text-4xl md:text-5xl">Acordos e Convenções</h2>
           </div>
 
           {image && (
@@ -72,9 +72,10 @@ export default function ServiceContent({
                 {section.title && (
                   <Heading as="h2" className="mb-8 text-4xl md:text-5xl font-normal">{section.title}</Heading>
                 )}
-                <p className="text-muted-foreground text-justify whitespace-pre-line">
-                  {section.content}
-                </p>
+                <p
+                  className="text-muted-foreground text-justify"
+                  dangerouslySetInnerHTML={{ __html: section.content }}
+                />
               </div>
             ))}
           </div>
