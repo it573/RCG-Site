@@ -31,11 +31,11 @@ export default function AnalisesClinicasPage() {
           
           {
             title: "",
-            content: `A Reabilitar em Casa continua em expansão e, em 2026, coloca ao serviço dos seus clientes, em Carcavelos, um posto de colheitas de Análises Clínicas, em parceria com a Synlab, laboratório líder europeu em serviços de laboratório médico e diagnósticos clínicos.<br><br>
-Independentemente do seu subsistema pode fazer as suas análises clínicas <strong>no nosso posto de colheitas (Carcavelos)</strong> ou <strong>no conforto do seu lar</strong>.<br>
-<br/>
-Para marcar as suas Análises Clínicas ou o seu check-up pode obter mais informações sobre os nossos perfis de análises clínicas, contacte-nos.
-`
+            content: `A Reabilitar em Casa continua em expansão e, em 2026, coloca ao serviço dos seus clientes, em Carcavelos, um posto de colheitas de Análises Clínicas, em parceria com a Synlab, laboratório líder europeu em serviços de laboratório médico e diagnósticos clínicos.
+
+Independentemente do seu subsistema pode fazer as suas análises clínicas no nosso posto de colheitas (Carcavelos) ou no conforto do seu lar.
+
+Para marcar as suas Análises Clínicas ou o seu check-up pode obter mais informações sobre os nossos perfis de análises clínicas, contacte-nos.`
           },
         ]}
       />

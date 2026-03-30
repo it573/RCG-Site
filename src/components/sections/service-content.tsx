@@ -72,10 +72,9 @@ export default function ServiceContent({
                 {section.title && (
                   <Heading as="h2" className="mb-8 text-4xl md:text-5xl font-normal">{section.title}</Heading>
                 )}
-                <p
-                  className="text-muted-foreground text-justify"
-                  dangerouslySetInnerHTML={{ __html: section.content }}
-                />
+                <p className="text-muted-foreground text-justify whitespace-pre-line">
+                  {section.content}
+                </p>
               </div>
             ))}
           </div>

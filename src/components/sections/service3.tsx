@@ -90,7 +90,7 @@ export default function Service3({
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 animate-fade-in-up">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up">
             {serviceData.map((service, index) => {
               return (
                 <div
