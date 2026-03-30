@@ -125,21 +125,21 @@ export default function Footer() {
         {/* Gallery Section */}
         <div className="flex flex-wrap justify-center gap-6 my-8">
           <Image
-            src="https://reabilitar-em-casa.com/wp-content/uploads/2018/07/ERS_footer_com_licenca.png"
+            src="/images/ers.png"
             alt="ERS"
             width={201}
             height={164}
             className="h-auto max-w-[201px]"
           />
           <Image
-            src="https://reabilitar-em-casa.com/wp-content/uploads/2020/01/ScorePME2019-1.jpg"
+            src="/images/scorepme.jpg"
             alt="ScorePME"
             width={201}
             height={164}
             className="h-auto max-w-[201px]"
           />
           <Image
-            src="https://reabilitar-em-casa.com/wp-content/uploads/2018/07/IGFSS3_footer_com_licenca.png"
+            src="/images/ss.png"
             alt="Segurança Social"
             width={201}
             height={164}

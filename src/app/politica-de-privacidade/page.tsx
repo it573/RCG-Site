@@ -8,8 +8,8 @@ export default function PoliticaPrivacidadePage() {
             <p>&nbsp;</p>
             <p>
               Este documento estabelece a Política de Privacidade da{' '}
-              <strong>RCG – Reabilitar em Casa, Lda</strong>, com morada em Lagoas Park Oeiras, Edif.7, Piso 1
-              Sul, 2740-244 Porto Salvo, contribuinte fiscal número 508756545, doravante identificada como "
+              <strong>RCG – Reabilitar em Casa, Lda</strong>, com morada em Rua Itália, nº1, Piso 1, Escritório 6
+              , 2775-407 Carcavelos, contribuinte fiscal número 508756545, doravante identificada como "
               <strong>RCG</strong>", como responsável pelo tratamento de dados pessoais.
             </p>
 

@@ -6,6 +6,7 @@ import { ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./mobile-menu";
 
 const menuItems = [
+  { label: "Análises Clínicas", href: "/analises-clinicas" },
   {
     label: "Institucional",
     href: "#",
@@ -48,12 +49,16 @@ export default function Navigation() {
               <Link
                 href={item.href}
                 className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
-                  item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
+                  item.label === "Análises Clínicas" || item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
                     ? "whitespace-normal leading-tight"
                     : "whitespace-nowrap"
                 }`}
               >
-                {item.label === "Apoio Domiciliário" ? (
+                {item.label === "Análises Clínicas" ? (
+                  <>
+                    Análises<br />Clínicas
+                  </>
+                ) : item.label === "Apoio Domiciliário" ? (
                   <>
                     Apoio<br />Domiciliário
                   </>
@@ -122,12 +127,16 @@ export default function Navigation() {
               <Link
                 href={item.href}
                 className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
-                  item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
+                  item.label === "Análises Clínicas" || item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
                     ? "whitespace-normal leading-tight"
                     : "whitespace-nowrap"
                 }`}
               >
-                {item.label === "Apoio Domiciliário" ? (
+                {item.label === "Análises Clínicas" ? (
+                  <>
+                    Análises<br />Clínicas
+                  </>
+                ) : item.label === "Apoio Domiciliário" ? (
                   <>
                     Apoio<br />Domiciliário
                   </>
