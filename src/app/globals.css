@@ -120,8 +120,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Default body paragraph text size */
+  p {
+    @apply text-xl;
+  }
+
+  /* Smooth scroll offset for anchor links */
+  [id] {
+    scroll-margin-top: 80px;
   }
 }
 

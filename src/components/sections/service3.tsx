@@ -84,7 +84,7 @@ export default function Service3({
               </h1>
 
               {/* Description */}
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 {description}
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function Service3({
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Title */}
-                  <h5 className="text-foreground font-semibold mb-2">
+                  <h5 className="text-[25px] text-foreground font-semibold mb-2 leading-[1.125]">
                     <a
                       href="#"
                       className="hover:text-primary transition-colors"
@@ -109,7 +109,7 @@ export default function Service3({
                   </h5>
 
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-xl text-muted-foreground">
                     {service.description}
                   </p>
                 </div>

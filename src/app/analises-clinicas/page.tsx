@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Hero from "@/components/sections/hero";
 import WhyChooseUs from "@/components/sections/why-choose-us";
 import AppointmentForm from "@/components/forms/appointment-form";
@@ -5,12 +8,76 @@ import Services3 from "@/components/sections/service3";
 import ServiceContent from "@/components/sections/service-content";
 import SynlabDeals from "@/components/sections/synlabdeals";
 
-export const metadata = {
-  title: "Análises Clínicas - RCG",
-  description: "Serviços de análises clínicas ao domicílio com rigor e rapidez",
-};
-
 export default function AnalisesClinicasPage() {
+  useEffect(() => {
+    const smoothScrollToElement = (element: Element, offset = 80) => {
+      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1500; // 1.5 seconds for smooth animation
+      let start: number | null = null;
+
+      const animation = (currentTime: number) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+
+        // Linear - constant speed
+        const ease = progress;
+
+        window.scrollTo(0, startPosition + distance * ease);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+
+      requestAnimationFrame(animation);
+    };
+
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            smoothScrollToElement(element);
+          }, 100);
+        }
+      }
+    };
+
+    // Handle initial load
+    handleHashChange();
+
+    // Handle hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Add click handlers to anchor links
+    const handleClick = (e: Event) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a[href^="#"]');
+      if (anchor) {
+        e.preventDefault();
+        const href = anchor.getAttribute('href');
+        if (href) {
+          const element = document.querySelector(href);
+          if (element) {
+            smoothScrollToElement(element);
+            window.history.pushState(null, '', href);
+          }
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClick);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
+
   return (
     <>
       <Hero
@@ -29,17 +96,19 @@ export default function AnalisesClinicasPage() {
           height: 900
         }}
         sections={[
-          
+
           {
             title: "",
             content: `A Reabilitar em Casa continua em expansão e, em 2026, coloca ao serviço dos seus clientes, em Carcavelos, um posto de colheitas de Análises Clínicas, em parceria com a Synlab, laboratório líder europeu em serviços de laboratório médico e diagnósticos clínicos.<br><br>
-Independentemente do seu <a href="/synlab-acordos" class="text-primary hover:underline font-semibold">subsistema de saúde</a>, pode fazer as suas análises clínicas no nosso posto de colheitas (Carcavelos) ou no conforto do seu lar.<br><br>
+Independentemente do seu <a href="#acordos" class="text-primary hover:underline font-semibold">subsistema de saúde</a>, pode fazer as suas análises clínicas no nosso posto de colheitas (Carcavelos) ou no conforto do seu lar.<br><br>
 Para marcar as suas Análises Clínicas ou o seu check-up pode obter mais informações sobre os nossos perfis de análises clínicas, contacte-nos.`
           },
         ]}
       />
       <Services3 />
-      <SynlabDeals />
+      <div id="acordos">
+        <SynlabDeals />
+      </div>
       <section className="py-20" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
