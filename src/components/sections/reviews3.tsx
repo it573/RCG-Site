@@ -117,7 +117,7 @@ export default function Reviews3({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <section className="py-20 bg-white overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Main Image */}
           <div className="animate-fade-in-left overflow-x-hidden">

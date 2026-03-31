@@ -56,7 +56,7 @@ export default function Services5({
 }: Services5Props) {
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div

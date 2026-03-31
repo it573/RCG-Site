@@ -33,7 +33,7 @@ export default function Doctors2({
 }: Doctors2Props) {
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         {/* Section Title */}
         <div className="text-center mb-12 animate-fade-in-up">
           <h3 className="text-3xl font-bold text-foreground">

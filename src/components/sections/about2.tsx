@@ -55,7 +55,7 @@ export default function About2(props: About2Props) {
 
   return (
     <section className="py-20 bg-white overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="grid md:grid-cols-3 gap-8 items-start">
           {/* History Column */}
           <div className="space-y-6 animate-fade-in-left overflow-x-hidden">

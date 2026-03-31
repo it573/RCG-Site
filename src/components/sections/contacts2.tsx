@@ -50,7 +50,7 @@ export default function Contacts2({
 }: Contacts2Props) {
   return (
     <section className="py-20 bg-white overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Column - Contact Info & Form */}
           <div className="space-y-8">

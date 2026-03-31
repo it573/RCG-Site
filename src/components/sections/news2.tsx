@@ -77,7 +77,7 @@ export default function News2({
 }: News2Props) {
   return (
     <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="text-center mb-12 space-y-4">
           {/* <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm">
             {badge}

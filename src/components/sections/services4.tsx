@@ -36,7 +36,7 @@ export default function Services4({
 }: Services4Props) {
   return (
     <section className="py-20 bg-white relative">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="grid md:grid-cols-2 gap-12 items-stretch">
           {/* Left Column - Programs & Services */}
           <div className="relative min-h-[600px] flex flex-col animate-fade-in-left">

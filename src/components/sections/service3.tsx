@@ -58,7 +58,7 @@ export default function Service3({
 
       {/* White overlay with 60% opacity */}
       <div className="absolute inset-0 bg-white/60 pointer-events-none" style={{ zIndex: -5 }} />
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="grid md:grid-cols-[25%_75%] gap-20">
           {/* Left Subsection - Image */}
           <div className="hidden md:flex items-center justify-center h-full">

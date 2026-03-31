@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Navigation from "./navigation";
 import { Phone } from "lucide-react";
@@ -17,21 +17,19 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed z-50" style={{ top: '25px', left: '25px', right: '25px', height: '64px' }}>
-      <div className="mx-auto px-4 max-w-[1140px] bg-white/75 backdrop-blur-md h-full">
+    <header className="fixed z-50 w-full" style={{ top: '25px', left: 0, right: 0, height: '64px' }}>
+      <div className="mx-auto px-4 max-w-full md:max-w-[80%] bg-white/75 backdrop-blur-md h-full">
         <div className="flex items-center justify-between py-4 h-full relative">
           {/* Logo - Left */}
           <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10">
             <Link href="/" onClick={handleLogoClick} className="flex items-center">
-                <CldImage
-                    src="RCG_Full_Logo_ Green" // Use this sample image or upload your own via the Media Library
-                    width="160" // Transform the image: auto-crop to square aspect_ratio
-                    height="35"
-                    crop={{
-                        type: 'scale',
-                        source: true
-                    }}
+                <Image
+                    src="/images/logo-transparent.png"
                     alt="RCG Logo"
+                    width={320}
+                    height={70}
+                    className="w-[240px] h-auto md:w-[320px]"
+                    priority
                 />
             </Link>
           </div>

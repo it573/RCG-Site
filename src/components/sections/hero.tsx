@@ -222,7 +222,7 @@ export default function Hero({
       {/* Black overlay with 25% opacity */}
       <div className="absolute inset-0 bg-black/22 pointer-events-none" style={{ zIndex: 5 }} />
 
-      <div className={`container mx-auto px-4 max-w-[1140px] relative z-10 h-full flex items-center pb-32 md:pb-20 ${showForm ? 'pt-[280px] md:pt-[220px]' : 'pt-[180px] md:pt-20'}`}>
+      <div className={`container mx-auto px-4 max-w-[80%] relative z-10 h-full flex items-center pb-32 md:pb-20 ${showForm ? 'pt-[280px] md:pt-[220px]' : 'pt-[180px] md:pt-20'}`}>
         <div className="w-full">
           <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
             <div className="space-y-6 max-w-2xl animate-fade-in-left-double">

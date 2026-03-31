@@ -38,7 +38,7 @@ export default function Navigation() {
     <>
       {/* Desktop Navigation - Normal */}
       <nav className="hidden xl:flex items-center animate-fade-in-down">
-        <ul className="flex items-center gap-[2.66rem]">
+        <ul className="flex items-center gap-[2.5vw]">
           {menuItems.map((item) => (
             <li
               key={item.label}
@@ -116,7 +116,7 @@ export default function Navigation() {
 
       {/* Desktop Navigation - Compact */}
       <nav className="hidden lg:flex xl:hidden items-center animate-fade-in-down">
-        <ul className="flex items-center gap-5">
+        <ul className="flex items-center gap-[2vw]">
           {menuItems.map((item) => (
             <li
               key={item.label}

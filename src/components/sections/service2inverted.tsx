@@ -25,7 +25,7 @@ export default function Service2Inverted({
 }: Service2InvertedProps) {
   return (
     <section className="py-20 bg-primary/85 overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-[1140px]">
+      <div className="container mx-auto px-4 max-w-[80%]">
         <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white">
           {/* Title - Mobile Top, Desktop Left */}
           <div className="px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-x-hidden">
