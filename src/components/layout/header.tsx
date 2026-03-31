@@ -35,7 +35,7 @@ export default function Header() {
           </div>
 
           {/* Navigation - Centered on desktop only */}
-          <div className="hidden md:flex flex-1 items-center justify-center absolute left-1/2 transform -translate-x-1/2 pointer-events-none">
+          <div className="hidden min-[1720px]:flex flex-1 items-center justify-center absolute left-1/2 transform -translate-x-1/2 ml-[25px] pointer-events-none">
             <div className="pointer-events-auto">
               <Navigation />
             </div>
@@ -75,7 +75,7 @@ export default function Header() {
             </div>
 
             {/* Navigation - Shows mobile menu button on mobile */}
-            <div className="md:hidden">
+            <div className="max-[1719px]:flex hidden">
               <Navigation />
             </div>
           </div>
