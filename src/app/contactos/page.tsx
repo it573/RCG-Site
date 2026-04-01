@@ -11,7 +11,7 @@ export default function ContactosPage() {
     <>
       <Hero
         title="Contactos"
-        description="Estamos disponíveis para responder a todas as suas questões e fornecer-lhe as informações de que necessita sobre os nossos cuidados de saúde"
+        description="Estamos disponíveis para responder a todas as suas questões e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos."
         showForm={false}
         backgroundImage="/images/hero/contacts.png"
       />

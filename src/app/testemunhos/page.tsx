@@ -51,14 +51,9 @@ export default function TestemunhosPage() {
           {/* Content Area */}
           <div className="w-full md:w-7/12 mt-10 md:mt-0">
             {/* Header */}
-            <div className="flex flex-wrap md:flex-nowrap items-center justify-between mb-5 md:mb-7">
-              <div className="flex items-center">
-                <img
-                  className="mr-3 md:mr-5 inline-block w-12 h-12 md:w-14 md:h-14"
-                  src="https://livrodeelogios.com/frontend/images/elogiou-icon.png"
-                  alt="icon"
-                />
-                <h3 className="m-0 text-base lg:text-2xl font-bold text-black">
+            <div className="mb-5 md:mb-7">
+              <div className="flex flex-col items-center gap-0">
+                <h3 className="m-0 text-base lg:text-2xl font-bold text-black leading-none p-0">
                   Veja quem já nos elogiou
                   <small className="text-base font-normal"> (mais recentes de {TOTAL_COUNT})</small>
                 </h3>

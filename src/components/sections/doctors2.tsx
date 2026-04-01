@@ -16,19 +16,25 @@ const defaultDoctors: Doctor[] = [
     specialty: "",
   },
   {
-    image: "/images/beds.jpg",
+    image: "/images/bended-bed.jpg",
     name: "Camas Articuladas",
     specialty: "",
   },
   {
     image: "/images/andarilho.jpg",
-    name: "Auxiliares de Marcha",
+    name: "Andarilho",
     specialty: "",
   },
+  {
+    image: "/images/bengala-3.jpg",
+    name: "Bengala Tripé",
+    specialty: "",
+  },
+
 ];
 
 export default function Doctors2({
-  title = "Equipamentos Disponíveis",
+  title = "Ajudas Técnicas Disponíveis",
   doctors = defaultDoctors,
 }: Doctors2Props) {
   return (
@@ -42,12 +48,16 @@ export default function Doctors2({
         </div>
 
         {/* Doctors Grid - 3 Columns */}
-        <div className="grid md:grid-cols-3 gap-16">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-16">
           {doctors.map((doc, index) => (
             <div
               key={index}
               className="animate-fade-in-up border-2 border-primary rounded-2xl px-2 py-4"
-              style={{ animationDelay: `${index * 50}ms` }}
+              style={{
+                animationDelay: `${index * 50}ms`,
+                minWidth: '280px',
+                maxWidth: '320px'
+              }}
             >
               <div className="flex flex-col items-center gap-4 overflow-hidden">
                 {/* Doctor Image */}

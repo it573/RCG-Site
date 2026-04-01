@@ -22,7 +22,7 @@ const defaultServices: ServiceBox[] = [
 ];
 
 export default function Service21({
-  title = "Apoio Domiciliário, entidade licenciada pela Segurança Social (41/2023).",
+  title = "Apoio Domiciliário, entidade licenciada pela Segurança Social.",
   services = defaultServices,
 }: Service2Props) {
   return (
@@ -32,14 +32,14 @@ export default function Service21({
           {/* Left Column - Title */}
           <div className="px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
             <h2 className="text-3xl font-bold text-foreground">
-              {title === "Apoio Domiciliário, entidade licenciada pela Segurança Social (41/2023)." ? (
+              {title === "Apoio Domiciliário, entidade licenciada pela Segurança Social." ? (
                 <>
                   <div className="md:hidden">
                     Apoio<br />Domiciliário
                   </div>
                   <div className="hidden md:block">
                     Apoio Domiciliário<br />
-                    <span className="text-lg font-semibold">Entidade licenciada pela Segurança Social (N.º 41/2023)</span>
+                    <span className="text-lg font-semibold">Entidade licenciada pela Segurança Social</span>
                   </div>
                 </>
               ) : (

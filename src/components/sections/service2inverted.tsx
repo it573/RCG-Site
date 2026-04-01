@@ -11,7 +11,7 @@ interface Service2InvertedProps {
 const defaultServices: ServiceBox[] = [
   {
     title: "Uma Nova Era. Uma Nova Vida. Uma Nova Forma de Cuidar",
-    description: "A Hospitalização Domiciliária consiste num modelo de assistência hospitalar do doente agudo, que se caracteriza pela prestação de cuidados diferenciados no pós alta hospitalar.\n\nDestina-se a doentes agudos com patologia de complexidade elevada mas com possibilidade de internamento hospitalar no domicílio.\n\nApós a avaliação do quadro do paciente para analisar a sua complexidade, é estabelecido um plano terapêutico a ser cumprido pela equipa multidisciplinar.\n\nAs complexidades variam entre: alta, média e baixa complexidade (com ou sem ventilação)",
+    description: "A Hospitalização Domiciliária consiste num modelo de assistência hospitalar do doente agudo, que se caracteriza pela prestação de cuidados diferenciados no pós alta hospitalar.\n\nDestina-se a doentes agudos com patologia de complexidade elevada mas com possibilidade de internamento hospitalar no domicílio.\n\nApós a avaliação do quadro do paciente para analisar a sua complexidade, é estabelecido um plano terapêutico a ser cumprido pela equipa multidisciplinar. As complexidades variam entre: alta, média e baixa complexidade (com ou sem ventilação).\n\nHumanizamos os cuidados, oferecendo tratamento diferenciado de nível hospitalar, no conforto do seu lar.",
   },
 ];
 

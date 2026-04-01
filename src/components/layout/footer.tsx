@@ -22,39 +22,32 @@ export default function Footer() {
                 <Link href="/quem-somos" className="block hover:text-white/80 transition-colors">
                   Quem Somos
                 </Link>
+                <span className="block hover:text-white/80 transition-colors">
+                  Notícias
+                </span>
                 <Link href="/testemunhos" className="block hover:text-white/80 transition-colors">
                   Testemunhos
                 </Link>
-                <Link href="/contactos" className="block hover:text-white/80 transition-colors">
-                  Contactos
-                </Link>
-              </div>
-              <div className="space-y-2">
                 <Link href="/politica-de-privacidade" className="block hover:text-white/80 transition-colors">
                   Política de Privacidade
                 </Link>
+                <Link href="/cookies" className="block hover:text-white/80 transition-colors">
+                  Cookies
+                </Link>
+                <Link href="/ral" className="block hover:text-white/80 transition-colors">
+                  RAL
+                </Link>
+              </div>
+              <div className="space-y-2">
                 <Link href="/perguntas-frequentes" className="block hover:text-white/80 transition-colors">
                   Perguntas Frequentes
+                </Link>
+                <Link href="https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa" target="_blank" rel="noopener noreferrer" className="block hover:text-white/80 transition-colors">
+                  Livro de Elogios
                 </Link>
                 <Link href="https://www.livroreclamacoes.pt/inicio/" className="block hover:text-white/80 transition-colors">
                   Livro de Reclamações
                 </Link>
-                <div className="mt-4">
-                  <a
-                    href="https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block"
-                  >
-                    <Image
-                      src="https://livrodeelogios.com/assets/back-logo.svg"
-                      alt="Livro de Elogios"
-                      width={120}
-                      height={40}
-                      className="h-auto"
-                    />
-                  </a>
-                </div>
               </div>
             </div>
           </div>

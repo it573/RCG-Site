@@ -12,7 +12,7 @@ export default function EquipamentoHospitalarPage() {
     <>
       <Hero
         title="Equipamento Hospitalar"
-        description="Uma equipa dedicada de profissionais altamente qualificados ao seu serviço"
+        description="Disponibilizamos produtos de apoio, ajudas técnicas, com entrega ao Domicílio, em regime de Aluguer ou Venda.  Consulte-nos para mais Informações."
         showForm={false}
         backgroundImage="/images/hero/equipamentos.jpg"
       />

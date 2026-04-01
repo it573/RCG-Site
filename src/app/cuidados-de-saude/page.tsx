@@ -14,7 +14,7 @@ export default function CuidadosDeSaudePage() {
         title="Cuidados de Saúde"
         description="Proporcionamos cuidados de saúde personalizados e de excelência, com cobertura nacional."
         showForm={false}
-        backgroundImage="/images/hero/healthcare.png"
+        backgroundImage="/images/hero/pediatria.jpg"
       />
       <Services51 />
       <section className="py-20" style={{ background: '#fed7aa' }}>

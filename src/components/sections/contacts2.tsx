@@ -5,6 +5,7 @@ interface ContactItem {
   icon: React.ReactNode;
   text: string;
   href?: string;
+  note?: string;
 }
 
 interface Contacts2Props {
@@ -20,8 +21,9 @@ interface Contacts2Props {
 const defaultContactItems: ContactItem[] = [
   {
     icon: <Phone className="w-5 h-5" />,
-    text: "+351 210 136 676",
+    text: "210 136 676 / 917 861 795",
     href: "tel:+351210136760",
+    note: "chamada para rede fixa e móvel nacional",
   },
   {
     icon: <Mail className="w-5 h-5" />,
@@ -41,7 +43,7 @@ const defaultContactItems: ContactItem[] = [
 
 export default function Contacts2({
   subtitle = "Entre em Contacto",
-  description = "Estamos disponíveis para responder a todas as suas questões e fornecer-lhe as informações de que necessita sobre os nossos cuidados de saúde. Não hesite em contactar-nos.",
+  description = "A nossa eqiipa está disponível para responder às suas dúvidas e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos.",
   contactItems = defaultContactItems,
   image = {
     src: "/images/google-earth.png",
@@ -56,7 +58,7 @@ export default function Contacts2({
           <div className="space-y-8">
             {/* Subtitle */}
             <div className="animate-fade-in-left overflow-x-hidden">
-              <h6 className="text-primary font-semibold text-sm uppercase tracking-wider">
+              <h6 className="text-primary font-semibold text-2xl uppercase tracking-wider">
                 {subtitle}
               </h6>
             </div>
@@ -85,6 +87,11 @@ export default function Contacts2({
                       </a>
                     ) : (
                       <span className="text-foreground whitespace-pre-line">{item.text}</span>
+                    )}
+                    {item.note && (
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {item.note}
+                      </p>
                     )}
                   </div>
                 </div>

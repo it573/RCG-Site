@@ -10,7 +10,7 @@ export default function RecrutamentoPage() {
     <>
       <Hero
         title="Recrutamento"
-        description="Estamos sempre à procura de profissionais dedicados que queiram fazer parte da nossa missão de proporcionar cuidados de saúde de excelência"
+        description="Faça parte da nossa equipa. Procuramos profissionais dedicados, que queiram fazer parte da nossa missão de proporcionar Cuidados de Saúde de Excelência."
         showForm={false}
         backgroundImage="/images/hero-recruitment.png"
       />

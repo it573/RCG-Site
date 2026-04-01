@@ -33,7 +33,7 @@ const defaultServices: ServiceCard[] = [
   },
  {
     image: "/images/enfermagem.jpg",
-    title: "Enfermagem e Assistência Medicamentosa",
+    title: "Enfermagem e Administração de Medicação",
     description: "Cuidados de Enfermagem Geral e Especializados. Administração, Gestão e Assistência Medicamentosa.",
     link: "#",
   },

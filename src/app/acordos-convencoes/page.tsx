@@ -1,5 +1,5 @@
 import Hero from "@/components/sections/hero";
-import Reviews3 from "@/components/sections/reviews3";
+import RCGDeals from "@/components/sections/rcgdeals";
 import AppointmentForm from "@/components/forms/appointment-form";
 
 export const metadata = {
@@ -12,11 +12,11 @@ export default function AcordosConvencoesPage() {
     <>
       <Hero
         title="Acordos e Convenções"
-        description="Colaboramos com as principais entidades de saúde para proporcionar os melhores cuidados aos nossos doentes"
+        description="Colaboramos com as principais entidades de saúde para proporcionar os melhores cuidados."
         showForm={false}
-        backgroundImage="/images/hero/convencoes.jpg"
+        backgroundImage="/images/hero/acordos.jpg"
       />
-      <Reviews3 />
+      <RCGDeals />
       <section className="py-20 overflow-x-hidden" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
