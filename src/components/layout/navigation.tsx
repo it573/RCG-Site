@@ -6,16 +6,6 @@ import { ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./mobile-menu";
 
 const menuItems = [
-  { label: "Análises Clínicas", href: "/analises-clinicas" },
-  {
-    label: "Institucional",
-    href: "#",
-    children: [
-      { label: "Quem Somos", href: "/quem-somos" },
-      { label: "Recrutamento", href: "/recrutamento" },
-      { label: "Contactos", href: "/contactos" },
-    ],
-  },
   { label: "Cuidados de Saúde", href: "/cuidados-de-saude" },
   {
     label: "Apoio Domiciliário",
@@ -26,14 +16,25 @@ const menuItems = [
       { label: "Hospitalização Domiciliária", href: "/cuidados-continuados-hospitalizacao" },
     ],
   },
-  { label: "Acordos e Convenções", href: "/acordos-convencoes" },
+  { label: "Análises Clínicas", href: "/analises-clinicas" },
+
   { label: "Equipamento Hospitalar", href: "/equipamento-hospitalar" },
+  { label: "Acordos e Convenções", href: "/acordos-convencoes" },
+  {
+    label: "Institucional",
+    href: "#",
+    children: [
+      { label: "Quem Somos", href: "/quem-somos" },
+      { label: "Recrutamento", href: "/recrutamento" },
+      { label: "Contactos", href: "/contactos" },
+    ],
+  },
 ];
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
+  
   return (
     <>
       {/* Desktop Navigation - Normal */}
