@@ -24,14 +24,14 @@ export default function Service2Inverted({
       <div className="container mx-auto px-2 max-w-[80%]">
         <div className="grid md:grid-cols-[35%_65%] divide-y md:divide-y-0 md:divide-x divide-white">
           {/* Title Column */}
-          <div className="px-4 md:px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
-            <h2 className="text-5xl font-bold text-white">
+          <div className="px-2 md:px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
+            <h2 className="text-4xl font-bold text-white">
               {title}
             </h2>
           </div>
 
           {/* Service Column */}
-          <div className="px-4 md:px-8 pt-4 pb-8 md:pt-0 md:pb-0 animate-fade-in-right overflow-hidden" style={{ animationDelay: '100ms' }}>
+          <div className="px-2 md:px-8 pt-4 pb-8 md:pt-0 md:pb-0 animate-fade-in-right overflow-hidden" style={{ animationDelay: '100ms' }}>
             <h4 className="text-2xl font-semibold text-white mb-4">
               {services[0]?.title}
             </h4>
