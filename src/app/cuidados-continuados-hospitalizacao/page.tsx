@@ -5,7 +5,7 @@ import AppointmentForm from "@/components/forms/appointment-form";
 
 export const metadata = {
   title: "Cuidados Continuados e Hospitalização - RCG",
-  description: "Cuidados de saúde continuados e hospitalização ao domicílio",
+  description: "Cuidados de saúde continuados e hospitalização ao domicílio.",
 };
 
 export default function CuidadosContinuadosHospitalizacaoPage() {
@@ -13,7 +13,7 @@ export default function CuidadosContinuadosHospitalizacaoPage() {
     <>
       <Hero
         title="Cuidados Continuados e Hospitalização"
-        description="Cuidados especializados de longa duração e hospitalização ao domicílio com equipa médica disponível 24 horas"
+        description="Cuidados especializados de longa duração e hospitalização ao domicílio com equipa médica disponível 24 horas."
         showForm={false}
         backgroundImage="/images/hero/hospital.jpg"
       />
