@@ -52,8 +52,8 @@ export default function About4({
           section { background: transparent !important; }
         }
       `}</style>
-      <div className="container mx-auto px-4 max-w-[80%] overflow-hidden">
-        <div className="grid md:grid-cols-2 gap-0 md:gap-12 items-center overflow-hidden">
+      <div className="container mx-auto px-4 max-w-[1140px]">
+        <div className="grid md:grid-cols-2 gap-0 md:gap-12 items-center">
           {/* Left Column */}
           <div className="relative min-h-[400px] flex items-center py-12 px-4 md:py-0 md:px-0 md:bg-transparent -mx-4 md:mx-0" style={{ backgroundColor: '#fed7aa' }}>
             {/* Background image */}
