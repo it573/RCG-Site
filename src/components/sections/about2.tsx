@@ -54,11 +54,11 @@ export default function About2(props: About2Props) {
   const history = props.history ?? defaultProps.history!;
 
   return (
-    <section className="py-20 bg-white overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-[80%]">
-        <div className="grid md:grid-cols-3 gap-8 items-start">
+    <section className="py-20 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 max-w-[80%] overflow-hidden">
+        <div className="grid md:grid-cols-3 gap-8 items-start overflow-hidden">
           {/* History Column */}
-          <div className="space-y-6 animate-fade-in-left overflow-x-hidden">
+          <div className="space-y-6 animate-fade-in-left overflow-hidden">
             <div>
               <Heading as="h3">{history.title}</Heading>
             </div>
@@ -72,7 +72,7 @@ export default function About2(props: About2Props) {
           </div>
 
           {/* Doctors Column */}
-          <div className="self-center animate-fade-in-up overflow-x-hidden" style={{ animationDelay: '150ms' }}>
+          <div className="self-center animate-fade-in-up overflow-hidden" style={{ animationDelay: '150ms' }}>
             <div className="overflow-hidden rounded-lg">
               <img
                 src={doctors.image.src}
@@ -83,7 +83,7 @@ export default function About2(props: About2Props) {
           </div>
 
           {/* Mission Column */}
-          <div className="space-y-6 animate-fade-in-right overflow-x-hidden" style={{ animationDelay: '300ms' }}>
+          <div className="space-y-6 animate-fade-in-right overflow-hidden" style={{ animationDelay: '300ms' }}>
             <div className="space-y-4">
               <div>
                 <h4 className="text-xl font-semibold mb-2">{mission.title}</h4>
