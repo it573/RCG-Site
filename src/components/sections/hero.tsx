@@ -70,11 +70,11 @@ export default function Hero({
   // Determine which video to use based on orientation
   // Wait for orientation detection before deciding
   // Horizontal (landscape): use backgroundVideo
-  // Vertical (portrait): use backgroundVideoMobile
-  const activeVideo = isPortrait === null 
+  // Vertical (portrait): NO VIDEO - use static image instead
+  const activeVideo = isPortrait === null
     ? null // Don't show video until we know the orientation
-    : isPortrait 
-      ? backgroundVideoMobile // Vertical/portrait: use mobile video
+    : isPortrait
+      ? null // Vertical/portrait: NO VIDEO on mobile, always show photo
       : backgroundVideo; // Horizontal/landscape: use desktop video
   
   const isYouTube = activeVideo?.includes('youtube.com') || activeVideo?.includes('youtu.be');

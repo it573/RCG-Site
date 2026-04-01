@@ -34,13 +34,13 @@ const defaultServices: ServiceCard[] = [
  {
     image: "/images/enfermagem.jpg",
     title: "Enfermagem e Administração de Medicação",
-    description: "Cuidados de Enfermagem Geral e Especializados. Administração, Gestão e Assistência Medicamentosa.",
+    description: "Cuidados de Enfermagem geral e especializados. Gestão e assistência na administração de medicação.",
     link: "#",
   },
   {
     image: "/images/nutricionista.jpg",
     title: "Nutrição",
-    description: "O Acompanhamento especializado em nutrição, garante a alimentação variada e equilibrada, condição determinante para uma rápida recuperação.",
+    description: "O acompanhamento especializado em nutrição, garante a alimentação variada e equilibrada, condição determinante para uma rápida recuperação.",
     link: "#",
   },
   {
