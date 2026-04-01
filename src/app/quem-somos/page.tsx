@@ -12,9 +12,9 @@ export default function QuemSomosPage() {
     <>
       <Hero
         title="Quem Somos"
-        description="Cuidados de saúde de excelência ao domicílio, comprometidos com o bem-estar e qualidade de vida dos nossos doentes"
+        description="Cuidados de saúde de excelência ao Domicílio, com cobertura nacional."
         showForm={false}
-        backgroundImage="/images/hero/quem-somos.jpg"
+        backgroundImage="/images/hero/family.jpeg"
       />
       <About2 />
       <About4 />

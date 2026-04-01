@@ -43,7 +43,7 @@ const defaultProps: About2Props = {
   history: {
     title: "A Nossa História",
     description: [
-     "Somos uma empresa especializada em Cuidados de Saúde no Domicílio, com duas décadas de experiência no setor. A nossa trajetória começou em 2006, com a visão de proporcionar cuidados de excelência em ambiente familiar, onde já acreditávamos que a recuperação de cada indivíduo seria  mais eficaz, comparativamente à institucionalização.\n\n O que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual. Ao longo dos anos, expandimos os nossos serviços para a resposta em Serviços de Apoio Domiciliário (SAD) com o intuito de satisfazer as necessidades dos nossos utentes e famílias, clientes e parceiros.\n\nO nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo."
+     "Somos uma empresa especializada em Cuidados de Saúde no Domicílio, com duas décadas de experiência no setor. A nossa trajetória começou em 2006, com a visão de proporcionar cuidados de excelência em ambiente familiar, onde já acreditávamos que a recuperação de cada indivíduo seria  mais eficaz, comparativamente à institucionalização.\n\n O que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual. \n\nAo longo dos anos, expandimos os nossos serviços para a resposta em Serviços de Apoio Domiciliário (SAD) com o intuito de satisfazer as necessidades dos nossos utentes e famílias, clientes e parceiros.\n\nO nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo."
     ],
   },
 };
