@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ServiceBox {
   title: string;
   description: string;
@@ -68,10 +70,14 @@ export default function Service21({
             </p>
             {services[1].image && (
               <div className="mt-4">
-                <img
+                <Image
                   src={services[1].image}
                   alt={services[1].title}
+                  width={300}
+                  height={200}
                   className="w-auto h-auto max-w-full object-contain"
+                  sizes="(max-width: 768px) 100vw, 300px"
+                  loading="lazy"
                 />
               </div>
             )}

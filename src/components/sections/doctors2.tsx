@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Doctor {
   image: string;
   name: string;
@@ -62,10 +64,14 @@ export default function Doctors2({
               <div className="flex flex-col items-center gap-4 overflow-hidden">
                 {/* Doctor Image */}
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     src={doc.image}
                     alt={doc.name}
+                    width={224}
+                    height={288}
                     className="w-56 h-72 object-cover rounded-lg"
+                    sizes="(max-width: 768px) 50vw, 20vw"
+                    loading="lazy"
                   />
                 </div>
 

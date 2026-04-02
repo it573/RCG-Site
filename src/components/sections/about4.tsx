@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Heading from "@/components/ui/heading";
 
 interface Feature {
@@ -61,11 +62,14 @@ export default function About4({
               className="absolute inset-0 rounded-lg overflow-hidden hidden md:block"
               style={{ zIndex: -1 }}
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover object-center"
+                fill
+                className="object-cover object-center"
                 style={{ opacity: 0.7 }}
+                sizes="(max-width: 768px) 0vw, 100vw"
+                loading="lazy"
               />
             </div>
 

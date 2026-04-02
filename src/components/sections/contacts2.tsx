@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import AppointmentForm from "@/components/forms/appointment-form";
 
@@ -107,10 +108,14 @@ export default function Contacts2({
           {/* Right Column - Image */}
           <div className="animate-fade-in-right overflow-x-hidden">
             <div className="overflow-hidden rounded-lg w-2/3 mx-auto">
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
+                width={800}
+                height={600}
                 className="w-full h-auto object-cover"
+                sizes="(max-width: 768px) 66vw, 50vw"
+                loading="lazy"
               />
             </div>
           </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Organization {
   name: string;
   image: string;
@@ -60,10 +62,14 @@ export default function SynlabDeals({
         <div className="grid grid-cols-2 md:grid-cols-7 gap-6 max-w-7xl mx-auto">
           {organizations.map((org) => (
             <div key={org.name} className="aspect-square flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <img
+              <Image
                 src={org.image}
                 alt={org.name}
+                width={200}
+                height={200}
                 className="h-full w-auto object-contain max-w-full"
+                sizes="(max-width: 768px) 50vw, 14vw"
+                loading="lazy"
               />
             </div>
           ))}

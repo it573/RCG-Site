@@ -82,6 +82,7 @@ export default function About2(props: About2Props) {
                 height={600}
                 className="w-full h-auto object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="lazy"
               />
             </div>
           </div>

@@ -121,10 +121,14 @@ export default function Reviews3({
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Main Image */}
           <div className="animate-fade-in-left overflow-x-hidden">
-            <img
+            <Image
               src={mainImage.src}
               alt={mainImage.alt}
+              width={800}
+              height={600}
               className="w-full h-auto rounded-lg"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
             />
           </div>
 
@@ -163,10 +167,14 @@ export default function Reviews3({
                         className="absolute w-full h-full flex items-center justify-center backface-hidden"
                         style={{ backfaceVisibility: 'hidden' }}
                       >
-                        <img
+                        <Image
                           src={logo.src}
                           alt={logo.alt}
+                          width={logo.width}
+                          height={logo.height}
                           className="w-full h-auto object-contain max-h-[80px]"
+                          sizes="(max-width: 768px) 30vw, 15vw"
+                          loading="lazy"
                         />
                       </div>
 
