@@ -25,10 +25,6 @@ const defaultLocations = [
     city: "Faro",
     content: "serviços de saúde no Algarve, especialmente durante a época de verão",
   },
-  {
-    city: "Carcavelos",
-    content: "posto de colheitas de análises clínicas em Carcavelos, em parceria com a Synlab",
-  },
 ];
 
 export default function LocationSeoContent({
