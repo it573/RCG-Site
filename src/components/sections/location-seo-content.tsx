@@ -47,7 +47,7 @@ export default function LocationSeoContent({
           </h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             A RCG proporciona {serviceDescription}. Com cobertura nacional em Portugal continental,
-           我们有 equipas locais em Lisboa, Porto, Braga, Coimbra, Faro e outras cidades, garantindo
+           equipas locais em Lisboa, Porto, Braga, Coimbra, Faro e outras cidades, garantindo
             resposta rápida e profissional onde precisar.
           </p>
 

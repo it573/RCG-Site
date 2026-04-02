@@ -24,16 +24,6 @@ const defaultLocations: Location[] = [
     services: ["Apoio Domiciliário", "Cuidados de Saúde", "Cuidados Continuados"],
   },
   {
-    city: "Carcavelos",
-    region: "Cascais",
-    services: ["Apoio Domiciliário", "Análises Clínicas (Posto de Colheitas)", "Cuidados de Saúde"],
-  },
-  {
-    city: "Cascais",
-    region: "Linha de Cascais",
-    services: ["Apoio Domiciliário", "Cuidados de Saúde", "Fisioterapia"],
-  },
-  {
     city: "Sintra",
     region: "Grande Lisboa",
     services: ["Apoio Domiciliário", "Cuidados de Saúde", "Enfermagem"],
