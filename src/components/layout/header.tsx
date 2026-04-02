@@ -24,11 +24,11 @@ export default function Header() {
           <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10">
             <Link href="/" onClick={handleLogoClick} className="flex items-center">
                 <Image
-                    src="/images/logo-transparent-final-g.png"
+                    src="/images/logo-transparent-inf4.png"
                     alt="RCG Logo"
-                    width={320}
-                    height={70}
-                    className="w-[240px] h-auto md:w-[320px]"
+                    width={272}
+                    height={60}
+                    className="w-[204px] h-auto md:w-[272px]"
                     priority
                 />
             </Link>
