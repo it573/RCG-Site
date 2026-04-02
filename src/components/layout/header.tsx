@@ -30,6 +30,8 @@ export default function Header() {
                     height={77}
                     className="w-[264px] h-auto md:w-[352px]"
                     priority
+                    fetchPriority="high"
+                    quality={90}
                 />
             </Link>
           </div>
