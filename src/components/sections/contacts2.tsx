@@ -43,7 +43,7 @@ const defaultContactItems: ContactItem[] = [
 
 export default function Contacts2({
   subtitle = "Entre em Contacto",
-  description = "A nossa eqiipa está disponível para responder às suas dúvidas e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos.",
+  description = "A nossa equipa está disponível para responder às suas dúvidas e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos.",
   contactItems = defaultContactItems,
   image = {
     src: "/images/google-earth.png",
@@ -58,7 +58,7 @@ export default function Contacts2({
           <div className="space-y-8">
             {/* Subtitle */}
             <div className="animate-fade-in-left overflow-x-hidden">
-              <h6 className="text-primary font-semibold text-2xl uppercase tracking-wider">
+              <h6 className="text-primary font-semibold text-2xl tracking-wider">
                 {subtitle}
               </h6>
             </div>
