@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface ServiceCard {
   image: string;
@@ -69,10 +69,14 @@ export default function Services51({
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
                   {/* Image */}
                   <div className="overflow-hidden aspect-[4/3]">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.title}
+                      width={800}
+                      height={600}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                   </div>
 

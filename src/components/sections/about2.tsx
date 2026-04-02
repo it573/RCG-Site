@@ -1,4 +1,5 @@
 import Heading from "@/components/ui/heading";
+import Image from "next/image";
 
 interface About2Props {
   mission?: {
@@ -74,10 +75,13 @@ export default function About2(props: About2Props) {
           {/* Doctors Column */}
           <div className="self-center animate-fade-in-up overflow-hidden" style={{ animationDelay: '150ms' }}>
             <div className="overflow-hidden rounded-lg">
-              <img
+              <Image
                 src={doctors.image.src}
                 alt={doctors.image.alt}
+                width={800}
+                height={600}
                 className="w-full h-auto object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>

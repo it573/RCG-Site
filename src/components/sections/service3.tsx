@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ServiceItem {
   title: string;
   description: string;
@@ -48,11 +50,13 @@ export default function Service3({
     <section className="relative py-20 overflow-x-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10 w-full h-full">
-        <img
+        <Image
           src={backgroundImage}
           alt="Análises clínicas em laboratório moderno"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectFit: 'cover' }}
+          fill
+          className="object-cover"
+          sizes="100vw"
+          quality={85}
         />
       </div>
 
@@ -62,10 +66,14 @@ export default function Service3({
         <div className="grid md:grid-cols-[25%_75%] gap-20">
           {/* Left Subsection - Image */}
           <div className="hidden md:flex items-center justify-center h-full">
-            <img
+            <Image
               src="/images/synlab-window.png"
               alt="Synlab Window"
+              width={400}
+              height={600}
               className="w-full h-auto rounded-lg object-cover"
+              sizes="(max-width: 768px) 0vw, 25vw"
+              loading="lazy"
             />
           </div>
 
