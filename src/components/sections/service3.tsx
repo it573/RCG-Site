@@ -50,7 +50,7 @@ export default function Service3({
       <div className="absolute inset-0 -z-10 w-full h-full">
         <img
           src={backgroundImage}
-          alt=""
+          alt="Análises clínicas em laboratório moderno"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectFit: 'cover' }}
         />
@@ -74,14 +74,14 @@ export default function Service3({
             {/* Text Content */}
             <div className="text-left space-y-6 animate-fade-in-right">
               {/* Subtitle */}
-              <h6 className="text-primary font-semibold uppercase tracking-wide">
+              <p className="text-primary font-semibold uppercase tracking-wide text-sm">
                 {subtitle}
-              </h6>
+              </p>
 
               {/* Title */}
-              <h1 className="text-4xl md:text-5xl text-foreground">
+              <h2 className="text-4xl md:text-5xl text-foreground">
                 {title}
-              </h1>
+              </h2>
 
               {/* Description */}
               <p className="text-xl text-muted-foreground leading-relaxed">

@@ -1,10 +1,20 @@
+import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import RCGDeals from "@/components/sections/rcgdeals";
 import AppointmentForm from "@/components/forms/appointment-form";
 
-export const metadata = {
-  title: "Acordos e Convenções - RCG",
-  description: "Conheça os nossos acordos e parcerias com entidades de saúde",
+export const metadata: Metadata = {
+  title: "Acordos e Convenções - Subsistemas de Saúde | RCG",
+  description: "Somos convencionados com os principais subsistemas de saúde em Portugal: ADSE, SAD, SAMS, Médis, Multicare e mais. Confira se o seu subsistema aceita os nossos cuidados.",
+  keywords: ["acordos saúde", "convenções", "subsistemas saúde", "ADSE", "SAD", "SAMS", "Médis", "Multicare", "seguros saúde", "comparticipações"],
+  alternates: {
+    canonical: "https://new.reabilitar-em-casa.com/acordos-convencoes",
+  },
+  openGraph: {
+    title: "Acordos e Convenções - Subsistemas de Saúde | RCG",
+    description: "Somos convencionados com os principais subsistemas de saúde em Portugal: ADSE, SAD, SAMS, Médis e mais.",
+    url: "https://new.reabilitar-em-casa.com/acordos-convencoes",
+  },
 };
 
 export default function AcordosConvencoesPage() {

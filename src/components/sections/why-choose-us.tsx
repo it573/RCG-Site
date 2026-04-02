@@ -20,25 +20,25 @@ interface WhyChooseUsProps {
 const defaultFeatures: Feature[] = [
   {
     number: "01",
-    title: "Clinical Excellence",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.",
+    title: "Excelência Clínica",
+    description: "Equipa multidisciplinar licenciada pela Entidade Reguladora da Saúde (ERS) e Segurança Social, garantindo cuidados de saúde de elevada qualidade.",
   },
   {
     number: "02",
-    title: "Personalized Care",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.",
+    title: "Cuidados Personalizados",
+    description: "Planos de cuidados adaptados às necessidades específicas de cada cliente, com acompanhamento individualizado e disponibilidade 24 horas por dia.",
   },
   {
     number: "03",
-    title: "Quality Standards",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.",
+    title: "Padrões de Qualidade",
+    description: "Protocolos rigorosos de qualidade e segurança, cumprimos todas as normas legais e regulamentares para cuidados de saúde e apoio domiciliário.",
   },
 ];
 
 export default function WhyChooseUs({
-  badge = "HealthCare",
-  title = "Why Choose Us",
-  description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua laboris nisi aliquip.",
+  badge = "Saúde",
+  title = "Por Que Escolher a RCG",
+  description = "Somos líderes em cuidados de saúde ao domicílio em Portugal, com equipa licenciada, disponibilidade 24/7 e compromisso com a excelência.",
   features = defaultFeatures,
   backgroundImage,
 }: WhyChooseUsProps) {
@@ -48,7 +48,7 @@ export default function WhyChooseUs({
         <div className="absolute inset-0 -z-10">
           <Image
             src={backgroundImage}
-            alt=""
+            alt="Equip RCG - Cuidados de saúde de excelência"
             fill
             className="object-cover opacity-10"
           />

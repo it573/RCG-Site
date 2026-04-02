@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FAQAccordion } from "@/app/perguntas-frequentes/faq-accordion";
+import { FaqJsonLd } from "@/components/faq-json-ld";
 
 export const metadata: Metadata = {
   title: "Perguntas Frequentes | Reabilitar em Casa",
@@ -64,29 +65,32 @@ const faqs = [
 
 export default function PerguntasFrequentesPage() {
   return (
-    <div className="min-h-screen pt-40 pb-16" style={{ backgroundColor: '#fed7aa' }}>
-      <div className="container mx-auto px-4 max-w-4xl">
-        <article className="prose prose-lg max-w-none px-8 py-10 bg-white rounded-2xl shadow-lg">
-          <div className="entry-content">
-            {/* Header */}
-            <div className="mb-8">
-              <p className="text-2xl font-bold mb-4">PERGUNTAS FREQUENTES</p>
-              <p className="mb-4">
-                Estamos apostados na melhoria contínua e otimização dos processos que envolvem todos os nossos serviços, bem como, de todos os processos que decorrem do relacionamento com os nossos clientes.
-              </p>
-              <p className="mb-4">
-                Nesse sentido, e porque queremos manter os níveis de qualidade elevados na prestação de serviços a todos os clientes, disponibilizamos o documento "FAQ's" frequently asked questions/perguntas mais frequentes – que responde às dúvidas habituais no âmbito dos nossos serviços.
-              </p>
-              <p className="mb-6">
-                Em caso de dúvida ou necessidade de mais esclarecimentos, não deixe de nos contactar pelos meios ao seu dispor.
-              </p>
-            </div>
+    <>
+      <FaqJsonLd faqs={faqs} />
+      <div className="min-h-screen pt-40 pb-16" style={{ backgroundColor: '#fed7aa' }}>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <article className="prose prose-lg max-w-none px-8 py-10 bg-white rounded-2xl shadow-lg">
+            <div className="entry-content">
+              {/* Header */}
+              <div className="mb-8">
+                <p className="text-2xl font-bold mb-4">PERGUNTAS FREQUENTES</p>
+                <p className="mb-4">
+                  Estamos apostados na melhoria contínua e otimização dos processos que envolvem todos os nossos serviços, bem como, de todos os processos que decorrem do relacionamento com os nossos clientes.
+                </p>
+                <p className="mb-4">
+                  Nesse sentido, e porque queremos manter os níveis de qualidade elevados na prestação de serviços a todos os clientes, disponibilizamos o documento "FAQ's" frequently asked questions/perguntas mais frequentes – que responde às dúvidas habituais no âmbito dos nossos serviços.
+                </p>
+                <p className="mb-6">
+                  Em caso de dúvida ou necessidade de mais esclarecimentos, não deixe de nos contactar pelos meios ao seu dispor.
+                </p>
+              </div>
 
-            {/* FAQ Accordion */}
-            <FAQAccordion faqs={faqs} />
-          </div>
-        </article>
+              {/* FAQ Accordion */}
+              <FAQAccordion faqs={faqs} />
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
