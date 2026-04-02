@@ -16,9 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Hero
-        //backgroundVideo="https://www.youtube.com/watch?v=bs_7jWqSeIM"
-        backgroundVideoMobile="CareGiverVertical1" />
+      <Hero />
       <News2 />
     </>
   );

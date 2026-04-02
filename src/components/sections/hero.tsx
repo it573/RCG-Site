@@ -1,227 +1,34 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Heading from "@/components/ui/heading";
 import AppointmentForm from "@/components/forms/appointment-form";
 import Image from "next/image";
-import { CldVideoPlayer } from "next-cloudinary";
 
 interface HeroProps {
   title?: string;
   description?: string;
   showForm?: boolean;
   backgroundImage?: string;
-  backgroundVideo?: string;
-  backgroundVideoMobile?: string;
 }
 
 export default function Hero({
   title = "Cuidados Especializados no Domícilio",
   description = "O melhor lugar para Cuidar, Curar e Viver",
   showForm = true,
-  //backgroundImage = "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/64.jpg",
   backgroundImage = "/images/hero/oldman.jpg",
-  backgroundVideo,
-  backgroundVideoMobile,
 }: HeroProps) {
-  const [isPortrait, setIsPortrait] = useState<boolean | null>(null); // null = not determined yet
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  // Set mounted state to prevent hydration errors
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  // Detect orientation based on aspect ratio (horizontal vs vertical)
-  useEffect(() => {
-    if (!isMounted) return;
-    
-    const checkOrientation = () => {
-      // Portrait/vertical: height > width (aspect ratio < 1)
-      // Landscape/horizontal: width >= height (aspect ratio >= 1)
-      const aspectRatio = window.innerWidth / window.innerHeight;
-      setIsPortrait(aspectRatio < 1);
-    };
-    
-    // Check immediately
-    checkOrientation();
-    window.addEventListener('resize', checkOrientation);
-    window.addEventListener('orientationchange', checkOrientation);
-    
-    return () => {
-      window.removeEventListener('resize', checkOrientation);
-      window.removeEventListener('orientationchange', checkOrientation);
-    };
-  }, [isMounted]);
-
-  // Convert YouTube URL to embed URL
-  const getYouTubeEmbedUrl = (url: string) => {
-    let videoId = '';
-    if (url.includes('youtube.com/watch?v=')) {
-      videoId = url.split('v=')[1]?.split('&')[0] || '';
-    } else if (url.includes('youtube.com/shorts/')) {
-      videoId = url.split('shorts/')[1]?.split('?')[0] || '';
-    } else if (url.includes('youtu.be/')) {
-      videoId = url.split('youtu.be/')[1]?.split('?')[0] || '';
-    }
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&playlist=${videoId}` : '';
-  };
-
-  // Determine which video to use based on orientation
-  // Wait for orientation detection before deciding
-  // Horizontal (landscape): use backgroundVideo
-  // Vertical (portrait): NO VIDEO - use static image instead
-  const activeVideo = isPortrait === null
-    ? null // Don't show video until we know the orientation
-    : isPortrait
-      ? null // Vertical/portrait: NO VIDEO on mobile, always show photo
-      : backgroundVideo; // Horizontal/landscape: use desktop video
-  
-  const isYouTube = activeVideo?.includes('youtube.com') || activeVideo?.includes('youtu.be');
-  const isCloudinary = activeVideo && !isYouTube; // If it's not YouTube, assume it's a Cloudinary public ID
-
-  // Fade out white overlay after video starts loading and ensure video plays
-  useEffect(() => {
-    if (activeVideo && isCloudinary && isMounted) {
-      // Wait a bit for video to start loading, then fade out white overlay
-      const timer = setTimeout(() => {
-        setVideoLoaded(true);
-      }, 1500); // Adjust timing as needed
-
-      // Try to play video programmatically if autoplay fails
-      const playVideo = () => {
-        // Find the video element inside CldVideoPlayer
-        const videoElement = document.querySelector('#hero-background-video video') as HTMLVideoElement;
-        if (videoElement) {
-          videoElement.play().catch((error) => {
-            console.log('Autoplay prevented:', error);
-          });
-        }
-      };
-
-      // Try to play after a short delay to ensure video element is rendered
-      const playTimer = setTimeout(playVideo, 1000);
-
-      return () => {
-        clearTimeout(timer);
-        clearTimeout(playTimer);
-      };
-    } else if (activeVideo && isYouTube) {
-      // Wait a bit for video to start loading, then fade out white overlay
-      const timer = setTimeout(() => {
-        setVideoLoaded(true);
-      }, 1500);
-
-      return () => clearTimeout(timer);
-    }
-  }, [activeVideo, isCloudinary, isMounted]);
-
   return (
     <section className="relative overflow-hidden" style={{ height: '80vh', marginTop: 0, paddingTop: 0 }}>
-      {/* Background Video or Image */}
+      {/* Background Image */}
       <div className="absolute inset-0 -z-10 w-full h-full">
-        {/* Fallback image - only shown if no video */}
-        {!activeVideo && (
-          <Image
-            src={backgroundImage}
-            alt=""
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-            quality={80}
-            fetchPriority="high"
-          />
-        )}
-        
-        {/* Video for desktop or mobile - YouTube */}
-        {activeVideo && isYouTube && (
-          <>
-            {/* White background behind video */}
-            <div 
-              className="absolute inset-0 w-full h-full bg-white"
-              style={{ zIndex: 0 }}
-            />
-            <iframe
-              src={getYouTubeEmbedUrl(activeVideo)}
-              className="absolute inset-0 w-full h-full"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              style={{ 
-                pointerEvents: 'none',
-                width: '100vw',
-                height: '56.25vw',
-                minHeight: '100vh',
-                minWidth: '177.77vh',
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                zIndex: 1
-              }}
-            />
-            {/* White overlay on top of iframe that fades out */}
-            <div 
-              className="absolute inset-0 w-full h-full bg-white transition-opacity duration-1000"
-              style={{ 
-                zIndex: 2,
-                opacity: videoLoaded ? 0 : 1,
-                pointerEvents: 'none'
-              }}
-            />
-          </>
-        )}
-
-        {/* Video for desktop or mobile - Cloudinary */}
-        {activeVideo && isCloudinary && isMounted && (
-          <>
-            {/* White background behind video */}
-            <div 
-              className="absolute inset-0 w-full h-full bg-white"
-              style={{ zIndex: 0 }}
-            />
-            <div
-              style={{ 
-                zIndex: 1,
-                width: '100vw',
-                height: '177.78vw', // 9:16 portrait aspect ratio (height = width * 16/9)
-                minHeight: '100vh',
-                minWidth: '56.25vh', // For landscape viewports, maintain aspect ratio
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                pointerEvents: 'none',
-              }}
-            >
-              <CldVideoPlayer 
-                id="hero-background-video"
-                width={1080} 
-                height={1920} 
-                src={activeVideo}
-                autoPlay
-                loop
-                muted
-                transformation={{
-                  effect: "accelerate:-50"
-                }}                
-                controls={false}
-                playsinline
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* White overlay on top of video that fades out */}
-            <div 
-              className="absolute inset-0 w-full h-full bg-white transition-opacity duration-1000"
-              style={{ 
-                zIndex: 2,
-                opacity: videoLoaded ? 0 : 1,
-                pointerEvents: 'none'
-              }}
-            />
-          </>
-        )}
+        <Image
+          src={backgroundImage}
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+          quality={80}
+          fetchPriority="high"
+        />
       </div>
 
       {/* Black overlay with 25% opacity */}
