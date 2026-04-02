@@ -31,9 +31,9 @@ export default function Footer() {
                 <Link href="/politica-de-privacidade" className="block hover:text-white/80 transition-colors">
                   Política de Privacidade
                 </Link>
-                <Link href="/cookies" className="block hover:text-white/80 transition-colors">
+                {/* <Link href="/cookies" className="block hover:text-white/80 transition-colors">
                   Cookies
-                </Link>
+                </Link> */}
                 <Link href="/ral" className="block hover:text-white/80 transition-colors">
                   RAL
                 </Link>

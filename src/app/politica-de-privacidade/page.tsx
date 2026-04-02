@@ -192,7 +192,8 @@ export default function PoliticaPrivacidadePage() {
             <p>Apesar de envidarmos todos os esforços para proteger os seus dados, alertamos que a transmissão de informações através da Internet nunca é totalmente segura, pelo que qualquer partilha por vias abertas é feita por sua conta e risco.</p>
 
             <h2 className="text-xl font-bold mt-8 mb-4">12. Política de Cookies</h2>
-            <p>A RCG utiliza cookies e tecnologias semelhantes para melhorar a sua experiência de navegação nos nossos websites. Para obter informações detalhadas sobre os tipos de cookies que utilizamos, as respetivas finalidades e como pode gerir as suas preferências, consulte a nossa Política de Cookies.</p>
+            <p>A RCG <strong>não utiliza cookies</strong> no seu website. O nosso site não utiliza cookies de rastreamento, análise, ou qualquer tipo de cookies, incluindo cookies essenciais ou técnicos.</p>
+            <p>Não utilizamos Google Analytics, Facebook Pixel, ou qualquer outra ferramenta de análise de dados ou marketing. O nosso site funciona completamente sem cookies.</p>
 
             <p className="mt-8">
               <strong>Data da última atualização:</strong> 30 de março de 2026
