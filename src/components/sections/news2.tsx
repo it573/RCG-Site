@@ -36,7 +36,7 @@ const defaultPosts: BlogPost[] = [
     href: "/analises-clinicas",
   },
   {
-    title: "Apoio Domiciário",
+    title: "Apoio Domiciliário",
     image: {
       src: "/images/caregiver.jpg",
       alt: "Separating stigma from health advice",
