@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import News2 from "@/components/sections/news2";
-import CoverageArea from "@/components/sections/coverage-area";
 
 export const metadata: Metadata = {
   title: "RCG - Cuidados de Saúde e Apoio Domiciliário em Portugal",
@@ -21,7 +20,6 @@ export default function Home() {
         //backgroundVideo="https://www.youtube.com/watch?v=bs_7jWqSeIM"
         backgroundVideoMobile="CareGiverVertical1" />
       <News2 />
-      <CoverageArea />
     </>
   );
 }
