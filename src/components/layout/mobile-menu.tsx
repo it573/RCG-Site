@@ -59,28 +59,36 @@ export default function MobileMenu({
                 {item.children ? (
                   <>
                     <button
-                      className="w-full flex items-center justify-between py-2 text-xl font-medium"
+                      className="w-full flex items-center justify-between py-3 min-h-[48px] text-xl font-medium"
                       onClick={() =>
                         setOpenSubmenu(
                           openSubmenu === item.label ? null : item.label
                         )
                       }
+                      aria-expanded={openSubmenu === item.label}
+                      aria-controls={`submenu-${item.label}`}
                     >
-                      {item.label}
+                      <span>{item.label}</span>
                       <ChevronDown
-                        className={`w-4 h-4 mr-6 transition-transform ${
+                        className={`w-5 h-5 ml-2 transition-transform ${
                           openSubmenu === item.label ? "rotate-180" : ""
                         }`}
+                        aria-hidden="true"
                       />
                     </button>
                     {openSubmenu === item.label && (
-                      <ul className="pl-4 mt-2 space-y-1">
+                      <ul
+                        id={`submenu-${item.label}`}
+                        className="pl-4 mt-2 space-y-1"
+                        role="menu"
+                      >
                         {item.children.map((child) => (
                           <li key={child.label}>
                             <Link
                               href={child.href}
                               onClick={onClose}
-                              className="block py-2 text-lg text-muted-foreground hover:text-primary"
+                              className="block py-3 min-h-[44px] text-lg text-muted-foreground hover:text-primary"
+                              role="menuitem"
                             >
                               {child.label}
                             </Link>
@@ -93,7 +101,7 @@ export default function MobileMenu({
                   <Link
                     href={item.href}
                     onClick={item.label === "Home" ? handleHomeClick : onClose}
-                    className="block py-2 text-xl font-medium hover:text-primary"
+                    className="block py-3 min-h-[44px] text-xl font-medium hover:text-primary"
                   >
                     {item.label}
                   </Link>

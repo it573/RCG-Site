@@ -117,9 +117,10 @@ export default function Navigation() {
 
       {/* Mobile Menu Button */}
       <button
-        className="hidden max-[1649px]:flex p-2"
+        className="hidden max-[1649px]:flex min-h-[44px] min-w-[44px] p-3 items-center justify-center"
         onClick={() => setIsMobileMenuOpen(true)}
         aria-label="Open menu"
+        aria-expanded={isMobileMenuOpen}
       >
         <Menu className="w-6 h-6" />
       </button>

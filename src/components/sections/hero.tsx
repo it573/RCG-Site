@@ -39,7 +39,7 @@ export default function Hero({
           <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
             <div className="space-y-6 max-w-2xl animate-fade-in-left-double">
               <Heading as="h1" className="text-white">{title}</Heading>
-              <p className="text-[21.6px] md:text-3xl text-white font-light">{description}</p>
+              <p className="text-[21.6px] md:text-3xl text-white font-bold md:font-light">{description}</p>
             </div>
           </div>
           {showForm && (
