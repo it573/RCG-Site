@@ -34,7 +34,7 @@ export default function ApoioDomiciliarioPage() {
         title="Apoio Domiciliário"
         description="Proporcionamos cuidados personalizados no conforto do seu lar, com uma equipa dedicada e disponível 24 horas por dia."
         showForm={false}
-        backgroundImage="/images/hero/caregiver.png"
+        backgroundImage="/images/hero/caregiver.jpg"
       />
       <Service21 />
       <Confianca />
