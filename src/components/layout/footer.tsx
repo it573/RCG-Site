@@ -16,8 +16,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Column 1: REABILITAR EM CASA */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">REABILITAR EM CASA</h4>
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <h4 className="text-xl font-semibold">REABILITAR EM CASA</h4>
+            <div className="grid grid-cols-2 gap-4 text-base">
               <div className="space-y-2">
                 <Link href="/quem-somos" className="block hover:text-white/80 transition-colors">
                   Quem Somos
@@ -54,8 +54,8 @@ export default function Footer() {
 
           {/* Column 2: REGISTE-SE */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">REGISTE-SE</h4>
-            <div className="space-y-2 text-sm">
+            <h4 className="text-xl font-semibold">REGISTE-SE</h4>
+            <div className="space-y-2 text-base">
               <Link href="/recrutamento" className="block hover:text-white/80 transition-colors">
                 Recrutamento
               </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Column 3: SIGA-NOS */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">SIGA-NOS</h4>
+            <h4 className="text-xl font-semibold">SIGA-NOS</h4>
             <div className="flex items-center gap-4">
               <a
                 href="https://www.facebook.com/fisireabilitar/"
@@ -142,7 +142,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-white/20 pt-8 mt-8">
-          <div className="text-center text-sm text-white/80">
+          <div className="text-center text-base text-white/80">
             <p>
               ©2026 Reabilitar em Casa | Prestação de Cuidados de Saúde | Todos os direitos reservados
               <br />
