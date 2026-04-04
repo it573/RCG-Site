@@ -122,21 +122,21 @@ export default function Footer() {
             alt="ERS"
             width={201}
             height={164}
-            className="h-auto max-w-[221px] md:max-w-[201px]"
+            className="h-auto max-w-[201px]"
           />
           <Image
             src="/images/scorepme.jpg"
             alt="ScorePME"
             width={201}
             height={164}
-            className="h-auto max-w-[221px] md:max-w-[201px]"
+            className="h-auto max-w-[201px]"
           />
           <Image
             src="/images/ss.png"
             alt="Segurança Social"
             width={201}
             height={164}
-            className="h-auto max-w-[221px] md:max-w-[201px]"
+            className="h-auto max-w-[201px]"
           />
         </div>
 
