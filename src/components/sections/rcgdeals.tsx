@@ -103,15 +103,22 @@ export default function RCGDeals({
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{description}</p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">
           {logos.map((logo) => (
-            <div key={logo.alt} className="aspect-square flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow" style={{ minWidth: '120px', maxWidth: '150px' }}>
+            <div
+              key={logo.alt}
+              className="relative bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center"
+              style={{
+                paddingTop: '75%', // 4:3 aspect ratio container
+                overflow: 'hidden'
+              }}
+            >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={logo.width}
                 height={logo.height}
-                className="h-full w-auto object-contain"
+                className="absolute top-0 left-0 w-full h-full p-6 object-contain"
               />
             </div>
           ))}
