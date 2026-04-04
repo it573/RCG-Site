@@ -31,7 +31,7 @@ export default function AcordosConvencoesPage() {
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
             <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Contacte-nos!</h2>
-            <AppointmentForm />
+            <AppointmentForm campaign="" source="acordos-convencoes" />
           </div>
         </div>
       </section>

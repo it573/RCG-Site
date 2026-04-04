@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -35,7 +36,16 @@ const appointmentSchema = z.object({
 
 type AppointmentFormValues = z.infer<typeof appointmentSchema>;
 
-export default function AppointmentForm() {
+interface AppointmentFormProps {
+  campaign?: string;
+  source?: string;
+}
+
+export default function AppointmentForm({
+  campaign: pageCampaign = "",
+  source: pageSource = ""
+}: AppointmentFormProps) {
+  const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -47,6 +57,13 @@ export default function AppointmentForm() {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Pathname-based mapping for pages that use reusable components
+  const getPathnameDefaults = (path: string) => {
+    if (path === "/") return { campaign: "", source: "home" };
+    if (path === "/contactos") return { campaign: "", source: "contactos" };
+    return null;
+  };
 
   const form = useForm<AppointmentFormValues>({
     resolver: zodResolver(appointmentSchema),
@@ -71,13 +88,18 @@ export default function AppointmentForm() {
 
     const params = new URLSearchParams(window.location.search);
 
-    // Campaign and Source (can be set via query params or page context)
-    // Always set to empty string if not present (Salesforce requires these fields)
-    const campaign = params.get("campaign");
-    form.setValue("campaign", campaign || "");
+    // Campaign and Source (priority: page props > pathname mapping > empty string)
+    // Campaign is NOT read from URL params to prevent Salesforce ID validation errors
+    const pathnameDefaults = getPathnameDefaults(pathname);
 
-    const source = params.get("source");
-    form.setValue("source", source || "");
+    // Campaign - only from page props or pathname defaults, never from URL params
+    const finalCampaign = pageCampaign || pathnameDefaults?.campaign || "";
+    form.setValue("campaign", finalCampaign);
+
+    // Source - can be overridden by URL params if needed
+    const sourceParam = params.get("source");
+    const finalSource = sourceParam || pageSource || pathnameDefaults?.source || "";
+    form.setValue("source", finalSource);
 
     // Google tracking parameters
     // Always set to empty string if not present (Salesforce requires these fields)
@@ -92,7 +114,7 @@ export default function AppointmentForm() {
 
     const gmatchtype = params.get("gmatchtype");
     form.setValue("gmatchtype", gmatchtype || "");
-  }, [form, isMounted]);
+  }, [form, isMounted, pageCampaign, pageSource, pathname]);
 
   // Don't render form until mounted to prevent hydration mismatch
   if (!isMounted) {

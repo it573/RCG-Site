@@ -29,9 +29,13 @@ export async function POST(request: NextRequest) {
     // Required fields (always sent, even if empty)
     addField("FirstName", body.FirstName);
     addField("telefone", body.telefone);
-    
+
+    // Campaign field - only send if it has a value (empty string causes Salesforce validation errors)
+    if (body.campaign && body.campaign.trim() !== "") {
+      addField("campaign", body.campaign);
+    }
+
     // Optional/hidden fields - always send (even if empty string) to prevent Salesforce exceptions
-    addFieldRequired("campaign", body.campaign);
     addFieldRequired("source", body.source);
     addFieldRequired("gclid", body.gclid);
     addFieldRequired("gcampaign", body.gcampaign);
