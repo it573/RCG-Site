@@ -4,7 +4,6 @@ import Confianca from "@/components/sections/confianca";
 import Service21 from "@/components/sections/service21";
 import Services5 from "@/components/sections/services5";
 import AppointmentForm from "@/components/forms/appointment-form";
-import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import LocationSeoContent from "@/components/sections/location-seo-content";
 
 export const metadata: Metadata = {
@@ -22,14 +21,8 @@ export const metadata: Metadata = {
 };
 
 export default function ApoioDomiciliarioPage() {
-  const breadcrumbs = [
-    { label: "Serviços", href: "#" },
-    { label: "Apoio Domiciliário" },
-  ];
-
   return (
     <>
-      <Breadcrumbs items={breadcrumbs} />
       <Hero
         title="Apoio Domiciliário"
         description="Proporcionamos cuidados personalizados no conforto do seu lar, com uma equipa dedicada e disponível 24 horas por dia."

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import Services51 from "@/components/sections/services51";
 import AppointmentForm from "@/components/forms/appointment-form";
-import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import LocationSeoContent from "@/components/sections/location-seo-content";
 
 export const metadata: Metadata = {
@@ -20,14 +19,8 @@ export const metadata: Metadata = {
 };
 
 export default function CuidadosDeSaudePage() {
-  const breadcrumbs = [
-    { label: "Serviços", href: "#" },
-    { label: "Cuidados de Saúde" },
-  ];
-
   return (
     <>
-      <Breadcrumbs items={breadcrumbs} />
       <Hero
         title="Cuidados de Saúde"
         description="Proporcionamos cuidados de saúde personalizados e de excelência, com cobertura nacional."

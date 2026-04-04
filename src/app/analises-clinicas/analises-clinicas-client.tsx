@@ -7,7 +7,6 @@ import AppointmentForm from "@/components/forms/appointment-form";
 import Services3 from "@/components/sections/service3";
 import ServiceContent from "@/components/sections/service-content";
 import SynlabDeals from "@/components/sections/synlabdeals";
-import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import LocationSeoContent from "@/components/sections/location-seo-content";
 
 export default function AnalisesClinicasClient() {
@@ -78,7 +77,6 @@ export default function AnalisesClinicasClient() {
 
   return (
     <>
-      <Breadcrumbs items={[{ label: "Serviços" }, { label: "Análises Clínicas" }]} />
       <Hero
         title="Análises Clínicas"
         description="No nosso Posto de Colheitas ou no Domicílio, realizamos análises clínicas com rapidez e confidencialidade."
