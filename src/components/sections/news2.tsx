@@ -62,7 +62,7 @@ const defaultPosts: BlogPost[] = [
   {
     title: "Equipamentos Hospitalares",
     image: {
-      src: "/images/wheel-chair.png",
+      src: "/images/wheel-chair.jpg",
       alt: "Equipamentos Hospitalares",
     },
     href: "/equipamento-hospitalar",
