@@ -44,7 +44,7 @@ const defaultServices: ServiceCard[] = [
     link: "#",
   },
   {
-    image: "/images/24h.jpg",
+    image: "/images/24horas.jpg",
     title: "Acompanhamento Permanente\n(até 24 horas)",
     description: "",
     link: "#",

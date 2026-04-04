@@ -40,52 +40,6 @@ export default function ApoioDomiciliarioPage() {
       <Confianca />
       <Services5 />
 
-      {/* Related Services Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-[1140px]">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Serviços Relacionados
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <a
-              href="/cuidados-de-saude"
-              className="block p-6 rounded-lg border-2 border-gray-200 hover:border-primary transition-all hover:shadow-lg"
-            >
-              <h3 className="text-xl font-bold mb-3 text-foreground">Cuidados de Saúde</h3>
-              <p className="text-muted-foreground">
-                Serviços de enfermagem, fisioterapia e assistência médica especializada ao domicílio.
-              </p>
-              <span className="text-primary font-semibold mt-4 inline-block">Saiba mais →</span>
-            </a>
-            <a
-              href="/cuidados-continuados-hospitalizacao"
-              className="block p-6 rounded-lg border-2 border-gray-200 hover:border-primary transition-all hover:shadow-lg"
-            >
-              <h3 className="text-xl font-bold mb-3 text-foreground">Cuidados Continuados</h3>
-              <p className="text-muted-foreground">
-                Cuidados de longa duração e hospitalização domiciliária com equipa médica 24/7.
-              </p>
-              <span className="text-primary font-semibold mt-4 inline-block">Saiba mais →</span>
-            </a>
-            <a
-              href="/analises-clinicas"
-              className="block p-6 rounded-lg border-2 border-gray-200 hover:border-primary transition-all hover:shadow-lg"
-            >
-              <h3 className="text-xl font-bold mb-3 text-foreground">Análises Clínicas</h3>
-              <p className="text-muted-foreground">
-                Posto de colheitas em Carcavelos e análises ao domicílio em parceria com Synlab.
-              </p>
-              <span className="text-primary font-semibold mt-4 inline-block">Saiba mais →</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <LocationSeoContent
-        serviceName="Apoio Domiciliário"
-        serviceDescription="serviços de apoio domiciliário personalizados e de excelência, com cuidadores 24/7, assistência na higiene, alimentação, medicação e acompanhamento"
-      />
-
       <section className="py-20" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">

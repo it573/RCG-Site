@@ -30,10 +30,6 @@ export default function CuidadosContinuadosHospitalizacaoPage() {
       />
       <Service2 />
       <Service2Inverted />
-      <LocationSeoContent
-        serviceName="Cuidados Continuados e Hospitalização Domiciliária"
-        serviceDescription="cuidados de longa duração, hospitalização ao domicílio e cuidados paliativos com equipa médica e de enfermagem 24/7, como alternativa ao internamento hospitalar"
-      />
       <section className="py-20 overflow-x-hidden" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
@@ -57,10 +53,6 @@ export function CuidadosContinuadosPageContent() {
       />
       <Service2 />
       <Service2Inverted />
-      <LocationSeoContent
-        serviceName="Cuidados Continuados e Hospitalização Domiciliária"
-        serviceDescription="cuidados de longa duração, hospitalização ao domicílio e cuidados paliativos com equipa médica e de enfermagem 24/7, como alternativa ao internamento hospitalar"
-      />
       <section className="py-20 overflow-x-hidden" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">

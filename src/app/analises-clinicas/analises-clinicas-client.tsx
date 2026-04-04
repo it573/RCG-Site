@@ -108,53 +108,6 @@ Para marcar as suas Análises Clínicas ou o seu check-up pode obter mais inform
       <div id="acordos">
         <SynlabDeals />
       </div>
-
-      {/* Related Services Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-[1140px]">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Serviços Relacionados
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <a
-              href="/cuidados-de-saude"
-              className="block p-6 rounded-lg border-2 border-gray-200 hover:border-primary transition-all hover:shadow-lg"
-            >
-              <h3 className="text-xl font-bold mb-3 text-foreground">Cuidados de Saúde</h3>
-              <p className="text-muted-foreground">
-                Serviços de enfermagem e fisioterapia ao domicílio com equipa especializada.
-              </p>
-              <span className="text-primary font-semibold mt-4 inline-block">Saiba mais →</span>
-            </a>
-            <a
-              href="/apoio-domiciliario"
-              className="block p-6 rounded-lg border-2 border-gray-200 hover:border-primary transition-all hover:shadow-lg"
-            >
-              <h3 className="text-xl font-bold mb-3 text-foreground">Apoio Domiciliário</h3>
-              <p className="text-muted-foreground">
-                Cuidadores e assistência personalizada 24/7 no conforto do seu lar.
-              </p>
-              <span className="text-primary font-semibold mt-4 inline-block">Saiba mais →</span>
-            </a>
-            <a
-              href="/acordos-convencoes"
-              className="block p-6 rounded-lg border-2 border-gray-200 hover:border-primary transition-all hover:shadow-lg"
-            >
-              <h3 className="text-xl font-bold mb-3 text-foreground">Acordos e Convenções</h3>
-              <p className="text-muted-foreground">
-                Convencionados com ADSE, SAD, SAMS e outros subsistemas de saúde.
-              </p>
-              <span className="text-primary font-semibold mt-4 inline-block">Saiba mais →</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <LocationSeoContent
-        serviceName="Análises Clínicas"
-        serviceDescription="análises clínicas ao domicílio e posto de colheitas em Carcavelos, em parceria com a Synlab, com check-ups personalizados, testes de nutrição, hormonais e muito mais"
-      />
-
       <section className="py-20" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
