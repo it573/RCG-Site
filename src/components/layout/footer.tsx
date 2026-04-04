@@ -82,21 +82,6 @@ export default function Footer() {
                 />
               </a>
               <a
-                href="https://www.linkedin.com/in/reabilitar-em-casa-lda-84a7a9106/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
-                aria-label="LinkedIn"
-              >
-                <Image
-                  src="https://reabilitar-em-casa.com/wp-content/uploads/2020/02/LinkedIn-Icon-e1581553039519.png"
-                  alt="LinkedIn"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
-              </a>
-              <a
                 href="https://www.instagram.com/reabilitaremcasa.saudeemcasa/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"

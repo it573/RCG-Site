@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
       const errorText = await response.text();
       console.error("Salesforce webhook error:", errorText);
       return NextResponse.json(
-        { error: "Failed to send data to Salesforce", details: errorText },
+        { error: "Falha no envio de dados. Por favor, telefone-nos: 210 136 676", details: errorText },
         { status: response.status }
       );
     }
