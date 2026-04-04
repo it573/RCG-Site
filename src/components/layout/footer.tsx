@@ -18,34 +18,34 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-3xl font-semibold">REABILITAR EM CASA</h4>
             <div className="grid grid-cols-2 gap-4 text-xl">
-              <div className="space-y-2">
-                <Link href="/quem-somos" className="block hover:text-white/80 transition-colors">
+              <div className="space-y-3">
+                <Link href="/quem-somos" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Quem Somos
                 </Link>
-                <span className="block hover:text-white/80 transition-colors">
+                <span className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Notícias
                 </span>
-                <Link href="/testemunhos" className="block hover:text-white/80 transition-colors">
+                <Link href="/testemunhos" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Testemunhos
                 </Link>
-                <Link href="/politica-de-privacidade" className="block hover:text-white/80 transition-colors">
+                <Link href="/politica-de-privacidade" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Política de Privacidade
                 </Link>
-                {/* <Link href="/cookies" className="block hover:text-white/80 transition-colors">
+                {/* <Link href="/cookies" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Cookies
                 </Link> */}
-                <Link href="/ral" className="block hover:text-white/80 transition-colors">
+                <Link href="/ral" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   RAL
                 </Link>
               </div>
-              <div className="space-y-2">
-                <Link href="/perguntas-frequentes" className="block hover:text-white/80 transition-colors">
+              <div className="space-y-3">
+                <Link href="/perguntas-frequentes" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Perguntas Frequentes
                 </Link>
-                <Link href="https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa" target="_blank" rel="noopener noreferrer" className="block hover:text-white/80 transition-colors">
+                <Link href="https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa" target="_blank" rel="noopener noreferrer" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Livro de Elogios
                 </Link>
-                <Link href="https://www.livroreclamacoes.pt/inicio/" className="block hover:text-white/80 transition-colors">
+                <Link href="https://www.livroreclamacoes.pt/inicio/" className="block hover:text-white/80 transition-colors leading-[0.95]">
                   Livro de Reclamações
                 </Link>
               </div>
@@ -55,8 +55,8 @@ export default function Footer() {
           {/* Column 2: REGISTE-SE */}
           <div className="space-y-4">
             <h4 className="text-3xl font-semibold">REGISTE-SE</h4>
-            <div className="space-y-2 text-xl">
-              <Link href="/recrutamento" className="block hover:text-white/80 transition-colors">
+            <div className="space-y-3 text-xl">
+              <Link href="/recrutamento" className="block hover:text-white/80 transition-colors leading-[0.95]">
                 Recrutamento
               </Link>
             </div>
