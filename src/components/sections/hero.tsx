@@ -7,6 +7,7 @@ interface HeroProps {
   description?: string;
   showForm?: boolean;
   backgroundImage?: string;
+  showStampImage?: boolean;
 }
 
 export default function Hero({
@@ -14,6 +15,7 @@ export default function Hero({
   description = "O melhor lugar para Cuidar, Curar e Viver",
   showForm = true,
   backgroundImage = "/images/hero/oldman.jpg",
+  showStampImage = false,
 }: HeroProps) {
   return (
     <section className="relative overflow-hidden" style={{ height: '80vh', marginTop: 0, paddingTop: 0 }}>
@@ -46,6 +48,19 @@ export default function Hero({
             <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
               <div className="p-4 md:p-8 max-w-xl mt-0 animate-fade-in-up">
                 <AppointmentForm />
+              </div>
+            </div>
+          )}
+          {showStampImage && (
+            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto mt-8">
+              <div className="max-w-xs animate-fade-in-up">
+                <Image
+                  src="/images/acp-stamp.png"
+                  alt="ACP Stamp"
+                  width={200}
+                  height={200}
+                  className="w-auto h-auto"
+                />
               </div>
             </div>
           )}
