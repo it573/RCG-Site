@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://new.reabilitar-em-casa.com";
+  const baseUrl = "https://www.reabilitar-em-casa.com";
 
-  // Define all pages with their SEO metadata
+  //Define all pages with their SEO metadata
   const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
