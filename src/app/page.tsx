@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RCG - Cuidados de Saúde e Apoio Domiciliário em Portugal",
     description: "Providenciamos cuidados de saúde personalizados, apoio domiciliário, análises clínicas e equipamento hospitalar em Portugal. Equipa disponível 24/7.",
-    url: "https://new.reabilitar-em-casa.com",
+    url: "https://www.reabilitar-em-casa.com",
   },
 };
 

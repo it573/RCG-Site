@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: "Contacte a RCG para cuidados de saúde ao domicílio em Portugal. Telefone: 210 136 676. Disponível 24/7. Atendimento em Lisboa e cobertura nacional.",
   keywords: ["contactos", "telefone", "morada", "email", "fale connosco", "RCG contactos", "cuidados saúde Portugal"],
   alternates: {
-    canonical: "https://new.reabilitar-em-casa.com/contactos",
+    canonical: "https://www.reabilitar-em-casa.com/contactos",
   },
   openGraph: {
     title: "Contactos - RCG | Fale Connosco",
     description: "Contacte a RCG para cuidados de saúde ao domicílio. Telefone: 210 136 676. Disponível 24/7.",
-    url: "https://new.reabilitar-em-casa.com/contactos",
+    url: "https://www.reabilitar-em-casa.com/contactos",
   },
 };
 

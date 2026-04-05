@@ -2,11 +2,11 @@ export function LocalBusinessJsonLd() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://new.reabilitar-em-casa.com",
+    "@id": "https://www.reabilitar-em-casa.com",
     name: "RCG",
     alternateName: "Reabilitar em Casa",
     description: "Cuidados de saúde ao domicílio em Portugal. Serviços de enfermagem, fisioterapia, análises clínicas, cuidados continuados e equipamento hospitalar.",
-    url: "https://new.reabilitar-em-casa.com",
+    url: "https://www.reabilitar-em-casa.com",
     telephone: "+351-210-136-676",
     telephone2: "+351-917-861-795",
     email: "geral@reabilitar-em-casa.com",
@@ -42,7 +42,7 @@ export function LocalBusinessJsonLd() {
       name: "Portugal",
     },
     priceRange: "€€",
-    image: "https://new.reabilitar-em-casa.com/logo.png",
+    image: "https://www.reabilitar-em-casa.com/logo.png",
     sameAs: [
       "https://www.facebook.com/reabilitaremcasa",
       "https://www.linkedin.com/company/reabilitar-em-casa",

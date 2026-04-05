@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: "A RCG é líder em cuidados de saúde ao domicílio em Portugal. Conheça a nossa história, missão, valores e equipa licenciada. Cobertura nacional com qualidade e excelência.",
   keywords: ["quem somos", "sobre nós", "RCG", "cuidados saúde Portugal", "missão valores", "equipa médica", "história empresa"],
   alternates: {
-    canonical: "https://new.reabilitar-em-casa.com/quem-somos",
+    canonical: "https://www.reabilitar-em-casa.com/quem-somos",
   },
   openGraph: {
     title: "Quem Somos - RCG | Cuidados de Saúde em Portugal",
     description: "A RCG é líder em cuidados de saúde ao domicílio em Portugal. Conheça a nossa história, missão e valores.",
-    url: "https://new.reabilitar-em-casa.com/quem-somos",
+    url: "https://www.reabilitar-em-casa.com/quem-somos",
   },
 };
 

@@ -4,7 +4,7 @@ const agreementsSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://new.reabilitar-em-casa.com/#organization",
+      "@id": "https://www.reabilitar-em-casa.com/#organization",
       name: "RCG",
       description: "Cuidados de saúde ao domicílio convencionados com subsistemas de saúde",
       healthPlanNetwork: {

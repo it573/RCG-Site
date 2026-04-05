@@ -13,9 +13,9 @@ export function ReviewsJsonLd({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://new.reabilitar-em-casa.com/#organization",
+        "@id": "https://www.reabilitar-em-casa.com/#organization",
         name: "RCG",
-        url: "https://new.reabilitar-em-casa.com",
+        url: "https://www.reabilitar-em-casa.com",
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: ratingValue,

@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description: "Cuidados de longa duração e hospitalização ao domicílio com equipa médica especializada 24/7. Alternativa segura ao hospital, no conforto do seu lar.",
   keywords: ["cuidados continuados", "hospitalização domiciliária", "cuidados de longa duração", "internamento domicílio", "cuidados paliativos", "equipa médica domicílio"],
   alternates: {
-    canonical: "https://new.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
+    canonical: "https://www.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
   },
   openGraph: {
     title: "Cuidados Continuados e Hospitalização Domiciliária | RCG",
     description: "Cuidados de longa duração e hospitalização ao domicílio com equipa médica especializada 24/7.",
-    url: "https://new.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
+    url: "https://www.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
   },
 };
 

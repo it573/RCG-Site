@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: "Aluguer e venda de equipamento hospitalar e ajudas técnicas para uso domicílio. Entrega rápida em Portugal. Cadeiras de rodas, camas hospitalares, material de enfermagem.",
   keywords: ["equipamento hospitalar", "ajudas técnicas", "aluguer equipamento médico", "cama hospitalar", "cadeira de rodas", "material enfermagem", "equipamento domicílio"],
   alternates: {
-    canonical: "https://new.reabilitar-em-casa.com/equipamento-hospitalar",
+    canonical: "https://www.reabilitar-em-casa.com/equipamento-hospitalar",
   },
   openGraph: {
     title: "Equipamento Hospitalar e Ajudas Técnicas | RCG",
     description: "Aluguer e venda de equipamento hospitalar e ajudas técnicas para uso domicílio. Entrega rápida em Portugal.",
-    url: "https://new.reabilitar-em-casa.com/equipamento-hospitalar",
+    url: "https://www.reabilitar-em-casa.com/equipamento-hospitalar",
   },
 };
 

@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://new.reabilitar-em-casa.com"),
+  metadataBase: new URL("https://www.reabilitar-em-casa.com"),
   openGraph: {
     type: "website",
     locale: "pt_PT",
-    url: "https://new.reabilitar-em-casa.com",
+    url: "https://www.reabilitar-em-casa.com",
     title: "RCG - Cuidados de Saúde e Apoio Domiciliário",
     description: "Providenciamos cuidados de saúde personalizados, apoio domiciliário, análises clínicas e equipamento hospitalar em Portugal.",
     siteName: "RCG",

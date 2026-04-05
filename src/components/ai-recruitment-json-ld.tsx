@@ -4,9 +4,9 @@ const recruitmentSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://new.reabilitar-em-casa.com/#organization",
+      "@id": "https://www.reabilitar-em-casa.com/#organization",
       name: "RCG",
-      url: "https://new.reabilitar-em-casa.com",
+      url: "https://www.reabilitar-em-casa.com",
       description: "Empresa de cuidados de saúde ao domicílio em Portugal",
     },
     {
@@ -23,7 +23,7 @@ const recruitmentSchema = {
       hiringOrganization: {
         "@type": "Organization",
         name: "RCG",
-        sameAs: "https://new.reabilitar-em-casa.com",
+        sameAs: "https://www.reabilitar-em-casa.com",
       },
       jobLocation: {
         "@type": "Place",
@@ -50,7 +50,7 @@ const recruitmentSchema = {
       hiringOrganization: {
         "@type": "Organization",
         name: "RCG",
-        sameAs: "https://new.reabilitar-em-casa.com",
+        sameAs: "https://www.reabilitar-em-casa.com",
       },
       jobLocation: {
         "@type": "Place",
@@ -77,7 +77,7 @@ const recruitmentSchema = {
       hiringOrganization: {
         "@type": "Organization",
         name: "RCG",
-        sameAs: "https://new.reabilitar-em-casa.com",
+        sameAs: "https://www.reabilitar-em-casa.com",
       },
       jobLocation: {
         "@type": "Place",
@@ -104,7 +104,7 @@ const recruitmentSchema = {
       hiringOrganization: {
         "@type": "Organization",
         name: "RCG",
-        sameAs: "https://new.reabilitar-em-casa.com",
+        sameAs: "https://www.reabilitar-em-casa.com",
       },
       jobLocation: {
         "@type": "Place",
@@ -131,7 +131,7 @@ const recruitmentSchema = {
       hiringOrganization: {
         "@type": "Organization",
         name: "RCG",
-        sameAs: "https://new.reabilitar-em-casa.com",
+        sameAs: "https://www.reabilitar-em-casa.com",
       },
       jobLocation: {
         "@type": "Place",

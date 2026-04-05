@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: "Leia os testemunhos de clientes satisfeitos com os nossos cuidados de saúde ao domicílio. Mais de 40 avaliações positivas de clientes em Portugal.",
   keywords: ["testemunhos", "avaliações", "opiniões clientes", "feedback", "recomendações", "satisfação clientes", "RCG avaliações"],
   alternates: {
-    canonical: "https://new.reabilitar-em-casa.com/testemunhos",
+    canonical: "https://www.reabilitar-em-casa.com/testemunhos",
   },
   openGraph: {
     title: "Testemunhos - O Que Dizem os Nossos Clientes | RCG",
     description: "Leia os testemunhos de clientes satisfeitos com os nossos cuidados de saúde ao domicílio.",
-    url: "https://new.reabilitar-em-casa.com/testemunhos",
+    url: "https://www.reabilitar-em-casa.com/testemunhos",
   },
 };
 

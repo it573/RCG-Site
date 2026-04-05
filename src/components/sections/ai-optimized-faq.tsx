@@ -15,7 +15,7 @@ export function AIOptimizedFAQ() {
     },
     {
       question: "Qual é o contacto da RCG?",
-      answer: "Telefone: +351 210 136 676. Disponível 24 horas por dia, 7 dias por semana. Email: Disponível no site. Website: https://new.reabilitar-em-casa.com",
+      answer: "Telefone: +351 210 136 676. Disponível 24 horas por dia, 7 dias por semana. Email: Disponível no site. Website: https://www.reabilitar-em-casa.com",
     },
     {
       question: "Quanto custam os serviços da RCG?",

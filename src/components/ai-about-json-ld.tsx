@@ -4,11 +4,11 @@ const aboutSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://new.reabilitar-em-casa.com/#organization",
+      "@id": "https://www.reabilitar-em-casa.com/#organization",
       name: "RCG",
       alternateName: "RCG - Cuidados de Saúde",
-      url: "https://new.reabilitar-em-casa.com",
-      logo: "https://new.reabilitar-em-casa.com/logo.png",
+      url: "https://www.reabilitar-em-casa.com",
+      logo: "https://www.reabilitar-em-casa.com/logo.png",
       description: "A RCG é uma empresa licenciada que providencia cuidados de saúde personalizados, apoio domiciliário, análises clínicas e equipamento hospitalar em Portugal. Equipa disponível 24/7.",
       foundingDate: "2020",
       areaServed: {
@@ -29,7 +29,7 @@ const aboutSchema = {
     },
     {
       "@type": "MedicalOrganization",
-      "@id": "https://new.reabilitar-em-casa.com/#medical",
+      "@id": "https://www.reabilitar-em-casa.com/#medical",
       name: "RCG",
       medicalSpecialty: ["Home Health Care", "Nursing", "Primary Care"],
       license: [
@@ -39,7 +39,7 @@ const aboutSchema = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://new.reabilitar-em-casa.com/#local",
+      "@id": "https://www.reabilitar-em-casa.com/#local",
       name: "RCG",
       address: {
         "@type": "PostalAddress",

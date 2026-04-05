@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   description: "Serviços de enfermagem, fisioterapia e assistência médica ao domicílio em Portugal. Equipa licenciada pela ERS, disponível 24/7. Cuidamos de si e da sua família.",
   keywords: ["cuidados de saúde", "enfermagem domicílio", "fisioterapia domicílio", "assistência médica", "cuidadores domicílio", "saúde em Portugal", "apoio domiciliário"],
   alternates: {
-    canonical: "https://new.reabilitar-em-casa.com/cuidados-de-saude",
+    canonical: "https://www.reabilitar-em-casa.com/cuidados-de-saude",
   },
   openGraph: {
     title: "Cuidados de Saúde ao Domicílio em Portugal | RCG",
     description: "Serviços de enfermagem, fisioterapia e assistência médica ao domicílio. Equipa licenciada pela ERS, disponível 24/7.",
-    url: "https://new.reabilitar-em-casa.com/cuidados-de-saude",
+    url: "https://www.reabilitar-em-casa.com/cuidados-de-saude",
   },
 };
 

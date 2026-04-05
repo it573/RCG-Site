@@ -5,8 +5,8 @@ const jsonLd = {
   name: "RCG",
   alternateName: "RCG - Cuidados de Saúde",
   description: "Providenciamos cuidados de saúde personalizados, apoio domiciliário, análises clínicas e equipamento hospitalar em Portugal. Equipa disponível 24/7.",
-  url: "https://new.reabilitar-em-casa.com",
-  logo: "https://new.reabilitar-em-casa.com/logo.png",
+  url: "https://www.reabilitar-em-casa.com",
+  logo: "https://www.reabilitar-em-casa.com/logo.png",
   foundingDate: "2020",
   areaServed: {
     "@type": "Country",
@@ -41,7 +41,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Apoio Domiciliário",
           description: "Cuidados personalizados no conforto do seu lar, com equipa dedicada 24 horas por dia.",
-          url: "https://new.reabilitar-em-casa.com/apoio-domiciliario",
+          url: "https://www.reabilitar-em-casa.com/apoio-domiciliario",
         },
       },
       {
@@ -50,7 +50,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Cuidados de Saúde",
           description: "Serviços de saúde personalizados prestados por profissionais qualificados.",
-          url: "https://new.reabilitar-em-casa.com/cuidados-de-saude",
+          url: "https://www.reabilitar-em-casa.com/cuidados-de-saude",
         },
       },
       {
@@ -59,7 +59,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Cuidados Continuados e Hospitalização Domiciliária",
           description: "Cuidados de longa duração e hospitalização no domicílio com equipa médica especializada.",
-          url: "https://new.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
+          url: "https://www.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
         },
       },
       {
@@ -68,7 +68,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Análises Clínicas",
           description: "Análises clínicas ao domicílio com recolha de amostras e resultados rápidos.",
-          url: "https://new.reabilitar-em-casa.com/analises-clinicas",
+          url: "https://www.reabilitar-em-casa.com/analises-clinicas",
         },
       },
       {
@@ -77,7 +77,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Equipamento Hospitalar",
           description: "Aluguer e venda de equipamento hospitalar para uso domiciliar.",
-          url: "https://new.reabilitar-em-casa.com/equipamento-hospitalar",
+          url: "https://www.reabilitar-em-casa.com/equipamento-hospitalar",
         },
       },
     ],

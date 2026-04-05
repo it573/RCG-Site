@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: "Junte-se à equipa da RCG! Procuramos profissionais de saúde dedicados: enfermeiros, fisioterapeutas, cuidadores e médicos. Candidaturas abertas para cuidados domiciliários.",
   keywords: ["recrutamento", "emprego saúde", "enfermeiro", "fisioterapeuta", "cuidador", "médico domicílio", "trabalhe connosco", "carreira saúde"],
   alternates: {
-    canonical: "https://new.reabilitar-em-casa.com/recrutamento",
+    canonical: "https://www.reabilitar-em-casa.com/recrutamento",
   },
   openGraph: {
     title: "Recrutamento - Trabalhe Connosco | RCG",
     description: "Junte-se à equipa da RCG! Procuramos profissionais de saúde dedicados para cuidados domiciliários.",
-    url: "https://new.reabilitar-em-casa.com/recrutamento",
+    url: "https://www.reabilitar-em-casa.com/recrutamento",
   },
 };
 

@@ -19,11 +19,11 @@ export function ServiceJsonLd({
     "@type": "Service",
     name: serviceName,
     description: description,
-    url: `https://new.reabilitar-em-casa.com${url}`,
+    url: `https://www.reabilitar-em-casa.com${url}`,
     provider: {
       "@type": "MedicalOrganization",
       name: "RCG",
-      url: "https://new.reabilitar-em-casa.com",
+      url: "https://www.reabilitar-em-casa.com",
     },
     areaServed: {
       "@type": "Country",
