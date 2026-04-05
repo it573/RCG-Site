@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Heading from "@/components/ui/heading";
 
 interface Feature {
@@ -11,10 +10,6 @@ interface About2Props {
   subtitle?: string;
   title?: string;
   description?: string;
-  image?: {
-    src: string;
-    alt: string;
-  };
   features?: Feature[];
 }
 
@@ -40,10 +35,6 @@ export default function About4({
   title = "Quem Somos",
   subtitle = "",
   description = "Somos uma equipa dedicada de profissionais de saúde comprometidos em proporcionar cuidados de excelência aos nossos doentes. A nossa missão é garantir que cada pessoa receba a melhor atenção possível, no conforto do seu lar. Com anos de experiência no setor da saúde, desenvolvemos uma abordagem centrada no doente, combinando competência técnica com humanismo. Acreditamos que os cuidados de saúde devem ser acessíveis, personalizados e prestados com dignidade e respeito.",
-  image = {
-    src: "https://demo.eightheme.com/paramedic/wp-content/uploads/sites/14/2022/05/43.jpg",
-    alt: "Nossa Equipa",
-  },
   features = defaultFeatures,
 }: About2Props) {
   return (
@@ -57,22 +48,6 @@ export default function About4({
         <div className="grid md:grid-cols-2 gap-0 md:gap-12 items-center">
           {/* Left Column */}
           <div className="relative min-h-[400px] flex items-center py-12 px-4 md:py-0 md:px-0 md:bg-transparent -mx-4 md:mx-0" style={{ backgroundColor: '#fed7aa' }}>
-            {/* Background image */}
-            <div
-              className="absolute inset-0 rounded-lg overflow-hidden hidden md:block"
-              style={{ zIndex: -1 }}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover object-center"
-                style={{ opacity: 0.7 }}
-                sizes="(max-width: 768px) 0vw, 100vw"
-                loading="lazy"
-              />
-            </div>
-
             <div className="relative z-10 space-y-6 w-full px-4 md:px-0">
               <div className="animate-fade-in-left overflow-hidden">
                 <h6 className="text-primary font-semibold text-sm uppercase tracking-wider">

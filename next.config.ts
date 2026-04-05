@@ -5,11 +5,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "demo.eightheme.com",
-        pathname: "/paramedic/**",
-      },
-      {
-        protocol: "https",
         hostname: "reabilitar-em-casa.com",
       },
       {
@@ -21,6 +16,20 @@ const nextConfig: NextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/fisioterapia-ao-domicilio",
+        destination: "/cuidados-de-saude",
+        permanent: true,
+      },
+      {
+        source: "/apoio-ao-domicilio",
+        destination: "/apoio-domiciliario",
+        permanent: true,
+      },
+    ];
   },
 };
 
