@@ -70,7 +70,7 @@ export default function Header() {
               {/* Mobile: Show just icon */}
               <a
                 href="tel:+351210136276"
-                className="sm:hidden flex items-center px-3 md:px-4 py-0.5 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
+                className="sm:hidden flex items-center px-3 md:px-4 py-[0.375rem] bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
               >
                 <Phone className="w-5 h-5 md:w-6 md:h-6" />
               </a>
