@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: "Serviços de apoio domiciliário personalizados e de excelência em Portugal. Cuidadores 24/7, cuidados de enfermagem e assistência no conforto do seu lar.",
   keywords: ["apoio domiciliário", "cuidadores domicílio", "cuidados enfermagem", "assistência domiciliária", "cuidados idosos", "apoio seniores", "cuidados 24 horas"],
   alternates: {
-    canonical: "https://www.reabilitar-em-casa.com/apoio-domiciliario",
+    canonical: "https://www.reabilitar-em-casa.com/apoio-domicilio",
   },
   openGraph: {
     title: "Apoio Domiciliário | RCG",
     description: "Serviços de apoio domiciliário personalizados e de excelência em Portugal.",
-    url: "https://www.reabilitar-em-casa.com/apoio-domiciliario",
+    url: "https://www.reabilitar-em-casa.com/apoio-domicilio",
   },
 };
 
@@ -27,7 +27,7 @@ export default function ApoioDomiciliarioPage() {
       <ServiceJsonLd
         serviceName="Apoio Domiciliário"
         description="Serviços de apoio domiciliário personalizados e de excelência em Portugal. Cuidadores 24/7, cuidados de enfermagem e assistência no conforto do seu lar."
-        url="/apoio-domiciliario"
+        url="/apoio-domicilio"
       />
       <Hero
         title="Apoio Domiciliário"
@@ -44,7 +44,7 @@ export default function ApoioDomiciliarioPage() {
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
             <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Contacte-nos!</h2>
-            <AppointmentForm campaign="AD" source="apoio-domiciliario" />
+            <AppointmentForm campaign="AD" source="apoio-domicilio" />
           </div>
         </div>
       </section>

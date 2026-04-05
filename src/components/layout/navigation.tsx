@@ -11,7 +11,7 @@ const menuItems = [
     label: "Apoio Domiciliário",
     href: "#",
     children: [
-      { label: "Apoio Domiciliário", href: "/apoio-domiciliario" },
+      { label: "Apoio Domiciliário", href: "/apoio-domicilio" },
       { label: "Cuidados Continuados", href: "/cuidados-continuados-hospitalizacao" },
       { label: "Hospitalização Domiciliária", href: "/cuidados-continuados-hospitalizacao" },
     ],

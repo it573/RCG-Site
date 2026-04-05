@@ -41,7 +41,7 @@ const defaultPosts: BlogPost[] = [
       src: "/images/caregiver.jpg",
       alt: "Separating stigma from health advice",
     },
-    href: "/apoio-domiciliario",
+    href: "/apoio-domicilio",
   },
   {
     title: "Cuidados Continuados",

@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/apoio-domiciliario`,
+      url: `${baseUrl}/apoio-domicilio`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,

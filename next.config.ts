@@ -26,7 +26,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/apoio-ao-domicilio",
-        destination: "/apoio-domiciliario",
+        destination: "/apoio-domicilio",
+        permanent: true,
+      },
+      {
+        source: "/apoio-domiciliario",
+        destination: "/apoio-domicilio",
         permanent: true,
       },
     ];

@@ -41,7 +41,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Apoio Domiciliário",
           description: "Cuidados personalizados no conforto do seu lar, com equipa dedicada 24 horas por dia.",
-          url: "https://www.reabilitar-em-casa.com/apoio-domiciliario",
+          url: "https://www.reabilitar-em-casa.com/apoio-domicilio",
         },
       },
       {
