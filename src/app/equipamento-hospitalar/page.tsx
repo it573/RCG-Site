@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import Doctors2 from "@/components/sections/doctors2";
 import AppointmentForm from "@/components/forms/appointment-form";
+import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
   title: "Equipamento Hospitalar e Ajudas Técnicas | RCG",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
 export default function EquipamentoHospitalarPage() {
   return (
     <>
+      <ServiceJsonLd
+        serviceName="Equipamento Hospitalar"
+        description="Aluguer e venda de equipamento hospitalar e ajudas técnicas para uso domicílio. Entrega rápida em Portugal. Cadeiras de rodas, camas hospitalares, material de enfermagem."
+        url="/equipamento-hospitalar"
+      />
       <Hero
         title="Equipamento Hospitalar"
         description="Disponibilizamos produtos de apoio, ajudas técnicas, com entrega ao Domicílio, em regime de Aluguer ou Venda.  Consulte-nos para mais Informações."

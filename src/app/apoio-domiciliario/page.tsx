@@ -5,6 +5,7 @@ import Service21 from "@/components/sections/service21";
 import Services5 from "@/components/sections/services5";
 import AppointmentForm from "@/components/forms/appointment-form";
 import LocationSeoContent from "@/components/sections/location-seo-content";
+import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
   title: "Apoio Domiciliário | RCG",
@@ -23,6 +24,11 @@ export const metadata: Metadata = {
 export default function ApoioDomiciliarioPage() {
   return (
     <>
+      <ServiceJsonLd
+        serviceName="Apoio Domiciliário"
+        description="Serviços de apoio domiciliário personalizados e de excelência em Portugal. Cuidadores 24/7, cuidados de enfermagem e assistência no conforto do seu lar."
+        url="/apoio-domiciliario"
+      />
       <Hero
         title="Apoio Domiciliário"
         description="Proporcionamos cuidados personalizados no conforto do seu lar, com uma equipa dedicada e disponível 24 horas por dia."

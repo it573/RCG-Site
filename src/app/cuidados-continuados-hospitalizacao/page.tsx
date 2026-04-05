@@ -4,6 +4,7 @@ import Service2 from "@/components/sections/service2";
 import Service2Inverted from "@/components/sections/service2inverted";
 import AppointmentForm from "@/components/forms/appointment-form";
 import LocationSeoContent from "@/components/sections/location-seo-content";
+import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
   title: "Cuidados Continuados e Hospitalização Domiciliária | RCG",
@@ -22,6 +23,11 @@ export const metadata: Metadata = {
 export default function CuidadosContinuadosHospitalizacaoPage() {
   return (
     <>
+      <ServiceJsonLd
+        serviceName="Cuidados Continuados e Hospitalização Domiciliária"
+        description="Cuidados de longa duração e hospitalização ao domicílio com equipa médica especializada 24/7. Alternativa segura ao hospital, no conforto do seu lar."
+        url="/cuidados-continuados-hospitalizacao"
+      />
       <Hero
         title="Cuidados Continuados e Hospitalização"
         description="Cuidados especializados de longa duração e hospitalização ao domicílio com equipa médica disponível 24 horas."

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import About2 from "@/components/sections/about2";
 import About4 from "@/components/sections/about4";
+import { AboutJsonLd } from "@/components/ai-about-json-ld";
 
 export const metadata: Metadata = {
   title: "Quem Somos - RCG | Cuidados de Saúde em Portugal",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function QuemSomosPage() {
   return (
     <>
+      <AboutJsonLd />
       <Hero
         title="Quem Somos"
         description="Cuidados de saúde de excelência ao Domicílio, com cobertura nacional."

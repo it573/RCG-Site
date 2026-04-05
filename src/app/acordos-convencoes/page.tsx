@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import RCGDeals from "@/components/sections/rcgdeals";
 import AppointmentForm from "@/components/forms/appointment-form";
+import { AgreementsJsonLd } from "@/components/ai-agreements-json-ld";
 
 export const metadata: Metadata = {
   title: "Acordos e Convenções - Subsistemas de Saúde | RCG",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function AcordosConvencoesPage() {
   return (
     <>
+      <AgreementsJsonLd />
       <Hero
         title="Acordos e Convenções"
         description="Colaboramos com as principais entidades de saúde para proporcionar os melhores cuidados."

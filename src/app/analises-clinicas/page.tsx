@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AnalisesClinicasClient from "./analises-clinicas-client";
+import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
   title: "Análises Clínicas ao Domicílio e em Carcavelos | RCG",
@@ -16,5 +17,14 @@ export const metadata: Metadata = {
 };
 
 export default function AnalisesClinicasPage() {
-  return <AnalisesClinicasClient />;
+  return (
+    <>
+      <ServiceJsonLd
+        serviceName="Análises Clínicas"
+        description="Posto de colheitas em Carcavelos e análises clínicas ao domicílio em parceria com Synlab. Check-ups, testes de nutrição, hormonais e muito mais. Resultados rápidos e fiáveis."
+        url="/analises-clinicas"
+      />
+      <AnalisesClinicasClient />
+    </>
+  );
 }

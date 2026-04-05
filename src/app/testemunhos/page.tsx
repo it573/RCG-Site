@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TestimonialsClient from "./testimonials-client";
+import { ReviewsJsonLd } from "@/components/ai-reviews-json-ld";
 
 export const metadata: Metadata = {
   title: "Testemunhos - O Que Dizem os Nossos Clientes | RCG",
@@ -59,5 +60,10 @@ const testimonials: Testimonial[] = [
 const TOTAL_COUNT = 43;
 
 export default function TestemunhosPage() {
-  return <TestimonialsClient testimonials={testimonials} totalCount={TOTAL_COUNT} />;
+  return (
+    <>
+      <ReviewsJsonLd totalCount={TOTAL_COUNT} />
+      <TestimonialsClient testimonials={testimonials} totalCount={TOTAL_COUNT} />
+    </>
+  );
 }

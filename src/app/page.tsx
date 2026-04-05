@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import News2 from "@/components/sections/news2";
+import { AIOptimizedFAQ } from "@/components/sections/ai-optimized-faq";
 
 export const metadata: Metadata = {
   title: "RCG - Cuidados de Saúde e Apoio Domiciliário em Portugal",
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <Hero />
       <News2 />
+      <AIOptimizedFAQ />
     </>
   );
 }

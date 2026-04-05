@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
+import { RecruitmentJsonLd } from "@/components/ai-recruitment-json-ld";
 
 export const metadata: Metadata = {
   title: "Recrutamento - Trabalhe Connosco | RCG",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function RecrutamentoPage() {
   return (
     <>
+      <RecruitmentJsonLd />
       <Hero
         title="Recrutamento"
         description="Faça parte da nossa equipa. Procuramos profissionais dedicados, que queiram fazer parte da nossa missão de proporcionar Cuidados de Saúde de Excelência."
