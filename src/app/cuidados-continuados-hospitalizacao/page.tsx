@@ -7,14 +7,14 @@ import LocationSeoContent from "@/components/sections/location-seo-content";
 import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
-  title: "Cuidados Continuados e Hospitalização Domiciliária | RCG",
+  title: "Cuidados Continuados e Hospitalização Domiciliária",
   description: "Cuidados de longa duração e hospitalização ao domicílio com equipa médica especializada 24/7. Alternativa segura ao hospital, no conforto do seu lar.",
   keywords: ["cuidados continuados", "hospitalização domiciliária", "cuidados de longa duração", "internamento domicílio", "cuidados paliativos", "equipa médica domicílio"],
   alternates: {
     canonical: "https://www.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
   },
   openGraph: {
-    title: "Cuidados Continuados e Hospitalização Domiciliária | RCG",
+    title: "Cuidados Continuados e Hospitalização Domiciliária",
     description: "Cuidados de longa duração e hospitalização ao domicílio com equipa médica especializada 24/7.",
     url: "https://www.reabilitar-em-casa.com/cuidados-continuados-hospitalizacao",
   },

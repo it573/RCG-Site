@@ -6,14 +6,14 @@ import LocationSeoContent from "@/components/sections/location-seo-content";
 import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
-  title: "Cuidados de Saúde ao Domicílio em Portugal | RCG",
+  title: "Cuidados de Saúde ao Domicílio em Portugal",
   description: "Serviços de enfermagem, fisioterapia e assistência médica ao domicílio em Portugal. Equipa licenciada pela ERS, disponível 24/7. Cuidamos de si e da sua família.",
   keywords: ["cuidados de saúde", "enfermagem domicílio", "fisioterapia domicílio", "assistência médica", "cuidadores domicílio", "saúde em Portugal", "apoio domiciliário"],
   alternates: {
     canonical: "https://www.reabilitar-em-casa.com/cuidados-de-saude",
   },
   openGraph: {
-    title: "Cuidados de Saúde ao Domicílio em Portugal | RCG",
+    title: "Cuidados de Saúde ao Domicílio em Portugal",
     description: "Serviços de enfermagem, fisioterapia e assistência médica ao domicílio. Equipa licenciada pela ERS, disponível 24/7.",
     url: "https://www.reabilitar-em-casa.com/cuidados-de-saude",
   },

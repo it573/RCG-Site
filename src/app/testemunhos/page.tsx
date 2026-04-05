@@ -3,14 +3,14 @@ import TestimonialsClient from "./testimonials-client";
 import { ReviewsJsonLd } from "@/components/ai-reviews-json-ld";
 
 export const metadata: Metadata = {
-  title: "Testemunhos - O Que Dizem os Nossos Clientes | RCG",
+  title: "Testemunhos - O Que Dizem os Nossos Clientes",
   description: "Leia os testemunhos de clientes satisfeitos com os nossos cuidados de saúde ao domicílio. Mais de 40 avaliações positivas de clientes em Portugal.",
   keywords: ["testemunhos", "avaliações", "opiniões clientes", "feedback", "recomendações", "satisfação clientes", "RCG avaliações"],
   alternates: {
     canonical: "https://www.reabilitar-em-casa.com/testemunhos",
   },
   openGraph: {
-    title: "Testemunhos - O Que Dizem os Nossos Clientes | RCG",
+    title: "Testemunhos - O Que Dizem os Nossos Clientes",
     description: "Leia os testemunhos de clientes satisfeitos com os nossos cuidados de saúde ao domicílio.",
     url: "https://www.reabilitar-em-casa.com/testemunhos",
   },

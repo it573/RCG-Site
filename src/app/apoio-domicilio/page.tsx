@@ -8,14 +8,14 @@ import LocationSeoContent from "@/components/sections/location-seo-content";
 import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
-  title: "Apoio Domiciliário | RCG",
+  title: "Apoio Domiciliário",
   description: "Serviços de apoio domiciliário personalizados e de excelência em Portugal. Cuidadores 24/7, cuidados de enfermagem e assistência no conforto do seu lar.",
   keywords: ["apoio domiciliário", "cuidadores domicílio", "cuidados enfermagem", "assistência domiciliária", "cuidados idosos", "apoio seniores", "cuidados 24 horas"],
   alternates: {
     canonical: "https://www.reabilitar-em-casa.com/apoio-domicilio",
   },
   openGraph: {
-    title: "Apoio Domiciliário | RCG",
+    title: "Apoio Domiciliário",
     description: "Serviços de apoio domiciliário personalizados e de excelência em Portugal.",
     url: "https://www.reabilitar-em-casa.com/apoio-domicilio",
   },

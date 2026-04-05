@@ -5,14 +5,14 @@ import AppointmentForm from "@/components/forms/appointment-form";
 import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 
 export const metadata: Metadata = {
-  title: "Equipamento Hospitalar e Ajudas Técnicas | RCG",
+  title: "Equipamento Hospitalar e Ajudas Técnicas",
   description: "Aluguer e venda de equipamento hospitalar e ajudas técnicas para uso domicílio. Entrega rápida em Portugal. Cadeiras de rodas, camas hospitalares, material de enfermagem.",
   keywords: ["equipamento hospitalar", "ajudas técnicas", "aluguer equipamento médico", "cama hospitalar", "cadeira de rodas", "material enfermagem", "equipamento domicílio"],
   alternates: {
     canonical: "https://www.reabilitar-em-casa.com/equipamento-hospitalar",
   },
   openGraph: {
-    title: "Equipamento Hospitalar e Ajudas Técnicas | RCG",
+    title: "Equipamento Hospitalar e Ajudas Técnicas",
     description: "Aluguer e venda de equipamento hospitalar e ajudas técnicas para uso domicílio. Entrega rápida em Portugal.",
     url: "https://www.reabilitar-em-casa.com/equipamento-hospitalar",
   },

@@ -3,14 +3,14 @@ import Hero from "@/components/sections/hero";
 import { RecruitmentJsonLd } from "@/components/ai-recruitment-json-ld";
 
 export const metadata: Metadata = {
-  title: "Recrutamento - Trabalhe Connosco | RCG",
+  title: "Recrutamento - Trabalhe Connosco",
   description: "Junte-se à equipa da RCG! Procuramos profissionais de saúde dedicados: enfermeiros, fisioterapeutas, cuidadores e médicos. Candidaturas abertas para cuidados domiciliários.",
   keywords: ["recrutamento", "emprego saúde", "enfermeiro", "fisioterapeuta", "cuidador", "médico domicílio", "trabalhe connosco", "carreira saúde"],
   alternates: {
     canonical: "https://www.reabilitar-em-casa.com/recrutamento",
   },
   openGraph: {
-    title: "Recrutamento - Trabalhe Connosco | RCG",
+    title: "Recrutamento - Trabalhe Connosco",
     description: "Junte-se à equipa da RCG! Procuramos profissionais de saúde dedicados para cuidados domiciliários.",
     url: "https://www.reabilitar-em-casa.com/recrutamento",
   },

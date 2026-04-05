@@ -11,7 +11,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Cuidados Especializados no Domícilio",
+  title = "Cuidados Especializados no Domicílio",
   description = "O melhor lugar para Cuidar, Curar e Viver",
   showForm = true,
   backgroundImage = "/images/hero/oldman.jpg",

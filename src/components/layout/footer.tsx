@@ -104,21 +104,21 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-6 my-8">
           <Image
             src="/images/ers.png"
-            alt="ERS"
+            alt="ERS - Certificado da Entidade Reguladora da Saúde"
             width={201}
             height={164}
             className="h-auto max-w-[201px]"
           />
           <Image
             src="/images/scorepme.jpg"
-            alt="ScorePME"
+            alt="ScorePME - Certificado de Qualidade"
             width={201}
             height={164}
             className="h-auto max-w-[201px]"
           />
           <Image
             src="/images/ss.png"
-            alt="Segurança Social"
+            alt="Segurança Social - Certificado de Registo na Segurança Social"
             width={201}
             height={164}
             className="h-auto max-w-[201px]"
