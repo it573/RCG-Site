@@ -44,7 +44,7 @@ const defaultContactItems: ContactItem[] = [
 
 export default function Contacts2({
   subtitle = "Entre em Contacto",
-  description = "A nossa equipa está disponível para responder às suas dúvidas e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos.",
+  description = "Com serviços de Cobertura Nacional, a nossa equipa está disponível para responder às suas dúvidas e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos.",
   contactItems = defaultContactItems,
   image = {
     src: "/images/google-earth.png",
