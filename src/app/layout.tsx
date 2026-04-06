@@ -5,6 +5,9 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { JsonLd } from "@/components/json-ld";
+import GoogleAnalytics from "@/components/analytics/google-analytics";
+import GoogleTagManager from "@/components/analytics/google-tag-manager";
+import CookieConsentBanner from "@/components/layout/cookie-consent-banner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,9 +78,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <JsonLd />
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );
