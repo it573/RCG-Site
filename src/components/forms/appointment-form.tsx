@@ -148,6 +148,16 @@ export default function AppointmentForm({
         throw new Error(result.error || "Failed to submit form");
       }
 
+      // Push GTM event based on campaign type
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        const campaign = data.campaign?.toLowerCase() || '';
+        const eventType = campaign.includes('ad') ? 'ad-site-conversion' : 'cs-site-conversion';
+
+        window.dataLayer.push({
+          'event': eventType
+        });
+      }
+
       setSubmitStatus({
         type: "success",
         message: "Obrigado! Será contactado por nós nos próximos minutos.",
