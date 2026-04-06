@@ -38,15 +38,15 @@ export default function Hero({
 
       <div className={`container mx-auto px-4 max-w-[80%] relative z-10 h-full flex items-center pb-32 md:pb-20 ${showForm ? 'pt-[280px] md:pt-[220px]' : 'pt-[180px] md:pt-20'}`}>
         <div className="w-full">
-          <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
+          <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0">
             <div className="space-y-6 max-w-2xl animate-fade-in-left-double">
               <Heading as="h1" className="text-white">{title}</Heading>
               <p className="text-[21.6px] md:text-3xl text-white font-bold md:font-light">{description}</p>
             </div>
           </div>
           {showForm && (
-            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto">
-              <div className="p-4 md:p-8 max-w-xl mt-0 animate-fade-in-up">
+            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0">
+              <div className="pt-4 md:pt-8 max-w-xl mt-0 animate-fade-in-up">
                 <AppointmentForm />
               </div>
             </div>
