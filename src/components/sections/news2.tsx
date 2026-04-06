@@ -1,6 +1,6 @@
 import Heading from "@/components/ui/heading";
 import Image from "next/image";
-import Link from "next/link";
+import PreservingLink from "@/components/ui/preserving-link";
 
 interface BlogPost {
   title: string;
@@ -93,7 +93,7 @@ export default function News2({
               className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <Link href={post.href} className="block">
+              <PreservingLink href={post.href} className="block">
                 <div className="overflow-hidden">
                   <Image
                     src={post.image.src}
@@ -108,7 +108,7 @@ export default function News2({
                     {post.title}
                   </h3>
                 </div>
-              </Link>
+              </PreservingLink>
             </div>
           ))}
         </div>

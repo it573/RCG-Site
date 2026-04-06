@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -10,6 +9,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import PreservingLink from "@/components/ui/preserving-link";
 
 interface MenuItem {
   label: string;
@@ -46,9 +46,9 @@ export default function MobileMenu({
       <SheetContent side="right" className="w-80 min-w-80 max-w-80 overflow-y-auto">
         <SheetHeader>
           <SheetTitle>
-            <Link href="/" onClick={onClose} className="text-2xl font-bold text-primary">
+            <PreservingLink href="/" onClick={onClose} className="text-2xl font-bold text-primary">
               Gostamos de Cuidar
-            </Link>
+            </PreservingLink>
           </SheetTitle>
         </SheetHeader>
 
@@ -84,27 +84,27 @@ export default function MobileMenu({
                       >
                         {item.children.map((child) => (
                           <li key={child.label}>
-                            <Link
+                            <PreservingLink
                               href={child.href}
                               onClick={onClose}
                               className="block py-3 min-h-[44px] text-lg text-muted-foreground hover:text-primary"
                               role="menuitem"
                             >
                               {child.label}
-                            </Link>
+                            </PreservingLink>
                           </li>
                         ))}
                       </ul>
                     )}
                   </>
                 ) : (
-                  <Link
+                  <PreservingLink
                     href={item.href}
                     onClick={item.label === "Home" ? handleHomeClick : onClose}
                     className="block py-3 min-h-[44px] text-xl font-medium hover:text-primary"
                   >
                     {item.label}
-                  </Link>
+                  </PreservingLink>
                 )}
               </li>
             ))}

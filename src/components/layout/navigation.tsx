@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./mobile-menu";
+import PreservingLink from "@/components/ui/preserving-link";
 
 const menuItems = [
   { label: "Cuidados de Saúde", href: "/cuidados-de-saude" },
@@ -47,7 +47,7 @@ export default function Navigation() {
               onMouseEnter={() => item.children && setOpenDropdown(item.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <Link
+              <PreservingLink
                 href={item.href}
                 className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
                   item.label === "Análises Clínicas" || item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
@@ -81,7 +81,7 @@ export default function Navigation() {
                 {item.children && (
                   <ChevronDown className="w-4 h-4 flex-shrink-0" />
                 )}
-              </Link>
+              </PreservingLink>
 
               {/* Dropdown Menu */}
               {item.children && openDropdown === item.label && (
@@ -99,12 +99,12 @@ export default function Navigation() {
                   >
                   {item.children.map((child) => (
                     <li key={child.label}>
-                      <Link
+                      <PreservingLink
                         href={child.href}
                         className="block pl-4 pr-12 py-2 text-sm hover:bg-gray-100 transition-colors"
                       >
                         {child.label}
-                      </Link>
+                      </PreservingLink>
                     </li>
                   ))}
                   </ul>

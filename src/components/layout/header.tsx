@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Navigation from "./navigation";
 import { Phone } from "lucide-react";
+import PreservingLink from "@/components/ui/preserving-link";
 
 export default function Header() {
   const pathname = usePathname();
@@ -22,7 +22,7 @@ export default function Header() {
         <div className="flex items-center justify-between py-4 h-full relative">
           {/* Logo - Left */}
           <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10">
-            <Link href="/" onClick={handleLogoClick} className="flex items-center">
+            <PreservingLink href="/" onClick={handleLogoClick} className="flex items-center">
                 <Image
                     src="/images/logo-transparent-final-greenv6.png"
                     alt="RCG Logo"
@@ -33,7 +33,7 @@ export default function Header() {
                     fetchPriority="high"
                     quality={90}
                 />
-            </Link>
+            </PreservingLink>
           </div>
 
           {/* Navigation - Centered on desktop only */}
