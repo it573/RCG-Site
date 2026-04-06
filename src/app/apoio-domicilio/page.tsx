@@ -32,7 +32,7 @@ export default function ApoioDomiciliarioPage() {
       <Hero
         title="Apoio Domiciliário"
         description="Proporcionamos cuidados personalizados no conforto do seu lar, com uma equipa dedicada e disponível 24 horas por dia."
-        showForm={true}
+        showForm={false}
         backgroundImage="/images/hero/caregiver.jpg"
         showStampImage={true}
       />
