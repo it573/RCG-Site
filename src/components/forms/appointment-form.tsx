@@ -189,7 +189,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Nome" className="bg-white/90 rounded-md" {...field} />
+                  <Input placeholder="Nome" className="bg-white rounded-md" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -202,7 +202,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="tel" placeholder="Telefone" className="bg-white/90 rounded-md" {...field} />
+                  <Input type="tel" placeholder="Telefone" className="bg-white rounded-md" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
