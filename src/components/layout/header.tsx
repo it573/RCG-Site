@@ -17,8 +17,8 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed z-50 w-full" style={{ top: '25px', left: 0, right: 0, height: '64px' }}>
-      <div className="mx-auto px-4 max-w-full md:max-w-[80%] bg-white/75 backdrop-blur-md h-full">
+    <header className="fixed z-50 w-full top-0 left-0 right-0" style={{ height: '64px' }}>
+      <div className="mx-auto px-4 max-w-full bg-white/75 backdrop-blur-md h-full">
         <div className="flex items-center justify-between py-4 h-full relative">
           {/* Logo - Left */}
           <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10">
