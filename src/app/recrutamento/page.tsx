@@ -28,6 +28,9 @@ export default function RecrutamentoPage() {
       />
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-[1140px]">
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
+            Recrutamento Nacional para prestação de Cuidados
+          </h2>
           <div className="w-full">
             <iframe
               src="https://reabilitaremcasa.my.salesforce-sites.com/applicant"
