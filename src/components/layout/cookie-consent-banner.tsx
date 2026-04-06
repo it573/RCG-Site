@@ -21,12 +21,18 @@ export default function CookieConsentBanner() {
     setCookie("cookie-consent", "accepted", { maxAge: 60 * 60 * 24 * 365 });
     setIsAnimatingOut(true);
     setTimeout(() => setIsVisible(false), 300);
+
+    // Dispatch custom event to notify analytics components
+    window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: 'accepted' }));
   };
 
   const handleReject = () => {
     setCookie("cookie-consent", "rejected", { maxAge: 60 * 60 * 24 * 365 });
     setIsAnimatingOut(true);
     setTimeout(() => setIsVisible(false), 300);
+
+    // Dispatch custom event to notify analytics components
+    window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: 'rejected' }));
   };
 
   if (!isVisible) return null;
