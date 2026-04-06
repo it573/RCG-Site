@@ -54,7 +54,7 @@ const faqs = [
     answer: (
       <>
         Somos a única Entidade <strong>convencionada</strong> com vários subsistemas públicos e privados. Todos eles têm regras diferentes. Consulte os nossos{" "}
-        <a href="/acordos" className="text-blue-600 hover:text-blue-800 underline">
+        <a href="/acordos-convencoes" className="text-blue-600 hover:text-blue-800 underline">
           <strong>Acordos</strong>
         </a>{" "}
         ou contacte-nos para mais informações.

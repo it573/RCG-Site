@@ -107,21 +107,21 @@ export default function Footer() {
             alt="ERS - Certificado da Entidade Reguladora da Saúde"
             width={201}
             height={164}
-            className="h-auto max-w-[201px]"
+            className="h-auto max-w-[201px] rounded-md"
           />
           <Image
             src="/images/scorepme.jpg"
             alt="ScorePME - Certificado de Qualidade"
             width={201}
             height={164}
-            className="h-auto max-w-[201px]"
+            className="h-auto max-w-[201px] rounded-md"
           />
           <Image
             src="/images/ss.png"
             alt="Segurança Social - Certificado de Registo na Segurança Social"
             width={201}
             height={164}
-            className="h-auto max-w-[201px]"
+            className="h-auto max-w-[201px] rounded-md"
           />
         </div>
 

@@ -24,7 +24,7 @@ const defaultServices: ServiceBox[] = [
 ];
 
 export default function Service21({
-  title = "Cobertura Nacional, entidade licenciada pela Segurança Social.",
+  title = "Assistência Permanente, entidade licenciada pela Segurança Social.",
   services = defaultServices,
 }: Service2Props) {
   return (
@@ -34,13 +34,13 @@ export default function Service21({
           {/* Left Column - Title */}
           <div className="px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
             <h2 className="text-3xl font-bold text-foreground">
-              {title === "Cobertura Nacional, entidade licenciada pela Segurança Social." ? (
+              {title === "Assistência Permanente, entidade licenciada pela Segurança Social." ? (
                 <>
                   <div className="md:hidden">
                     Cobertura<br />Nacional
                   </div>
                   <div className="hidden md:block">
-                    Cobertura Nacional<br />
+                    Assistência Permanente<br />
                     <span className="text-lg font-semibold">Entidade licenciada pela Segurança Social</span>
                   </div>
                 </>
