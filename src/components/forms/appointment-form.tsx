@@ -189,7 +189,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Nome" className="bg-white/75" {...field} />
+                  <Input placeholder="Nome" className="bg-white/75 rounded-md" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -202,7 +202,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="tel" placeholder="Telefone" className="bg-white/75" {...field} />
+                  <Input type="tel" placeholder="Telefone" className="bg-white/75 rounded-md" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -292,7 +292,7 @@ export default function AppointmentForm({
           </div>
         )}
 
-        <Button type="submit" className="w-full bg-teal-500 hover:bg-teal-600 text-white" disabled={isSubmitting}>
+        <Button type="submit" className="w-full bg-teal-500 hover:bg-teal-600 text-white rounded-md" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Pedido de Contacto"}
         </Button>
       </form>
