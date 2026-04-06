@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <Hero />
       <News2 />
-      <AIOptimizedFAQ />
+      {/* <AIOptimizedFAQ /> */}
     </>
   );
 }
