@@ -21,7 +21,7 @@ export default function Header() {
       <div className="mx-auto px-4 max-w-full bg-white/75 backdrop-blur-md h-full">
         <div className="flex items-center justify-between py-4 h-full relative">
           {/* Logo - Left */}
-          <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10">
+          <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10 ml-[15px]">
             <PreservingLink href="/" onClick={handleLogoClick} className="flex items-center">
                 <Image
                     src="/images/logo-transparent-final-greenv6.png"
@@ -44,7 +44,7 @@ export default function Header() {
           </div>
 
           {/* Right side: Phone button and Navigation (mobile menu) */}
-          <div className="flex items-center gap-3 flex-shrink-0 z-10">
+          <div className="flex items-center gap-3 flex-shrink-0 z-10 mr-[15px]">
             {/* Phone Number - Visible on all screens, appears before mobile menu */}
             <div className="flex items-center animate-fade-in-right">
               <a
