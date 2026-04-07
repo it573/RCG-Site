@@ -28,7 +28,7 @@ export default function Header() {
                     alt="RCG Logo"
                     width={352}
                     height={77}
-                    className="w-[232px] h-auto md:w-[352px]"
+                    className="w-[209px] h-auto md:w-[317px]"
                     priority
                     fetchPriority="high"
                     quality={90}

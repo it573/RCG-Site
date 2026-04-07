@@ -39,7 +39,7 @@ export default function CuidadosContinuadosHospitalizacaoPage() {
       <section className="py-20 overflow-x-hidden" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
-            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Nós Ligamos-lhe!</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Nós Ligamos!</h2>
             <AppointmentForm campaign="" source="cuidados-continuados-hospitalizacao" />
           </div>
         </div>
@@ -62,7 +62,7 @@ export function CuidadosContinuadosPageContent() {
       <section className="py-20 overflow-x-hidden" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
-            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Nós Ligamos-lhe!</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Nós Ligamos!</h2>
             <AppointmentForm campaign="" source="cuidados-continuados-hospitalizacao" />
           </div>
         </div>

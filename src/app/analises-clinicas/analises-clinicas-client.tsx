@@ -109,7 +109,7 @@ Para marcar as suas Análises Clínicas ou o seu check-up pode obter mais inform
       <section className="py-20" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">
           <div className="w-1/2 mx-auto">
-            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Nós Ligamos-lhe!</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Nós Ligamos!</h2>
             <AppointmentForm campaign="CS" source="analises-clinicas" />
           </div>
         </div>
