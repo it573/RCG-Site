@@ -38,12 +38,15 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop Navigation - Normal */}
-      <nav className="hidden min-[1650px]:flex items-center animate-fade-in-down">
+      <nav className="hidden min-[1650px]:flex items-center">
         <ul className="flex items-center gap-[4vw]">
           {menuItems.map((item) => (
             <li
               key={item.label}
-              className="relative group flex-shrink-0"
+              className="relative group flex-shrink-0 animate-fade-in-down"
+              style={{
+                animationDelay: "0s",
+              }}
               onMouseEnter={() => item.children && setOpenDropdown(item.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
