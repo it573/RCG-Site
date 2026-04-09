@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed z-50 w-full top-0 left-0 right-0 overflow-hidden" style={{ height: '64px' }}>
+    <header className="fixed z-50 w-full top-0 left-0 right-0" style={{ height: '64px' }}>
       <div className="mx-auto max-w-full bg-white/75 backdrop-blur-md h-full">
         <div className="flex items-center justify-between py-4 h-full relative w-full min-w-0 px-[2.25%]">
           {/* Logo - Left */}
