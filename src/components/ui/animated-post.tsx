@@ -11,11 +11,15 @@ export default function AnimatedPost({ children, delay }: AnimatedPostProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const hasAnimatedRef = useRef(false);
+  const isMobileRef = useRef(false);
 
   useEffect(() => {
     // Check if mobile
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      isMobileRef.current = mobile;
     };
 
     checkMobile();
@@ -25,24 +29,31 @@ export default function AnimatedPost({ children, delay }: AnimatedPostProps) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !hasAnimatedRef.current) {
+            hasAnimatedRef.current = true;
+            // On mobile: animate immediately, on desktop: use delay
+            const animationDelay = isMobileRef.current ? 0 : delay;
             setTimeout(() => {
               setIsVisible(true);
-            }, delay);
+            }, animationDelay);
           }
         });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
       window.removeEventListener("resize", checkMobile);
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [delay]);
@@ -52,13 +63,18 @@ export default function AnimatedPost({ children, delay }: AnimatedPostProps) {
       ref={ref}
       className={
         isMobile
-          ? isVisible
-            ? "animate-slide-from-right visible"
-            : "animate-slide-from-right"
+          ? "opacity-0"
           : "animate-rise-up"
       }
       style={
-        !isMobile ? { animationDelay: `${delay}ms` } : { animationDelay: `${delay}ms` }
+        isMobile
+          ? {
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? "translateX(0)" : "translateX(100px)",
+              transition: "opacity 1.2s ease-out, transform 1.2s ease-out",
+              transitionDelay: "0ms"
+            }
+          : { animationDelay: `${delay}ms` }
       }
     >
       {children}
