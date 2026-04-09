@@ -67,15 +67,23 @@ export default function Header() {
                   </tbody>
                 </table>
               </a>
-              {/* Mobile: Show just icon */}
+              {/* Mobile: Heart-shaped call button */}
               <a
                 href="tel:+351210136276"
-                className="sm:hidden flex items-center px-3 md:px-4 py-[0.375rem] bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
+                className="sm:hidden block w-10 h-10 relative hover:opacity-80 transition-opacity"
                 style={{
                   animation: 'heartbeat 1.5s ease-in-out infinite'
                 }}
+                aria-label="Ligar agora"
               >
-                <Phone className="w-5 h-5 md:w-6 md:h-6" />
+                <svg
+                  viewBox="0 0 24 24"
+                  className="w-full h-full fill-teal-500 transition-colors"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <Phone className="absolute left-1/2 -translate-x-1/2 top-[10px] w-4 h-4 text-white pointer-events-none" />
               </a>
             </div>
 
