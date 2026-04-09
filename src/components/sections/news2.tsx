@@ -4,6 +4,7 @@ import PreservingLink from "@/components/ui/preserving-link";
 
 interface BlogPost {
   title: string;
+  description: string;
   image: {
     src: string;
     alt: string;
@@ -21,6 +22,7 @@ interface News2Props {
 const defaultPosts: BlogPost[] = [
   {
     title: "SAÚDE - Serviços Especializados",
+    description: "Cuidados especializados de saúde que aliam o rigor profissional à proximidade e segurança do ambiente familiar",
     image: {
       src: "/images/health-service.jpg",
       alt: "SAÚDE - Serviços Especializados",
@@ -29,6 +31,7 @@ const defaultPosts: BlogPost[] = [
   },
   {
     title: "Análises Clínicas",
+    description: "Realizamos a sua colheita de análises clínicas no conforto do domicílio, um serviço de diagnóstico rápido e seguro que leva a excelência laboratorial até si, priorizando o seu bem-estar e a agilidade nos resultados",
     image: {
       src: "/images/blood-test.jpg",
       alt: "Análises Clínicas",
@@ -37,14 +40,16 @@ const defaultPosts: BlogPost[] = [
   },
   {
     title: "Apoio Domiciliário",
+    description: "Garantimos uma assistência completa nas atividades da vida diária, a todos aqueles que não possam assegurar temporária ou permanentemente, a satisfação das suas necessidades básicas numa companhia atenta que promove a qualidade de vida no conforto do lar",
     image: {
       src: "/images/caregiver.jpg",
-      alt: "Separating stigma from health advice",
+      alt: "Apoio Domiciliário",
     },
     href: "/apoio-domicilio",
   },
   {
     title: "Cuidados Continuados",
+    description: "Uma alternativa segura à hospitalização convencional, com cuidados de saúde permanentes e especializados que garantem a continuidade do tratamento com a máxima dignidade",
     image: {
       src: "/images/CuidadosContinuados-Maos.jpg",
       alt: "Cuidados Continuados",
@@ -53,6 +58,7 @@ const defaultPosts: BlogPost[] = [
   },
   {
     title: "Hospitalização Domiciliária",
+    description: "Uma alternativa inovadora ao internamento convencional que promove uma recuperação mais rápida e humanizada, através de cuidados clínicos intensivos prestados no conforto e proximidade da família",
     image: {
       src: "/images/hospital-at-home.jpg",
       alt: "Hospitalização Domiciliária",
@@ -61,6 +67,7 @@ const defaultPosts: BlogPost[] = [
   },
   {
     title: "Equipamentos Hospitalares",
+    description: "Disponibilizamos soluções completas em equipamentos hospitalares de última geração, garantindo a adaptação segura e funcional do domicílio às necessidades específicas de cada pessoa. Aluguer e Venda (entrega e instalação incluídas)",
     image: {
       src: "/images/wheel-chair.jpg",
       alt: "Equipamentos Hospitalares",
@@ -82,7 +89,7 @@ export default function News2({
           {/* <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm">
             {badge}
           </div> */}
-          <Heading as="h2" className="text-3xl font-normal">{title}</Heading>
+          <Heading as="h2" className="text-3xl font-normal animate-drop-from-top">{title}</Heading>
           <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
         </div>
 
@@ -90,8 +97,7 @@ export default function News2({
           {posts.map((post, index) => (
             <div
               key={index}
-              className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
             >
               <PreservingLink href={post.href} className="block">
                 <div className="overflow-hidden">
@@ -104,9 +110,12 @@ export default function News2({
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors mb-2">
                     {post.title}
                   </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-3">
+                    {post.description}
+                  </p>
                 </div>
               </PreservingLink>
             </div>
