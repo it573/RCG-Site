@@ -1,16 +1,70 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronUp } from "lucide-react";
 import PreservingLink from "@/components/ui/preserving-link";
 
+const footerImages = [
+  {
+    src: "/images/ers.png",
+    alt: "ERS - Certificado da Entidade Reguladora da Saúde",
+    width: 201,
+    height: 164,
+  },
+  {
+    src: "/images/scorepme.jpg",
+    alt: "ScorePME - Certificado de Qualidade",
+    width: 201,
+    height: 164,
+  },
+  {
+    src: "/images/ss.png",
+    alt: "Segurança Social - Certificado de Registo na Segurança Social",
+    width: 201,
+    height: 164,
+  },
+];
+
 export default function Footer() {
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef<HTMLDivElement>(null);
+  const hasAnimatedRef = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimatedRef.current) {
+            hasAnimatedRef.current = true;
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px"
+      }
+    );
+
+    const currentRef = footerRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="bg-teal-500 text-white">
+    <footer ref={footerRef} className="bg-teal-500 text-white">
       <div className="container mx-auto px-4 py-12">
         {/* Footer Widgets - Three Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -100,29 +154,49 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Gallery Section */}
+        {/* Gallery Section with Circular Animation */}
         <div className="flex flex-wrap justify-center gap-6 my-8">
-          <Image
-            src="/images/ers.png"
-            alt="ERS - Certificado da Entidade Reguladora da Saúde"
-            width={201}
-            height={164}
-            className="h-auto max-w-[201px] rounded-md"
-          />
-          <Image
-            src="/images/scorepme.jpg"
-            alt="ScorePME - Certificado de Qualidade"
-            width={201}
-            height={164}
-            className="h-auto max-w-[201px] rounded-md"
-          />
-          <Image
-            src="/images/ss.png"
-            alt="Segurança Social - Certificado de Registo na Segurança Social"
-            width={201}
-            height={164}
-            className="h-auto max-w-[201px] rounded-md"
-          />
+          {footerImages.map((image, index) => {
+            // Calculate position on circumference from bottom
+            // ers.png: bottom left (135°), scorepme.jpg: bottom (90°), ss.png: bottom right (45°)
+            let angle: number;
+            if (index === 0) {
+              // ers.png - bottom left
+              angle = 135 * (Math.PI / 180);
+            } else if (index === 1) {
+              // scorepme.jpg - bottom
+              angle = 90 * (Math.PI / 180);
+            } else {
+              // ss.png - bottom right
+              angle = 45 * (Math.PI / 180);
+            }
+
+            const radius = 200; // Distance from center
+
+            const startX = Math.cos(angle) * radius;
+            const startY = Math.sin(angle) * radius;
+
+            return (
+              <div
+                key={index}
+                style={{
+                  transform: isVisible
+                    ? "translate(0, 0)"
+                    : `translate(${startX}px, ${startY}px)`,
+                  opacity: isVisible ? 1 : 0,
+                  transition: `all 1.5s ease-out 0s`,
+                }}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  className="h-auto max-w-[201px] rounded-md"
+                />
+              </div>
+            );
+          })}
         </div>
 
         {/* Copyright */}
