@@ -92,7 +92,7 @@ const defaultLogos: LogoItem[] = [
 
 export default function RCGDeals({
   title = "Acordos",
-  description = "Temos acordos com as principais seguradoras e substistemas.",
+  description = "Temos acordos com as principais seguradoras e subsistemas.",
   logos = defaultLogos,
 }: RCGDealsProps) {
   return (
