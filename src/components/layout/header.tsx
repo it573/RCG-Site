@@ -48,7 +48,7 @@ export default function Header() {
             {/* Phone Number - Visible on all screens, appears before mobile menu */}
             <div className="flex items-center animate-fade-in-right">
               <a
-                href="tel:+351210136276"
+                href="tel:+351210136676"
                 className="hidden sm:flex items-center px-3 md:px-4 py-1 bg-teal-500 text-white text-xs md:text-sm font-medium rounded-md hover:bg-teal-600 transition-colors"
               >
                 <table className="border-collapse">
@@ -69,7 +69,7 @@ export default function Header() {
               </a>
               {/* Mobile: Heart-shaped call button */}
               <a
-                href="tel:+351210136276"
+                href="tel:+351210136676"
                 className="sm:hidden block w-[50px] h-[50px] relative hover:opacity-80 transition-opacity translate-x-[10px]"
                 style={{
                   animation: 'heartbeat 1.5s ease-in-out infinite'
