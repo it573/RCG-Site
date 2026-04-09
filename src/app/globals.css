@@ -131,6 +131,28 @@
     }
   }
 
+  @keyframes riseUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   .animate-fade-in-left {
     animation: fadeInLeft 0.6s ease-out forwards;
     opacity: 1;
@@ -153,6 +175,20 @@
 
   .animate-drop-from-top {
     animation: dropFromTop 0.6s ease-out forwards;
+    opacity: 1;
+  }
+
+  .animate-rise-up {
+    animation: riseUp 1.2s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-from-right {
+    animation: slideFromRight 1.2s ease-out forwards;
+    opacity: 0;
+  }
+
+  .visible {
     opacity: 1;
   }
 

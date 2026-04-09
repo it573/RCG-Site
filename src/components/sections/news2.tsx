@@ -1,6 +1,7 @@
 import Heading from "@/components/ui/heading";
 import Image from "next/image";
 import PreservingLink from "@/components/ui/preserving-link";
+import AnimatedPost from "@/components/ui/animated-post";
 
 interface BlogPost {
   title: string;
@@ -95,30 +96,29 @@ export default function News2({
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
-            >
-              <PreservingLink href={post.href} className="block">
-                <div className="overflow-hidden">
-                  <Image
-                    src={post.image.src}
-                    alt={post.image.alt}
-                    width={768}
-                    height={512}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors mb-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-3">
-                    {post.description}
-                  </p>
-                </div>
-              </PreservingLink>
-            </div>
+            <AnimatedPost key={index} delay={index * 300}>
+              <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <PreservingLink href={post.href} className="block">
+                  <div className="overflow-hidden">
+                    <Image
+                      src={post.image.src}
+                      alt={post.image.alt}
+                      width={768}
+                      height={512}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors mb-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground line-clamp-3">
+                      {post.description}
+                    </p>
+                  </div>
+                </PreservingLink>
+              </div>
+            </AnimatedPost>
           ))}
         </div>
       </div>
