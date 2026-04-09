@@ -17,9 +17,9 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed z-50 w-full top-0 left-0 right-0" style={{ height: '64px' }}>
+    <header className="fixed z-50 w-full top-0 left-0 right-0 overflow-hidden" style={{ height: '64px' }}>
       <div className="mx-auto px-4 max-w-full bg-white/75 backdrop-blur-md h-full">
-        <div className="flex items-center justify-between py-4 h-full relative">
+        <div className="flex items-center justify-between py-4 h-full relative w-full min-w-0">
           {/* Logo - Left */}
           <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10 ml-[15px]">
             <PreservingLink href="/" onClick={handleLogoClick} className="flex items-center">

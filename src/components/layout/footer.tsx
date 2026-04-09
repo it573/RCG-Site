@@ -26,6 +26,23 @@ const footerImages = [
   },
 ];
 
+const leftColumnItems = [
+  { title: "REABILITAR EM CASA", type: "heading" },
+  { title: "Quem Somos", type: "link", href: "/quem-somos" },
+  { title: "Notícias", type: "text" },
+  { title: "Testemunhos", type: "link", href: "/testemunhos" },
+  { title: "Política de Privacidade", type: "link", href: "/politica-de-privacidade" },
+  { title: "RAL", type: "link", href: "/ral" },
+  { title: "Perguntas Frequentes", type: "link", href: "/perguntas-frequentes" },
+  { title: "Livro de Elogios", type: "link", href: "https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa", external: true },
+  { title: "Livro de Reclamações", type: "link", href: "https://www.livroreclamacoes.pt/inicio/", external: true },
+];
+
+const middleColumnItems = [
+  { title: "REGISTE-SE", type: "heading" },
+  { title: "Recrutamento", type: "link", href: "/recrutamento" },
+];
+
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
   const footerRef = useRef<HTMLDivElement>(null);
@@ -68,58 +85,138 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         {/* Footer Widgets - Three Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Column 1: REABILITAR EM CASA */}
+          {/* Column 1: REABILITAR EM CASA - Animated from left */}
           <div className="space-y-4">
-            <h4 className="text-3xl font-semibold">REABILITAR EM CASA</h4>
+            <h4
+              className="text-3xl font-semibold"
+              style={{
+                transform: isVisible ? "translateX(0)" : "translateX(-100px)",
+                opacity: isVisible ? 1 : 0,
+                transition: "all 0.8s ease-out 0s",
+              }}
+            >
+              REABILITAR EM CASA
+            </h4>
             <div className="grid grid-cols-2 gap-4 text-xl">
+              {/* Left sub-column - First 4 items */}
               <div className="space-y-3">
-                <PreservingLink href="/quem-somos" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Quem Somos
-                </PreservingLink>
-                <span className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Notícias
-                </span>
-                <PreservingLink href="/testemunhos" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Testemunhos
-                </PreservingLink>
-                <PreservingLink href="/politica-de-privacidade" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Política de Privacidade
-                </PreservingLink>
-                {/* <Link href="/cookies" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Cookies
-                </Link> */}
-                <PreservingLink href="/ral" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  RAL
-                </PreservingLink>
+                {leftColumnItems.slice(1, 5).map((item, index) => {
+                  if (item.type === "link") {
+                    return (
+                      <PreservingLink
+                        key={index}
+                        href={item.href || "#"}
+                        target={item.external ? "_blank" : undefined}
+                        rel={item.external ? "noopener noreferrer" : undefined}
+                        className="block hover:text-white/80 transition-colors leading-[0.95]"
+                        style={{
+                          transform: isVisible ? "translateX(0)" : "translateX(-100px)",
+                          opacity: isVisible ? 1 : 0,
+                          transition: `all 0.8s ease-out ${(index + 1) * 0.1}s`,
+                        }}
+                      >
+                        {item.title}
+                      </PreservingLink>
+                    );
+                  } else {
+                    return (
+                      <span
+                        key={index}
+                        className="block hover:text-white/80 transition-colors leading-[0.95]"
+                        style={{
+                          transform: isVisible ? "translateX(0)" : "translateX(-100px)",
+                          opacity: isVisible ? 1 : 0,
+                          transition: `all 0.8s ease-out ${(index + 1) * 0.1}s`,
+                        }}
+                      >
+                        {item.title}
+                      </span>
+                    );
+                  }
+                })}
               </div>
+              {/* Right sub-column - Last 4 items */}
               <div className="space-y-3">
-                <PreservingLink href="/perguntas-frequentes" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Perguntas Frequentes
-                </PreservingLink>
-                <PreservingLink href="https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa" target="_blank" rel="noopener noreferrer" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Livro de Elogios
-                </PreservingLink>
-                <PreservingLink href="https://www.livroreclamacoes.pt/inicio/" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                  Livro de Reclamações
-                </PreservingLink>
+                {leftColumnItems.slice(5).map((item, index) => {
+                  if (item.type === "link") {
+                    return (
+                      <PreservingLink
+                        key={index}
+                        href={item.href || "#"}
+                        target={item.external ? "_blank" : undefined}
+                        rel={item.external ? "noopener noreferrer" : undefined}
+                        className="block hover:text-white/80 transition-colors leading-[0.95]"
+                        style={{
+                          transform: isVisible ? "translateX(0)" : "translateX(-100px)",
+                          opacity: isVisible ? 1 : 0,
+                          transition: `all 0.8s ease-out ${(index + 5) * 0.1}s`,
+                        }}
+                      >
+                        {item.title}
+                      </PreservingLink>
+                    );
+                  }
+                })}
               </div>
             </div>
           </div>
 
-          {/* Column 2: REGISTE-SE */}
+          {/* Column 2: REGISTE-SE - Animated from top */}
           <div className="space-y-4">
-            <h4 className="text-3xl font-semibold">REGISTE-SE</h4>
-            <div className="space-y-3 text-xl">
-              <PreservingLink href="/recrutamento" className="block hover:text-white/80 transition-colors leading-[0.95]">
-                Recrutamento
-              </PreservingLink>
-            </div>
+            {middleColumnItems.map((item, index) => {
+              if (item.type === "heading") {
+                return (
+                  <h4
+                    key={index}
+                    className="text-3xl font-semibold"
+                    style={{
+                      transform: isVisible ? "translateY(0)" : "translateY(-100px)",
+                      opacity: isVisible ? 1 : 0,
+                      transition: `all 0.8s ease-out ${index * 0.15}s`,
+                    }}
+                  >
+                    {item.title}
+                  </h4>
+                );
+              } else if (item.type === "link") {
+                return (
+                  <PreservingLink
+                    key={index}
+                    href={item.href || "#"}
+                    className="block hover:text-white/80 transition-colors leading-[0.95] text-xl"
+                    style={{
+                      transform: isVisible ? "translateY(0)" : "translateY(-100px)",
+                      opacity: isVisible ? 1 : 0,
+                      transition: `all 0.8s ease-out ${index * 0.15}s`,
+                    }}
+                  >
+                    {item.title}
+                  </PreservingLink>
+                );
+              }
+            })}
           </div>
 
-          {/* Column 3: SIGA-NOS */}
+          {/* Column 3: SIGA-NOS - Animated from right */}
           <div className="space-y-4">
-            <h4 className="text-3xl font-semibold">SIGA-NOS</h4>
-            <div className="flex items-center gap-4">
+            <h4
+              className="text-3xl font-semibold"
+              style={{
+                transform: isVisible ? "translateX(0)" : "translateX(100px)",
+                opacity: isVisible ? 1 : 0,
+                transition: "all 0.8s ease-out 0s",
+              }}
+            >
+              SIGA-NOS
+            </h4>
+            <div
+              className="flex items-center gap-4"
+              style={{
+                transform: isVisible ? "translateX(0)" : "translateX(100px)",
+                opacity: isVisible ? 1 : 0,
+                transition: "all 0.8s ease-out 0.15s",
+              }}
+            >
               <a
                 href="https://www.facebook.com/fisireabilitar/"
                 target="_blank"
