@@ -94,11 +94,11 @@ export default function News2({
           <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {posts.map((post, index) => (
             <AnimatedPost key={index} delay={index * 300}>
-              <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
-                <PreservingLink href={post.href} className="block">
+              <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                <PreservingLink href={post.href} className="block flex flex-col h-full">
                   <div className="overflow-hidden">
                     <Image
                       src={post.image.src}
@@ -108,12 +108,12 @@ export default function News2({
                       className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors mb-2">
+                  <div className="p-4 flex-1 flex flex-col">
+                    <h3 className="text-lg font-semibold group-hover:text-primary transition-colors mb-2 h-14 flex-shrink-0 leading-tight overflow-hidden">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {post.description}
+                    <p className="text-sm text-muted-foreground leading-relaxed min-h-[6rem] flex-shrink-0">
+                      {post.description || "\u00A0"}
                     </p>
                   </div>
                 </PreservingLink>

@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { clsx } from "clsx";
 
 interface AnimatedPostProps {
   children: React.ReactNode;
   delay: number;
+  className?: string;
 }
 
-export default function AnimatedPost({ children, delay }: AnimatedPostProps) {
+export default function AnimatedPost({ children, delay, className }: AnimatedPostProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -61,11 +63,10 @@ export default function AnimatedPost({ children, delay }: AnimatedPostProps) {
   return (
     <div
       ref={ref}
-      className={
-        isMobile
-          ? "opacity-0"
-          : "animate-rise-up"
-      }
+      className={clsx(
+        className,
+        isMobile ? "opacity-0" : "animate-rise-up"
+      )}
       style={
         isMobile
           ? {
