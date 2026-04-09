@@ -97,7 +97,7 @@ export default function News2({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post, index) => (
             <AnimatedPost key={index} delay={index * 300}>
-              <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
                 <PreservingLink href={post.href} className="block">
                   <div className="overflow-hidden">
                     <Image
@@ -112,7 +112,7 @@ export default function News2({
                     <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors mb-2">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-3">
+                    <p className="text-sm text-muted-foreground">
                       {post.description}
                     </p>
                   </div>
