@@ -29,7 +29,7 @@ export function FAQAccordion({ faqs }: FAQAccordionProps) {
         >
           <button
             onClick={() => toggleFAQ(index)}
-            className="w-full px-5 py-3 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+            className="w-full px-5 py-3 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors duration-200 focus:outline-none"
             aria-expanded={openIndex === index}
           >
             <h3 className="text-base font-medium text-gray-900 pr-4">
