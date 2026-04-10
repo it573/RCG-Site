@@ -1,3 +1,11 @@
+export const metadata = {
+  title: "Política de Privacidade - RCG",
+  description: "Política de Privacidade e proteção de dados pessoais da RCG - Reabilitar em Casa, Lda.",
+  alternates: {
+    canonical: "https://www.reabilitar-em-casa.com/politica-de-privacidade",
+  },
+};
+
 export default function PoliticaPrivacidadePage() {
   return (
     <div className="min-h-screen pt-40 pb-16" style={{ backgroundColor: '#fed7aa' }}>

@@ -1,6 +1,9 @@
 export const metadata = {
   title: "RAL - Resolução de Litígios Online - RCG",
   description: "Resolução Alternativa de Litígios - RCG",
+  alternates: {
+    canonical: "https://www.reabilitar-em-casa.com/ral",
+  },
 };
 
 export default function RALPage() {

@@ -5,6 +5,9 @@ import { FaqJsonLd } from "@/components/faq-json-ld";
 export const metadata: Metadata = {
   title: "Perguntas Frequentes | Reabilitar em Casa",
   description: "FAQs - Perguntas mais frequentes sobre os nossos serviços de saúde e apoio domiciliário",
+  alternates: {
+    canonical: "https://www.reabilitar-em-casa.com/perguntas-frequentes",
+  },
 };
 
 const faqs = [

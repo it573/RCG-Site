@@ -1,6 +1,9 @@
 export const metadata = {
   title: "Política de Cookies - RCG",
   description: "Política de Cookies e privacidade de dados",
+  alternates: {
+    canonical: "https://www.reabilitar-em-casa.com/cookies",
+  },
 };
 
 export default function CookiesPage() {

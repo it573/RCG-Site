@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Cuidados de Saúde ao Domicílio em Portugal | RCG",
   description: "Cuidados de saúde personalizados e apoio domiciliário 24/7 em Portugal. Análises clínicas e equipamento hospitalar ao domicílio.",
   keywords: ["cuidados de saúde portugal", "apoio domiciliário", "cuidadores", "análises clínicas domicílio", "cuidados continuados", "saúde familiar"],
+  alternates: {
+    canonical: "https://www.reabilitar-em-casa.com",
+  },
   openGraph: {
     title: "Cuidados de Saúde ao Domicílio em Portugal | RCG",
     description: "Providenciamos cuidados de saúde personalizados, apoio domiciliário, análises clínicas e equipamento hospitalar em Portugal. Equipa disponível 24/7.",
