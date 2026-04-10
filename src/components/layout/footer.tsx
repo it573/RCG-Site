@@ -9,20 +9,32 @@ const footerImages = [
   {
     src: "/images/ers.png",
     alt: "ERS - Certificado da Entidade Reguladora da Saúde",
-    width: 201,
-    height: 164,
+    width: 121,
+    height: 98,
   },
   {
     src: "/images/scorepme.jpg",
     alt: "ScorePME - Certificado de Qualidade",
-    width: 201,
-    height: 164,
+    width: 121,
+    height: 98,
   },
   {
     src: "/images/ss.png",
     alt: "Segurança Social - Certificado de Registo na Segurança Social",
-    width: 201,
-    height: 164,
+    width: 121,
+    height: 98,
+  },
+  {
+    src: "/images/aepad.jpg",
+    alt: "APEPAD - Certificado",
+    width: 121,
+    height: 98,
+  },
+  {
+    src: "/images/degeart.jpg",
+    alt: "DEGEART - Certificado",
+    width: 121,
+    height: 98,
   },
 ];
 
@@ -289,7 +301,7 @@ export default function Footer() {
                   alt={image.alt}
                   width={image.width}
                   height={image.height}
-                  className="h-auto max-w-[201px] rounded-md"
+                  className="h-auto max-w-[121px] rounded-md"
                 />
               </div>
             );
