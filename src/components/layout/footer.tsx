@@ -25,8 +25,8 @@ const footerImages = [
     height: 98,
   },
   {
-    src: "/images/aepad.jpg",
-    alt: "APEPAD - Certificado",
+    src: "/images/aepad1.jpg",
+    alt: "AEPAD - Certificado",
     width: 121,
     height: 98,
   },
@@ -268,7 +268,17 @@ export default function Footer() {
           {footerImages.map((image, index) => {
             // Calculate position on circumference from bottom
             // ers.png: bottom left (135°), scorepme.jpg: bottom (90°), ss.png: bottom right (45°)
-            const angle = 90 * (Math.PI / 180);
+            let angle: number;
+            if (index === 0) {
+              // ers.png - bottom left
+              angle = 135 * (Math.PI / 180);
+            } else if (index === 1) {
+              // scorepme.jpg - bottom right (swapped)
+              angle = 45 * (Math.PI / 180);
+            } else {
+              // ss.png - bottom (swapped)
+              angle = 90 * (Math.PI / 180);
+            }
 
             const radius = 200; // Distance from center
 
