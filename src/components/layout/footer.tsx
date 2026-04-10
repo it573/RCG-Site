@@ -268,17 +268,7 @@ export default function Footer() {
           {footerImages.map((image, index) => {
             // Calculate position on circumference from bottom
             // ers.png: bottom left (135°), scorepme.jpg: bottom (90°), ss.png: bottom right (45°)
-            let angle: number;
-            if (index === 0) {
-              // ers.png - bottom left
-              angle = 135 * (Math.PI / 180);
-            } else if (index === 1) {
-              // scorepme.jpg - bottom
-              angle = 90 * (Math.PI / 180);
-            } else {
-              // ss.png - bottom right
-              angle = 45 * (Math.PI / 180);
-            }
+            const angle = 90 * (Math.PI / 180);
 
             const radius = 200; // Distance from center
 
