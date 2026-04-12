@@ -45,7 +45,7 @@ export default function ServiceContent({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 mb-12 items-center">
           {/* Top row spanning all columns */}
           <div className="lg:col-span-3 text-center">
-            <h2 className="text-4xl md:text-5xl">Acordos e Convenções</h2>
+            <h2 className="text-4xl md:text-5xl"> Com o Líder em Medicina Laboratorial</h2>
           </div>
 
           {image && (
