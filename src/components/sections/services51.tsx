@@ -1,5 +1,4 @@
 import Image from "next/image";
-import PreservingLink from "@/components/ui/preserving-link";
 
 interface ServiceCard {
   image: string;
@@ -65,42 +64,40 @@ export default function Services51({
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card */}
-              <PreservingLink href={service.link} className="block group">
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                  {/* Image */}
-                  <div className="overflow-hidden aspect-[4/3]">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      width={800}
-                      height={600}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 text-center">
-                    {/* Title */}
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors whitespace-pre-line">
-                      {service.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-muted-foreground mb-4 text-justify">
-                      {service.description}
-                    </p>
-
-                    {/* Button
-                    <div className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
-                      <span>Saiba mais</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                    */}
-                  </div>
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+                {/* Image */}
+                <div className="overflow-hidden aspect-[4/3]">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
+                  />
                 </div>
-              </PreservingLink>
+
+                {/* Content */}
+                <div className="p-6 text-center">
+                  {/* Title */}
+                  <h3 className="text-xl font-semibold text-foreground mb-3 whitespace-pre-line">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground leading-relaxed min-h-[4.5rem] flex-shrink-0">
+                    {service.description}
+                  </p>
+
+                  {/* Button
+                  <div className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
+                    <span>Saiba mais</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                  */}
+                </div>
+              </div>
             </div>
           ))}
         </div>
