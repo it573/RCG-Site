@@ -36,6 +36,7 @@ const footerImages = [
     width: 121,
     height: 98,
   },
+  
 ];
 
 const leftColumnItems = [
@@ -259,6 +260,21 @@ export default function Footer() {
                   className="w-8 h-8"
                 />
               </a>
+              <a
+                href="https://www.linkedin.com/company/reabilitar-em-casa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="Instagram"
+              >
+                <Image
+                  src="/images/linkedin.png"
+                  alt="Linkedin"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8"
+                />
+              </a>              
             </div>
           </div>
         </div>
