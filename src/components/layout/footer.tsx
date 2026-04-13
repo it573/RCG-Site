@@ -104,7 +104,7 @@ export default function Footer() {
               style={{
                 transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                 opacity: isVisible ? 1 : 0,
-                transition: "all 0.8s ease-out 0s",
+                transition: "all 0.8s ease-out 1.2s",
               }}
             >
               REABILITAR EM CASA
@@ -124,7 +124,7 @@ export default function Footer() {
                         style={{
                           transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                           opacity: isVisible ? 1 : 0,
-                          transition: `all 0.8s ease-out ${(index + 1) * 0.1}s`,
+                          transition: `all 0.8s ease-out 1.2s`,
                         }}
                       >
                         {item.title}
@@ -138,7 +138,7 @@ export default function Footer() {
                         style={{
                           transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                           opacity: isVisible ? 1 : 0,
-                          transition: `all 0.8s ease-out ${(index + 1) * 0.1}s`,
+                          transition: `all 0.8s ease-out 1.2s`,
                         }}
                       >
                         {item.title}
@@ -161,7 +161,7 @@ export default function Footer() {
                         style={{
                           transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                           opacity: isVisible ? 1 : 0,
-                          transition: `all 0.8s ease-out ${(index + 5) * 0.1}s`,
+                          transition: `all 0.8s ease-out 1.2s`,
                         }}
                       >
                         {item.title}
@@ -184,7 +184,7 @@ export default function Footer() {
                     style={{
                       transform: isVisible ? "translateY(0)" : "translateY(-100px)",
                       opacity: isVisible ? 1 : 0,
-                      transition: `all 0.8s ease-out ${index * 0.15}s`,
+                      transition: `all 0.8s ease-out 1.2s`,
                     }}
                   >
                     {item.title}
@@ -199,7 +199,7 @@ export default function Footer() {
                     style={{
                       transform: isVisible ? "translateY(0)" : "translateY(-100px)",
                       opacity: isVisible ? 1 : 0,
-                      transition: `all 0.8s ease-out ${index * 0.15}s`,
+                      transition: `all 0.8s ease-out 1.2s`,
                     }}
                   >
                     {item.title}
@@ -216,7 +216,7 @@ export default function Footer() {
               style={{
                 transform: isVisible ? "translateX(0)" : "translateX(100px)",
                 opacity: isVisible ? 1 : 0,
-                transition: "all 0.8s ease-out 0s",
+                transition: "all 0.8s ease-out 1.2s",
               }}
             >
               SIGA-NOS
@@ -226,7 +226,7 @@ export default function Footer() {
               style={{
                 transform: isVisible ? "translateX(0)" : "translateX(100px)",
                 opacity: isVisible ? 1 : 0,
-                transition: "all 0.8s ease-out 0.15s",
+                transition: "all 0.8s ease-out 1.2s",
               }}
             >
               <a
@@ -267,18 +267,12 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-6 my-8">
           {footerImages.map((image, index) => {
             // Calculate position on circumference from bottom
-            // ers.png: bottom left (135°), scorepme.jpg: bottom (90°), ss.png: bottom right (45°)
-            let angle: number;
-            if (index === 0) {
-              // ers.png - bottom left
-              angle = 135 * (Math.PI / 180);
-            } else if (index === 1) {
-              // scorepme.jpg - bottom right (swapped)
-              angle = 45 * (Math.PI / 180);
-            } else {
-              // ss.png - bottom (swapped)
-              angle = 90 * (Math.PI / 180);
-            }
+            // All images distributed evenly around bottom half of circle
+            // 5 images distributed across 180 degrees (from 135° to 45°)
+            const startAngle = 135; // bottom left
+            const endAngle = 45;    // bottom right
+            const angleStep = (startAngle - endAngle) / (footerImages.length - 1);
+            const angle = (startAngle - index * angleStep) * (Math.PI / 180);
 
             const radius = 200; // Distance from center
 
@@ -293,7 +287,7 @@ export default function Footer() {
                     ? "translate(0, 0)"
                     : `translate(${startX}px, ${startY}px)`,
                   opacity: isVisible ? 1 : 0,
-                  transition: `all 1.5s ease-out 0s`,
+                  transition: `all 1.5s ease-out 0.5s`,
                 }}
               >
                 <Image
