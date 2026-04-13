@@ -104,7 +104,7 @@ export default function Footer() {
               style={{
                 transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                 opacity: isVisible ? 1 : 0,
-                transition: "all 0.8s ease-out 1.2s",
+                transition: "all 1.5s ease-out",
               }}
             >
               REABILITAR EM CASA
@@ -124,7 +124,7 @@ export default function Footer() {
                         style={{
                           transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                           opacity: isVisible ? 1 : 0,
-                          transition: `all 0.8s ease-out 1.2s`,
+                          transition: `all 1.5s ease-out`,
                         }}
                       >
                         {item.title}
@@ -138,7 +138,7 @@ export default function Footer() {
                         style={{
                           transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                           opacity: isVisible ? 1 : 0,
-                          transition: `all 0.8s ease-out 1.2s`,
+                          transition: `all 1.5s ease-out`,
                         }}
                       >
                         {item.title}
@@ -161,7 +161,7 @@ export default function Footer() {
                         style={{
                           transform: isVisible ? "translateX(0)" : "translateX(-100px)",
                           opacity: isVisible ? 1 : 0,
-                          transition: `all 0.8s ease-out 1.2s`,
+                          transition: `all 1.5s ease-out`,
                         }}
                       >
                         {item.title}
@@ -184,7 +184,7 @@ export default function Footer() {
                     style={{
                       transform: isVisible ? "translateY(0)" : "translateY(-100px)",
                       opacity: isVisible ? 1 : 0,
-                      transition: `all 0.8s ease-out 1.2s`,
+                      transition: `all 1.5s ease-out`,
                     }}
                   >
                     {item.title}
@@ -199,7 +199,7 @@ export default function Footer() {
                     style={{
                       transform: isVisible ? "translateY(0)" : "translateY(-100px)",
                       opacity: isVisible ? 1 : 0,
-                      transition: `all 0.8s ease-out 1.2s`,
+                      transition: `all 1.5s ease-out`,
                     }}
                   >
                     {item.title}
@@ -216,7 +216,7 @@ export default function Footer() {
               style={{
                 transform: isVisible ? "translateX(0)" : "translateX(100px)",
                 opacity: isVisible ? 1 : 0,
-                transition: "all 0.8s ease-out 1.2s",
+                transition: "all 1.5s ease-out",
               }}
             >
               SIGA-NOS
@@ -226,7 +226,7 @@ export default function Footer() {
               style={{
                 transform: isVisible ? "translateX(0)" : "translateX(100px)",
                 opacity: isVisible ? 1 : 0,
-                transition: "all 0.8s ease-out 1.2s",
+                transition: "all 1.5s ease-out",
               }}
             >
               <a
@@ -287,7 +287,7 @@ export default function Footer() {
                     ? "translate(0, 0)"
                     : `translate(${startX}px, ${startY}px)`,
                   opacity: isVisible ? 1 : 0,
-                  transition: `all 1.5s ease-out 0.5s`,
+                  transition: `all 1.5s ease-out`,
                 }}
               >
                 <Image
