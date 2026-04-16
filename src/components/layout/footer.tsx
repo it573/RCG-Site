@@ -25,7 +25,7 @@ const footerImages = [
     height: 98,
   },
   {
-    src: "/images/aepad1.jpg",
+    src: "/images/aepad2.jpg",
     alt: "AEPAD - Certificado",
     width: 121,
     height: 98,
