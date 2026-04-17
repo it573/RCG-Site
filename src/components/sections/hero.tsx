@@ -18,7 +18,7 @@ export default function Hero({
   showStampImage = false,
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden" style={{ height: '80vh', marginTop: 0, paddingTop: 0 }}>
+    <section className="relative overflow-hidden h-[80dvh] max-h-[80svh] hero-section-height">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         <Image
@@ -36,23 +36,23 @@ export default function Hero({
       {/* Black overlay with 25% opacity */}
       <div className="absolute inset-0 bg-black/22 pointer-events-none" style={{ zIndex: 5 }} />
 
-      <div className={`container mx-auto px-4 max-w-[80%] relative z-10 h-full flex items-center pb-32 md:pb-20 ${showForm ? 'pt-[280px] md:pt-[220px]' : 'pt-[180px] md:pt-20'}`}>
+      <div className={`container mx-auto px-4 max-w-[80%] relative z-10 h-full flex items-center pb-20 md:pb-20 max-[700px]:pb-12 ${showForm ? 'pt-[240px] md:pt-[220px] max-[700px]:pt-[180px] max-[600px]:pt-[140px]' : 'pt-[180px] md:pt-20'}`}>
         <div className="w-full">
-          <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0">
-            <div className="space-y-6 max-w-2xl animate-fade-in-left-double">
-              <Heading as="h1" className="text-white">{title}</Heading>
-              <p className="text-[21.6px] md:text-3xl text-white font-bold md:font-light">{description}</p>
+          <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 max-[700px]:ml-4 max-[700px]:mr-4">
+            <div className="space-y-4 max-w-2xl animate-fade-in-left-double max-[700px]:space-y-2">
+              <Heading as="h1" className="text-white max-[700px]:text-3xl max-[600px]:text-2xl">{title}</Heading>
+              <p className="text-[21.6px] md:text-3xl text-white font-bold md:font-light max-[700px]:text-lg max-[600px]:text-base">{description}</p>
             </div>
           </div>
           {showForm && (
-            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0">
-              <div className="pt-4 md:pt-8 max-w-xl mt-0 animate-fade-in-up">
+            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 max-[700px]:ml-4 max-[700px]:mr-4">
+              <div className="pt-3 md:pt-8 max-w-xl mt-0 animate-fade-in-up max-[700px]:pt-2">
                 <AppointmentForm />
               </div>
             </div>
           )}
           {showStampImage && (
-            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto mt-8">
+            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto mt-8 max-[700px]:mt-4">
               <div className="max-w-xs animate-fade-in-up">
                 <Image
                   src="/images/acp-stamp.png"
