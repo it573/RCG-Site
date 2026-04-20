@@ -33,16 +33,11 @@ export default function Service21({
         <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary">
           {/* Left Column - Title */}
           <div className="px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
-            <h2 className="text-3xl font-bold text-foreground">
+            <h2 className="text-3xl font-bold text-foreground leading-[0.9em]">
               {title === "Assistência Permanente, entidade licenciada pela Segurança Social." ? (
                 <>
-                  <div className="md:hidden">
-                    Cobertura<br />Nacional
-                  </div>
-                  <div className="hidden md:block">
-                    Assistência Permanente<br />
-                    <span className="text-lg font-semibold">Entidade licenciada pela Segurança Social</span>
-                  </div>
+                  Assistência Permanente<br />
+                  <span className="text-lg font-semibold leading-tight -mt-2 pt-[15px] block">Entidade licenciada pela Segurança Social</span>
                 </>
               ) : (
                 title
@@ -61,7 +56,7 @@ export default function Service21({
           </div>
 
           {/* Right Column - Second Service */}
-          <div className="pl-8 pt-4 md:pt-0 animate-fade-in-up overflow-hidden" style={{ animationDelay: '200ms' }}>
+          <div className="px-8 pt-4 md:pt-0 animate-fade-in-up overflow-hidden" style={{ animationDelay: '200ms' }}>
             <h4 className="text-2xl font-semibold text-primary mb-4">
               {services[1].title}
             </h4>
