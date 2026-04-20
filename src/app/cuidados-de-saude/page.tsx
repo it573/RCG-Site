@@ -30,7 +30,7 @@ export default function CuidadosDeSaudePage() {
       <Hero
         title="Cuidados de Saúde"
         description="Proporcionamos cuidados de saúde personalizados e de excelência, com cobertura nacional."
-        showForm={false}
+        showForm={true}
         backgroundImage="/images/hero/pediatria.jpg"
       />
       <Services51 />
