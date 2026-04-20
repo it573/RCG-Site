@@ -293,7 +293,7 @@ export default function AppointmentForm({
         )}
 
         <Button type="submit" className="w-full bg-teal-500 hover:bg-teal-600 text-white rounded-md text-lg py-6" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Pedido de Contacto"}
+          {isSubmitting ? "Submitting..." : "Ligamos para Si"}
         </Button>
       </form>
     </Form>
