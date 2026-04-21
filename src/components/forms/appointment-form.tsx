@@ -24,8 +24,8 @@ import {
 } from "@/components/ui/select";
 
 const appointmentSchema = z.object({
-  FirstName: z.string().min(1, "Name is required"),
-  telefone: z.string().min(1, "Phone number is required"),
+  FirstName: z.string().min(1, "Campo obrigatório"),
+  telefone: z.string().min(1, "Campo obrigatório"),
   campaign: z.string().optional(),
   source: z.string().optional(),
   gclid: z.string().optional(),
