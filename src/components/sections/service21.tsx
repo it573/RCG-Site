@@ -29,10 +29,10 @@ export default function Service21({
 }: Service2Props) {
   return (
     <section className="py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 max-w-[80%]">
+      <div className="container mx-auto max-w-[85%] md:max-w-[80%] md:px-4">
         <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary">
           {/* Left Column - Title */}
-          <div className="px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
+          <div className="p-0 md:px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
             <h2 className="text-3xl font-bold text-foreground leading-[0.9em]">
               {title === "Assistência Permanente, entidade licenciada pela Segurança Social." ? (
                 <>
@@ -46,21 +46,21 @@ export default function Service21({
           </div>
 
           {/* Center Column - First Service */}
-          <div className="px-8 pt-4 pb-8 md:pt-0 md:pb-0 animate-fade-in-up overflow-hidden" style={{ animationDelay: '100ms' }}>
+          <div className="p-0 md:px-8 pt-4 pb-8 md:pt-0 md:pb-0 animate-fade-in-up overflow-hidden" style={{ animationDelay: '100ms' }}>
             <h4 className="text-2xl font-semibold text-primary mb-4">
               {services[0].title}
             </h4>
-            <p className="text-muted-foreground text-lg text-justify whitespace-pre-line">
+            <p className="text-muted-foreground text-lg whitespace-pre-line">
               {services[0].description}
             </p>
           </div>
 
           {/* Right Column - Second Service */}
-          <div className="px-8 pt-4 md:pt-0 animate-fade-in-up overflow-hidden" style={{ animationDelay: '200ms' }}>
+          <div className="p-0 md:px-8 pt-4 md:pt-0 animate-fade-in-up overflow-hidden" style={{ animationDelay: '200ms' }}>
             <h4 className="text-2xl font-semibold text-primary mb-4">
               {services[1].title}
             </h4>
-            <p className="text-muted-foreground text-lg text-justify whitespace-pre-line">
+            <p className="text-muted-foreground text-lg whitespace-pre-line">
               {services[1].description}
             </p>
             {services[1].image && (
