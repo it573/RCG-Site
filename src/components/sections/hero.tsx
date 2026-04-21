@@ -52,14 +52,14 @@ export default function Hero({
             </div>
           )}
           {showStampImage && (
-            <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 md:mx-auto mt-8 max-[700px]:mt-4">
+            <div className="flex justify-center md:justify-start mt-8 max-[700px]:mt-4">
               <div className="max-w-xs animate-fade-in-up">
                 <Image
                   src="/images/acp-stamp.png"
                   alt="ACP Stamp"
                   width={200}
                   height={200}
-                  className="w-auto h-auto"
+                  className="w-[70%] md:w-auto h-auto"
                 />
               </div>
             </div>
