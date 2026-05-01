@@ -2,8 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { setCookie, getCookie } from "cookies-next";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function CookieConsentBanner() {
+  const t = useTranslations('cookies.consent');
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
@@ -37,6 +42,9 @@ export default function CookieConsentBanner() {
 
   if (!isVisible) return null;
 
+  // Determine privacy policy path based on current locale
+  const privacyPath = pathname?.startsWith('/en') ? '/en/politica-de-privacidade' : '/pt/politica-de-privacidade';
+
   return (
     <div
       className={`fixed bottom-0 left-0 right-0 z-[100] bg-white border-t-4 border-teal-500 shadow-lg transition-all duration-300 ${
@@ -51,18 +59,16 @@ export default function CookieConsentBanner() {
           {/* Content */}
           <div className="flex-1 pr-8">
             <h2 id="cookie-title" className="text-lg font-bold text-teal-600 mb-2">
-              Cookies e Privacidade
+              {t('title')}
             </h2>
             <p id="cookie-description" className="text-sm text-gray-700 leading-relaxed">
-              Utilizamos cookies para melhorar a sua experiência e analisar o tráfego do site.
-              Ao clicar em "Aceitar", concorda com a utilização de cookies para fins de análise.
-              Saiba mais na nossa{" "}
-              <a
-                href="/politica-de-privacidade"
+              {t('description')}{" "}
+              <Link
+                href={privacyPath}
                 className="text-teal-600 hover:text-teal-700 underline font-medium"
               >
-                Política de Privacidade
-              </a>.
+                {t('privacyPolicy')}
+              </Link>.
             </p>
           </div>
 
@@ -71,16 +77,16 @@ export default function CookieConsentBanner() {
             <button
               onClick={handleReject}
               className="px-6 py-2.5 bg-orange-200 text-gray-800 font-semibold rounded-md hover:bg-orange-300 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
-              aria-label="Rejeitar cookies"
+              aria-label={t('rejectAriaLabel')}
             >
-              Rejeitar
+              {t('reject')}
             </button>
             <button
               onClick={handleAccept}
               className="px-6 py-2.5 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
-              aria-label="Aceitar cookies"
+              aria-label={t('acceptAriaLabel')}
             >
-              Aceitar
+              {t('accept')}
             </button>
           </div>
         </div>

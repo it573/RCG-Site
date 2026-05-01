@@ -65,6 +65,17 @@
       "weCallYou": "Ligamos para Si"
     }
   },
+  "cookies": {
+    "consent": {
+      "title": "Cookies e Privacidade",
+      "description": "Utilizamos cookies para melhorar a sua experiência e analisar o tráfego do site. Ao clicar em \"Aceitar\", concorda com a utilização de cookies para fins de análise. Saiba mais na nossa",
+      "privacyPolicy": "Política de Privacidade",
+      "accept": "Aceitar",
+      "reject": "Rejeitar",
+      "acceptAriaLabel": "Aceitar cookies",
+      "rejectAriaLabel": "Rejeitar cookies"
+    }
+  },
   "home": {
     "metadata": {
       "title": "Cuidados de Saúde ao Domicílio em Portugal | RCG",

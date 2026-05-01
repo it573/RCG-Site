@@ -65,6 +65,17 @@
       "weCallYou": "We Call You"
     }
   },
+  "cookies": {
+    "consent": {
+      "title": "Cookies and Privacy",
+      "description": "We use cookies to improve your experience and analyze site traffic. By clicking \"Accept\", you agree to the use of cookies for analytics purposes. Learn more in our",
+      "privacyPolicy": "Privacy Policy",
+      "accept": "Accept",
+      "reject": "Reject",
+      "acceptAriaLabel": "Accept cookies",
+      "rejectAriaLabel": "Reject cookies"
+    }
+  },
   "home": {
     "metadata": {
       "title": "Home Healthcare in Portugal | RCG",
