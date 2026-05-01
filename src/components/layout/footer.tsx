@@ -232,8 +232,8 @@ export default function Footer() {
                 <Image
                   src="/images/facebook.png"
                   alt="Facebook"
-                  width={32}
-                  height={32}
+                  width={30}
+                  height={15}
                   className="w-8 h-8"
                 />
               </a>
