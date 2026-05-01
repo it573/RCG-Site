@@ -346,5 +346,276 @@
     "form": {
       "title": "Nós Ligamos!"
     }
+  },
+  "hospitalEquipment": {
+    "metadata": {
+      "title": "Equipamento Hospitalar e Ajudas Técnicas",
+      "description": "Aluguer e venda de equipamento hospitalar e ajudas técnicas para uso domicílio. Entrega rápida em Portugal. Cadeiras de rodas, camas hospitalares, material de enfermagem.",
+      "keywords": ["equipamento hospitalar", "ajudas técnicas", "aluguer equipamento médico", "cama hospitalar", "cadeira de rodas", "material enfermagem", "equipamento domicílio"]
+    },
+    "hero": {
+      "title": "Equipamento Hospitalar",
+      "description": "Disponibilizamos produtos de apoio, ajudas técnicas, com entrega ao Domicílio, em regime de Aluguer ou Venda. Consulte-nos para mais Informações."
+    },
+    "doctors2": {
+      "title": "Ajudas Técnicas Disponíveis",
+      "equipment": [
+        {
+          "name": "Cadeira de Rodas"
+        },
+        {
+          "name": "Camas Articuladas"
+        },
+        {
+          "name": "Andarilho"
+        },
+        {
+          "name": "Bengala Tripé"
+        }
+      ]
+    },
+    "form": {
+      "title": "Nós Ligamos!"
+    }
+  },
+  "faq": {
+    "metadata": {
+      "title": "Perguntas Frequentes | Reabilitar em Casa",
+      "description": "FAQs - Perguntas mais frequentes sobre os nossos serviços de saúde e apoio domiciliário"
+    },
+    "hero": {
+      "title": "Perguntas Frequentes (FAQ's) – Cuidados de Saúde e Apoio Domiciliário",
+      "description": "Comprometemo-nos com a melhoria contínua e a otimização de todos os processos inerentes aos nossos serviços de saúde e apoio ao domicílio. Para manter os nossos elevados padrões de transparência e qualidade, disponibilizamos as respostas às dúvidas mais comuns dos nossos clientes e familiares.",
+      "contact": "Se necessitar de informações adicionais para o seu caso específico, não hesite em contactar-nos."
+    },
+    "faqs": [
+      {
+        "id": "faq-1",
+        "question": "A Reabilitar em Casa é licenciada para prestar Cuidados de Saúde no domicílio?",
+        "answer": "Sim. A nossa atividade é devidamente licenciada e supervisionada pela Entidade Reguladora da Saúde (ERS). A obtenção desta licença atesta que cumprimos todos os rigorosos requisitos legais, de qualidade e técnicos exigidos para a prestação de serviços de saúde, com cobertura nacional, garantindo total segurança e tranquilidade clínica aos nossos utentes."
+      },
+      {
+        "id": "faq-2",
+        "question": "Têm licença para o Serviço de Apoio Domiciliário (SAD)?",
+        "answer": "Sim. A Reabilitar em Casa possui Licença de Funcionamento emitida pela Segurança Social, um requisito legal e obrigatório em Portugal. Este licenciamento atesta que cumprimos critérios de excelência em instalações, qualificação de recursos humanos, regulamentos internos e obrigações legais, garantindo a proteção dos direitos dos utentes. Além disso, possuímos Seguro de Responsabilidade Civil para salvaguarda de todas as intervenções."
+      },
+      {
+        "id": "faq-3",
+        "question": "Como posso confirmar que o vosso Serviço de Apoio Domiciliário está legalizado?",
+        "answer": "A legalidade da nossa resposta social pode ser comprovada através do portal oficial da Carta Social (um instrumento do Estado Português que lista as entidades licenciadas). Pode consultar e verificar o nosso registo oficial diretamente em www.cartasocial.pt."
+      },
+      {
+        "id": "faq-4",
+        "question": "Na Análises Clínicas, como garantem o rigor e a fiabilidade dos meus resultados Clínicos?",
+        "answer": "Enquadramento Legal: Operamos em Portugal com Licenciamento da ERS (Entidade Reguladora da Saúde) e Autorização da ARS (Administração Regional de Saúde) para colheitas fixas e em regime Ambulatório (Domicílio). Rigor no Transporte: Garantimos a fiabilidade das amostras com Logística Certificada (norma ISO 15189) e Monitorização de Temperatura constante durante o transporte. Laboratórios Acreditados: Colaboramos exclusivamente com Laboratórios de Patologia Clínica com Acreditação pelo IPAC, utilizando Sistemas de Interface Direta para processamento rápido e seguro dos resultados."
+      },
+      {
+        "id": "faq-5",
+        "question": "Os vossos técnicos de saúde e cuidadores são credenciados?",
+        "answer": "Sim. Todos os nossos técnicos de saúde possuem cédula profissional válida emitida pela respetiva Ordem e pelo Ministério da Saúde. Além disso, somos uma entidade formadora acreditada pela DGERT, o que nos permite garantir que todos os ajudantes familiares e cuidadores passam por um recrutamento rigoroso, validação de referências, registo criminal limpo e formação contínua."
+      },
+      {
+        "id": "faq-6",
+        "question": "Como escolhem o cuidador ou profissional de saúde para o meu familiar?",
+        "answer": "A alocação é 100% personalizada. Após uma avaliação clínica e do contexto do utente, definimos um Plano Individual de Cuidados (PIC). Selecionamos o profissional considerando não só as competências técnicas necessárias para o diagnóstico, mas também o perfil interpessoal que melhor se adapte aos hábitos e preferências do utente."
+      },
+      {
+        "id": "faq-12",
+        "question": "Como funciona a 1ª visita de avaliação e qual o custo?",
+        "answer": "A primeira visita de avaliação é totalmente gratuita e sem compromisso. Deslocamo-nos a sua casa para avaliar não só o quadro clínico e de mobilidade, mas também as rotinas, gostos, e preocupações da família. O objetivo é desenhar um Plano de Cuidados 100% individualizado."
+      },
+      {
+        "id": "faq-26",
+        "question": "Os vossos serviços têm acordos ou comparticipações com Seguros e Subsistemas (ADSE, Médis, etc.)?",
+        "answer": "Sim. Com mais de 15 anos de experiência, construímos uma sólida rede de convenções e parcerias. Trabalhamos com ADSE, Médis, Multicare, AdvanceCare, SSCGD, ADM/IASFA, SNS, SAD/GNR, SAD/PSP, SAMS, entre muitos outros seguros privados e entidades públicas e privadas. Dependendo da sua apólice ou convenção, tratamos das autorizações prévias, copagamentos ou faturação direta ao subsistema."
+      }
+    ]
+  },
+  "privacy": {
+    "metadata": {
+      "title": "Política de Privacidade - RCG",
+      "description": "Política de Privacidade e proteção de dados pessoais da RCG - Reabilitar em Casa, Lda."
+    },
+    "title": "POLÍTICA DE PRIVACIDADE",
+    "introduction": "Este documento estabelece a Política de Privacidade da RCG – Reabilitar em Casa, Lda., com sede em Rua Itália 1, Piso 1, Esc 6, 2775-407 Carcavelos, pessoa coletiva número 508 756 545, doravante identificada como \"RCG\", na qualidade de Responsável pelo Tratamento de dados pessoais.",
+    "sections": [
+      {
+        "title": "1. Legislação Aplicável",
+        "content": "O tratamento dos dados pessoais realizado pela RCG está em estrita conformidade com a legislação nacional e comunitária em vigor, nomeadamente o Regulamento (UE) 2016/679 do Parlamento Europeu e do Conselho, de 27 de abril de 2016 (Regulamento Geral sobre a Proteção de Dados - RGPD), e a Lei n.º 58/2019, de 8 de agosto, que assegura a execução do RGPD na ordem jurídica portuguesa, bem como as linhas de orientação emitidas pelas autoridades europeias e nacionais de controlo."
+      },
+      {
+        "title": "2. Âmbito e Atualizações",
+        "content": "Esta política aplica-se a todas as atividades de tratamento de dados pessoais realizadas pela RCG.",
+        "content2": "A RCG reserva-se o direito de atualizar periodicamente a presente Política de Privacidade. Sempre que o fizer, a data de atualização será refletida no final do documento. As alterações substanciais serão comunicadas aos titulares dos dados (que tenham subscrito a receção de comunicações) através dos canais habituais, nomeadamente por correio eletrónico."
+      },
+      {
+        "title": "3. Princípios do Tratamento de Dados Pessoais",
+        "content": "O tratamento de dados pessoais pela RCG pauta-se pelos princípios gerais enunciados no RGPD:",
+        "principles": [
+          "Licitude, lealdade e transparência: Tratamos os dados de forma lícita, leal e transparente em relação ao titular dos dados.",
+          "Limitação das finalidades: Recolhemos dados para finalidades determinadas, explícitas e legítimas, não os tratando posteriormente de forma incompatível com as mesmas.",
+          "Minimização dos dados: Apenas tratamos os dados adequados, pertinentes e estritamente necessários às finalidades em causa.",
+          "Exatidão: Adotamos medidas para assegurar que dados inexatos sejam apagados ou retificados sem demora.",
+          "Limitação da conservação: Conservamos os dados apenas durante o período necessário para as finalidades para as quais são tratados.",
+          "Integridade e confidencialidade: Garantimos a segurança dos dados pessoais, protegendo-os contra o tratamento não autorizado ou ilícito, perda, destruição ou danificação acidental, através de medidas técnicas e organizativas adequadas."
+        ]
+      },
+      {
+        "title": "4. Que Dados Pessoais Tratamos",
+        "content": "No contexto das atividades desenvolvidas pela RCG, os Titulares dos Dados incluem, sem limitação: clientes e antigos clientes, potenciais clientes, parceiros, candidatos a emprego, colaboradores, fornecedores, reclamantes e visitantes das nossas instalações ou plataformas.",
+        "minors": "Proteção de Menores: A RCG não solicita nem recolhe voluntariamente dados pessoais de menores de 18 anos. Caso a RCG verifique que recolheu inadvertidamente dados de um menor, procederá à sua eliminação imediata. A recolha de dados de menores apenas ocorre de forma lícita quando fornecidos pelos pais ou representantes legais, com consentimento expresso (ex.: para prestação de serviços de saúde ao menor), ou através de sistemas de videovigilância (CCTV) para segurança de pessoas e bens.",
+        "optional": "Salientamos que não é obrigado a partilhar os seus dados pessoais. Contudo, a recusa no fornecimento de dados essenciais poderá impossibilitar a RCG de prestar os serviços contratados, fornecer produtos ou responder a solicitações.",
+        "categoriesTitle": "Categorias de dados pessoais tratados:",
+        "categories": [
+          "Dados de identificação: Nome, número de identificação civil, data de nascimento.",
+          "Dados fiscais: Número de Identificação Fiscal (NIF).",
+          "Dados de contacto: Morada, endereço de e-mail, número de telefone/telemóvel.",
+          "Dados de pagamento: IBAN, dados de faturação.",
+          "Dados de Saúde: Histórico clínico, necessidades especiais ou referências alimentares (apenas os estritamente necessários para a prestação de serviços de saúde contratualizados).",
+          "Dados de histórico e transacionais: Histórico de prestação de serviços, resolução de reclamações e histórico transacional.",
+          "Dados de acesso: Credenciais de verificação e recuperação no Website.",
+          "Dados de subscrição: Preferências de receção de comunicações e newsletters."
+        ]
+      },
+      {
+        "title": "5. Finalidades e Fundamentos de Licitude",
+        "content": "A RCG apenas trata dados pessoais quando existe um fundamento de licitude que legitime esse tratamento (Consentimento, Execução de Contrato, Cumprimento de Obrigação Legal ou Interesse Legítimo).",
+        "tablePurpose": "Finalidade do Tratamento",
+        "tableLegal": "Fundamento Jurídico",
+        "purposes": [
+          { "purpose": "Prestação de Serviços de Saúde", "legal": "Execução contratual e diligências pré-contratuais." },
+          { "purpose": "Gestão Administrativa, Económica e Contabilística", "legal": "Execução contratual e Cumprimento de obrigações legais (ex: faturação)." },
+          { "purpose": "Envio de Comunicações Comerciais / Newsletters", "legal": "Consentimento do titular dos dados." },
+          { "purpose": "Resposta a Solicitações e Pedidos de Contacto", "legal": "Diligências pré-contratuais e/ou Interesse Legítimo." },
+          { "purpose": "Avaliação do Grau de Satisfação", "legal": "Consentimento ou Interesse Legítimo na melhoria dos serviços." },
+          { "purpose": "Recrutamento e Seleção de Candidatos", "legal": "Diligências pré-contratuais e Consentimento." },
+          { "purpose": "Gestão de Eventos organizados pela RCG", "legal": "Consentimento do titular e Cumprimento de obrigações legais." },
+          { "purpose": "Segurança de Pessoas e Bens (Videovigilância - CCTV)", "legal": "Interesse Legítimo e Cumprimento de obrigação legal." },
+          { "purpose": "Transferência de dados para entidades oficiais", "legal": "Cumprimento de Obrigação Jurídica." }
+        ]
+      },
+      {
+        "title": "6. Prazos de Conservação",
+        "content": "A RCG conserva os dados pessoais apenas pelo período estritamente necessário à execução das finalidades específicas para as quais foram recolhidos, ou para cumprimento de prazos de prescrição e obrigações legais.",
+        "tableCategory": "Categoria de Tratamento",
+        "tableTime": "Tempo de Conservação",
+        "conservation": [
+          { "category": "Prestação de Serviços e Gestão Contabilística/Fiscal", "time": "10 anos após a prestação de serviços / emissão da fatura (prazo legal)." },
+          { "category": "Envio de Comunicações Comerciais", "time": "Até à revogação do consentimento ou exercício do direito de oposição." },
+          { "category": "Respostas a Solicitações", "time": "Até à conclusão da prossecução da finalidade." },
+          { "category": "Candidaturas a Emprego (candidatos não admitidos)", "time": "6 meses após a conclusão do processo, salvo consentimento para manutenção na base de dados." },
+          { "category": "Eventos organizados pela RCG", "time": "Até à avaliação e conclusão das diligências do evento." },
+          { "category": "Imagens de Videovigilância (CCTV)", "time": "30 dias após a data de gravação das imagens (prazo máximo legal)." }
+        ]
+      },
+      {
+        "title": "7. Partilha de Dados Pessoais",
+        "content": "Os dados pessoais podem ser partilhados com entidades terceiras em situações estritamente necessárias:",
+        "sharing": [
+          "Subcontratantes: Empresas prestadoras de serviços à RCG (ex: fornecedores de software, contabilidade, gestão de sistemas de informação). Estas entidades estão vinculadas por contratos escritos rigorosos (Acordos de Tratamento de Dados), apenas podendo tratar os dados para os fins estabelecidos e garantindo medidas técnicas adequadas.",
+          "Grupo RCG: Partilha interna com outras empresas do grupo, cumprindo as regras de proteção de dados aplicáveis.",
+          "Entidades Oficiais: Em cumprimento de obrigações legais, os dados poderão ser transmitidos a autoridades judiciais, tributárias (AT), administrativas ou regulatórias."
+        ]
+      },
+      {
+        "title": "8. Transferências Internacionais (Fora do EEE)",
+        "content": "No âmbito das suas atividades, a RCG poderá recorrer a parceiros ou prestadores de serviços cujos servidores se localizem fora do Espaço Económico Europeu (EEE), como por exemplo, em países de expressão portuguesa.",
+        "content2": "A RCG garante que qualquer transferência de dados para fora do EEE é realizada com o máximo rigor, aplicando-se:",
+        "transfers": [
+          "Decisões de Adequação adotadas pela Comissão Europeia para o país de destino; ou,",
+          "Cláusulas Contratuais Tipo (CCT) de proteção de dados adotadas pela Comissão Europeia, complementadas, quando aplicável, com medidas de segurança adicionais."
+        ]
+      },
+      {
+        "title": "9. Direitos dos Titulares dos Dados",
+        "content": "Nos termos do RGPD, e enquanto titular dos dados, goza dos seguintes direitos, que pode exercer de forma gratuita:",
+        "rights": [
+          "Direito de Acesso e Informação: Obter confirmação sobre se os seus dados são tratados, aceder aos mesmos e obter informações claras sobre esse tratamento.",
+          "Direito de Retificação: Solicitar a correção de dados inexatos ou a conclusão de dados incompletos.",
+          "Direito ao Apagamento (\"Direito a ser esquecido\"): Solicitar a eliminação dos seus dados, desde que não existam fundamentos legais (ex: faturação) que obriguem à sua conservação.",
+          "Direito à Limitação do Tratamento: Requerer a suspensão do tratamento dos seus dados em determinadas circunstâncias.",
+          "Direito à Portabilidade: Receber os dados que forneceu à RCG num formato estruturado, de uso corrente e de leitura automática, ou solicitar a sua transmissão a outro responsável.",
+          "Direito de Oposição: Opor-se ao tratamento dos dados para determinadas finalidades (ex: marketing direto).",
+          "Direito de Retirar o Consentimento: Sempre que o tratamento se baseie no consentimento, tem o direito de o retirar a qualquer momento, sem comprometer a licitude do tratamento efetuado até essa data."
+        ]
+      },
+      {
+        "title": "10. Exercício de Direitos e Reclamações",
+        "content": "Para exercer qualquer um dos seus direitos, ou para esclarecer dúvidas sobre o tratamento dos seus dados pessoais, deverá contactar o nosso Encarregado da Proteção de Dados (DPO) através dos seguintes meios:",
+        "contact": [
+          "E-mail: dpo@reabilitar-em-casa.com",
+          "Morada: Lagoas Park Oeiras, Edif. 7, Piso 1 Sul, 2740-244 Porto Salvo"
+        ],
+        "security": "Para garantir a segurança dos seus dados, a RCG poderá solicitar informações adicionais que ajudem a confirmar a sua identidade antes de responder ao pedido. A RCG não exige o envio de cópia do Cartão de Cidadão para o exercício destes direitos.",
+        "complaint": "Caso considere que a RCG violou os seus direitos ou a legislação de proteção de dados, tem o Direito de apresentar reclamação junto da autoridade de controlo nacional:",
+        "authority": "Comissão Nacional de Proteção de Dados (CNPD) – www.cnpd.pt"
+      },
+      {
+        "title": "11. Segurança e Confidencialidade",
+        "content": "A RCG adota medidas técnicas e organizativas rigorosas para proteger os seus dados pessoais contra a destruição, perda, alteração, divulgação ou acesso não autorizado. Estas incluem controlo de acessos físicos e lógicos, encriptação de dados (sempre que tecnicamente viável), backups regulares e auditorias internas.",
+        "content2": "Apesar de envidarmos todos os esforços para proteger os seus dados, alertamos que a transmissão de informações através da Internet nunca é totalmente segura, pelo que qualquer partilha por vias abertas é feita por sua conta e risco."
+      },
+      {
+        "title": "12. Política de Cookies",
+        "content": "A RCG não utiliza cookies no seu website. O nosso site não utiliza cookies de rastreamento, análise, ou qualquer tipo de cookies, incluindo cookies essenciais ou técnicos.",
+        "content2": "Não utilizamos Google Analytics, Facebook Pixel, ou qualquer outra ferramenta de análise de dados ou marketing. O nosso site funciona completamente sem cookies."
+      },
+      {
+        "updateDate": "Data da última atualização: 30 de março de 2026"
+      }
+    ]
+  },
+  "about": {
+    "metadata": {
+      "title": "Quem Somos - RCG | Cuidados de Saúde em Portugal",
+      "description": "A RCG é líder em cuidados de saúde ao domicílio em Portugal. Conheça a nossa história, missão, valores e equipa licenciada. Cobertura nacional com qualidade e excelência.",
+      "keywords": ["quem somos", "sobre nós", "RCG", "cuidados saúde Portugal", "missão valores", "equipa médica", "história empresa"]
+    },
+    "hero": {
+      "title": "Quem Somos",
+      "description": "Cuidados de saúde de excelência ao Domicílio, com cobertura nacional."
+    },
+    "about2": {
+      "history": {
+        "title": "A Nossa História",
+        "description": [
+          "Somos uma empresa especializada em Cuidados de Saúde no Domicílio, com duas décadas de experiência no setor. A nossa trajetória começou em 2006, com a visão de proporcionar cuidados de excelência em ambiente familiar, onde já acreditávamos que a recuperação de cada indivíduo seria mais eficaz, comparativamente à institucionalização.\n\nO que começou como uma visão de cuidados de proximidade transformou-se numa estrutura completa de saúde domiciliária sem igual.\n\nAo longo dos anos, expandimos os nossos serviços para a resposta em Serviços de Apoio Domiciliário (SAD) com o intuito de satisfazer as necessidades dos nossos utentes e famílias, clientes e parceiros.\n\nO nosso compromisso mantém-se inabalável: garantir que cada utente recebe os melhores cuidados, com dignidade, respeito e profissionalismo."
+        ]
+      },
+      "doctors": {
+        "image": {
+          "src": "/images/rita.jpg",
+          "alt": "A nossa equipa"
+        },
+        "buttonText": "Nossos Médicos",
+        "buttonLink": "/doctors"
+      },
+      "mission": {
+        "title": "Pioneiros em Cuidados de Saúde no Domícilio em Portugal",
+        "description": "A Reabilitar em Casa foi pioneira na prestação de Cuidados de Saúde no Domicílio, por ser a primeira empresa no país a celebrar convenções com múltiplos subsistemas públicos e privados, em cuidados especializados, assegurando uma resposta nacional, estruturada às necessidades das pessoas no conforto do(s) seu(s) domicílio(s).\n\nPrimeiramente com os Serviços Sociais da Portugal Telecom, depois com a Imprensa Nacional Casa da Moeda, seguiram-se os Serviços Sociais da Caixa Geral de Depósitos, várias Companhias de Seguros, Forças Armadas, ACP e muitas mais.\n\nSomos parceiros de algumas das mais importantes Instituições em Portugal, colaboramos em diversos projetos e mais recentemente a Reabilitar em Casa tornou-se cofundadora de uma associação setorial, a AEPAD- Associação de empresas privadas de Apoio Domiciliário. Este projeto nasce com o propósito fundamental de dignificar e profissionalizar o setor dos cuidados ao domicílio, estabelecendo novos padrões de excelência e reconhecimento para a área.",
+        "image": {
+          "src": "/images/fachada2.jpg",
+          "alt": "Cuidados de qualidade"
+        }
+      }
+    },
+    "about4": {
+      "title": "Quem Somos",
+      "description": "Somos uma equipa dedicada de profissionais de saúde comprometidos em proporcionar cuidados de excelência aos nossos doentes. A nossa missão é garantir que cada pessoa receba a melhor atenção possível, no conforto do seu lar. Com anos de experiência no setor da saúde, desenvolvemos uma abordagem centrada no doente, combinando competência técnica com humanismo. Acreditamos que os cuidados de saúde devem ser acessíveis, personalizados e prestados com dignidade e respeito.",
+      "features": [
+        {
+          "title": "Propósito e Visão",
+          "description": "Com duas décadas de dedicação, a Reabilitar em Casa nasceu de uma visão clara: transformar o Domicílio no melhor lugar para cuidar, reabilitar, curar e viver. Sempre acreditámos que a para uma boa recuperação, o bem-estar físico e emocional é indissociável do ambiente familiar. Consolidar um futuro onde os cuidados no domicílio, independentemente da idade, sejam sinónimos de dignidade, permitindo que cada pessoa receba cuidados de excelência no lugar onde se sente mais segura, a sua casa. Dignificar os cuidados domiciliários em Portugal, através da colaboração com Entidades Associativas e representativas do sector."
+        },
+        {
+          "title": "Missão",
+          "description": "Prestar Cuidados de Saúde e Apoio Domiciliário de elevada especialização, através de uma rede estruturada e convencionada, garantindo que a recuperação e promoção da autonomia, a qualidade de vida e o conforto dos nossos utentes em ambiente familiar, com o máximo rigor clínico e humanismo."
+        },
+        {
+          "title": "Valores",
+          "description": "Colocamos o utente no centro de todas as decisões, tratando cada indivíduo com a máxima humanidade e preservando a sua integridade no seu espaço pessoal. Excelência Clínica, Inovação, Integridade e Transparência, Proximidade Familiar e Compromisso Social"
+        }
+      ]
+    }
   }
 }

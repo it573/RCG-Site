@@ -346,5 +346,276 @@
     "form": {
       "title": "We Call You!"
     }
+  },
+  "hospitalEquipment": {
+    "metadata": {
+      "title": "Hospital Equipment and Technical Aids",
+      "description": "Rental and sale of hospital equipment and technical aids for home use. Fast delivery in Portugal. Wheelchairs, hospital beds, nursing material.",
+      "keywords": ["hospital equipment", "technical aids", "medical equipment rental", "hospital bed", "wheelchair", "nursing material", "home equipment"]
+    },
+    "hero": {
+      "title": "Hospital Equipment",
+      "description": "We provide support products and technical aids with home delivery, for rental or sale. Contact us for more information."
+    },
+    "doctors2": {
+      "title": "Available Technical Aids",
+      "equipment": [
+        {
+          "name": "Wheelchair"
+        },
+        {
+          "name": "Adjustable Beds"
+        },
+        {
+          "name": "Walker"
+        },
+        {
+          "name": "Tripod Cane"
+        }
+      ]
+    },
+    "form": {
+      "title": "We Call You!"
+    }
+  },
+  "faq": {
+    "metadata": {
+      "title": "Frequently Asked Questions | Reabilitar em Casa",
+      "description": "FAQs - Most frequently asked questions about our healthcare and home support services"
+    },
+    "hero": {
+      "title": "Frequently Asked Questions (FAQs) – Healthcare and Home Support",
+      "description": "We are committed to continuous improvement and optimization of all processes inherent to our healthcare and home support services. To maintain our high standards of transparency and quality, we provide answers to the most common doubts of our clients and families.",
+      "contact": "If you need additional information for your specific case, do not hesitate to contact us."
+    },
+    "faqs": [
+      {
+        "id": "faq-1",
+        "question": "Is Reabilitar em Casa licensed to provide Healthcare at home?",
+        "answer": "Yes. Our activity is properly licensed and supervised by the Health Regulatory Entity (ERS). Obtaining this license certifies that we comply with all the rigorous legal, quality and technical requirements required for the provision of health services, with national coverage, guaranteeing total safety and clinical tranquility to our users."
+      },
+      {
+        "id": "faq-2",
+        "question": "Do you have a license for the Home Support Service (SAD)?",
+        "answer": "Yes. Reabilitar em Casa has an Operating License issued by Social Security, a legal and mandatory requirement in Portugal. This licensing certifies that we meet criteria of excellence in facilities, qualification of human resources, internal regulations and legal obligations, guaranteeing the protection of users' rights. In addition, we have Civil Liability Insurance to safeguard all interventions."
+      },
+      {
+        "id": "faq-3",
+        "question": "How can I confirm that your Home Support Service is legalized?",
+        "answer": "The legality of our social response can be proven through the official portal of the Carta Social (an instrument of the Portuguese State that lists licensed entities). You can consult and verify our official registration directly at www.cartasocial.pt."
+      },
+      {
+        "id": "faq-4",
+        "question": "In Clinical Analysis, how do you guarantee the rigor and reliability of my Clinical results?",
+        "answer": "Legal Framework: We operate in Portugal with Licensing from the ERS (Health Regulatory Entity) and Authorization from the ARS (Regional Health Administration) for fixed collections and Ambulatory regime (Home). Transport Rigor: We guarantee the reliability of samples with Certified Logistics (ISO 15189 standard) and constant Temperature monitoring during transport. Accredited Laboratories: We work exclusively with Clinical Pathology Laboratories with Accreditation by IPAC, using Direct Interface Systems for fast and secure processing of results."
+      },
+      {
+        "id": "faq-5",
+        "question": "Are your health technicians and caregivers accredited?",
+        "answer": "Yes. All our health technicians have a valid professional license issued by their respective Order and by the Ministry of Health. In addition, we are a training entity accredited by DGERT, which allows us to guarantee that all family helpers and caregivers go through rigorous recruitment, validation of references, clean criminal record and continuous training."
+      },
+      {
+        "id": "faq-6",
+        "question": "How do you choose the caregiver or health professional for my family member?",
+        "answer": "The allocation is 100% personalized. After a clinical assessment and the user's context, we define an Individual Care Plan (ICP). We select the professional considering not only the technical skills necessary for the diagnosis, but also the interpersonal profile that best adapts to the user's habits and preferences."
+      },
+      {
+        "id": "faq-12",
+        "question": "How does the 1st assessment visit work and what is the cost?",
+        "answer": "The first assessment visit is completely free and without commitment. We come to your home to assess not only the clinical and mobility framework, but also the routines, tastes, and family concerns. The objective is to design a 100% individualized Care Plan."
+      },
+      {
+        "id": "faq-26",
+        "question": "Do your services have agreements or copayments with Insurance and Subsystems (ADSE, Médis, etc.)?",
+        "answer": "Yes. With more than 15 years of experience, we have built a solid network of conventions and partnerships. We work with ADSE, Médis, Multicare, AdvanceCare, SSCGD, ADM/IASFA, SNS, SAD/GNR, SAD/PSP, SAMS, among many other private insurance and public and private entities. Depending on your policy or convention, we handle prior authorizations, copayments or direct billing to the subsystem."
+      }
+    ]
+  },
+  "privacy": {
+    "metadata": {
+      "title": "Privacy Policy - RCG",
+      "description": "Privacy Policy and personal data protection of RCG - Reabilitar em Casa, Lda."
+    },
+    "title": "PRIVACY POLICY",
+    "introduction": "This document establishes the Privacy Policy of RCG – Reabilitar em Casa, Lda., headquartered at Rua Itália 1, Piso 1, Esc 6, 2775-407 Carcavelos, tax ID number 508 756 545, hereinafter identified as \"RCG\", as Data Controller for personal data.",
+    "sections": [
+      {
+        "title": "1. Applicable Legislation",
+        "content": "The processing of personal data carried out by RCG is in strict compliance with current national and community legislation, namely Regulation (EU) 2016/679 of the European Parliament and Council, of April 27, 2016 (General Data Protection Regulation - GDPR), and Law No. 58/2019, of August 8, which ensures the implementation of the GDPR in the Portuguese legal order, as well as the guidelines issued by European and national control authorities."
+      },
+      {
+        "title": "2. Scope and Updates",
+        "content": "This policy applies to all personal data processing activities carried out by RCG.",
+        "content2": "RCG reserves the right to periodically update this Privacy Policy. Whenever it does so, the update date will be reflected at the end of the document. Substantial changes will be communicated to data subjects (who have subscribed to receive communications) through usual channels, namely by email."
+      },
+      {
+        "title": "3. Principles of Personal Data Processing",
+        "content": "The processing of personal data by RCG is guided by the general principles set out in the GDPR:",
+        "principles": [
+          "Lawfulness, fairness and transparency: We process data lawfully, fairly and transparently in relation to the data subject.",
+          "Purpose limitation: We collect data for determined, explicit and legitimate purposes, not subsequently processing them incompatibly with the same.",
+          "Data minimization: We only process data that is adequate, relevant and strictly necessary for the purposes in question.",
+          "Accuracy: We adopt measures to ensure that inaccurate data is deleted or rectified without delay.",
+          "Storage limitation: We keep data only for the period necessary for the purposes for which they are processed.",
+          "Integrity and confidentiality: We guarantee the security of personal data, protecting them against unauthorized or unlawful processing, loss, destruction or accidental damage, through appropriate technical and organizational measures."
+        ]
+      },
+      {
+        "title": "4. What Personal Data We Process",
+        "content": "In the context of the activities developed by RCG, Data Subjects include, without limitation: clients and former clients, potential clients, partners, job candidates, collaborators, suppliers, complainants and visitors to our facilities or platforms.",
+        "minors": "Protection of Minors: RCG does not request or voluntarily collect personal data from minors under 18 years of age. If RCG verifies that it has inadvertently collected data from a minor, it will proceed with its immediate elimination. The collection of data from minors only occurs lawfully when provided by parents or legal representatives, with express consent (e.g., for the provision of health services to the minor), or through CCTV systems for the security of people and property.",
+        "optional": "We emphasize that you are not obliged to share your personal data. However, refusal to provide essential data may prevent RCG from providing contracted services, supplying products or responding to requests.",
+        "categoriesTitle": "Categories of personal data processed:",
+        "categories": [
+          "Identification data: Name, civil identification number, date of birth.",
+          "Tax data: Tax Identification Number (NIF).",
+          "Contact data: Address, email address, telephone/mobile number.",
+          "Payment data: IBAN, billing data.",
+          "Health data: Clinical history, special needs or dietary references (only those strictly necessary for the provision of contracted health services).",
+          "History and transactional data: History of service provision, complaint resolution and transactional history.",
+          "Access data: Verification and recovery credentials on the Website.",
+          "Subscription data: Preferences for receiving communications and newsletters."
+        ]
+      },
+      {
+        "title": "5. Purposes and Lawfulness Bases",
+        "content": "RCG only processes personal data when there is a lawfulness basis that legitimizes this processing (Consent, Contract Execution, Compliance with Legal Obligation or Legitimate Interest).",
+        "tablePurpose": "Purpose of Processing",
+        "tableLegal": "Legal Basis",
+        "purposes": [
+          { "purpose": "Provision of Health Services", "legal": "Contractual execution and pre-contractual diligences." },
+          { "purpose": "Administrative, Economic and Accounting Management", "legal": "Contractual execution and Compliance with legal obligations (e.g., billing)." },
+          { "purpose": "Sending Commercial Communications / Newsletters", "legal": "Consent of the data subject." },
+          { "purpose": "Response to Requests and Contact Requests", "legal": "Pre-contractual diligences and/or Legitimate Interest." },
+          { "purpose": "Satisfaction Assessment", "legal": "Consent or Legitimate Interest in improving services." },
+          { "purpose": "Recruitment and Selection of Candidates", "legal": "Pre-contractual diligences and Consent." },
+          { "purpose": "Management of Events organized by RCG", "legal": "Consent of the subject and Compliance with legal obligations." },
+          { "purpose": "Security of People and Property (Video Surveillance - CCTV)", "legal": "Legitimate Interest and Compliance with legal obligation." },
+          { "purpose": "Transfer of data to official entities", "legal": "Compliance with Legal Obligation." }
+        ]
+      },
+      {
+        "title": "6. Retention Periods",
+        "content": "RCG keeps personal data only for the period strictly necessary for the execution of the specific purposes for which they were collected, or for compliance with prescription periods and legal obligations.",
+        "tableCategory": "Category of Processing",
+        "tableTime": "Retention Time",
+        "conservation": [
+          { "category": "Provision of Services and Accounting/Fiscal Management", "time": "10 years after provision of services / invoice issuance (legal deadline)." },
+          { "category": "Sending Commercial Communications", "time": "Until revocation of consent or exercise of the right to object." },
+          { "category": "Responses to Requests", "time": "Until conclusion of the purpose pursuit." },
+          { "category": "Job Applications (unsuccessful candidates)", "time": "6 months after completion of the process, unless consent for maintenance in the database." },
+          { "category": "Events organized by RCG", "time": "Until evaluation and completion of event diligences." },
+          { "category": "CCTV Images", "time": "30 days after the date of recording the images (maximum legal period)." }
+        ]
+      },
+      {
+        "title": "7. Sharing of Personal Data",
+        "content": "Personal data may be shared with third parties in strictly necessary situations:",
+        "sharing": [
+          "Subcontractors: Service provider companies to RCG (e.g., software suppliers, accounting, information system management). These entities are bound by rigorous written contracts (Data Processing Agreements), only being able to process data for the established purposes and guaranteeing appropriate technical measures.",
+          "RCG Group: Internal sharing with other group companies, complying with applicable data protection rules.",
+          "Official Entities: In compliance with legal obligations, data may be transmitted to judicial, tax (AT), administrative or regulatory authorities."
+        ]
+      },
+      {
+        "title": "8. International Transfers (Outside EEE)",
+        "content": "In the scope of its activities, RCG may use partners or service providers whose servers are located outside the European Economic Area (EEA), such as in Portuguese-speaking countries.",
+        "content2": "RCG guarantees that any transfer of data outside the EEA is carried out with maximum rigor, applying:",
+        "transfers": [
+          "Adequacy decisions adopted by the European Commission for the destination country; or,",
+          "Standard Contractual Clauses (SCC) for data protection adopted by the European Commission, complemented, when applicable, with additional security measures."
+        ]
+      },
+      {
+        "title": "9. Rights of Data Subjects",
+        "content": "Under the GDPR, and as a data subject, you enjoy the following rights, which you can exercise free of charge:",
+        "rights": [
+          "Right of Access and Information: Obtain confirmation about whether your data is processed, access it and obtain clear information about that processing.",
+          "Right to Rectification: Request correction of inaccurate data or completion of incomplete data.",
+          "Right to Erasure (\"Right to be forgotten\"): Request deletion of your data, provided there are no legal grounds (e.g., billing) that require their conservation.",
+          "Right to Restrict Processing: Request suspension of the processing of your data in certain circumstances.",
+          "Right to Portability: Receive the data you provided to RCG in a structured, commonly used and machine-readable format, or request its transmission to another controller.",
+          "Right to Object: Object to the processing of data for certain purposes (e.g., direct marketing).",
+          "Right to Withdraw Consent: Whenever processing is based on consent, you have the right to withdraw it at any time, without affecting the lawfulness of the processing carried out until that date."
+        ]
+      },
+      {
+        "title": "10. Exercise of Rights and Complaints",
+        "content": "To exercise any of your rights, or to clarify doubts about the processing of your personal data, you should contact our Data Protection Officer (DPO) through the following means:",
+        "contact": [
+          "Email: dpo@reabilitar-em-casa.com",
+          "Address: Lagoas Park Oeiras, Edif. 7, Piso 1 Sul, 2740-244 Porto Salvo"
+        ],
+        "security": "To guarantee the security of your data, RCG may request additional information that helps confirm your identity before responding to the request. RCG does not require sending a copy of the Citizen Card for the exercise of these rights.",
+        "complaint": "If you consider that RCG has violated your rights or data protection legislation, you have the Right to file a complaint with the national control authority:",
+        "authority": "National Data Protection Commission (CNPD) – www.cnpd.pt"
+      },
+      {
+        "title": "11. Security and Confidentiality",
+        "content": "RCG adopts rigorous technical and organizational measures to protect your personal data against destruction, loss, alteration, disclosure or unauthorized access. These include control of physical and logical accesses, data encryption (whenever technically feasible), regular backups and internal audits.",
+        "content2": "Despite our efforts to protect your data, we warn that the transmission of information over the Internet is never completely secure, so any sharing through open channels is done at your own risk."
+      },
+      {
+        "title": "12. Cookie Policy",
+        "content": "RCG does not use cookies on its website. Our site does not use tracking, analysis, or any type of cookies, including essential or technical cookies.",
+        "content2": "We do not use Google Analytics, Facebook Pixel, or any other data analysis or marketing tool. Our site works completely without cookies."
+      },
+      {
+        "updateDate": "Date of last update: March 30, 2026"
+      }
+    ]
+  },
+  "about": {
+    "metadata": {
+      "title": "About Us - RCG | Healthcare in Portugal",
+      "description": "RCG is a leader in home healthcare in Portugal. Learn about our history, mission, values and licensed team. National coverage with quality and excellence.",
+      "keywords": ["about us", "who we are", "RCG", "healthcare Portugal", "mission values", "medical team", "company history"]
+    },
+    "hero": {
+      "title": "About Us",
+      "description": "Excellent Healthcare at Home, with national coverage."
+    },
+    "about2": {
+      "history": {
+        "title": "Our History",
+        "description": [
+          "We are a company specialized in Healthcare at Home, with two decades of experience in the sector. Our trajectory began in 2006, with the vision of providing excellent care in a family environment, where we already believed that the recovery of each individual would be more effective compared to institutionalization.\n\nWhat started as a vision of proximity care has transformed into a unique complete home health structure.\n\nOver the years, we have expanded our services to respond to Home Support Services (SAD) to meet the needs of our users, families, clients and partners.\n\nOur commitment remains unwavering: to ensure that each user receives the best care, with dignity, respect and professionalism."
+        ]
+      },
+      "doctors": {
+        "image": {
+          "src": "/images/rita.jpg",
+          "alt": "Our team"
+        },
+        "buttonText": "Our Doctors",
+        "buttonLink": "/doctors"
+      },
+      "mission": {
+        "title": "Pioneers in Healthcare at Home in Portugal",
+        "description": "Reabilitar em Casa was a pioneer in providing Healthcare at Home, by being the first company in the country to establish agreements with multiple public and private subsystems in specialized care, ensuring a national response structured to people's needs in the comfort of their home(s).\n\nFirst with the Social Services of Portugal Telecom, then with the Imprensa Nacional Casa da Moeda, followed by the Social Services of Caixa Geral de Depósitos, several Insurance Companies, Armed Forces, ACP and many more.\n\nWe are partners of some of the most important Institutions in Portugal, we collaborate in several projects and more recently Reabilitar em Casa became a co-founder of a sectoral association, AEPAD - Association of private home care companies. This project was born with the fundamental purpose of dignifying and professionalizing the home care sector, establishing new standards of excellence and recognition for the area.",
+        "image": {
+          "src": "/images/fachada2.jpg",
+          "alt": "Quality care"
+        }
+      }
+    },
+    "about4": {
+      "title": "About Us",
+      "description": "We are a dedicated team of healthcare professionals committed to providing excellent care to our patients. Our mission is to ensure that each person receives the best possible attention in the comfort of their home. With years of experience in the healthcare sector, we have developed a patient-centered approach, combining technical competence with humanism. We believe that healthcare should be accessible, personalized and provided with dignity and respect.",
+      "features": [
+        {
+          "title": "Purpose and Vision",
+          "description": "With two decades of dedication, Reabilitar em Casa was born from a clear vision: to transform the Home into the best place to care, rehabilitate, heal and live. We have always believed that for a good recovery, physical and emotional well-being is inseparable from the family environment. To consolidate a future where home care, regardless of age, is synonymous with dignity, allowing each person to receive excellent care in the place where they feel safest, their home. To dignify home care in Portugal through collaboration with Associative and Representative Entities of the sector."
+        },
+        {
+          "title": "Mission",
+          "description": "To provide highly specialized Healthcare and Home Support through a structured and partnered network, ensuring the recovery and promotion of autonomy, quality of life and comfort of our users in a family environment, with maximum clinical rigor and humanism."
+        },
+        {
+          "title": "Values",
+          "description": "We place the user at the center of all decisions, treating each individual with maximum humanity and preserving their integrity in their personal space. Clinical Excellence, Innovation, Integrity and Transparency, Family Proximity and Social Commitment"
+        }
+      ]
+    }
   }
 }
