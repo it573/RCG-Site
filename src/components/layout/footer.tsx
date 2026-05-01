@@ -230,7 +230,7 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <Image
-                  src="/images/signatures/facebook-icon.jpg"
+                  src="/images/facebook.png"
                   alt="Facebook"
                   width={32}
                   height={32}
@@ -245,7 +245,7 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <Image
-                  src="/images/signatures/instagram-icon.jpg"
+                  src="/images/instagram.png"
                   alt="Instagram"
                   width={32}
                   height={32}
