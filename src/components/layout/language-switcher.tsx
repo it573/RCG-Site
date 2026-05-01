@@ -27,24 +27,17 @@ export function LanguageSwitcher() {
     router.push(newPath);
   };
 
+  // Determine the target locale and display text
+  const targetLocale: Locale = locale === 'pt' ? 'en' : 'pt';
+  const displayText = locale === 'pt' ? 'EN' : 'PT';
+
   return (
-    <div className="flex items-center gap-1">
-      {locales.map((loc) => (
-        <button
-          key={loc}
-          onClick={() => switchLocale(loc)}
-          className={`
-            px-2 py-1 text-sm font-medium rounded transition-colors
-            ${locale === loc
-              ? 'bg-primary text-primary-foreground'
-              : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-            }
-          `}
-          aria-label={`Switch to ${loc === 'pt' ? 'Portuguese' : 'English'}`}
-        >
-          {loc.toUpperCase()}
-        </button>
-      ))}
-    </div>
+    <button
+      onClick={() => switchLocale(targetLocale)}
+      className="text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] whitespace-nowrap"
+      aria-label={`Switch to ${targetLocale === 'pt' ? 'Portuguese' : 'English'}`}
+    >
+      {displayText}
+    </button>
   );
 }

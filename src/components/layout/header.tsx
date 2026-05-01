@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Navigation from "./navigation";
 import { Phone } from "lucide-react";
 import PreservingLink from "@/components/ui/preserving-link";
-import { LanguageSwitcher } from "./language-switcher";
 import { Link } from "@/i18n/routing";
 
 export default function Header() {
@@ -30,7 +29,7 @@ export default function Header() {
                     alt="RCG Logo"
                     width={352}
                     height={77}
-                    className="w-[209px] h-auto md:w-[317px]"
+                    className="w-[209px] h-auto md:w-[254px]"
                     priority
                     fetchPriority="high"
                     quality={90}
@@ -45,13 +44,8 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Right side: Phone button, Language Switcher, and Navigation (mobile menu) */}
+          {/* Right side: Phone button and Navigation (mobile menu) */}
           <div className="flex items-center gap-3 flex-shrink-0 z-10">
-            {/* Language Switcher */}
-            <div className="hidden sm:flex items-center animate-fade-in-right">
-              <LanguageSwitcher />
-            </div>
-
             {/* Phone Number - Visible on all screens, appears before mobile menu */}
             <div className="flex items-center animate-fade-in-right">
               <a

@@ -5,6 +5,7 @@ import { ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./mobile-menu";
 import { useTranslations } from 'next-intl';
 import PreservingLink from "@/components/ui/preserving-link";
+import { LanguageSwitcher } from "./language-switcher";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Navigation() {
     { label: t('hospitalEquipment'), href: "/equipamento-hospitalar" },
     { label: t('agreements'), href: "/acordos-convencoes" },
     {
-      label: "Institucional",
+      label: t('institutional'),
       href: "#",
       children: [
         { label: t('whoWeAre'), href: "/quem-somos" },
@@ -54,60 +55,9 @@ export default function Navigation() {
             >
               <PreservingLink
                 href={item.href}
-                className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
-                  item.label === t('clinicalAnalysis') || item.label === t('homeSupport') || item.label === t('healthcare') || item.label === t('agreements') || item.label === t('hospitalEquipment')
-                    ? "whitespace-normal leading-tight"
-                    : "whitespace-nowrap"
-                }`}
+                className="inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] whitespace-nowrap"
               >
-                {item.label === t('clinicalAnalysis') ? (
-                  <>
-                    {t('clinicalAnalysis').split(' ').map((word, i, arr) => (
-                      <span key={i}>
-                        {word}
-                        {i < arr.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </>
-                ) : item.label === t('homeSupport') ? (
-                  <>
-                    {t('homeSupport').split(' ').map((word, i, arr) => (
-                      <span key={i}>
-                        {word}
-                        {i < arr.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </>
-                ) : item.label === t('healthcare') ? (
-                  <>
-                    {t('healthcare').split(' ').map((word, i, arr) => (
-                      <span key={i}>
-                        {word}
-                        {i < arr.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </>
-                ) : item.label === t('agreements') ? (
-                  <>
-                    {t('agreements').split(' ').map((word, i, arr) => (
-                      <span key={i}>
-                        {word}
-                        {i < arr.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </>
-                ) : item.label === t('hospitalEquipment') ? (
-                  <>
-                    {t('hospitalEquipment').split(' ').map((word, i, arr) => (
-                      <span key={i}>
-                        {word}
-                        {i < arr.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </>
-                ) : (
-                  item.label
-                )}
+                {item.label}
                 {item.children && (
                   <ChevronDown className="w-4 h-4 flex-shrink-0" />
                 )}
@@ -142,6 +92,12 @@ export default function Navigation() {
               )}
             </li>
           ))}
+          {/* Language Switcher as last menu item */}
+          <li className="flex-shrink-0 animate-fade-in-down">
+            <div className="inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] whitespace-nowrap">
+              <LanguageSwitcher />
+            </div>
+          </li>
         </ul>
       </nav>
 

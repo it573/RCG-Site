@@ -121,13 +121,14 @@ export default function MobileMenu({
                 )}
               </li>
             ))}
+            {/* Language Switcher as last menu item */}
+            <li>
+              <div className="py-3 min-h-[44px] text-xl font-medium hover:text-primary">
+                <LanguageSwitcher />
+              </div>
+            </li>
           </ul>
         </nav>
-
-        {/* Language Switcher */}
-        <div className="mt-8 pt-6 border-t border-border">
-          <LanguageSwitcher />
-        </div>
       </SheetContent>
     </Sheet>
   );
