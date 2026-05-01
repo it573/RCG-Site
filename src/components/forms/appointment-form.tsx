@@ -5,27 +5,21 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { usePathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
+// Static schema - will use dynamic error messages in the form
 const appointmentSchema = z.object({
-  FirstName: z.string().min(1, "Campo obrigatório"),
-  telefone: z.string().min(1, "Campo obrigatório"),
+  FirstName: z.string().min(1, "Required field"),
+  telefone: z.string().min(1, "Required field"),
   campaign: z.string().optional(),
   source: z.string().optional(),
   gclid: z.string().optional(),
@@ -53,6 +47,9 @@ export default function AppointmentForm({
     message: string;
   }>({ type: null, message: "" });
 
+  // Always call useTranslations hook at the top level
+  const t = useTranslations('forms.appointment');
+
   // Prevent hydration mismatch by only rendering after mount
   useEffect(() => {
     setIsMounted(true);
@@ -61,20 +58,17 @@ export default function AppointmentForm({
   // Pathname-based mapping for pages that use reusable components
   const getPathnameDefaults = (path: string) => {
     if (path === "/") return { campaign: "", source: "home" };
-    if (path === "/contactos") return { campaign: "", source: "contactos" };
+    if (path.includes("contactos")) return { campaign: "", source: "contactos" };
     return null;
   };
 
   const form = useForm<AppointmentFormValues>({
     resolver: zodResolver(appointmentSchema),
     defaultValues: {
-      //to be filled in the form
       FirstName: "",
       telefone: "",
-      //to be instantiated depending of the page
       campaign: "",
       source: "",
-      //to be retrieved from the query string parameters
       gclid: "",
       gcampaign: "",
       gkeywords: "",
@@ -89,7 +83,6 @@ export default function AppointmentForm({
     const params = new URLSearchParams(window.location.search);
 
     // Campaign and Source (priority: page props > pathname mapping > empty string)
-    // Campaign is NOT read from URL params to prevent Salesforce ID validation errors
     const pathnameDefaults = getPathnameDefaults(pathname);
 
     // Campaign - only from page props or pathname defaults, never from URL params
@@ -102,7 +95,6 @@ export default function AppointmentForm({
     form.setValue("source", finalSource);
 
     // Google tracking parameters
-    // Always set to empty string if not present (Salesforce requires these fields)
     const gclid = params.get("gclid");
     form.setValue("gclid", gclid || "");
 
@@ -160,7 +152,7 @@ export default function AppointmentForm({
 
       setSubmitStatus({
         type: "success",
-        message: "Obrigado! Será contactado por nós nos próximos minutos.",
+        message: t.success,
       });
 
       // Reset form after successful submission
@@ -169,10 +161,7 @@ export default function AppointmentForm({
       console.error("Form submission error:", error);
       setSubmitStatus({
         type: "error",
-        message:
-          error instanceof Error
-            ? error.message
-            : "An error occurred. Please try again.",
+        message: t.error,
       });
     } finally {
       setIsSubmitting(false);
@@ -189,7 +178,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Nome" className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
+                  <Input placeholder={t.namePlaceholder} className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -202,7 +191,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="tel" placeholder="Telefone" className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
+                  <Input type="tel" placeholder={t.phonePlaceholder} className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -293,10 +282,9 @@ export default function AppointmentForm({
         )}
 
         <Button type="submit" className="w-full bg-teal-500 hover:bg-teal-600 text-white rounded-md text-lg py-6" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Ligamos para Si"}
+          {isSubmitting ? t.submitting : t.submit}
         </Button>
       </form>
     </Form>
   );
 }
-

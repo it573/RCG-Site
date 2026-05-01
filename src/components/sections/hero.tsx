@@ -1,6 +1,7 @@
 import Heading from "@/components/ui/heading";
 import AppointmentForm from "@/components/forms/appointment-form";
 import Image from "next/image";
+import { getMessages } from 'next-intl/server';
 
 interface HeroProps {
   title?: string;
@@ -8,11 +9,12 @@ interface HeroProps {
   showForm?: boolean;
   backgroundImage?: string;
   showStampImage?: boolean;
+  locale?: string;
 }
 
-export default function Hero({
-  title = "Cuidados Especializados no Domicílio",
-  description = "O melhor lugar para Cuidar, Curar e Viver",
+async function HeroContent({
+  title,
+  description,
   showForm = true,
   backgroundImage = "/images/hero/oldman.jpg",
   showStampImage = false,
@@ -81,3 +83,24 @@ export default function Hero({
   );
 }
 
+export default async function Hero(props: HeroProps) {
+  // If title/description are provided, use them directly (for client components)
+  if (props.title && props.description) {
+    return <HeroContent {...props} />;
+  }
+
+  // Get locale from props or default to 'pt'
+  const locale = props.locale || 'pt';
+
+  // Otherwise, fetch translations and render
+  const messages = await getMessages({ locale });
+  const heroMessages = messages.home?.hero as { title?: string; description?: string };
+
+  return (
+    <HeroContent
+      {...props}
+      title={heroMessages?.title || "Cuidados Especializados no Domicílio"}
+      description={heroMessages?.description || "O melhor lugar para Cuidar, Curar e Viver"}
+    />
+  );
+}

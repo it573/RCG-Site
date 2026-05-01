@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 interface ServiceItem {
   title: string;
@@ -12,40 +15,17 @@ interface Service3Props {
   backgroundImage?: string;
 }
 
-// Define service data without any component references
-const serviceData: ServiceItem[] = [
-  {
-    title: "Check-Up Personalizado",
-    description: "Específicos, Gerais, para quem procura fazer uma avaliação de parâmetros de saúde e estilos de vida. ",
-  },
-  {
-    title: "Testes de Nutrição",
-    description: "Descubra como sua alimentação impacta sua saúde e o seu bem-estar geral.",
-  },
-  {
-    title: "Testes de Bem-Estar",
-    description: "Análise do bio-ritmo e alterações do sono. Medição de níveis de cortisol e DHA-S (avaliação do stress). Diagnóstico de enxaqueca, entre outros.",
-  },
-  {
-    title: "Testes da Saúde Gastro-Intestinal",
-    description: "Microbioma intestinal, Intolerâncias Alimentares, avaliação da Microbiota intestinal, sobrecrescimento bacteriano intestinal.",
-  },
-  {
-    title: "Saúde da Mulher",
-    description: "Avaliação hormonal, ciclo menstrual, fertilidade, gravidez e menopausa.",
-  },
-  {
-    title: "Analises Clínicas ao Domícilio",
-    description: "Para todos os que preferem realizar a colheita no conforto da sua casa, disponibilizamos um serviço de análises clínicas ao domicílio",
-  },
-];
-
 export default function Service3({
-  subtitle = "",
-  title = "Análises Clínicas Especializadas",
-  description = "",
+  subtitle,
+  title,
+  description,
   backgroundImage = "/images/blood-test.jpg",
 }: Service3Props) {
+  const t = useTranslations('clinicalAnalysis.services');
+
+  // Get service data from translations
+  const serviceData: ServiceItem[] = (t.raw('items') as ServiceItem[]) || [];
+
   return (
     <section className="relative py-20 overflow-x-hidden">
       {/* Background Image */}
@@ -82,19 +62,23 @@ export default function Service3({
             {/* Text Content */}
             <div className="text-left space-y-6 animate-fade-in-right">
               {/* Subtitle */}
-              <p className="text-primary font-semibold uppercase tracking-wide text-sm">
-                {subtitle}
-              </p>
+              {subtitle && (
+                <p className="text-primary font-semibold uppercase tracking-wide text-sm">
+                  {subtitle}
+                </p>
+              )}
 
               {/* Title */}
               <h2 className="text-4xl md:text-5xl text-foreground">
-                {title}
+                {title || t('title')}
               </h2>
 
               {/* Description */}
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                {description}
-              </p>
+              {description && (
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
+              )}
             </div>
 
             {/* Services Grid */}

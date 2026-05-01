@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import Navigation from "./navigation";
 import { Phone } from "lucide-react";
 import PreservingLink from "@/components/ui/preserving-link";
+import { LanguageSwitcher } from "./language-switcher";
+import { Link } from "@/i18n/routing";
 
 export default function Header() {
   const pathname = usePathname();
@@ -22,7 +24,7 @@ export default function Header() {
         <div className="flex items-center justify-between py-4 h-full relative w-full min-w-0 px-[2.25%]">
           {/* Logo - Left */}
           <div className="flex-shrink-0 flex items-center animate-fade-in-left z-10">
-            <PreservingLink href="/" onClick={handleLogoClick} className="flex items-center">
+            <Link href="/" onClick={handleLogoClick} className="flex items-center">
                 <Image
                     src="/images/logo-transparent-final-greenv8.png"
                     alt="RCG Logo"
@@ -33,7 +35,7 @@ export default function Header() {
                     fetchPriority="high"
                     quality={90}
                 />
-            </PreservingLink>
+            </Link>
           </div>
 
           {/* Navigation - Centered on desktop only */}
@@ -43,8 +45,13 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Right side: Phone button and Navigation (mobile menu) */}
+          {/* Right side: Phone button, Language Switcher, and Navigation (mobile menu) */}
           <div className="flex items-center gap-3 flex-shrink-0 z-10">
+            {/* Language Switcher */}
+            <div className="hidden sm:flex items-center animate-fade-in-right">
+              <LanguageSwitcher />
+            </div>
+
             {/* Phone Number - Visible on all screens, appears before mobile menu */}
             <div className="flex items-center animate-fade-in-right">
               <a

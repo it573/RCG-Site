@@ -3,13 +3,15 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import PreservingLink from "@/components/ui/preserving-link";
+import { Link } from "@/i18n/routing";
+import { LanguageSwitcher } from "./language-switcher";
 
 interface MenuItem {
   label: string;
@@ -30,6 +32,8 @@ export default function MobileMenu({
 }: MobileMenuProps) {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
+  const t = useTranslations('mobileMenu');
+  const navT = useTranslations('nav');
 
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (pathname === "/") {
@@ -46,14 +50,23 @@ export default function MobileMenu({
       <SheetContent side="right" className="w-80 min-w-80 max-w-80 overflow-y-auto">
         <SheetHeader>
           <SheetTitle>
-            <PreservingLink href="/" onClick={onClose} className="text-2xl font-bold text-primary">
-              Gostamos de Cuidar
-            </PreservingLink>
+            <Link href="/" onClick={onClose} className="text-2xl font-bold text-primary">
+              {t('title')}
+            </Link>
           </SheetTitle>
         </SheetHeader>
 
         <nav className="mt-8">
           <ul className="space-y-2 pl-4">
+            <li>
+              <Link
+                href="/"
+                onClick={handleHomeClick}
+                className="block py-3 min-h-[44px] text-xl font-medium hover:text-primary"
+              >
+                {navT('home')}
+              </Link>
+            </li>
             {menuItems.map((item) => (
               <li key={item.label}>
                 {item.children ? (
@@ -84,34 +97,38 @@ export default function MobileMenu({
                       >
                         {item.children.map((child) => (
                           <li key={child.label}>
-                            <PreservingLink
+                            <Link
                               href={child.href}
                               onClick={onClose}
                               className="block py-3 min-h-[44px] text-lg text-muted-foreground hover:text-primary"
                               role="menuitem"
                             >
                               {child.label}
-                            </PreservingLink>
+                            </Link>
                           </li>
                         ))}
                       </ul>
                     )}
                   </>
                 ) : (
-                  <PreservingLink
+                  <Link
                     href={item.href}
-                    onClick={item.label === "Home" ? handleHomeClick : onClose}
+                    onClick={onClose}
                     className="block py-3 min-h-[44px] text-xl font-medium hover:text-primary"
                   >
                     {item.label}
-                  </PreservingLink>
+                  </Link>
                 )}
               </li>
             ))}
           </ul>
         </nav>
+
+        {/* Language Switcher */}
+        <div className="mt-8 pt-6 border-t border-border">
+          <LanguageSwitcher />
+        </div>
       </SheetContent>
     </Sheet>
   );
 }
-

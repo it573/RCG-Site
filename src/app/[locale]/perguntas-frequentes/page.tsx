@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { FAQAccordion } from "@/app/perguntas-frequentes/faq-accordion";
+import { FAQAccordion } from "@/components/faq-accordion";
 import { FaqJsonLd } from "@/components/faq-json-ld";
 
 export const metadata: Metadata = {

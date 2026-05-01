@@ -44,9 +44,11 @@ export default function ServiceContent({
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 mb-12 items-center">
           {/* Top row spanning all columns */}
-          <div className="lg:col-span-3 text-center">
-            <h2 className="text-4xl md:text-5xl"> Com o Líder em Medicina Laboratorial</h2>
-          </div>
+          {title && (
+            <div className="lg:col-span-3 text-center">
+              <h2 className="text-4xl md:text-5xl">{title}</h2>
+            </div>
+          )}
 
           {image && (
             <div className="flex items-center justify-center">

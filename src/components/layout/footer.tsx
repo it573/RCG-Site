@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronUp } from "lucide-react";
-import PreservingLink from "@/components/ui/preserving-link";
+import { useTranslations } from 'next-intl';
+import { Link } from "@/i18n/routing";
 
 const footerImages = [
   {
@@ -36,30 +37,14 @@ const footerImages = [
     width: 121,
     height: 98,
   },
-  
-];
 
-const leftColumnItems = [
-  { title: "REABILITAR EM CASA", type: "heading" },
-  { title: "Quem Somos", type: "link", href: "/quem-somos" },
-  { title: "Notícias", type: "text" },
-  { title: "Testemunhos", type: "link", href: "/testemunhos" },
-  { title: "Política de Privacidade", type: "link", href: "/politica-de-privacidade" },
-  { title: "RAL", type: "link", href: "/ral" },
-  { title: "Perguntas Frequentes", type: "link", href: "/perguntas-frequentes" },
-  { title: "Livro de Elogios", type: "link", href: "https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa", external: true },
-  { title: "Livro de Reclamações", type: "link", href: "https://www.livroreclamacoes.pt/inicio/", external: true },
-];
-
-const middleColumnItems = [
-  { title: "REGISTE-SE", type: "heading" },
-  { title: "Recrutamento", type: "link", href: "/recrutamento" },
 ];
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
   const footerRef = useRef<HTMLDivElement>(null);
   const hasAnimatedRef = useRef(false);
+  const t = useTranslations('footer');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -93,6 +78,21 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const leftColumnItems = [
+    { title: t('company.whoWeAre'), type: "link" as const, href: "/quem-somos" },
+    { title: t('company.news'), type: "text" as const },
+    { title: t('company.testimonials'), type: "link" as const, href: "/testemunhos" },
+    { title: t('company.privacy'), type: "link" as const, href: "/politica-de-privacidade" },
+    { title: t('company.ral'), type: "link" as const, href: "/ral" },
+    { title: t('company.faq'), type: "link" as const, href: "/perguntas-frequentes" },
+    { title: t('company.praiseBook'), type: "link" as const, href: "https://elogiar.livrodeelogios.com/elogiar/reabilitar-em-casa", external: true },
+    { title: t('company.complaintsBook'), type: "link" as const, href: "https://www.livroreclamacoes.pt/inicio/", external: true },
+  ];
+
+  const middleColumnItems = [
+    { title: t('register.recruitment'), type: "link" as const, href: "/recrutamento" },
+  ];
+
   return (
     <footer ref={footerRef} className="bg-teal-500 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -108,15 +108,15 @@ export default function Footer() {
                 transition: "all 1.5s ease-out",
               }}
             >
-              REABILITAR EM CASA
+              {t('company.title')}
             </h4>
             <div className="grid grid-cols-2 gap-4 text-xl">
               {/* Left sub-column - First 4 items */}
               <div className="space-y-3">
-                {leftColumnItems.slice(1, 5).map((item, index) => {
+                {leftColumnItems.slice(0, 4).map((item, index) => {
                   if (item.type === "link") {
                     return (
-                      <PreservingLink
+                      <Link
                         key={index}
                         href={item.href || "#"}
                         target={item.external ? "_blank" : undefined}
@@ -129,7 +129,7 @@ export default function Footer() {
                         }}
                       >
                         {item.title}
-                      </PreservingLink>
+                      </Link>
                     );
                   } else {
                     return (
@@ -150,10 +150,10 @@ export default function Footer() {
               </div>
               {/* Right sub-column - Last 4 items */}
               <div className="space-y-3">
-                {leftColumnItems.slice(5).map((item, index) => {
+                {leftColumnItems.slice(4).map((item, index) => {
                   if (item.type === "link") {
                     return (
-                      <PreservingLink
+                      <Link
                         key={index}
                         href={item.href || "#"}
                         target={item.external ? "_blank" : undefined}
@@ -166,7 +166,7 @@ export default function Footer() {
                         }}
                       >
                         {item.title}
-                      </PreservingLink>
+                      </Link>
                     );
                   }
                 })}
@@ -176,38 +176,30 @@ export default function Footer() {
 
           {/* Column 2: REGISTE-SE - Animated from top */}
           <div className="space-y-4">
-            {middleColumnItems.map((item, index) => {
-              if (item.type === "heading") {
-                return (
-                  <h4
-                    key={index}
-                    className="text-3xl font-semibold"
-                    style={{
-                      transform: isVisible ? "translateY(0)" : "translateY(-100px)",
-                      opacity: isVisible ? 1 : 0,
-                      transition: `all 1.5s ease-out`,
-                    }}
-                  >
-                    {item.title}
-                  </h4>
-                );
-              } else if (item.type === "link") {
-                return (
-                  <PreservingLink
-                    key={index}
-                    href={item.href || "#"}
-                    className="block hover:text-white/80 transition-colors leading-[0.95] text-xl"
-                    style={{
-                      transform: isVisible ? "translateY(0)" : "translateY(-100px)",
-                      opacity: isVisible ? 1 : 0,
-                      transition: `all 1.5s ease-out`,
-                    }}
-                  >
-                    {item.title}
-                  </PreservingLink>
-                );
-              }
-            })}
+            <h4
+              className="text-3xl font-semibold"
+              style={{
+                transform: isVisible ? "translateY(0)" : "translateY(-100px)",
+                opacity: isVisible ? 1 : 0,
+                transition: `all 1.5s ease-out`,
+              }}
+            >
+              {t('register.title')}
+            </h4>
+            {middleColumnItems.map((item, index) => (
+              <Link
+                key={index}
+                href={item.href || "#"}
+                className="block hover:text-white/80 transition-colors leading-[0.95] text-xl"
+                style={{
+                  transform: isVisible ? "translateY(0)" : "translateY(-100px)",
+                  opacity: isVisible ? 1 : 0,
+                  transition: `all 1.5s ease-out`,
+                }}
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
 
           {/* Column 3: SIGA-NOS - Animated from right */}
@@ -220,7 +212,7 @@ export default function Footer() {
                 transition: "all 1.5s ease-out",
               }}
             >
-              SIGA-NOS
+              {t('followUs')}
             </h4>
             <div
               className="flex items-center gap-4"
@@ -265,7 +257,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
-                aria-label="Instagram"
+                aria-label="Linkedin"
               >
                 <Image
                   src="/images/linkedin.png"
@@ -274,7 +266,7 @@ export default function Footer() {
                   height={32}
                   className="w-8 h-8"
                 />
-              </a>              
+              </a>
             </div>
           </div>
         </div>
@@ -322,9 +314,9 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8 mt-8">
           <div className="text-center text-xl text-white/80">
             <p>
-              ©2026 Reabilitar em Casa | Prestação de Cuidados de Saúde | Todos os direitos reservados
+              {t('copyright')}
               <br />
-              Powered by <a href="https://responsive4.com/" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-white transition-colors">Responsive4 Ltd</a>
+              {t('poweredBy')} <a href="https://responsive4.com/" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-white transition-colors">Responsive4 Ltd</a>
             </p>
           </div>
         </div>

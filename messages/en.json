@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "title": "RCG - Healthcare at Home",
+    "description": "We provide quality home healthcare services in Portugal. Nursing services, clinical analysis, home support and more."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "healthcare": "Healthcare",
+    "homeSupport": "Home Support",
+    "clinicalAnalysis": "Clinical Analysis",
+    "hospitalEquipment": "Hospital Equipment",
+    "agreements": "Agreements",
+    "about": "About Us",
+    "recruitment": "Recruitment",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "faq": "FAQ",
+    "testimonials": "Testimonials",
+    "continuedCare": "Continued Care",
+    "homeHospitalization": "Home Hospitalization",
+    "bookAppeal": "Complaints Book",
+    "praiseBook": "Praise Book",
+    "whoWeAre": "About Us"
+  },
+  "languageSwitcher": {
+    "pt": "PT",
+    "en": "EN"
+  },
+  "mobileMenu": {
+    "title": "We Love to Care"
+  },
+  "footer": {
+    "company": {
+      "title": "REABILITAR EM CASA",
+      "whoWeAre": "About Us",
+      "news": "News",
+      "testimonials": "Testimonials",
+      "privacy": "Privacy Policy",
+      "ral": "RAL",
+      "faq": "FAQ",
+      "praiseBook": "Praise Book",
+      "complaintsBook": "Complaints Book"
+    },
+    "register": {
+      "title": "REGISTER",
+      "recruitment": "Recruitment"
+    },
+    "followUs": "FOLLOW US",
+    "copyright": "©2026 Reabilitar em Casa | Healthcare Services | All rights reserved",
+    "poweredBy": "Powered by"
+  },
+  "forms": {
+    "appointment": {
+      "name": "Name",
+      "phone": "Phone",
+      "namePlaceholder": "Name",
+      "phonePlaceholder": "Phone",
+      "required": "Required field",
+      "submit": "We Call You",
+      "submitting": "Submitting...",
+      "success": "Thank you! We will contact you in the next few minutes.",
+      "error": "An error occurred. Please try again.",
+      "weCallYou": "We Call You"
+    }
+  },
+  "home": {
+    "metadata": {
+      "title": "Home Healthcare in Portugal | RCG",
+      "description": "Personalized healthcare and home support 24/7 in Portugal. Clinical analysis and hospital equipment at home."
+    },
+    "hero": {
+      "title": "Specialized Care at Home",
+      "description": "The best place to Care, Heal and Live"
+    },
+    "services": {
+      "title": "Medical Specialties and Services",
+      "posts": {
+        "healthcare": {
+          "title": "HEALTH - Specialized Services",
+          "description": "Specialized healthcare that combines professional rigor with the proximity and safety of the home environment",
+          "alt": "HEALTH - Specialized Services"
+        },
+        "clinicalAnalysis": {
+          "title": "Clinical Analysis",
+          "description": "We perform your clinical analysis collection in the comfort of your home, a fast and safe diagnostic service that brings laboratory excellence to you, prioritizing your well-being and agility in results",
+          "alt": "Clinical Analysis"
+        },
+        "homeSupport": {
+          "title": "Home Support",
+          "description": "We guarantee complete assistance in daily activities for all those who cannot temporarily or permanently ensure the satisfaction of their basic needs, with an attentive company that promotes quality of life in the comfort of home",
+          "alt": "Home Support"
+        },
+        "continuedCare": {
+          "title": "Continued Care",
+          "description": "A safe alternative to conventional hospitalization, with permanent and specialized healthcare that ensures continuity of treatment with maximum dignity",
+          "alt": "Continued Care"
+        },
+        "homeHospitalization": {
+          "title": "Home Hospitalization",
+          "description": "An innovative alternative to conventional hospitalization that promotes faster and more humanized recovery, through intensive clinical care provided in the comfort and proximity of family",
+          "alt": "Home Hospitalization"
+        },
+        "hospitalEquipment": {
+          "title": "Hospital Equipment",
+          "description": "We provide complete solutions in state-of-the-art hospital equipment, ensuring safe and functional adaptation of the home to each person's specific needs. Rental and Sale (delivery and installation included)",
+          "alt": "Hospital Equipment"
+        }
+      }
+    }
+  },
+  "agreements": {
+    "metadata": {
+      "title": "Agreements and Partnerships - Health Subsystems",
+      "description": "We are partnered with the main health subsystems in Portugal: ADSE, SAD, SAMS, Médis, Multicare and more. Check if your subsystem accepts our care.",
+      "keywords": ["health agreements", "partnerships", "health subsystems", "ADSE", "SAD", "SAMS", "Médis", "Multicare", "health insurance", "coverage"]
+    },
+    "hero": {
+      "title": "Agreements and Partnerships",
+      "description": "We collaborate with the main health entities to provide the best care."
+    },
+    "form": {
+      "title": "We Call You!"
+    },
+    "deals": {
+      "title": "Partnerships",
+      "description": "We have partnerships with major insurance companies and health subsystems."
+    }
+  },
+  "clinicalAnalysis": {
+    "metadata": {
+      "title": "Clinical Analysis at Home and in Carcavelos",
+      "description": "Collection point in Carcavelos and home clinical analysis in partnership with Synlab. Check-ups, nutrition tests, hormonal tests and more. Fast and reliable results.",
+      "keywords": ["clinical analysis", "home collection", "carcavelos collection point", "synlab", "health check-up", "laboratory tests", "blood analysis", "medical exams"]
+    },
+    "hero": {
+      "title": "Clinical Analysis",
+      "description": "At our Collection Point or at Home, we perform clinical analysis with speed and confidentiality."
+    },
+    "serviceContent": {
+      "title": "Why choose our clinical analysis services?",
+      "description": "With a team of specialized professionals and state-of-the-art technology, we guarantee reliable and fast results for better health management.",
+      "imageAlt": "Clinical analysis equipment",
+      "content": "Reabilitar em Casa continues to expand and, in 2026, places at the service of its customers, in Carcavelos, a clinical analysis collection point, in partnership with Synlab, the European leader in medical laboratory services and clinical diagnostics.<br><br>Regardless of your <a href=\"#acordos\" class=\"text-primary hover:underline font-semibold\">health subsystem</a>, you can do your clinical analysis at our collection point (Carcavelos) or in the comfort of your home.<br><br>To schedule your Clinical Analysis or your check-up, you can get more information about our clinical analysis profiles, contact us."
+    },
+    "services": {
+      "title": "Specialized Clinical Analysis",
+      "items": [
+        {
+          "title": "Personalized Check-Up",
+          "description": "Specific, General, for those seeking to evaluate health parameters and lifestyles."
+        },
+        {
+          "title": "Nutrition Tests",
+          "description": "Discover how your diet impacts your health and general well-being."
+        },
+        {
+          "title": "Wellness Tests",
+          "description": "Analysis of bio-rhythm and sleep changes. Measurement of cortisol and DHA-S levels (stress assessment). Migraine diagnosis, among others."
+        },
+        {
+          "title": "Gastro-Intestinal Health Tests",
+          "description": "Intestinal microbiome, Food Intolerances, evaluation of intestinal microbiota, intestinal bacterial overgrowth."
+        },
+        {
+          "title": "Women's Health",
+          "description": "Hormonal evaluation, menstrual cycle, fertility, pregnancy and menopause."
+        },
+        {
+          "title": "Clinical Analysis at Home",
+          "description": "For those who prefer to perform the collection in the comfort of their home, we provide a home clinical analysis service"
+        }
+      ]
+    },
+    "synlabDeals": {
+      "title": "Agreements and Partnerships",
+      "description": "We work with the main health subsystems to guarantee the best access to clinical analysis."
+    },
+    "form": {
+      "title": "We Call You!"
+    }
+  },
+  "homeSupport": {
+    "metadata": {
+      "title": "Home Support in Portugal | RCG",
+      "description": "Personalized and excellent home support services in Portugal. 24/7 caregivers, nursing care and assistance in the comfort of your home.",
+      "keywords": ["home support", "home caregivers", "nursing care", "home assistance", "elderly care", "senior support", "24 hour care"]
+    },
+    "hero": {
+      "title": "Home Support",
+      "description": "We provide personalized care in the comfort of your home, with a dedicated team available 24 hours a day."
+    },
+    "service21": {
+      "title": "Continuous Assistance",
+      "titleHighlight": "Entity licensed by Social Security",
+      "services": [
+        {
+          "title": "In the Comfort of Your Home",
+          "description": "The Home Support Service (S.A.D.) is an organized social response that consists of providing individualized and personalized care at home to individuals and families when, due to illness, disability or other impediment, they cannot temporarily or permanently ensure the satisfaction of their basic needs and/or daily life activities, contributing to the promotion of their autonomy and the prevention of dependency situations or their worsening."
+        },
+        {
+          "title": "Social Charter",
+          "description": "Make sure you choose a legal entity, registered in the Social Charter.\n\nReabilitar em Casa is!"
+        }
+      ]
+    },
+    "confianca": {
+      "title": "Trusted Care",
+      "description": "With a team that sums two decades of experience dedicated to the art of caring, we transform the provision of care into a commitment of excellence and proximity.",
+      "pillar": "Our intervention is based on an unshakeable pillar: Trust.",
+      "howWeWork": {
+        "title": "How do we work?",
+        "steps": [
+          {
+            "title": "Needs Diagnosis",
+            "description": "After your initial contact, we perform a detailed screening to understand the specifics of the case. We share the values of rigor and humanism that have guided our company for 20 years."
+          },
+          {
+            "title": "Personalized Proposal",
+            "description": "We present solutions adapted to the reality of each family, guaranteeing clarity and transparency from the very first second."
+          },
+          {
+            "title": "Specialized Technical Assessment",
+            "description": "With the acceptance of the proposal, we assess the extent of the intervention and outline the profile of the ideal family caregiver, guaranteeing perfect compatibility."
+          },
+          {
+            "title": "Guarantee and Adjustment",
+            "description": "We formalize our commitment through a simplified contract and monitor the evolution of each case, adjusting the tasks whenever necessary for the family's well-being."
+          },
+          {
+            "title": "Immediate Response",
+            "description": "We are able to start support within a maximum period of 24/48 hours after the assessment."
+          }
+        ]
+      }
+    },
+    "services5": {
+      "services": [
+        {
+          "title": "Personal Hygiene\nand Comfort"
+        },
+        {
+          "title": "Meal Preparation\nand Assistance"
+        },
+        {
+          "title": "Medical Appointment\nAccompaniment"
+        },
+        {
+          "title": "Medication\nSupervision"
+        },
+        {
+          "title": "Company, Conversation\nand Cognitive Stimulation"
+        },
+        {
+          "title": "Continuous Support\n(up to 24 hours)"
+        }
+      ]
+    },
+    "form": {
+      "title": "We Call You!"
+    }
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contact - RCG | Get in Touch",
+      "description": "Contact RCG for home healthcare services in Portugal. Phone: 210 136 676. Available 24/7. Service in Lisbon and national coverage.",
+      "keywords": ["contact", "phone", "address", "email", "get in touch", "RCG contact", "healthcare Portugal"]
+    },
+    "hero": {
+      "title": "Contact",
+      "description": "We are available to answer all your questions and provide you with the information you need about the healthcare services we provide."
+    },
+    "contacts2": {
+      "subtitle": "Get in Touch",
+      "description": "With National Coverage services, our team is available to answer your questions and provide you with the information you need about the healthcare services we provide.",
+      "phoneNote": "call to national landline and mobile network",
+      "email": "geral@reabilitar-em-casa.com",
+      "address": "Rua Itália, nº1, Piso 1, Escritório 6, 2775-407 Carcavelos, Portugal",
+      "phone": "210 136 676 / 917 861 795",
+      "workingHours": "Monday to Friday (8h - 19h)\nSaturday (9h - 17h)",
+      "imageAlt": "Our team"
+    }
+  },
+  "continuedCareHospitalization": {
+    "metadata": {
+      "title": "Continued Care and Home Hospitalization",
+      "description": "Long-term care and home hospitalization with specialized medical team 24/7. Safe alternative to hospital, in the comfort of your home.",
+      "keywords": ["continued care", "home hospitalization", "long-term care", "home care", "palliative care", "home medical team"]
+    },
+    "hero": {
+      "title": "Continued Care and Hospitalization",
+      "description": "Specialized long-term care and home hospitalization with medical team available 24 hours."
+    },
+    "service2": {
+      "title": "Continued Care",
+      "serviceTitle": "We bring you all the care you need!",
+      "serviceDescription": "Due to the progressive aging of the population, situations of physical and psychological vulnerability occur more frequently, which can lead to the appearance of chronic pathological conditions and, in most cases, generate dependency within limits not always controllable by the person and/or their family. It should be noted that the situation of dependency can occur in any other age group, also requiring this type of Social Response.\n\nBy providing this service, Reabilitar em Casa aims to promote the well-being and individual development of clients, in a climate of emotional, physical and psychological security and in a perspective of specialized care, through individualized and personalized care, in close collaboration between medical team and family."
+    },
+    "service2Inverted": {
+      "title": "Home Hospitalization",
+      "serviceTitle": "A New Era. A New Life. A New Way of Caring",
+      "serviceDescription": "Home Hospitalization consists of a hospital care model for acute patients, characterized by the provision of differentiated care in the post-hospital discharge period.\n\nIt is intended for acute patients with high complexity pathology but with the possibility of hospital admission at home.\n\nAfter assessing the patient's condition to analyze their complexity, a therapeutic plan is established to be implemented by the multidisciplinary team. Complexities vary between: high, medium and low complexity (with or without ventilation).\n\nWe humanize care, offering differentiated hospital-level treatment in the comfort of your home."
+    },
+    "form": {
+      "title": "We Call You!"
+    }
+  },
+  "healthcare": {
+    "metadata": {
+      "title": "Healthcare at Home in Portugal",
+      "description": "Nursing, physiotherapy and medical assistance services at home in Portugal. Licensed team by ERS, available 24/7. We care for you and your family.",
+      "keywords": ["healthcare", "home nursing", "home physiotherapy", "medical assistance", "home caregivers", "health in Portugal", "home support"]
+    },
+    "hero": {
+      "title": "Healthcare",
+      "description": "We provide personalized and excellent healthcare services, with national coverage."
+    },
+    "services51": {
+      "services": [
+        {
+          "title": "General and Family Practice",
+          "description": "Medical specialty that follows the individual's health in the long term (at all age levels)."
+        },
+        {
+          "title": "Physiotherapy",
+          "description": "Physiotherapy and osteopathy treatments, specialized for babies, children, adults and elderly."
+        },
+        {
+          "title": "Occupational Therapy",
+          "description": "Promotes the individual's ability to care for themselves, whether in self-care or in occupations that can be as elementary as eating or dressing."
+        },
+        {
+          "title": "Nursing and Medication Administration",
+          "description": "General and specialized nursing care. Management and assistance in medication administration."
+        },
+        {
+          "title": "Nutrition",
+          "description": "Specialized nutrition monitoring ensures a varied and balanced diet, a determining condition for quick recovery."
+        },
+        {
+          "title": "Speech Therapy",
+          "description": "Treatments in the areas of language, speech, reading and writing, voice, verbal articulation, fluency, orofacial motricity and swallowing. Children and Adults."
+        }
+      ]
+    },
+    "form": {
+      "title": "We Call You!"
+    }
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 interface LogoItem {
   src: string;
@@ -91,16 +92,18 @@ const defaultLogos: LogoItem[] = [
 ];
 
 export default function RCGDeals({
-  title = "Acordos",
-  description = "Temos acordos com as principais seguradoras e subsistemas.",
+  title,
+  description,
   logos = defaultLogos,
 }: RCGDealsProps) {
+  const t = useTranslations('agreements.deals');
+
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl mb-4">{title}</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{description}</p>
+          <h2 className="text-4xl md:text-5xl mb-4">{title || t('title')}</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{description || t('description')}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">

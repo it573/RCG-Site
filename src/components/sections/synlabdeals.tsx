@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 interface Organization {
   name: string;
@@ -48,15 +51,17 @@ interface SynlabDealsProps {
 }
 
 export default function SynlabDeals({
-  title = "Acordos e Convenções",
-  description = "Trabalhamos com os principais subsistemas de saúde para garantir o melhor acesso às análises clínicas.",
+  title,
+  description,
 }: SynlabDealsProps) {
+  const t = useTranslations('clinicalAnalysis.synlabDeals');
+
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl mb-4">{title}</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{description}</p>
+          <h2 className="text-4xl md:text-5xl mb-4">{title || t('title')}</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{description || t('description')}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-7 gap-6 max-w-7xl mx-auto">

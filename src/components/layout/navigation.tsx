@@ -3,38 +3,40 @@
 import { useState } from "react";
 import { ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./mobile-menu";
+import { useTranslations } from 'next-intl';
 import PreservingLink from "@/components/ui/preserving-link";
-
-const menuItems = [
-  { label: "Cuidados de Saúde", href: "/cuidados-de-saude" },
-  {
-    label: "Apoio Domiciliário",
-    href: "#",
-    children: [
-      { label: "Apoio Domiciliário", href: "/apoio-domicilio" },
-      { label: "Cuidados Continuados", href: "/cuidados-continuados-hospitalizacao" },
-      { label: "Hospitalização Domiciliária", href: "/cuidados-continuados-hospitalizacao" },
-    ],
-  },
-  { label: "Análises Clínicas", href: "/analises-clinicas" },
-
-  { label: "Equipamento Hospitalar", href: "/equipamento-hospitalar" },
-  { label: "Acordos e Convenções", href: "/acordos-convencoes" },
-  {
-    label: "Institucional",
-    href: "#",
-    children: [
-      { label: "Quem Somos", href: "/quem-somos" },
-      { label: "Recrutamento", href: "/recrutamento" },
-      { label: "Contactos", href: "/contactos" },
-    ],
-  },
-];
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  
+  const t = useTranslations('nav');
+
+  const menuItems = [
+    { label: t('healthcare'), href: "/cuidados-de-saude" },
+    {
+      label: t('homeSupport'),
+      href: "#",
+      children: [
+        { label: t('homeSupport'), href: "/apoio-domicilio" },
+        { label: t('continuedCare'), href: "/cuidados-continuados-hospitalizacao" },
+        { label: t('homeHospitalization'), href: "/cuidados-continuados-hospitalizacao" },
+      ],
+    },
+    { label: t('clinicalAnalysis'), href: "/analises-clinicas" },
+
+    { label: t('hospitalEquipment'), href: "/equipamento-hospitalar" },
+    { label: t('agreements'), href: "/acordos-convencoes" },
+    {
+      label: "Institucional",
+      href: "#",
+      children: [
+        { label: t('whoWeAre'), href: "/quem-somos" },
+        { label: t('recruitment'), href: "/recrutamento" },
+        { label: t('contact'), href: "/contactos" },
+      ],
+    },
+  ];
+
   return (
     <>
       {/* Desktop Navigation - Normal */}
@@ -53,30 +55,55 @@ export default function Navigation() {
               <PreservingLink
                 href={item.href}
                 className={`inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] ${
-                  item.label === "Análises Clínicas" || item.label === "Apoio Domiciliário" || item.label === "Cuidados de Saúde" || item.label === "Acordos e Convenções" || item.label === "Equipamento Hospitalar"
+                  item.label === t('clinicalAnalysis') || item.label === t('homeSupport') || item.label === t('healthcare') || item.label === t('agreements') || item.label === t('hospitalEquipment')
                     ? "whitespace-normal leading-tight"
                     : "whitespace-nowrap"
                 }`}
               >
-                {item.label === "Análises Clínicas" ? (
+                {item.label === t('clinicalAnalysis') ? (
                   <>
-                    Análises<br />Clínicas
+                    {t('clinicalAnalysis').split(' ').map((word, i, arr) => (
+                      <span key={i}>
+                        {word}
+                        {i < arr.length - 1 && <br />}
+                      </span>
+                    ))}
                   </>
-                ) : item.label === "Apoio Domiciliário" ? (
+                ) : item.label === t('homeSupport') ? (
                   <>
-                    Apoio<br />Domiciliário
+                    {t('homeSupport').split(' ').map((word, i, arr) => (
+                      <span key={i}>
+                        {word}
+                        {i < arr.length - 1 && <br />}
+                      </span>
+                    ))}
                   </>
-                ) : item.label === "Cuidados de Saúde" ? (
+                ) : item.label === t('healthcare') ? (
                   <>
-                    Cuidados<br />de Saúde
+                    {t('healthcare').split(' ').map((word, i, arr) => (
+                      <span key={i}>
+                        {word}
+                        {i < arr.length - 1 && <br />}
+                      </span>
+                    ))}
                   </>
-                ) : item.label === "Acordos e Convenções" ? (
+                ) : item.label === t('agreements') ? (
                   <>
-                    Acordos e<br />Convenções
+                    {t('agreements').split(' ').map((word, i, arr) => (
+                      <span key={i}>
+                        {word}
+                        {i < arr.length - 1 && <br />}
+                      </span>
+                    ))}
                   </>
-                ) : item.label === "Equipamento Hospitalar" ? (
+                ) : item.label === t('hospitalEquipment') ? (
                   <>
-                    Equipamento<br />Hospitalar
+                    {t('hospitalEquipment').split(' ').map((word, i, arr) => (
+                      <span key={i}>
+                        {word}
+                        {i < arr.length - 1 && <br />}
+                      </span>
+                    ))}
                   </>
                 ) : (
                   item.label
@@ -137,4 +164,3 @@ export default function Navigation() {
     </>
   );
 }
-

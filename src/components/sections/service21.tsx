@@ -8,6 +8,7 @@ interface ServiceBox {
 
 interface Service2Props {
   title?: string;
+  titleHighlight?: string;
   services?: ServiceBox[];
 }
 
@@ -25,6 +26,7 @@ const defaultServices: ServiceBox[] = [
 
 export default function Service21({
   title = "Assistência Permanente, entidade licenciada pela Segurança Social.",
+  titleHighlight = "Entidade licenciada pela Segurança Social",
   services = defaultServices,
 }: Service2Props) {
   return (
@@ -34,10 +36,10 @@ export default function Service21({
           {/* Left Column - Title */}
           <div className="p-0 md:px-8 flex items-center pb-8 md:pb-0 md:pr-8 md:pl-0 animate-fade-in-left overflow-hidden">
             <h2 className="text-3xl font-bold text-foreground leading-[0.9em]">
-              {title === "Assistência Permanente, entidade licenciada pela Segurança Social." ? (
+              {titleHighlight ? (
                 <>
-                  Assistência Permanente<br />
-                  <span className="text-lg font-semibold leading-tight -mt-2 pt-[15px] block">Entidade licenciada pela Segurança Social</span>
+                  {title}<br />
+                  <span className="text-lg font-semibold leading-tight -mt-2 pt-[15px] block">{titleHighlight}</span>
                 </>
               ) : (
                 title

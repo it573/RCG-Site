@@ -12,44 +12,30 @@ interface Services5Props {
   services?: ServiceCard[];
 }
 
-const defaultServices: ServiceCard[] = [
-  {
-    image: "/images/higiene.jpg",
-    title: "Higiene e Conforto\nPessoal",
-    description: "",
-    link: "#",
-  },
-  {
-    image: "/images/refeicoes.jpg",
-    title: "Preparação e Acompanhamento\nde Refeições",
-    description: "",
-    link: "#",
-  },
-  {
-    image: "/images/acompanhamentoconsultas.jpg",
-    title: "Acompanhamento a Consultas\nMédicas",
-    description: "",
-    link: "#",
-  },
- {
-    image: "/images/medicamentos.jpg",
-    title: "Acompanhamento e Assistência\nna toma da Medicação",
-    description: "",
-    link: "#",
-  },
-  {
-    image: "/images/conversacaocompanhia.jpg",
-    title: "Companhia, Conversação e\nEstimulação Cognitiva",
-    description: "",
-    link: "#",
-  },
-  {
-    image: "/images/24horas.jpg",
-    title: "Acompanhamento Permanente\n(até 24 horas)",
-    description: "",
-    link: "#",
-  },  
+const defaultImages = [
+  "/images/higiene.jpg",
+  "/images/refeicoes.jpg",
+  "/images/acompanhamentoconsultas.jpg",
+  "/images/medicamentos.jpg",
+  "/images/conversacaocompanhia.jpg",
+  "/images/24horas.jpg",
 ];
+
+const defaultTitles = [
+  "Higiene e Conforto\nPessoal",
+  "Preparação e Acompanhamento\nde Refeições",
+  "Acompanhamento a Consultas\nMédicas",
+  "Acompanhamento e Assistência\nna toma da Medicação",
+  "Companhia, Conversação e\nEstimulação Cognitiva",
+  "Acompanhamento Permanente\n(até 24 horas)",
+];
+
+const defaultServices: ServiceCard[] = defaultImages.map((image, index) => ({
+  image,
+  title: defaultTitles[index],
+  description: "",
+  link: "#",
+}));
 
 export default function Services5({
   services = defaultServices,

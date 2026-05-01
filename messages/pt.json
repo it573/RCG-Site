@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "title": "RCG - Cuidados de Saúde ao Domicílio",
+    "description": "Providenciamos cuidados de saúde de qualidade ao domicílio em Portugal. Serviços de enfermagem, análises clínicas, apoio domiciliar e muito mais."
+  },
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "healthcare": "Cuidados de Saúde",
+    "homeSupport": "Apoio Domiciliário",
+    "clinicalAnalysis": "Análises Clínicas",
+    "hospitalEquipment": "Equipamento Hospitalar",
+    "agreements": "Acordos e Convenções",
+    "about": "Quem Somos",
+    "recruitment": "Recrutamento",
+    "contact": "Contactos",
+    "privacy": "Política de Privacidade",
+    "faq": "Perguntas Frequentes",
+    "testimonials": "Testemunhos",
+    "continuedCare": "Cuidados Continuados",
+    "homeHospitalization": "Hospitalização Domiciliária",
+    "bookAppeal": "Livro de Reclamações",
+    "praiseBook": "Livro de Elogios",
+    "whoWeAre": "Quem Somos"
+  },
+  "languageSwitcher": {
+    "pt": "PT",
+    "en": "EN"
+  },
+  "mobileMenu": {
+    "title": "Gostamos de Cuidar"
+  },
+  "footer": {
+    "company": {
+      "title": "REABILITAR EM CASA",
+      "whoWeAre": "Quem Somos",
+      "news": "Notícias",
+      "testimonials": "Testemunhos",
+      "privacy": "Política de Privacidade",
+      "ral": "RAL",
+      "faq": "Perguntas Frequentes",
+      "praiseBook": "Livro de Elogios",
+      "complaintsBook": "Livro de Reclamações"
+    },
+    "register": {
+      "title": "REGISTE-SE",
+      "recruitment": "Recrutamento"
+    },
+    "followUs": "SIGA-NOS",
+    "copyright": "©2026 Reabilitar em Casa | Prestação de Cuidados de Saúde | Todos os direitos reservados",
+    "poweredBy": "Powered by"
+  },
+  "forms": {
+    "appointment": {
+      "name": "Nome",
+      "phone": "Telefone",
+      "namePlaceholder": "Nome",
+      "phonePlaceholder": "Telefone",
+      "required": "Campo obrigatório",
+      "submit": "Ligamos para Si",
+      "submitting": "A enviar...",
+      "success": "Obrigado! Será contactado por nós nos próximos minutos.",
+      "error": "Ocorreu um erro. Por favor tente novamente.",
+      "weCallYou": "Ligamos para Si"
+    }
+  },
+  "home": {
+    "metadata": {
+      "title": "Cuidados de Saúde ao Domicílio em Portugal | RCG",
+      "description": "Cuidados de saúde personalizados e apoio domiciliário 24/7 em Portugal. Análises clínicas e equipamento hospitalar ao domicílio."
+    },
+    "hero": {
+      "title": "Cuidados Especializados no Domicílio",
+      "description": "O melhor lugar para Cuidar, Curar e Viver"
+    },
+    "services": {
+      "title": "Especialidades Médicas e Serviços",
+      "posts": {
+        "healthcare": {
+          "title": "SAÚDE - Serviços Especializados",
+          "description": "Cuidados especializados de saúde que aliam o rigor profissional à proximidade e segurança do ambiente familiar",
+          "alt": "SAÚDE - Serviços Especializados"
+        },
+        "clinicalAnalysis": {
+          "title": "Análises Clínicas",
+          "description": "Realizamos a sua colheita de análises clínicas no conforto do domicílio, um serviço de diagnóstico rápido e seguro que leva a excelência laboratorial até si, priorizando o seu bem-estar e a agilidade nos resultados",
+          "alt": "Análises Clínicas"
+        },
+        "homeSupport": {
+          "title": "Apoio Domiciliário",
+          "description": "Garantimos uma assistência completa nas atividades da vida diária, a todos aqueles que não possam assegurar temporária ou permanentemente, a satisfação das suas necessidades básicas numa companhia atenta que promove a qualidade de vida no conforto do lar",
+          "alt": "Apoio Domiciliário"
+        },
+        "continuedCare": {
+          "title": "Cuidados Continuados",
+          "description": "Uma alternativa segura à hospitalização convencional, com cuidados de saúde permanentes e especializados que garantem a continuidade do tratamento com a máxima dignidade",
+          "alt": "Cuidados Continuados"
+        },
+        "homeHospitalization": {
+          "title": "Hospitalização Domiciliária",
+          "description": "Uma alternativa inovadora ao internamento convencional que promove uma recuperação mais rápida e humanizada, através de cuidados clínicos intensivos prestados no conforto e proximidade da família",
+          "alt": "Hospitalização Domiciliária"
+        },
+        "hospitalEquipment": {
+          "title": "Equipamentos Hospitalares",
+          "description": "Disponibilizamos soluções completas em equipamentos hospitalares de última geração, garantindo a adaptação segura e funcional do domicílio às necessidades específicas de cada pessoa. Aluguer e Venda (entrega e instalação incluídas)",
+          "alt": "Equipamentos Hospitalares"
+        }
+      }
+    }
+  },
+  "agreements": {
+    "metadata": {
+      "title": "Acordos e Convenções - Subsistemas de Saúde",
+      "description": "Somos convencionados com os principais subsistemas de saúde em Portugal: ADSE, SAD, SAMS, Médis, Multicare e mais. Confira se o seu subsistema aceita os nossos cuidados.",
+      "keywords": ["acordos saúde", "convenções", "subsistemas saúde", "ADSE", "SAD", "SAMS", "Médis", "Multicare", "seguros saúde", "comparticipações"]
+    },
+    "hero": {
+      "title": "Acordos e Convenções",
+      "description": "Colaboramos com as principais entidades de saúde para proporcionar os melhores cuidados."
+    },
+    "form": {
+      "title": "Nós Ligamos!"
+    },
+    "deals": {
+      "title": "Acordos",
+      "description": "Temos acordos com as principais seguradoras e subsistemas."
+    }
+  },
+  "clinicalAnalysis": {
+    "metadata": {
+      "title": "Análises Clínicas ao Domicílio e em Carcavelos",
+      "description": "Posto de colheitas em Carcavelos e análises clínicas ao domicílio em parceria com Synlab. Check-ups, testes de nutrição, hormonais e muito mais. Resultados rápidos e fiáveis.",
+      "keywords": ["análises clínicas", "colheitas domicílio", "posto colheitas carcavelos", "synlab", "check-up saúde", "testes laboratoriais", "análises sangue", "exames médicos"]
+    },
+    "hero": {
+      "title": "Análises Clínicas",
+      "description": "No nosso Posto de Colheitas ou no Domicílio, realizamos análises clínicas com rapidez e confidencialidade."
+    },
+    "serviceContent": {
+      "title": "Por que escolher os nossos serviços de análises clínicas?",
+      "description": "Com uma equipa de profissionais especializados e tecnologia de ponta, garantimos resultados fiáveis e rápidos para uma melhor gestão da sua saúde.",
+      "imageAlt": "Equipamento de análises clínicas",
+      "content": "A Reabilitar em Casa continua em expansão e, em 2026, coloca ao serviço dos seus clientes, em Carcavelos, um posto de colheitas de Análises Clínicas, em parceria com a Synlab, laboratório líder europeu em serviços de laboratório médico e diagnósticos clínicos.<br><br>Independentemente do seu <a href=\"#acordos\" class=\"text-primary hover:underline font-semibold\">subsistema de saúde</a>, pode fazer as suas análises clínicas no nosso posto de colheitas (Carcavelos) ou no conforto do seu lar.<br><br>Para marcar as suas Análises Clínicas ou o seu check-up pode obter mais informações sobre os nossos perfis de análises clínicas, contacte-nos."
+    },
+    "services": {
+      "title": "Análises Clínicas Especializadas",
+      "items": [
+        {
+          "title": "Check-Up Personalizado",
+          "description": "Específicos, Gerais, para quem procura fazer uma avaliação de parâmetros de saúde e estilos de vida."
+        },
+        {
+          "title": "Testes de Nutrição",
+          "description": "Descubra como sua alimentação impacta sua saúde e o seu bem-estar geral."
+        },
+        {
+          "title": "Testes de Bem-Estar",
+          "description": "Análise do bio-ritmo e alterações do sono. Medição de níveis de cortisol e DHA-S (avaliação do stress). Diagnóstico de enxaqueca, entre outros."
+        },
+        {
+          "title": "Testes da Saúde Gastro-Intestinal",
+          "description": "Microbioma intestinal, Intolerâncias Alimentares, avaliação da Microbiota intestinal, sobrecrescimento bacteriano intestinal."
+        },
+        {
+          "title": "Saúde da Mulher",
+          "description": "Avaliação hormonal, ciclo menstrual, fertilidade, gravidez e menopausa."
+        },
+        {
+          "title": "Analises Clínicas ao Domícilio",
+          "description": "Para todos os que preferem realizar a colheita no conforto da sua casa, disponibilizamos um serviço de análises clínicas ao domicílio"
+        }
+      ]
+    },
+    "synlabDeals": {
+      "title": "Acordos e Convenções",
+      "description": "Trabalhamos com os principais subsistemas de saúde para garantir o melhor acesso às análises clínicas."
+    },
+    "form": {
+      "title": "Nós Ligamos!"
+    }
+  },
+  "homeSupport": {
+    "metadata": {
+      "title": "Apoio Domiciliário em Portugal | RCG",
+      "description": "Serviços de apoio domiciliário personalizados e de excelência em Portugal. Cuidadores 24/7, cuidados de enfermagem e assistência no conforto do seu lar.",
+      "keywords": ["apoio domiciliário", "cuidadores domicílio", "cuidados enfermagem", "assistência domiciliária", "cuidados idosos", "apoio seniores", "cuidados 24 horas"]
+    },
+    "hero": {
+      "title": "Apoio Domiciliário",
+      "description": "Proporcionamos cuidados personalizados no conforto do seu lar, com uma equipa dedicada e disponível 24 horas por dia."
+    },
+    "service21": {
+      "title": "Assistência Permanente",
+      "titleHighlight": "Entidade licenciada pela Segurança Social",
+      "services": [
+        {
+          "title": "No Conforto do seu Lar",
+          "description": "O Serviço de Apoio Domiciliário (S.A.D.) é uma resposta social organizada que consiste na prestação de cuidados individualizados e personalizados no domicílio, a indivíduos e famílias quando, por motivo de doença, deficiência ou outro impedimento, não possam assegurar temporária ou permanentemente, a satisfação das suas necessidades básicas e/ou as actividades da vida diária, contribuindo para a promoção da sua autonomia e a prevenção de situações de dependência ou seu agravamento."
+        },
+        {
+          "title": "Carta Social",
+          "description": "Certifique-se que escolhe uma entidade legal, inscrita na Carta Social.\n\nA Reabilitar em Casa está!"
+        }
+      ]
+    },
+    "confianca": {
+      "title": "Cuidados de Confiança",
+      "description": "Com uma equipa que soma duas décadas de experiência dedicada ao saber cuidar, transformamos a prestação de cuidados num compromisso de excelência e proximidade.",
+      "pillar": "Assentamos a nossa intervenção num pilar inabalável: a Confiança.",
+      "howWeWork": {
+        "title": "Como atuamos?",
+        "steps": [
+          {
+            "title": "Diagnóstico de Necessidade",
+            "description": "Após o seu contacto inicial, realizamos uma triagem detalhada para compreender as especificidades do caso. Partilhamos os valores de rigor e humanismo que guiam a nossa empresa há 20 anos."
+          },
+          {
+            "title": "Proposta Personalizada",
+            "description": "Apresentamos soluções adaptadas à realidade de cada família, garantindo clareza e transparência desde o primeiro segundo."
+          },
+          {
+            "title": "Avaliação Técnica Especializada",
+            "description": "Com a aceitação da proposta, avaliamos a extensão da intervenção e traçamos o perfil do ajudante familiar ideal, garantindo uma compatibilidade perfeita."
+          },
+          {
+            "title": "Garantia e Ajuste",
+            "description": "Formalizamos o nosso compromisso através de um contrato simplificado e acompanhamos a evolução de cada caso, ajustando as tarefas sempre que necessário para o bem-estar da família."
+          },
+          {
+            "title": "Resposta Imediata",
+            "description": "Estamos aptos a iniciar o apoio num prazo máximo de 24/48 horas após a avaliação."
+          }
+        ]
+      }
+    },
+    "services5": {
+      "services": [
+        {
+          "title": "Higiene e Conforto\nPessoal"
+        },
+        {
+          "title": "Preparação e Acompanhamento\nde Refeições"
+        },
+        {
+          "title": "Acompanhamento a Consultas\nMédicas"
+        },
+        {
+          "title": "Acompanhamento e Assistência\nna toma da Medicação"
+        },
+        {
+          "title": "Companhia, Conversação e\nEstimulação Cognitiva"
+        },
+        {
+          "title": "Acompanhamento Permanente\n(até 24 horas)"
+        }
+      ]
+    },
+    "form": {
+      "title": "Nós Ligamos!"
+    }
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contactos - RCG | Fale Connosco",
+      "description": "Contacte a RCG para cuidados de saúde ao domicílio em Portugal. Telefone: 210 136 676. Disponível 24/7. Atendimento em Lisboa e cobertura nacional.",
+      "keywords": ["contactos", "telefone", "morada", "email", "fale connosco", "RCG contactos", "cuidados saúde Portugal"]
+    },
+    "hero": {
+      "title": "Contactos",
+      "description": "Estamos disponíveis para responder a todas as suas questões e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos."
+    },
+    "contacts2": {
+      "subtitle": "Entre em Contacto",
+      "description": "Com serviços de Cobertura Nacional, a nossa equipa está disponível para responder às suas dúvidas e fornecer-lhe as informações de que necessita sobre os cuidados de saúde que prestamos.",
+      "phoneNote": "chamada para rede fixa e móvel nacional",
+      "email": "geral@reabilitar-em-casa.com",
+      "address": "Rua Itália, nº1, Piso 1, Escritório 6, 2775-407 Carcavelos, Portugal",
+      "phone": "210 136 676 / 917 861 795",
+      "workingHours": "Segunda a Sexta (8h - 19h)\nSábado (9h - 17h)",
+      "imageAlt": "A nossa equipa"
+    }
+  },
+  "continuedCareHospitalization": {
+    "metadata": {
+      "title": "Cuidados Continuados e Hospitalização Domiciliária",
+      "description": "Cuidados de longa duração e hospitalização ao domicílio com equipa médica especializada 24/7. Alternativa segura ao hospital, no conforto do seu lar.",
+      "keywords": ["cuidados continuados", "hospitalização domiciliária", "cuidados de longa duração", "internamento domicílio", "cuidados paliativos", "equipa médica domicílio"]
+    },
+    "hero": {
+      "title": "Cuidados Continuados e Hospitalização",
+      "description": "Cuidados especializados de longa duração e hospitalização ao domicílio com equipa médica disponível 24 horas."
+    },
+    "service2": {
+      "title": "Cuidados Continuados",
+      "serviceTitle": "Levamos até si todos os cuidados de que necessita!",
+      "serviceDescription": "Devido ao envelhecimento progressivo da população, ocorrem com maior frequência situações de vulnerabilidade física e psíquica, que podem conduzir ao aparecimento de situações patológicas crónicas e originar, na maioria dos casos, dependência dentro de limites nem sempre controláveis pelo próprio e/ou seu agregado familiar. De ressalvar que a situação de dependência pode ocorrer em qualquer outro grupo de idade, podendo igualmente necessitar deste tipo de Resposta Social.\n\nAo prestar este serviço, a Reabilitar em Casa tem como objetivo proporcionar o bem-estar e o desenvolvimento individual dos clientes, num clima de segurança afetiva, física e psíquica e numa perspetiva de cuidados especializados, através do atendimento individualizado e personalizado, na colaboração estreita entre equipa médica e família."
+    },
+    "service2Inverted": {
+      "title": "Hospitalização Domiciliária",
+      "serviceTitle": "Uma Nova Era. Uma Nova Vida. Uma Nova Forma de Cuidar",
+      "serviceDescription": "A Hospitalização Domiciliária consiste num modelo de assistência hospitalar do doente agudo, que se caracteriza pela prestação de cuidados diferenciados no pós alta hospitalar.\n\nDestina-se a doentes agudos com patologia de complexidade elevada mas com possibilidade de internamento hospitalar no domicílio.\n\nApós a avaliação do quadro do paciente para analisar a sua complexidade, é estabelecido um plano terapêutico a ser cumprido pela equipa multidisciplinar. As complexidades variam entre: alta, média e baixa complexidade (com ou sem ventilação).\n\nHumanizamos os cuidados, oferecendo tratamento diferenciado de nível hospitalar, no conforto do seu lar."
+    },
+    "form": {
+      "title": "Nós Ligamos!"
+    }
+  },
+  "healthcare": {
+    "metadata": {
+      "title": "Cuidados de Saúde ao Domicílio em Portugal",
+      "description": "Serviços de enfermagem, fisioterapia e assistência médica ao domicílio em Portugal. Equipa licenciada pela ERS, disponível 24/7. Cuidamos de si e da sua família.",
+      "keywords": ["cuidados de saúde", "enfermagem domicílio", "fisioterapia domicílio", "assistência médica", "cuidadores domicílio", "saúde em Portugal", "apoio domiciliário"]
+    },
+    "hero": {
+      "title": "Cuidados de Saúde",
+      "description": "Proporcionamos cuidados de saúde personalizados e de excelência, com cobertura nacional."
+    },
+    "services51": {
+      "services": [
+        {
+          "title": "Clínica Geral e Familiar",
+          "description": "Especialidade Médica que segue a saúde do indivíduo a longo prazo (em todos os escalões etários)."
+        },
+        {
+          "title": "Fisioterapia",
+          "description": "Tratamentos de fisioterapia e osteopatia, especializados para bebés, crianças, adultos e idosos."
+        },
+        {
+          "title": "Terapia Ocupacional",
+          "description": "Promove a capacidade do indivíduo conseguir cuidar de si próprio, quer seja nos autocuidados, quer seja nas ocupações que podem ser tão elementares como alimentar-se ou vestir-se."
+        },
+        {
+          "title": "Enfermagem e Administração de Medicação",
+          "description": "Cuidados de Enfermagem geral e especializados. Gestão e assistência na administração de medicação."
+        },
+        {
+          "title": "Nutrição",
+          "description": "O acompanhamento especializado em nutrição, garante a alimentação variada e equilibrada, condição determinante para uma rápida recuperação."
+        },
+        {
+          "title": "Terapia da Fala",
+          "description": "Tratamentos nas áreas da linguagem, fala, leitura e escrita, voz, articulação verbal, disfluência, motricidade orofacial e deglutição. Crianças e Adultos."
+        }
+      ]
+    },
+    "form": {
+      "title": "Nós Ligamos!"
+    }
+  }
+}
