@@ -1,52 +1,147 @@
-export const metadata = {
-  title: "RAL - Resolução de Litígios Online - RCG",
-  description: "Resolução Alternativa de Litígios - RCG",
-  alternates: {
-    canonical: "https://www.reabilitar-em-casa.com/ral",
-  },
-};
+import type { Metadata } from "next";
+import { getMessages } from 'next-intl/server';
 
-export default function RALPage() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const metadataMessages = messages.ral?.metadata as { title?: string; description?: string; keywords?: string[] };
+
+  return {
+    title: metadataMessages?.title || "RAL - Resolução de Litígios Online - RCG",
+    description: metadataMessages?.description || "Resolução Alternativa de Litígios - RCG",
+    keywords: metadataMessages?.keywords || ["resolução litígios", "alternativa litígios", "mediação", "conciliação", "consumo", "tribunais", "RCG"],
+    alternates: {
+      canonical: `https://www.reabilitar-em-casa.com/${locale === 'pt' ? 'ral' : 'dispute-resolution'}`,
+    },
+    openGraph: {
+      title: metadataMessages?.title || "RAL - Resolução de Litígios Online - RCG",
+      description: metadataMessages?.description || "Resolução Alternativa de Litígios - RCG",
+      url: `https://www.reabilitar-em-casa.com/${locale === 'pt' ? 'ral' : 'dispute-resolution'}`,
+    },
+  };
+}
+
+export default async function RALPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const ralMessages = messages.ral as {
+    hero?: { title?: string; subtitle?: string };
+    content?: {
+      intro?: { title?: string; description?: string };
+      howItWorks?: { title?: string; description?: string };
+      advantages?: { title?: string; description?: string };
+      centers?: { title?: string; centerName?: string; description?: string };
+      contacts?: {
+        title?: string;
+        address?: string;
+        campus?: string;
+        location?: string;
+        phone?: string;
+        email?: string;
+        website?: string;
+        emailLink?: string;
+        websiteLink?: string;
+      };
+      lastUpdate?: string;
+    };
+  };
+
   return (
     <div className="min-h-screen pt-40 pb-16" style={{ backgroundColor: '#fed7aa' }}>
       <div className="container mx-auto px-4 max-w-4xl">
         <article className="prose prose-lg max-w-none px-8 py-10 bg-white rounded-2xl shadow-lg">
           <div className="entry-content">
-            <p className="text-2xl font-bold mb-4">Resolução de Litígios Online</p>
-            <p>&nbsp;</p>
-            <p>
-              A resolução alternativa de litígios é a possibilidade que todos os consumidores têm ao seu dispôr de recorrer a entidades oficiais que os ajudem na resolução, ou orientação de algum conflito, antes de abrirem processos litigiosos nos Tribunais.
+            <p className="text-2xl font-bold mb-4">
+              {ralMessages?.hero?.title || "Resolução de Litígios Online"}
+            </p>
+            <p className="text-lg mb-8 text-gray-600">
+              {ralMessages?.hero?.subtitle || "Soluções rápidas e eficazes para conflitos de consumo"}
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4">COMO FUNCIONA?</h2>
-            <p>
-              O cliente pede a um terceiro imparcial que intervenha como intermediário entre si e o comerciante que é o alvo da sua reclamação. O intermediário pode sugerir uma solução para a sua reclamação, impor uma solução a ambas as partes ou reunir as partes para encontrar uma solução.
-            </p>
-            <p>
-              A RESOLUÇÃO DE LITÍGIOS funciona como mediação ou conciliação. Funciona como uma arbitragem ou comissão competente no âmbito dos litígios de consumo.
-            </p>
+            {ralMessages?.content?.intro && (
+              <>
+                <h2 className="text-xl font-bold mt-8 mb-4">
+                  {ralMessages.content.intro.title || "Resolução de Litígios Online"}
+                </h2>
+                <p className="mb-8">
+                  {ralMessages.content.intro.description}
+                </p>
+              </>
+            )}
 
-            <h2 className="text-xl font-bold mt-8 mb-4">VANTAGENS</h2>
-            <p>A resolução alternativa de litígios é, por norma, menos dispendiosa, mais rápida do que a via judicial e menos formal.</p>
-            <p>Em caso de litígio o consumidor pode recorrer a uma Entidade de Resolução Alternativa de Litígios de consumo (ao abrigo da Lei n.º 144/2015, de 8 de setembro).</p>
+            {ralMessages?.content?.howItWorks && (
+              <>
+                <h2 className="text-xl font-bold mt-8 mb-4">
+                  {ralMessages.content.howItWorks.title || "COMO FUNCIONA?"}
+                </h2>
+                <p className="mb-6">
+                  {ralMessages.content.howItWorks.description}
+                </p>
+              </>
+            )}
 
-            <h2 className="text-xl font-bold mt-8 mb-4">CENTROS DE ARBITRAGEM DE COMPETÊNCIA GENÉRICA</h2>
-            <p><strong>Centro Nacional de Informação e Arbitragem de Conflitos de Consumo</strong></p>
-            <p>Atuação em todo o território nacional, nas zonas não abrangidas por outro centro de arbitragem de competência regional</p>
+            {ralMessages?.content?.advantages && (
+              <>
+                <h2 className="text-xl font-bold mt-8 mb-4">
+                  {ralMessages.content.advantages.title || "VANTAGENS"}
+                </h2>
+                <p className="mb-6">
+                  {ralMessages.content.advantages.description}
+                </p>
+              </>
+            )}
 
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-              <p className="font-semibold mb-2">Contactos CNIACC – Centro Nacional de Informação e Arbitragem de Conflitos de Consumo</p>
-              <p>Faculdade de Direito da Universidade Nova de Lisboa</p>
-              <p>Campus de Campolide</p>
-              <p>1099-032 Lisboa</p>
-              <p><strong>Tel.:</strong> 213 847 484</p>
-              <p><strong>E-mail:</strong> <a href="mailto:cniacc@fd.unl.pt" className="text-blue-600 hover:underline">cniacc@fd.unl.pt</a></p>
-              <p><strong>Web:</strong> <a href="https://www.arbitragemdeconsumo.org" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">www.arbitragemdeconsumo.org</a></p>
-            </div>
+            {ralMessages?.content?.centers && (
+              <>
+                <h2 className="text-xl font-bold mt-8 mb-4">
+                  {ralMessages.content.centers.title || "CENTROS DE ARBITRAGEM DE COMPETÊNCIA GENÉRICA"}
+                </h2>
+                <p className="font-semibold mb-2">
+                  {ralMessages.content.centers.centerName || "Centro Nacional de Informação e Arbitragem de Conflitos de Consumo"}
+                </p>
+                <p className="mb-8">
+                  {ralMessages.content.centers.description}
+                </p>
+              </>
+            )}
 
-            <p className="mt-8">
-              <strong>Data da última atualização:</strong> 30 de março de 2026
-            </p>
+            {ralMessages?.content?.contacts && (
+              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                <p className="font-semibold mb-2">
+                  {ralMessages.content.contacts.title || "Contactos CNIACC – Centro Nacional de Informação e Arbitragem de Conflitos de Consumo"}
+                </p>
+                <p>{ralMessages.content.contacts.address || "Faculdade de Direito da Universidade Nova de Lisboa"}</p>
+                <p>{ralMessages.content.contacts.campus || "Campus de Campolide"}</p>
+                <p>{ralMessages.content.contacts.location || "1099-032 Lisboa"}</p>
+                <p><strong>Tel.:</strong> {ralMessages.content.contacts.phone || "213 847 484"}</p>
+                <p>
+                  <strong>E-mail:</strong>{" "}
+                  <a
+                    href={ralMessages.content.contacts.emailLink || "mailto:cniacc@fd.unl.pt"}
+                    className="text-blue-600 hover:underline"
+                  >
+                    {ralMessages.content.contacts.email || "cniacc@fd.unl.pt"}
+                  </a>
+                </p>
+                <p>
+                  <strong>Web:</strong>{" "}
+                  <a
+                    href={ralMessages.content.contacts.websiteLink || "https://www.arbitragemdeconsumo.org"}
+                    className="text-blue-600 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {ralMessages.content.contacts.website || "www.arbitragemdeconsumo.org"}
+                  </a>
+                </p>
+              </div>
+            )}
+
+            {ralMessages?.content?.lastUpdate && (
+              <p className="mt-8">
+                <strong>{ralMessages.content.lastUpdate}</strong>
+              </p>
+            )}
           </div>
         </article>
       </div>

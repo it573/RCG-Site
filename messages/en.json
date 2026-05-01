@@ -617,5 +617,112 @@
         }
       ]
     }
+  },
+  "ral": {
+    "metadata": {
+      "title": "RAL - Online Dispute Resolution | RCG",
+      "description": "Alternative Dispute Resolution - Learn how to resolve conflicts quickly, economically and formally through official entities.",
+      "keywords": ["dispute resolution", "alternative disputes", "mediation", "conciliation", "consumer", "courts", "RCG"]
+    },
+    "hero": {
+      "title": "Online Dispute Resolution",
+      "subtitle": "Fast and effective solutions for consumer conflicts"
+    },
+    "content": {
+      "intro": {
+        "title": "Online Dispute Resolution",
+        "description": "Alternative dispute resolution is the possibility that all consumers have at their disposal to resort to official entities that help them resolve or guide some conflict before filing lawsuits in Courts."
+      },
+      "howItWorks": {
+        "title": "HOW DOES IT WORK?",
+        "description": "The client asks for a third impartial party to intervene as an intermediary between them and the merchant who is the target of their complaint. The intermediary can suggest a solution to their complaint, impose a solution on both parties or bring the parties together to find a solution. DISPUTE RESOLUTION works as mediation or conciliation. It works as an arbitration or competent commission within the scope of consumer disputes."
+      },
+      "advantages": {
+        "title": "ADVANTAGES",
+        "description": "Alternative dispute resolution is, as a rule, less expensive, faster than the judicial route and less formal. In case of dispute, the consumer can resort to an Alternative Dispute Resolution Entity (under Law No. 144/2015, of September 8)."
+      },
+      "centers": {
+        "title": "GENERAL COMPETENCE ARBITRATION CENTERS",
+        "centerName": "National Center for Information and Consumer Conflict Arbitration",
+        "description": "Operates throughout the national territory, in areas not covered by other regional arbitration centers"
+      },
+      "contacts": {
+        "title": "Contacts CNIACC – National Center for Information and Consumer Conflict Arbitration",
+        "address": "Faculty of Law of Nova University of Lisbon",
+        "campus": "Campolide Campus",
+        "location": "1099-032 Lisbon",
+        "phone": "213 847 484",
+        "email": "cniacc@fd.unl.pt",
+        "website": "www.arbitragemdeconsumo.org",
+        "emailLink": "mailto:cniacc@fd.unl.pt",
+        "websiteLink": "https://www.arbitragemdeconsumo.org"
+      },
+      "lastUpdate": "Last update date: March 30, 2026"
+    }
+  },
+  "recruitment": {
+    "metadata": {
+      "title": "Recruitment - Work With Us",
+      "description": "Join the RCG team! We are looking for dedicated health professionals: nurses, physiotherapists, caregivers and doctors. Open positions for home care.",
+      "keywords": ["recruitment", "health jobs", "nurse", "physiotherapist", "caregiver", "home doctor", "work with us", "health career"]
+    },
+    "hero": {
+      "title": "Recruitment",
+      "description": "Be part of our team. We are looking for dedicated professionals who want to be part of our mission to provide Excellent Healthcare."
+    },
+    "content": {
+      "title": "National Recruitment for Healthcare Provision"
+    }
+  },
+  "testimonials": {
+    "metadata": {
+      "title": "Testimonials - What Our Clients Say",
+      "description": "Read testimonials from satisfied clients with our home healthcare services. Over 40 positive reviews from clients in Portugal.",
+      "keywords": ["testimonials", "reviews", "customer opinions", "feedback", "recommendations", "customer satisfaction", "RCG reviews"]
+    },
+    "header": {
+      "title": "See who has already praised us",
+      "recentCount": "most recent of 43"
+    },
+    "testimonials": [
+      {
+        "id": 1,
+        "title": "Physiotherapist Rita Moreira",
+        "content": "I thank Rita for her dedication, friendliness, availability, and professionalism in treating my father. I also leave my thanks to Isabel for her friendly service.",
+        "author": "Margarida Basso"
+      },
+      {
+        "id": 2,
+        "title": "The company",
+        "content": "Always available when I need to resolve any issue. And together with the company, I always manage to resolve things in the best possible way. Thank you!",
+        "author": "Kilzeanne Nicolau"
+      },
+      {
+        "id": 3,
+        "title": "Physiotherapist Tiago",
+        "content": "I had hip surgery. I am doing physiotherapy with physiotherapist Tiago. I have already done 10 sessions. I am halfway through the treatment. I am recovering visibly. The knowledge of physiotherapist Tiago combined with the affection with which he guides me, all his empathy, leads me to want to highlight the excellence of his work and his professionalism. Many thanks to physiotherapist Tiago.",
+        "author": "Maria Elisabeth dos Santos Rocha"
+      },
+      {
+        "id": 4,
+        "title": "Management",
+        "content": "I contacted Reabilitar Em Casa to get home support after hip surgery. I was always attended by Mrs. Ana Filipa Santos with great friendliness and availability so that we could program what best fit my needs. After the surgery, they sent me an excellent collaborator, Rosa Ângela, who has left me very very satisfied. It could hardly have been better. With competence and affection, she has helped a lot in my rehabilitation. I am truly pleased to have chosen Reabilitar Em Casa to support me.",
+        "author": "Maria Elisabeth"
+      },
+      {
+        "id": 5,
+        "title": "Reabilitar em Casa",
+        "content": "Good afternoon to all. Having completed Physiotherapy due to I.A.S.F.A. requirements, I must fulfill my duty and express my opinion whether positive or negative because nothing should be left unsaid. -I start by referring to the treatment and support of the User Managers, as there were several I didn't memorize their names but they all have in common: education, availability, training and pleasure in what they do, all with friendliness and without the subservience that is horrible. WELL DONE TO YOU ALL. -Another team member I want to mention is the fighter Dr. Rita Cosme who I want to salute for the mission she took on and for which I have no words to thank for myself and for all my DFA brothers and not only. A big hug with enormous gratitude and WELL DONE Dr. Rita Cosme for her dedication. -Finally the Physiotherapist Andreia who I cannot classify because she combines high professionalism with a friendliness that leaves me without words to thank her for everything she did for me because I am very well. She is cheerful, well-disposed and loves to help. My high gratitude and a big WELL DONE. Many thanks to the whole team for the spectacular work they do. Congratulations and happiness to all and strength in the fight they fight daily in the service of others. António Roquette",
+        "author": "António Roquette"
+      }
+    ],
+    "totalCount": {
+      "count": 43
+    },
+    "praisedBy": "Praised by",
+    "reviewSchema": {
+      "name": "Customer Testimonials - RCG",
+      "description": "What our clients say about our home healthcare services"
+    }
   }
 }
