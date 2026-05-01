@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { usePathname } from "next/navigation";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -16,10 +16,15 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-// Static schema - will use dynamic error messages in the form
-const appointmentSchema = z.object({
-  FirstName: z.string().min(1, "Required field"),
-  telefone: z.string().min(1, "Required field"),
+interface AppointmentFormProps {
+  campaign?: string;
+  source?: string;
+}
+
+// Dynamic schema that will be created with translated error messages
+const createAppointmentSchema = (t: any) => z.object({
+  FirstName: z.string().min(1, t('required')),
+  telefone: z.string().min(1, t('required')),
   campaign: z.string().optional(),
   source: z.string().optional(),
   gclid: z.string().optional(),
@@ -28,27 +33,20 @@ const appointmentSchema = z.object({
   gmatchtype: z.string().optional(),
 });
 
-type AppointmentFormValues = z.infer<typeof appointmentSchema>;
-
-interface AppointmentFormProps {
-  campaign?: string;
-  source?: string;
-}
+type AppointmentFormValues = z.infer<ReturnType<typeof createAppointmentSchema>>;
 
 export default function AppointmentForm({
   campaign: pageCampaign = "",
   source: pageSource = ""
 }: AppointmentFormProps) {
   const pathname = usePathname();
+  const t = useTranslations('forms.appointment');
   const [isMounted, setIsMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
-
-  // Always call useTranslations hook at the top level
-  const t = useTranslations('forms.appointment');
 
   // Prevent hydration mismatch by only rendering after mount
   useEffect(() => {
@@ -63,7 +61,7 @@ export default function AppointmentForm({
   };
 
   const form = useForm<AppointmentFormValues>({
-    resolver: zodResolver(appointmentSchema),
+    resolver: zodResolver(createAppointmentSchema(t)),
     defaultValues: {
       FirstName: "",
       telefone: "",
@@ -152,7 +150,7 @@ export default function AppointmentForm({
 
       setSubmitStatus({
         type: "success",
-        message: t.success,
+        message: t('success'),
       });
 
       // Reset form after successful submission
@@ -161,7 +159,7 @@ export default function AppointmentForm({
       console.error("Form submission error:", error);
       setSubmitStatus({
         type: "error",
-        message: t.error,
+        message: t('error'),
       });
     } finally {
       setIsSubmitting(false);
@@ -178,7 +176,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder={t.namePlaceholder} className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
+                  <Input placeholder={t('namePlaceholder')} className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -191,7 +189,7 @@ export default function AppointmentForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="tel" placeholder={t.phonePlaceholder} className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
+                  <Input type="tel" placeholder={t('phonePlaceholder')} className="!bg-white/75 rounded-md text-lg placeholder:text-lg" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -282,7 +280,7 @@ export default function AppointmentForm({
         )}
 
         <Button type="submit" className="w-full bg-teal-500 hover:bg-teal-600 text-white rounded-md text-lg py-6" disabled={isSubmitting}>
-          {isSubmitting ? t.submitting : t.submit}
+          {isSubmitting ? t('submitting') : t('submit')}
         </Button>
       </form>
     </Form>
