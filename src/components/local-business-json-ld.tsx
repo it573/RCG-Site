@@ -44,9 +44,9 @@ export function LocalBusinessJsonLd() {
     priceRange: "€€",
     image: "https://www.reabilitar-em-casa.com/logo.png",
     sameAs: [
-      "https://www.facebook.com/reabilitaremcasa",
+      "https://www.facebook.com/ReabilitarEmCasa",
       "https://www.linkedin.com/company/reabilitar-em-casa",
-      "https://www.instagram.com/reabilitaremcasa",
+      "https://www.instagram.com/reabilitar.em.casa",
     ],
   };
 

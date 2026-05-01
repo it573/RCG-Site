@@ -223,14 +223,14 @@ export default function Footer() {
               }}
             >
               <a
-                href="https://www.facebook.com/fisireabilitar/"
+                href="https://www.facebook.com/ReabilitarEmCasa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
                 aria-label="Facebook"
               >
                 <Image
-                  src="https://reabilitar-em-casa.com/wp-content/uploads/2018/07/facebook_icon_xsmall.png"
+                  src="/images/signatures/facebook-icon.jpg"
                   alt="Facebook"
                   width={32}
                   height={32}
@@ -238,14 +238,14 @@ export default function Footer() {
                 />
               </a>
               <a
-                href="https://www.instagram.com/reabilitaremcasa.saudeemcasa/?hl=en"
+                href="https://www.instagram.com/reabilitar.em.casa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
                 aria-label="Instagram"
               >
                 <Image
-                  src="https://reabilitar-em-casa.com/wp-content/uploads/2020/04/instagram.png"
+                  src="/images/signatures/instagram-icon.jpg"
                   alt="Instagram"
                   width={32}
                   height={32}
