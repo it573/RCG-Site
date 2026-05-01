@@ -81,9 +81,11 @@ export default function Navigation() {
                     <li key={child.label}>
                       <PreservingLink
                         href={child.href}
-                        className="block pl-4 pr-12 py-2 text-sm hover:bg-gray-100 transition-colors"
+                        className="block pl-4 pr-12 py-2 text-sm hover:bg-orange-100 transition-all duration-300"
                       >
-                        {child.label}
+                        <span className="inline-block transition-all duration-300 hover:scale-[1.10] hover:text-primary hover:font-bold">
+                          {child.label}
+                        </span>
                       </PreservingLink>
                     </li>
                   ))}
