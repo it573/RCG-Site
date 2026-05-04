@@ -75,6 +75,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+        <meta name="facebook-domain-verification" content="flm8qq5atlf8dsoijnxd7yqt6aiwh7" />
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"
