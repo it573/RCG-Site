@@ -143,6 +143,12 @@ export default function AppointmentForm({
         const campaign = data.campaign?.toLowerCase() || '';
         const eventType = campaign.includes('ad') ? 'ad-site-conversion' : 'cs-site-conversion';
 
+        // Track general form submission event
+        window.dataLayer.push({
+          'event': 'form_sent'
+        });
+
+        // Track campaign-specific conversion event
         window.dataLayer.push({
           'event': eventType
         });
