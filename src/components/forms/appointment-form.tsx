@@ -31,6 +31,7 @@ const createAppointmentSchema = (t: any) => z.object({
   gcampaign: z.string().optional(),
   gkeywords: z.string().optional(),
   gmatchtype: z.string().optional(),
+  fbclid: z.string().optional(),
 });
 
 type AppointmentFormValues = z.infer<ReturnType<typeof createAppointmentSchema>>;
@@ -70,7 +71,8 @@ export default function AppointmentForm({
       gclid: "",
       gcampaign: "",
       gkeywords: "",
-      gmatchtype: ""
+      gmatchtype: "",
+      fbclid: ""
     },
   });
 
@@ -104,6 +106,10 @@ export default function AppointmentForm({
 
     const gmatchtype = params.get("gmatchtype");
     form.setValue("gmatchtype", gmatchtype || "");
+
+    // Meta/Facebook tracking parameters
+    const fbclid = params.get("fbclid");
+    form.setValue("fbclid", fbclid || "");
   }, [form, isMounted, pageCampaign, pageSource, pathname]);
 
   // Don't render form until mounted to prevent hydration mismatch
@@ -264,6 +270,17 @@ export default function AppointmentForm({
         <FormField
           control={form.control}
           name="gmatchtype"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="fbclid"
           render={({ field }) => (
             <FormItem className="hidden">
               <FormControl>

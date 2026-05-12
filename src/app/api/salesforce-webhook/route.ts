@@ -41,6 +41,7 @@ export async function POST(request: NextRequest) {
     addFieldRequired("gcampaign", body.gcampaign);
     addFieldRequired("gkeywords", body.gkeywords);
     addFieldRequired("gmatchtype", body.gmatchtype);
+    addFieldRequired("fbclid", body.fbclid);
 
     // Prepare headers - Salesforce expects form-urlencoded
     const headers: HeadersInit = {
