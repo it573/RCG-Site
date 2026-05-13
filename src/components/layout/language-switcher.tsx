@@ -2,7 +2,7 @@
 
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { locales, type Locale } from '@/i18n/config';
+import { type Locale } from '@/i18n/config';
 
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
@@ -34,7 +34,7 @@ export function LanguageSwitcher() {
   return (
     <button
       onClick={() => switchLocale(targetLocale)}
-      className="text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] whitespace-nowrap"
+      className="text-sm font-bold hover:text-primary transition-all duration-300 hover:scale-[1.15] whitespace-nowrap cursor-pointer"
       aria-label={`Switch to ${targetLocale === 'pt' ? 'Portuguese' : 'English'}`}
     >
       {displayText}
