@@ -6,7 +6,6 @@ import Script from "next/script";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { JsonLd } from "@/components/json-ld";
-import GoogleAnalytics from "@/components/analytics/google-analytics";
 import GoogleTagManager from "@/components/analytics/google-tag-manager";
 import CookieConsentBanner from "@/components/layout/cookie-consent-banner";
 import { locales } from "@/i18n/config";
@@ -108,7 +107,6 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <JsonLd />
-          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
           <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
           <Header />
           <main>{children}</main>

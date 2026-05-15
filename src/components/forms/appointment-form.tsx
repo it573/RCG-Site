@@ -146,18 +146,24 @@ export default function AppointmentForm({
 
       // Push GTM event based on campaign type
       if (typeof window !== 'undefined' && window.dataLayer) {
-        const campaign = data.campaign?.toLowerCase() || '';
-        const eventType = campaign.includes('ad') ? 'ad-site-conversion' : 'cs-site-conversion';
+        // const campaign = data.campaign?.toLowerCase() || '';
+        // const eventType = campaign.includes('ad') ? 'ad-site-conversion' : 'cs-site-conversion';
 
-        // Track general form submission event
+        // Track general form submission event with identification
         window.dataLayer.push({
-          'event': 'form_sent'
+          'event': 'form_submit',
+          'form_id': 'appointment-form',
+          'form_name': 'Appointment Form',
+          'form_destination': window.location.href,
+          'page_path': pathname,
+          'form_source': data.source || getPathnameDefaults(pathname)?.source || 'unknown',
+          'form_campaign': data.campaign || ''
         });
 
         // Track campaign-specific conversion event
-        window.dataLayer.push({
-          'event': eventType
-        });
+        // window.dataLayer.push({
+        //   'event': eventType
+        // });
       }
 
       setSubmitStatus({

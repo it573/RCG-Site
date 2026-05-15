@@ -40,19 +40,21 @@ export default function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
 
       setIsLoaded(true);
 
-      // Initialize gtag if not already available
-      window.gtag = window.gtag || function () {
+      // Initialize gtag function to prevent hydration issues (needed for window.gtag checks)
+      window.gtag = window.gtag || function() {
         (window.dataLayer = window.dataLayer || []).push(arguments);
       };
 
-      // Set default consent BEFORE loading GTM (required by consent mode v2)
-      window.gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'wait_for_update': 500
-      });
+      // Push consent default to dataLayer - GTM will handle gtag calls
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'consent_default',
+          'analytics_storage': 'denied',
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
+        });
+      }
 
       // Inject GTM script BEFORE updating consent
       const script = document.createElement("script");
@@ -72,15 +74,8 @@ export default function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
 
       // Wait for GTM to load, then update consent and trigger tags
       setTimeout(() => {
-        // Now update consent to granted
-        if (window.gtag) {
-          window.gtag('consent', 'update', {
-            'analytics_storage': 'granted',
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted'
-          });
-        } else if (window.dataLayer) {
+        // Push consent update to dataLayer - GTM will handle gtag calls
+        if (window.dataLayer) {
           window.dataLayer.push({
             'event': 'consent_update',
             'analytics_storage': 'granted',
