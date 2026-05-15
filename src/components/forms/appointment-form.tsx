@@ -151,7 +151,7 @@ export default function AppointmentForm({
 
         // Track general form submission event with identification
         window.dataLayer.push({
-          'event': 'form_submit',
+          'event': 'form_submit_rcg',
           'form_id': 'appointment-form',
           'form_name': 'Appointment Form',
           'form_destination': window.location.href,
