@@ -152,6 +152,7 @@ export default function AppointmentForm({
           'form_campaign': data.campaign || '',
           'form_result': 'success',
           'gclid': data.gclid || '',
+          'gcampaign': data.gcampaign || '',
           'fbclid': data.fbclid || ''
         });
       }
@@ -193,6 +194,7 @@ export default function AppointmentForm({
           'form_campaign': data.campaign || '',
           'form_result': 'error',
           'gclid': data.gclid || '',
+          'gcampaign': data.gcampaign || '',
           'fbclid': data.fbclid || ''
         });
       }
