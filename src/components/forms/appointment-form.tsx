@@ -140,6 +140,22 @@ export default function AppointmentForm({
 
       const result = await response.json();
 
+      // Track general form submission event with identification
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'form_sent',
+          'form_id': 'appointment-form',
+          'form_name': 'Appointment Form',
+          'form_destination': window.location.href,
+          'page_path': pathname,
+          'form_source': data.source || getPathnameDefaults(pathname)?.source || 'unknown',
+          'form_campaign': data.campaign || '',
+          'form_result': 'success',
+          'gclid': data.gclid || '',
+          'fbclid': data.fbclid || ''
+        });
+      }
+
       if (!response.ok) {
         throw new Error(result.error || "Failed to submit form");
       }
@@ -148,17 +164,6 @@ export default function AppointmentForm({
       if (typeof window !== 'undefined' && window.dataLayer) {
         // const campaign = data.campaign?.toLowerCase() || '';
         // const eventType = campaign.includes('ad') ? 'ad-site-conversion' : 'cs-site-conversion';
-
-        // Track general form submission event with identification
-        window.dataLayer.push({
-          'event': 'form_submit_rcg',
-          'form_id': 'appointment-form',
-          'form_name': 'Appointment Form',
-          'form_destination': window.location.href,
-          'page_path': pathname,
-          'form_source': data.source || getPathnameDefaults(pathname)?.source || 'unknown',
-          'form_campaign': data.campaign || ''
-        });
 
         // Track campaign-specific conversion event
         // window.dataLayer.push({
@@ -175,6 +180,23 @@ export default function AppointmentForm({
       form.reset();
     } catch (error) {
       console.error("Form submission error:", error);
+
+      // Track form submission error event
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'form_sent',
+          'form_id': 'appointment-form',
+          'form_name': 'Appointment Form',
+          'form_destination': window.location.href,
+          'page_path': pathname,
+          'form_source': data.source || getPathnameDefaults(pathname)?.source || 'unknown',
+          'form_campaign': data.campaign || '',
+          'form_result': 'error',
+          'gclid': data.gclid || '',
+          'fbclid': data.fbclid || ''
+        });
+      }
+
       setSubmitStatus({
         type: "error",
         message: t('error'),
