@@ -32,6 +32,7 @@ const createAppointmentSchema = (t: any) => z.object({
   gkeywords: z.string().optional(),
   gmatchtype: z.string().optional(),
   fbclid: z.string().optional(),
+  fbcampaign: z.string().optional(),
 });
 
 type AppointmentFormValues = z.infer<ReturnType<typeof createAppointmentSchema>>;
@@ -72,7 +73,8 @@ export default function AppointmentForm({
       gcampaign: "",
       gkeywords: "",
       gmatchtype: "",
-      fbclid: ""
+      fbclid: "",
+      fbcampaign: ""
     },
   });
 
@@ -110,6 +112,9 @@ export default function AppointmentForm({
     // Meta/Facebook tracking parameters
     const fbclid = params.get("fbclid");
     form.setValue("fbclid", fbclid || "");
+
+    const fbcampaign = params.get("fbcampaign");
+    form.setValue("fbcampaign", fbcampaign || "");
   }, [form, isMounted, pageCampaign, pageSource, pathname]);
 
   // Don't render form until mounted to prevent hydration mismatch
@@ -153,7 +158,8 @@ export default function AppointmentForm({
           'form_result': 'success',
           'gclid': data.gclid || '',
           'gcampaign': data.gcampaign || '',
-          'fbclid': data.fbclid || ''
+          'fbclid': data.fbclid || '',
+          'fbcampaign': data.fbcampaign || ''
         });
       }
 
@@ -195,7 +201,8 @@ export default function AppointmentForm({
           'form_result': 'error',
           'gclid': data.gclid || '',
           'gcampaign': data.gcampaign || '',
-          'fbclid': data.fbclid || ''
+          'fbclid': data.fbclid || '',
+          'fbcampaign': data.fbcampaign || ''
         });
       }
 
@@ -311,6 +318,17 @@ export default function AppointmentForm({
         <FormField
           control={form.control}
           name="fbclid"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="fbcampaign"
           render={({ field }) => (
             <FormItem className="hidden">
               <FormControl>
