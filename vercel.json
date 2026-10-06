@@ -1,14 +1,3 @@
 {
-  "bunVersion": "1.x",
-  "redirects": [
-    {
-      "source": "/apoio-domiciliario",
-      "destination": "/apoio-domicilio",
-      "permanent": true
-    }
-  ]
+  "bunVersion": "1.x"
 }
-
-
-
-
