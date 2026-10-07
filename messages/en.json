@@ -125,7 +125,18 @@
     "metadata": {
       "title": "Agreements and Partnerships - Health Subsystems",
       "description": "We are partnered with the main health subsystems in Portugal: ADSE, SAD, SAMS, Médis, Multicare and more. Check if your subsystem accepts our care.",
-      "keywords": ["health agreements", "partnerships", "health subsystems", "ADSE", "SAD", "SAMS", "Médis", "Multicare", "health insurance", "coverage"]
+      "keywords": [
+        "health agreements",
+        "partnerships",
+        "health subsystems",
+        "ADSE",
+        "SAD",
+        "SAMS",
+        "Médis",
+        "Multicare",
+        "health insurance",
+        "coverage"
+      ]
     },
     "hero": {
       "title": "Agreements and Partnerships",
@@ -143,7 +154,16 @@
     "metadata": {
       "title": "Clinical Analysis at Home and in Carcavelos",
       "description": "Collection point in Carcavelos and home clinical analysis in partnership with Synlab. Check-ups, nutrition tests, hormonal tests and more. Fast and reliable results.",
-      "keywords": ["clinical analysis", "home collection", "carcavelos collection point", "synlab", "health check-up", "laboratory tests", "blood analysis", "medical exams"]
+      "keywords": [
+        "clinical analysis",
+        "home collection",
+        "carcavelos collection point",
+        "synlab",
+        "health check-up",
+        "laboratory tests",
+        "blood analysis",
+        "medical exams"
+      ]
     },
     "hero": {
       "title": "Clinical Analysis",
@@ -196,7 +216,15 @@
     "metadata": {
       "title": "Home Support in Portugal | RCG",
       "description": "Personalized and excellent home support services in Portugal. 24/7 caregivers, nursing care and assistance in the comfort of your home.",
-      "keywords": ["home support", "home caregivers", "nursing care", "home assistance", "elderly care", "senior support", "24 hour care"]
+      "keywords": [
+        "home support",
+        "home caregivers",
+        "nursing care",
+        "home assistance",
+        "elderly care",
+        "senior support",
+        "24 hour care"
+      ]
     },
     "hero": {
       "title": "Home Support",
@@ -276,7 +304,15 @@
     "metadata": {
       "title": "Contact - RCG | Get in Touch",
       "description": "Contact RCG for home healthcare services in Portugal. Phone: 210 136 676. Available 24/7. Service in Lisbon and national coverage.",
-      "keywords": ["contact", "phone", "address", "email", "get in touch", "RCG contact", "healthcare Portugal"]
+      "keywords": [
+        "contact",
+        "phone",
+        "address",
+        "email",
+        "get in touch",
+        "RCG contact",
+        "healthcare Portugal"
+      ]
     },
     "hero": {
       "title": "Contact",
@@ -297,7 +333,14 @@
     "metadata": {
       "title": "Continued Care and Home Hospitalization",
       "description": "Long-term care and home hospitalization with specialized medical team 24/7. Safe alternative to hospital, in the comfort of your home.",
-      "keywords": ["continued care", "home hospitalization", "long-term care", "home care", "palliative care", "home medical team"]
+      "keywords": [
+        "continued care",
+        "home hospitalization",
+        "long-term care",
+        "home care",
+        "palliative care",
+        "home medical team"
+      ]
     },
     "hero": {
       "title": "Continued Care and Hospitalization",
@@ -321,7 +364,15 @@
     "metadata": {
       "title": "Healthcare at Home in Portugal",
       "description": "Nursing, physiotherapy and medical assistance services at home in Portugal. Licensed team by ERS, available 24/7. We care for you and your family.",
-      "keywords": ["healthcare", "home nursing", "home physiotherapy", "medical assistance", "home caregivers", "health in Portugal", "home support"]
+      "keywords": [
+        "healthcare",
+        "home nursing",
+        "home physiotherapy",
+        "medical assistance",
+        "home caregivers",
+        "health in Portugal",
+        "home support"
+      ]
     },
     "hero": {
       "title": "Healthcare",
@@ -363,7 +414,15 @@
     "metadata": {
       "title": "Hospital Equipment and Technical Aids",
       "description": "Rental and sale of hospital equipment and technical aids for home use. Fast delivery in Portugal. Wheelchairs, hospital beds, nursing material.",
-      "keywords": ["hospital equipment", "technical aids", "medical equipment rental", "hospital bed", "wheelchair", "nursing material", "home equipment"]
+      "keywords": [
+        "hospital equipment",
+        "technical aids",
+        "medical equipment rental",
+        "hospital bed",
+        "wheelchair",
+        "nursing material",
+        "home equipment"
+      ]
     },
     "hero": {
       "title": "Hospital Equipment",
@@ -495,15 +554,42 @@
         "tablePurpose": "Purpose of Processing",
         "tableLegal": "Legal Basis",
         "purposes": [
-          { "purpose": "Provision of Health Services", "legal": "Contractual execution and pre-contractual diligences." },
-          { "purpose": "Administrative, Economic and Accounting Management", "legal": "Contractual execution and Compliance with legal obligations (e.g., billing)." },
-          { "purpose": "Sending Commercial Communications / Newsletters", "legal": "Consent of the data subject." },
-          { "purpose": "Response to Requests and Contact Requests", "legal": "Pre-contractual diligences and/or Legitimate Interest." },
-          { "purpose": "Satisfaction Assessment", "legal": "Consent or Legitimate Interest in improving services." },
-          { "purpose": "Recruitment and Selection of Candidates", "legal": "Pre-contractual diligences and Consent." },
-          { "purpose": "Management of Events organized by RCG", "legal": "Consent of the subject and Compliance with legal obligations." },
-          { "purpose": "Security of People and Property (Video Surveillance - CCTV)", "legal": "Legitimate Interest and Compliance with legal obligation." },
-          { "purpose": "Transfer of data to official entities", "legal": "Compliance with Legal Obligation." }
+          {
+            "purpose": "Provision of Health Services",
+            "legal": "Contractual execution and pre-contractual diligences."
+          },
+          {
+            "purpose": "Administrative, Economic and Accounting Management",
+            "legal": "Contractual execution and Compliance with legal obligations (e.g., billing)."
+          },
+          {
+            "purpose": "Sending Commercial Communications / Newsletters",
+            "legal": "Consent of the data subject."
+          },
+          {
+            "purpose": "Response to Requests and Contact Requests",
+            "legal": "Pre-contractual diligences and/or Legitimate Interest."
+          },
+          {
+            "purpose": "Satisfaction Assessment",
+            "legal": "Consent or Legitimate Interest in improving services."
+          },
+          {
+            "purpose": "Recruitment and Selection of Candidates",
+            "legal": "Pre-contractual diligences and Consent."
+          },
+          {
+            "purpose": "Management of Events organized by RCG",
+            "legal": "Consent of the subject and Compliance with legal obligations."
+          },
+          {
+            "purpose": "Security of People and Property (Video Surveillance - CCTV)",
+            "legal": "Legitimate Interest and Compliance with legal obligation."
+          },
+          {
+            "purpose": "Transfer of data to official entities",
+            "legal": "Compliance with Legal Obligation."
+          }
         ]
       },
       {
@@ -512,12 +598,30 @@
         "tableCategory": "Category of Processing",
         "tableTime": "Retention Time",
         "conservation": [
-          { "category": "Provision of Services and Accounting/Fiscal Management", "time": "10 years after provision of services / invoice issuance (legal deadline)." },
-          { "category": "Sending Commercial Communications", "time": "Until revocation of consent or exercise of the right to object." },
-          { "category": "Responses to Requests", "time": "Until conclusion of the purpose pursuit." },
-          { "category": "Job Applications (unsuccessful candidates)", "time": "6 months after completion of the process, unless consent for maintenance in the database." },
-          { "category": "Events organized by RCG", "time": "Until evaluation and completion of event diligences." },
-          { "category": "CCTV Images", "time": "30 days after the date of recording the images (maximum legal period)." }
+          {
+            "category": "Provision of Services and Accounting/Fiscal Management",
+            "time": "10 years after provision of services / invoice issuance (legal deadline)."
+          },
+          {
+            "category": "Sending Commercial Communications",
+            "time": "Until revocation of consent or exercise of the right to object."
+          },
+          {
+            "category": "Responses to Requests",
+            "time": "Until conclusion of the purpose pursuit."
+          },
+          {
+            "category": "Job Applications (unsuccessful candidates)",
+            "time": "6 months after completion of the process, unless consent for maintenance in the database."
+          },
+          {
+            "category": "Events organized by RCG",
+            "time": "Until evaluation and completion of event diligences."
+          },
+          {
+            "category": "CCTV Images",
+            "time": "30 days after the date of recording the images (maximum legal period)."
+          }
         ]
       },
       {
@@ -581,7 +685,15 @@
     "metadata": {
       "title": "About Us - RCG | Healthcare in Portugal",
       "description": "RCG is a leader in home healthcare in Portugal. Learn about our history, mission, values and licensed team. National coverage with quality and excellence.",
-      "keywords": ["about us", "who we are", "RCG", "healthcare Portugal", "mission values", "medical team", "company history"]
+      "keywords": [
+        "about us",
+        "who we are",
+        "RCG",
+        "healthcare Portugal",
+        "mission values",
+        "medical team",
+        "company history"
+      ]
     },
     "hero": {
       "title": "About Us",
@@ -634,7 +746,15 @@
     "metadata": {
       "title": "RAL - Online Dispute Resolution | RCG",
       "description": "Alternative Dispute Resolution - Learn how to resolve conflicts quickly, economically and formally through official entities.",
-      "keywords": ["dispute resolution", "alternative disputes", "mediation", "conciliation", "consumer", "courts", "RCG"]
+      "keywords": [
+        "dispute resolution",
+        "alternative disputes",
+        "mediation",
+        "conciliation",
+        "consumer",
+        "courts",
+        "RCG"
+      ]
     },
     "hero": {
       "title": "Online Dispute Resolution",
@@ -676,7 +796,16 @@
     "metadata": {
       "title": "Recruitment - Work With Us",
       "description": "Join the RCG team! We are looking for dedicated health professionals: nurses, physiotherapists, caregivers and doctors. Open positions for home care.",
-      "keywords": ["recruitment", "health jobs", "nurse", "physiotherapist", "caregiver", "home doctor", "work with us", "health career"]
+      "keywords": [
+        "recruitment",
+        "health jobs",
+        "nurse",
+        "physiotherapist",
+        "caregiver",
+        "home doctor",
+        "work with us",
+        "health career"
+      ]
     },
     "hero": {
       "title": "Recruitment",
@@ -690,7 +819,15 @@
     "metadata": {
       "title": "Testimonials - What Our Clients Say",
       "description": "Read testimonials from satisfied clients with our home healthcare services. Over 40 positive reviews from clients in Portugal.",
-      "keywords": ["testimonials", "reviews", "customer opinions", "feedback", "recommendations", "customer satisfaction", "RCG reviews"]
+      "keywords": [
+        "testimonials",
+        "reviews",
+        "customer opinions",
+        "feedback",
+        "recommendations",
+        "customer satisfaction",
+        "RCG reviews"
+      ]
     },
     "header": {
       "title": "See who has already praised us",
@@ -735,6 +872,94 @@
     "reviewSchema": {
       "name": "Customer Testimonials - RCG",
       "description": "What our clients say about our home healthcare services"
+    }
+  },
+  "physiotherapy": {
+    "metadata": {
+      "title": "Home Physiotherapy in Portugal | Reabilitar em Casa",
+      "description": "Home physiotherapy with qualified and certified physiotherapists. Motor rehabilitation, post-surgical recovery and respiratory physiotherapy in the comfort of your home, with nationwide coverage.",
+      "keywords": [
+        "home physiotherapy",
+        "physiotherapy at home",
+        "home physiotherapist",
+        "motor rehabilitation",
+        "post-surgical recovery",
+        "respiratory physiotherapy",
+        "neurological rehabilitation"
+      ]
+    },
+    "hero": {
+      "title": "Home Physiotherapy",
+      "description": "Qualified and Certified Physiotherapists"
+    },
+    "service21": {
+      "title": "Physiotherapy in the Comfort of Your Home",
+      "titleHighlight": "Entity licensed by Social Security",
+      "services": [
+        {
+          "title": "Treatment Without Travel",
+          "description": "Home physiotherapy allows you to start or continue a rehabilitation plan without the strain of travelling to a clinic. The physiotherapist assesses the real environment in which you live, adapts the exercises to your space and involves the family in the recovery process. For those with reduced mobility, intense pain or recovering from surgery, treatment at home is often the safest and most effective option."
+        },
+        {
+          "title": "Carta Social",
+          "description": "Make sure you choose a legal entity, registered with the Carta Social.\n\nReabilitar em Casa is!"
+        }
+      ]
+    },
+    "confianca": {
+      "title": "Rehabilitation You Can Trust",
+      "description": "With a team bringing together two decades of experience dedicated to the art of caring, every physiotherapy plan is designed around the patient, their goals and their own pace of recovery.",
+      "pillar": "Our work rests on one unshakeable pillar: Trust.",
+      "howWeWork": {
+        "title": "How do we work?",
+        "steps": [
+          {
+            "title": "Initial Assessment",
+            "description": "After you contact us, we gather the clinical history, the medical prescription (where one exists) and the recovery goals, so we understand the specifics of each case."
+          },
+          {
+            "title": "Personalised Treatment Plan",
+            "description": "The physiotherapist defines the number of sessions, their frequency and the appropriate techniques, presenting a clear and transparent proposal from the very first moment."
+          },
+          {
+            "title": "Sessions at Home",
+            "description": "Sessions take place at home, with the necessary equipment, at the agreed time and always with the same professional, ensuring continuity and a relationship of trust."
+          },
+          {
+            "title": "Reassessment and Adjustment",
+            "description": "We track progress through periodic reassessments and adjust the plan whenever necessary, keeping the attending physician informed of developments."
+          },
+          {
+            "title": "Immediate Response",
+            "description": "We are able to begin treatment within a maximum of 24/48 hours after the assessment."
+          }
+        ]
+      }
+    },
+    "services5": {
+      "services": [
+        {
+          "title": "Motor Rehabilitation and\nGait Training"
+        },
+        {
+          "title": "Post-Surgical and\nPost-Traumatic Recovery"
+        },
+        {
+          "title": "Respiratory Physiotherapy"
+        },
+        {
+          "title": "Neurological Rehabilitation\n(Stroke and Parkinson)"
+        },
+        {
+          "title": "Pain Management and\nMusculoskeletal Physiotherapy"
+        },
+        {
+          "title": "Fall Prevention and\nBalance Training"
+        }
+      ]
+    },
+    "form": {
+      "title": "Physiotherapy at Home"
     }
   }
 }

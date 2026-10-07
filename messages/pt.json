@@ -125,7 +125,18 @@
     "metadata": {
       "title": "Acordos e Convenções - Subsistemas de Saúde",
       "description": "Somos convencionados com os principais subsistemas de saúde em Portugal: ADSE, SAD, SAMS, Médis, Multicare e mais. Confira se o seu subsistema aceita os nossos cuidados.",
-      "keywords": ["acordos saúde", "convenções", "subsistemas saúde", "ADSE", "SAD", "SAMS", "Médis", "Multicare", "seguros saúde", "comparticipações"]
+      "keywords": [
+        "acordos saúde",
+        "convenções",
+        "subsistemas saúde",
+        "ADSE",
+        "SAD",
+        "SAMS",
+        "Médis",
+        "Multicare",
+        "seguros saúde",
+        "comparticipações"
+      ]
     },
     "hero": {
       "title": "Acordos e Convenções",
@@ -143,7 +154,16 @@
     "metadata": {
       "title": "Análises Clínicas ao Domicílio e em Carcavelos",
       "description": "Posto de colheitas em Carcavelos e análises clínicas ao domicílio em parceria com Synlab. Check-ups, testes de nutrição, hormonais e muito mais. Resultados rápidos e fiáveis.",
-      "keywords": ["análises clínicas", "colheitas domicílio", "posto colheitas carcavelos", "synlab", "check-up saúde", "testes laboratoriais", "análises sangue", "exames médicos"]
+      "keywords": [
+        "análises clínicas",
+        "colheitas domicílio",
+        "posto colheitas carcavelos",
+        "synlab",
+        "check-up saúde",
+        "testes laboratoriais",
+        "análises sangue",
+        "exames médicos"
+      ]
     },
     "hero": {
       "title": "Análises Clínicas",
@@ -196,7 +216,15 @@
     "metadata": {
       "title": "Apoio Domiciliário em Portugal | RCG",
       "description": "Serviços de apoio domiciliário personalizados e de excelência em Portugal. Cuidadores 24/7, cuidados de enfermagem e assistência no conforto do seu lar.",
-      "keywords": ["apoio domiciliário", "cuidadores domicílio", "cuidados enfermagem", "assistência domiciliária", "cuidados idosos", "apoio seniores", "cuidados 24 horas"]
+      "keywords": [
+        "apoio domiciliário",
+        "cuidadores domicílio",
+        "cuidados enfermagem",
+        "assistência domiciliária",
+        "cuidados idosos",
+        "apoio seniores",
+        "cuidados 24 horas"
+      ]
     },
     "hero": {
       "title": "Apoio Domiciliário",
@@ -276,7 +304,15 @@
     "metadata": {
       "title": "Contactos - RCG | Fale Connosco",
       "description": "Contacte a RCG para cuidados de saúde ao domicílio em Portugal. Telefone: 210 136 676. Disponível 24/7. Atendimento em Lisboa e cobertura nacional.",
-      "keywords": ["contactos", "telefone", "morada", "email", "fale connosco", "RCG contactos", "cuidados saúde Portugal"]
+      "keywords": [
+        "contactos",
+        "telefone",
+        "morada",
+        "email",
+        "fale connosco",
+        "RCG contactos",
+        "cuidados saúde Portugal"
+      ]
     },
     "hero": {
       "title": "Contactos",
@@ -297,7 +333,14 @@
     "metadata": {
       "title": "Cuidados Continuados e Hospitalização Domiciliária",
       "description": "Cuidados de longa duração e hospitalização ao domicílio com equipa médica especializada 24/7. Alternativa segura ao hospital, no conforto do seu lar.",
-      "keywords": ["cuidados continuados", "hospitalização domiciliária", "cuidados de longa duração", "internamento domicílio", "cuidados paliativos", "equipa médica domicílio"]
+      "keywords": [
+        "cuidados continuados",
+        "hospitalização domiciliária",
+        "cuidados de longa duração",
+        "internamento domicílio",
+        "cuidados paliativos",
+        "equipa médica domicílio"
+      ]
     },
     "hero": {
       "title": "Cuidados Continuados e Hospitalização",
@@ -321,7 +364,15 @@
     "metadata": {
       "title": "Cuidados de Saúde ao Domicílio em Portugal",
       "description": "Serviços de enfermagem, fisioterapia e assistência médica ao domicílio em Portugal. Equipa licenciada pela ERS, disponível 24/7. Cuidamos de si e da sua família.",
-      "keywords": ["cuidados de saúde", "enfermagem domicílio", "fisioterapia domicílio", "assistência médica", "cuidadores domicílio", "saúde em Portugal", "apoio domiciliário"]
+      "keywords": [
+        "cuidados de saúde",
+        "enfermagem domicílio",
+        "fisioterapia domicílio",
+        "assistência médica",
+        "cuidadores domicílio",
+        "saúde em Portugal",
+        "apoio domiciliário"
+      ]
     },
     "hero": {
       "title": "Cuidados de Saúde",
@@ -363,7 +414,15 @@
     "metadata": {
       "title": "Equipamento Hospitalar e Ajudas Técnicas",
       "description": "Aluguer e venda de equipamento hospitalar e ajudas técnicas para uso domicílio. Entrega rápida em Portugal. Cadeiras de rodas, camas hospitalares, material de enfermagem.",
-      "keywords": ["equipamento hospitalar", "ajudas técnicas", "aluguer equipamento médico", "cama hospitalar", "cadeira de rodas", "material enfermagem", "equipamento domicílio"]
+      "keywords": [
+        "equipamento hospitalar",
+        "ajudas técnicas",
+        "aluguer equipamento médico",
+        "cama hospitalar",
+        "cadeira de rodas",
+        "material enfermagem",
+        "equipamento domicílio"
+      ]
     },
     "hero": {
       "title": "Equipamento Hospitalar",
@@ -495,15 +554,42 @@
         "tablePurpose": "Finalidade do Tratamento",
         "tableLegal": "Fundamento Jurídico",
         "purposes": [
-          { "purpose": "Prestação de Serviços de Saúde", "legal": "Execução contratual e diligências pré-contratuais." },
-          { "purpose": "Gestão Administrativa, Económica e Contabilística", "legal": "Execução contratual e Cumprimento de obrigações legais (ex: faturação)." },
-          { "purpose": "Envio de Comunicações Comerciais / Newsletters", "legal": "Consentimento do titular dos dados." },
-          { "purpose": "Resposta a Solicitações e Pedidos de Contacto", "legal": "Diligências pré-contratuais e/ou Interesse Legítimo." },
-          { "purpose": "Avaliação do Grau de Satisfação", "legal": "Consentimento ou Interesse Legítimo na melhoria dos serviços." },
-          { "purpose": "Recrutamento e Seleção de Candidatos", "legal": "Diligências pré-contratuais e Consentimento." },
-          { "purpose": "Gestão de Eventos organizados pela RCG", "legal": "Consentimento do titular e Cumprimento de obrigações legais." },
-          { "purpose": "Segurança de Pessoas e Bens (Videovigilância - CCTV)", "legal": "Interesse Legítimo e Cumprimento de obrigação legal." },
-          { "purpose": "Transferência de dados para entidades oficiais", "legal": "Cumprimento de Obrigação Jurídica." }
+          {
+            "purpose": "Prestação de Serviços de Saúde",
+            "legal": "Execução contratual e diligências pré-contratuais."
+          },
+          {
+            "purpose": "Gestão Administrativa, Económica e Contabilística",
+            "legal": "Execução contratual e Cumprimento de obrigações legais (ex: faturação)."
+          },
+          {
+            "purpose": "Envio de Comunicações Comerciais / Newsletters",
+            "legal": "Consentimento do titular dos dados."
+          },
+          {
+            "purpose": "Resposta a Solicitações e Pedidos de Contacto",
+            "legal": "Diligências pré-contratuais e/ou Interesse Legítimo."
+          },
+          {
+            "purpose": "Avaliação do Grau de Satisfação",
+            "legal": "Consentimento ou Interesse Legítimo na melhoria dos serviços."
+          },
+          {
+            "purpose": "Recrutamento e Seleção de Candidatos",
+            "legal": "Diligências pré-contratuais e Consentimento."
+          },
+          {
+            "purpose": "Gestão de Eventos organizados pela RCG",
+            "legal": "Consentimento do titular e Cumprimento de obrigações legais."
+          },
+          {
+            "purpose": "Segurança de Pessoas e Bens (Videovigilância - CCTV)",
+            "legal": "Interesse Legítimo e Cumprimento de obrigação legal."
+          },
+          {
+            "purpose": "Transferência de dados para entidades oficiais",
+            "legal": "Cumprimento de Obrigação Jurídica."
+          }
         ]
       },
       {
@@ -512,12 +598,30 @@
         "tableCategory": "Categoria de Tratamento",
         "tableTime": "Tempo de Conservação",
         "conservation": [
-          { "category": "Prestação de Serviços e Gestão Contabilística/Fiscal", "time": "10 anos após a prestação de serviços / emissão da fatura (prazo legal)." },
-          { "category": "Envio de Comunicações Comerciais", "time": "Até à revogação do consentimento ou exercício do direito de oposição." },
-          { "category": "Respostas a Solicitações", "time": "Até à conclusão da prossecução da finalidade." },
-          { "category": "Candidaturas a Emprego (candidatos não admitidos)", "time": "6 meses após a conclusão do processo, salvo consentimento para manutenção na base de dados." },
-          { "category": "Eventos organizados pela RCG", "time": "Até à avaliação e conclusão das diligências do evento." },
-          { "category": "Imagens de Videovigilância (CCTV)", "time": "30 dias após a data de gravação das imagens (prazo máximo legal)." }
+          {
+            "category": "Prestação de Serviços e Gestão Contabilística/Fiscal",
+            "time": "10 anos após a prestação de serviços / emissão da fatura (prazo legal)."
+          },
+          {
+            "category": "Envio de Comunicações Comerciais",
+            "time": "Até à revogação do consentimento ou exercício do direito de oposição."
+          },
+          {
+            "category": "Respostas a Solicitações",
+            "time": "Até à conclusão da prossecução da finalidade."
+          },
+          {
+            "category": "Candidaturas a Emprego (candidatos não admitidos)",
+            "time": "6 meses após a conclusão do processo, salvo consentimento para manutenção na base de dados."
+          },
+          {
+            "category": "Eventos organizados pela RCG",
+            "time": "Até à avaliação e conclusão das diligências do evento."
+          },
+          {
+            "category": "Imagens de Videovigilância (CCTV)",
+            "time": "30 dias após a data de gravação das imagens (prazo máximo legal)."
+          }
         ]
       },
       {
@@ -581,7 +685,15 @@
     "metadata": {
       "title": "Quem Somos - RCG | Cuidados de Saúde em Portugal",
       "description": "A RCG é líder em cuidados de saúde ao domicílio em Portugal. Conheça a nossa história, missão, valores e equipa licenciada. Cobertura nacional com qualidade e excelência.",
-      "keywords": ["quem somos", "sobre nós", "RCG", "cuidados saúde Portugal", "missão valores", "equipa médica", "história empresa"]
+      "keywords": [
+        "quem somos",
+        "sobre nós",
+        "RCG",
+        "cuidados saúde Portugal",
+        "missão valores",
+        "equipa médica",
+        "história empresa"
+      ]
     },
     "hero": {
       "title": "Quem Somos",
@@ -634,7 +746,15 @@
     "metadata": {
       "title": "RAL - Resolução de Litígios Online | RCG",
       "description": "Resolução Alternativa de Litígios - Saiba como resolver conflitos de forma rápida, económica e formal através de entidades oficiais.",
-      "keywords": ["resolução litígios", "alternativa litígios", "mediação", "conciliação", "consumo", "tribunais", "RCG"]
+      "keywords": [
+        "resolução litígios",
+        "alternativa litígios",
+        "mediação",
+        "conciliação",
+        "consumo",
+        "tribunais",
+        "RCG"
+      ]
     },
     "hero": {
       "title": "Resolução de Litígios Online",
@@ -676,7 +796,16 @@
     "metadata": {
       "title": "Recrutamento - Trabalhe Connosco",
       "description": "Junte-se à equipa da RCG! Procuramos profissionais de saúde dedicados: enfermeiros, fisioterapeutas, cuidadores e médicos. Candidaturas abertas para cuidados domiciliários.",
-      "keywords": ["recrutamento", "emprego saúde", "enfermeiro", "fisioterapeuta", "cuidador", "médico domicílio", "trabalhe connosco", "carreira saúde"]
+      "keywords": [
+        "recrutamento",
+        "emprego saúde",
+        "enfermeiro",
+        "fisioterapeuta",
+        "cuidador",
+        "médico domicílio",
+        "trabalhe connosco",
+        "carreira saúde"
+      ]
     },
     "hero": {
       "title": "Recrutamento",
@@ -690,7 +819,15 @@
     "metadata": {
       "title": "Testemunhos - O Que Dizem os Nossos Clientes",
       "description": "Leia os testemunhos de clientes satisfeitos com os nossos cuidados de saúde ao domicílio. Mais de 40 avaliações positivas de clientes em Portugal.",
-      "keywords": ["testemunhos", "avaliações", "opiniões clientes", "feedback", "recomendações", "satisfação clientes", "RCG avaliações"]
+      "keywords": [
+        "testemunhos",
+        "avaliações",
+        "opiniões clientes",
+        "feedback",
+        "recomendações",
+        "satisfação clientes",
+        "RCG avaliações"
+      ]
     },
     "header": {
       "title": "Veja quem já nos elogiou",
@@ -735,6 +872,94 @@
     "reviewSchema": {
       "name": "Testemunhos de Clientes - RCG",
       "description": "O que os nossos clientes dizem sobre os nossos serviços de saúde ao domicílio"
+    }
+  },
+  "physiotherapy": {
+    "metadata": {
+      "title": "Fisioterapia ao Domicílio em Portugal | Reabilitar em Casa",
+      "description": "Fisioterapia ao domicílio com fisioterapeutas qualificados e certificados. Reabilitação motora, recuperação pós-operatória e fisioterapia respiratória no conforto do seu lar, com cobertura nacional.",
+      "keywords": [
+        "fisioterapia ao domicílio",
+        "fisioterapia em casa",
+        "fisioterapeuta domicílio",
+        "reabilitação motora",
+        "recuperação pós-operatória",
+        "fisioterapia respiratória",
+        "fisioterapia neurológica"
+      ]
+    },
+    "hero": {
+      "title": "Fisioterapia ao Domicílio",
+      "description": "Fisioterapeutas Qualificados e Certificados"
+    },
+    "service21": {
+      "title": "Fisioterapia no Conforto do seu Lar",
+      "titleHighlight": "Entidade licenciada pela Segurança Social",
+      "services": [
+        {
+          "title": "Tratamento sem Deslocações",
+          "description": "A fisioterapia ao domicílio permite iniciar ou dar continuidade a um plano de reabilitação sem o desgaste das deslocações a uma clínica. O fisioterapeuta avalia o contexto real em que vive, adapta os exercícios ao seu espaço e envolve a família no processo de recuperação. Para quem tem mobilidade reduzida, dores intensas ou se encontra em recuperação pós-operatória, cuidar em casa é frequentemente a resposta mais segura e mais eficaz."
+        },
+        {
+          "title": "Carta Social",
+          "description": "Certifique-se que escolhe uma entidade legal, inscrita na Carta Social.\n\nA Reabilitar em Casa está!"
+        }
+      ]
+    },
+    "confianca": {
+      "title": "Reabilitação de Confiança",
+      "description": "Com uma equipa que soma duas décadas de experiência dedicada ao saber cuidar, cada plano de fisioterapia é desenhado à medida do doente, dos seus objetivos e do seu ritmo de recuperação.",
+      "pillar": "Assentamos a nossa intervenção num pilar inabalável: a Confiança.",
+      "howWeWork": {
+        "title": "Como atuamos?",
+        "steps": [
+          {
+            "title": "Avaliação Inicial",
+            "description": "Após o seu contacto, recolhemos o historial clínico, a prescrição médica (quando existe) e os objetivos de recuperação, para compreender as especificidades de cada caso."
+          },
+          {
+            "title": "Plano de Tratamento Personalizado",
+            "description": "O fisioterapeuta define o número de sessões, a frequência e as técnicas indicadas, apresentando uma proposta clara e transparente desde o primeiro momento."
+          },
+          {
+            "title": "Sessões no Domicílio",
+            "description": "As sessões decorrem em casa, com o material necessário, no horário combinado e sempre com o mesmo profissional, garantindo continuidade e uma relação de confiança."
+          },
+          {
+            "title": "Reavaliação e Ajuste",
+            "description": "Acompanhamos a evolução através de reavaliações periódicas e ajustamos o plano sempre que necessário, mantendo o médico assistente informado dos progressos."
+          },
+          {
+            "title": "Resposta Imediata",
+            "description": "Estamos aptos a iniciar o acompanhamento num prazo máximo de 24/48 horas após a avaliação."
+          }
+        ]
+      }
+    },
+    "services5": {
+      "services": [
+        {
+          "title": "Reabilitação Motora e\nTreino de Marcha"
+        },
+        {
+          "title": "Recuperação Pós-Operatória\ne Pós-Traumática"
+        },
+        {
+          "title": "Fisioterapia Respiratória"
+        },
+        {
+          "title": "Reabilitação Neurológica\n(AVC e Parkinson)"
+        },
+        {
+          "title": "Controlo da Dor e\nFisioterapia Músculo-Esquelética"
+        },
+        {
+          "title": "Prevenção de Quedas e\nTreino de Equilíbrio"
+        }
+      ]
+    },
+    "form": {
+      "title": "Fisioterapia em Casa"
     }
   }
 }
