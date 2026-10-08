@@ -894,15 +894,11 @@
     },
     "service21": {
       "title": "Fisioterapia no Conforto do seu Lar",
-      "titleHighlight": "Entidade licenciada pela Segurança Social",
+      "titleHighlight": "Fisioterapeutas qualificados e certificados",
       "services": [
         {
           "title": "Tratamento sem Deslocações",
           "description": "A fisioterapia ao domicílio permite iniciar ou dar continuidade a um plano de reabilitação sem o desgaste das deslocações a uma clínica. O fisioterapeuta avalia o contexto real em que vive, adapta os exercícios ao seu espaço e envolve a família no processo de recuperação. Para quem tem mobilidade reduzida, dores intensas ou se encontra em recuperação pós-operatória, cuidar em casa é frequentemente a resposta mais segura e mais eficaz."
-        },
-        {
-          "title": "Carta Social",
-          "description": "Certifique-se que escolhe uma entidade legal, inscrita na Carta Social.\n\nA Reabilitar em Casa está!"
         }
       ]
     },

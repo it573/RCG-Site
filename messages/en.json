@@ -894,15 +894,11 @@
     },
     "service21": {
       "title": "Physiotherapy in the Comfort of Your Home",
-      "titleHighlight": "Entity licensed by Social Security",
+      "titleHighlight": "Qualified and certified physiotherapists",
       "services": [
         {
           "title": "Treatment Without Travel",
           "description": "Home physiotherapy allows you to start or continue a rehabilitation plan without the strain of travelling to a clinic. The physiotherapist assesses the real environment in which you live, adapts the exercises to your space and involves the family in the recovery process. For those with reduced mobility, intense pain or recovering from surgery, treatment at home is often the safest and most effective option."
-        },
-        {
-          "title": "Carta Social",
-          "description": "Make sure you choose a legal entity, registered with the Carta Social.\n\nReabilitar em Casa is!"
         }
       ]
     },

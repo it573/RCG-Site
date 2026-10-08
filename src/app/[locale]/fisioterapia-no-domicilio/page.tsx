@@ -60,13 +60,14 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
   };
 
   // Prepare services for Services5 component
+  // Order must match the services5 titles in the message files
   const serviceImages = [
-    "/images/fisioterapia.jpg",
-    "/images/fisioterapia.jpg",
-    "/images/fisioterapia.jpg",
-    "/images/fisioterapia.jpg",
-    "/images/fisioterapia.jpg",
-    "/images/fisioterapia.jpg",
+    "/images/reabilitacao-motora.jpg",
+    "/images/recuperacao-pos-operatoria.png",
+    "/images/fisioterapia-respiratoria.jpg",
+    "/images/avc.jpg",
+    "/images/controlo-dor.jpg",
+    "/images/prevencao-quedas.jpg",
   ];
 
   const services5Data = serviceImages.map((image, index) => ({
@@ -77,10 +78,9 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
   }));
 
   // Prepare services for Service21 component
-  const service21Data = physiotherapyMessages?.service21?.services?.map((service, index) => ({
+  const service21Data = physiotherapyMessages?.service21?.services?.map((service) => ({
     title: service.title || "",
     description: service.description || "",
-    image: index === 1 ? "/images/ss-cs.jpg" : undefined,
   })) || [];
 
   return (
