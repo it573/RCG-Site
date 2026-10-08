@@ -63,7 +63,7 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
   // Order must match the services5 titles in the message files
   const serviceImages = [
     "/images/reabilitacao-motora.jpg",
-    "/images/recuperacao-pos-operatoria.png",
+    "/images/recuperacao-pos-operatoria.jpg",
     "/images/fisioterapia-respiratoria.jpg",
     "/images/avc.jpg",
     "/images/controlo-dor.jpg",
