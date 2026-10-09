@@ -22,6 +22,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Google Ads (Fisioterapia - CRESTANADS) points at /cuidados-de-saude; send ad clicks
+      // (identified by Google's click ids) to the physiotherapy landing page. Organic visits are untouched.
+      ...["gclid", "gbraid", "wbraid"].map((key) => ({
+        source: "/cuidados-de-saude",
+        has: [{ type: "query" as const, key }],
+        destination: "/fisioterapia-no-domicilio",
+        permanent: false,
+      })),
       {
         source: "/fisioterapia-ao-domicilio",
         destination: "/cuidados-de-saude",
