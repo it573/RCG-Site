@@ -10,6 +10,10 @@ interface HeroProps {
   backgroundImage?: string;
   showStampImage?: boolean;
   locale?: string;
+  /** Attribution forwarded to the hero's appointment form. Without these, the
+   *  hero form submits an empty campaign/source on service pages. */
+  formCampaign?: string;
+  formSource?: string;
 }
 
 async function HeroContent({
@@ -18,6 +22,8 @@ async function HeroContent({
   showForm = true,
   backgroundImage = "/images/hero/oldman.jpg",
   showStampImage = false,
+  formCampaign,
+  formSource,
 }: HeroProps) {
   return (
     <section className="relative overflow-hidden h-[80dvh] max-h-[80svh] hero-section-height">
@@ -49,7 +55,7 @@ async function HeroContent({
           {showForm && (
             <div className="ml-[25px] mr-[25px] md:ml-0 md:mr-0 max-[700px]:ml-4 max-[700px]:mr-4">
               <div className="pt-3 md:pt-8 max-w-xl mt-0 animate-fade-in-up max-[700px]:pt-2">
-                <AppointmentForm />
+                <AppointmentForm campaign={formCampaign} source={formSource} />
               </div>
             </div>
           )}

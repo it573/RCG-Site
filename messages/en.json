@@ -62,7 +62,9 @@
       "submitting": "Submitting...",
       "success": "Thank you! We will contact you in the next few minutes.",
       "error": "An error occurred. Please try again.",
-      "weCallYou": "We Call You"
+      "weCallYou": "We Call You",
+      "invalidPhone": "Please enter a valid Portuguese phone number (9 digits)",
+      "invalidName": "Please enter a valid name"
     }
   },
   "cookies": {

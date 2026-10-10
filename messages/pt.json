@@ -62,7 +62,9 @@
       "submitting": "A enviar...",
       "success": "Obrigado! Será contactado por nós nos próximos minutos.",
       "error": "Ocorreu um erro. Por favor tente novamente.",
-      "weCallYou": "Ligamos para Si"
+      "weCallYou": "Ligamos para Si",
+      "invalidPhone": "Indique um número de telefone português válido (9 dígitos)",
+      "invalidName": "Indique um nome válido"
     }
   },
   "cookies": {

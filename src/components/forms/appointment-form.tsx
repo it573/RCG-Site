@@ -15,25 +15,21 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { createLeadSchema, isAllowedSource } from "@/lib/lead-validation";
 
 interface AppointmentFormProps {
   campaign?: string;
   source?: string;
 }
 
-// Dynamic schema that will be created with translated error messages
-const createAppointmentSchema = (t: any) => z.object({
-  FirstName: z.string().min(1, t('required')),
-  telefone: z.string().min(1, t('required')),
-  campaign: z.string().optional(),
-  source: z.string().optional(),
-  gclid: z.string().optional(),
-  gcampaign: z.string().optional(),
-  gkeywords: z.string().optional(),
-  gmatchtype: z.string().optional(),
-  fbclid: z.string().optional(),
-  fbcampaign: z.string().optional(),
-});
+// Schema built with translated error messages. Validation rules themselves live
+// in @/lib/lead-validation so the API route enforces exactly the same checks.
+const createAppointmentSchema = (t: (key: string) => string) =>
+  createLeadSchema({
+    required: t("required"),
+    invalidName: t("invalidName"),
+    invalidPhone: t("invalidPhone"),
+  });
 
 type AppointmentFormValues = z.infer<ReturnType<typeof createAppointmentSchema>>;
 
@@ -55,10 +51,15 @@ export default function AppointmentForm({
     setIsMounted(true);
   }, []);
 
-  // Pathname-based mapping for pages that use reusable components
+  // Pathname-based mapping for pages that use reusable components.
+  // next/navigation returns the raw pathname, so the locale prefix (e.g. "/en")
+  // has to be stripped before matching or the homepage never resolves on
+  // non-default locales.
   const getPathnameDefaults = (path: string) => {
-    if (path === "/") return { campaign: "", source: "home" };
-    if (path.includes("contactos")) return { campaign: "", source: "contactos" };
+    const withoutLocale = path.replace(/^\/(?:pt|en)(?=\/|$)/, "") || "/";
+
+    if (withoutLocale === "/") return { campaign: "", source: "home" };
+    if (withoutLocale.includes("contactos")) return { campaign: "", source: "contactos" };
     return null;
   };
 
@@ -91,9 +92,15 @@ export default function AppointmentForm({
     const finalCampaign = pageCampaign || pathnameDefaults?.campaign || "";
     form.setValue("campaign", finalCampaign);
 
-    // Source - can be overridden by URL params if needed
+    // Source - a URL param may override the page default, but only if it is an
+    // allowlisted value. Without this, any visitor (or a mangled ad URL) can
+    // write arbitrary junk like "?" or "~?" into the CRM lead source.
     const sourceParam = params.get("source");
-    const finalSource = sourceParam || pageSource || pathnameDefaults?.source || "";
+    const finalSource =
+      (isAllowedSource(sourceParam) ? sourceParam : "") ||
+      pageSource ||
+      pathnameDefaults?.source ||
+      "";
     form.setValue("source", finalSource);
 
     // Google tracking parameters
@@ -130,6 +137,31 @@ export default function AppointmentForm({
     );
   }
 
+  // Pushes the form_sent event. Called exactly once per submission, only after
+  // the outcome is known - previously a 'success' event fired before the
+  // response was checked, inflating conversion counts on Salesforce failures.
+  const trackSubmission = (
+    data: AppointmentFormValues,
+    result: "success" | "error"
+  ) => {
+    if (typeof window === "undefined" || !window.dataLayer) return;
+
+    window.dataLayer.push({
+      'event': 'form_sent',
+      'form_id': 'appointment-form',
+      'form_name': 'Appointment Form',
+      'form_destination': window.location.href,
+      'page_path': pathname,
+      'form_source': data.source || getPathnameDefaults(pathname)?.source || 'unknown',
+      'form_campaign': data.campaign || '',
+      'form_result': result,
+      'gclid': data.gclid || '',
+      'gcampaign': data.gcampaign || '',
+      'fbclid': data.fbclid || '',
+      'fbcampaign': data.fbcampaign || ''
+    });
+  };
+
   const onSubmit = async (data: AppointmentFormValues) => {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
@@ -143,40 +175,13 @@ export default function AppointmentForm({
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
-      // Track general form submission event with identification
-      if (typeof window !== 'undefined' && window.dataLayer) {
-        window.dataLayer.push({
-          'event': 'form_sent',
-          'form_id': 'appointment-form',
-          'form_name': 'Appointment Form',
-          'form_destination': window.location.href,
-          'page_path': pathname,
-          'form_source': data.source || getPathnameDefaults(pathname)?.source || 'unknown',
-          'form_campaign': data.campaign || '',
-          'form_result': 'success',
-          'gclid': data.gclid || '',
-          'gcampaign': data.gcampaign || '',
-          'fbclid': data.fbclid || '',
-          'fbcampaign': data.fbcampaign || ''
-        });
-      }
+      const result = await response.json().catch(() => ({}));
 
       if (!response.ok) {
         throw new Error(result.error || "Failed to submit form");
       }
 
-      // Push GTM event based on campaign type
-      if (typeof window !== 'undefined' && window.dataLayer) {
-        // const campaign = data.campaign?.toLowerCase() || '';
-        // const eventType = campaign.includes('ad') ? 'ad-site-conversion' : 'cs-site-conversion';
-
-        // Track campaign-specific conversion event
-        // window.dataLayer.push({
-        //   'event': eventType
-        // });
-      }
+      trackSubmission(data, "success");
 
       setSubmitStatus({
         type: "success",
@@ -188,23 +193,7 @@ export default function AppointmentForm({
     } catch (error) {
       console.error("Form submission error:", error);
 
-      // Track form submission error event
-      if (typeof window !== 'undefined' && window.dataLayer) {
-        window.dataLayer.push({
-          'event': 'form_sent',
-          'form_id': 'appointment-form',
-          'form_name': 'Appointment Form',
-          'form_destination': window.location.href,
-          'page_path': pathname,
-          'form_source': data.source || getPathnameDefaults(pathname)?.source || 'unknown',
-          'form_campaign': data.campaign || '',
-          'form_result': 'error',
-          'gclid': data.gclid || '',
-          'gcampaign': data.gcampaign || '',
-          'fbclid': data.fbclid || '',
-          'fbcampaign': data.fbcampaign || ''
-        });
-      }
+      trackSubmission(data, "error");
 
       setSubmitStatus({
         type: "error",
