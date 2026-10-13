@@ -121,8 +121,7 @@ export default function TestimonialsCarousel({
 
   // Autoplay. The timer is keyed to `tick` rather than to `next`/`position`, so
   // re-renders from the wrap-around snap don't tear it down and restart the
-  // countdown — which previously stalled the cycle whenever the pointer rested
-  // on or crossed the carousel.
+  // countdown, which would stall the cycle.
   const [tick, setTick] = useState(0);
   const isPausedRef = useRef(isPaused);
   const nextRef = useRef(next);
@@ -134,8 +133,22 @@ export default function TestimonialsCarousel({
     nextRef.current = next;
   }, [isPaused, next]);
 
+  // Respect the OS "reduce motion" setting: no automatic rotation, controls only.
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
   useEffect(() => {
-    if (total <= 1 || autoPlayInterval <= 0) return;
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(query.matches);
+
+    const onChange = (event: MediaQueryListEvent) =>
+      setPrefersReducedMotion(event.matches);
+    query.addEventListener("change", onChange);
+
+    return () => query.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    if (total <= 1 || autoPlayInterval <= 0 || prefersReducedMotion) return;
 
     const timer = setTimeout(() => {
       if (!isPausedRef.current) nextRef.current();
@@ -143,7 +156,7 @@ export default function TestimonialsCarousel({
     }, autoPlayInterval);
 
     return () => clearTimeout(timer);
-  }, [tick, total, autoPlayInterval]);
+  }, [tick, total, autoPlayInterval, prefersReducedMotion]);
 
   if (total === 0) return null;
 
@@ -156,8 +169,9 @@ export default function TestimonialsCarousel({
 
         <div
           className="relative"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          // Pause only while a control actually has keyboard focus. Pausing on
+          // hover stalled the carousel whenever a resting cursor happened to
+          // sit over the card, which covers most of the viewport width.
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
           role="group"
