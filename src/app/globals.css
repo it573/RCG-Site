@@ -85,6 +85,26 @@
     max-height: 80svh;
   }
 
+  /* Pins the hero background while the page scrolls over it. clip-path keeps
+     the position:fixed image inside the hero bounds; overflow:hidden would
+     instead make the section a containing block and cancel the pinning. */
+  .hero-pinned-bg {
+    clip-path: inset(0);
+  }
+
+  /* Pinned backgrounds are jarring alongside reduced-motion preferences, and
+     iOS Safari historically mishandles fixed backgrounds during momentum
+     scroll — fall back to a normally scrolling hero in both cases. */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-pinned-bg {
+      clip-path: none;
+    }
+
+    .hero-pinned-bg > .fixed {
+      position: absolute;
+    }
+  }
+
   @supports not (height: 100dvh) {
     .hero-section-height {
       height: 80vh;

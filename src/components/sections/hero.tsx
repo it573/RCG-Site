@@ -26,9 +26,11 @@ async function HeroContent({
   formSource,
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden h-[80dvh] max-h-[80svh] hero-section-height">
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-10 w-full h-full">
+    <section className="relative h-[80dvh] max-h-[80svh] hero-section-height hero-pinned-bg">
+      {/* Background Image — fixed so it stays pinned while the page scrolls
+          over it. The section's clip-path confines it to the hero bounds;
+          overflow-hidden can't be used here as it would break positioning. */}
+      <div className="fixed inset-0 -z-10 w-full h-full">
         <Image
           src={backgroundImage}
           alt=""
@@ -41,8 +43,8 @@ async function HeroContent({
         />
       </div>
 
-      {/* Black overlay with 25% opacity */}
-      <div className="absolute inset-0 bg-black/22 pointer-events-none" style={{ zIndex: 5 }} />
+      {/* Black overlay with 25% opacity — fixed to track the pinned image */}
+      <div className="fixed inset-0 bg-black/22 pointer-events-none -z-10" />
 
       <div className={`container mx-auto px-4 max-w-full md:max-w-[80%] relative z-10 h-full flex items-center pb-20 md:pb-20 max-[700px]:pb-12 ${showForm ? 'pt-[240px] md:pt-[220px] max-[700px]:pt-[180px] max-[600px]:pt-[140px]' : 'pt-[180px] md:pt-20'}`}>
         <div className="w-full">
