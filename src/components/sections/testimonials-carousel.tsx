@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import PreservingLink from "@/components/ui/preserving-link";
 
@@ -52,7 +52,7 @@ export default function TestimonialsCarousel({
     [total]
   );
 
-  // Step from the live position so rapid clicks don't read a stale value
+  // Step from the live position so rapid clicks don't read a stale value.
   const step = useCallback(
     (delta: number) => {
       if (total === 0) return;
@@ -75,28 +75,48 @@ export default function TestimonialsCarousel({
   const prev = useCallback(() => step(-1), [step]);
 
   // Once the clone is centred, snap back to the real first slide without
-  // animating so the next advance continues rightward. Guarded on the live
-  // position so a click landing on the snap boundary can't skip a slide.
+  // animating so the next advance continues rightward. Driven by the track's
+  // own transitionend rather than a timer, so a click arriving near the end of
+  // the animation can't race the snap and skip a slide.
+  const trackRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (position !== total) return;
 
-    const timer = setTimeout(() => {
-      setPosition((prevPosition) => {
-        if (prevPosition !== total) return prevPosition; // user already moved on
-        setIsAnimating(false);
-        return 0;
-      });
-    }, TRANSITION_MS);
+    const track = trackRef.current;
+    if (!track) return;
 
-    return () => clearTimeout(timer);
+    const snap = (event: TransitionEvent) => {
+      // Ignore bubbled transitions from the card contents
+      if (event.target !== track || event.propertyName !== "transform") return;
+      setIsAnimating(false);
+      setPosition(0);
+    };
+
+    track.addEventListener("transitionend", snap);
+    // Safety net in case transitionend never fires (e.g. the tab was hidden
+    // mid-animation, which suppresses the event in some browsers).
+    const fallback = setTimeout(() => {
+      setIsAnimating(false);
+      setPosition(0);
+    }, TRANSITION_MS * 3);
+
+    return () => {
+      track.removeEventListener("transitionend", snap);
+      clearTimeout(fallback);
+    };
   }, [position, total]);
 
-  // Re-enable the transition on the frame after the silent snap.
-  useEffect(() => {
+  // Re-enable the transition synchronously after the browser has painted the
+  // snapped-back position. useLayoutEffect leaves no frame in which a click
+  // could observe the un-animated state and lose its update.
+  useLayoutEffect(() => {
     if (isAnimating) return;
 
-    const frame = requestAnimationFrame(() => setIsAnimating(true));
-    return () => cancelAnimationFrame(frame);
+    // Force a reflow so the un-animated transform is committed before the
+    // transition class comes back; otherwise the snap itself animates.
+    void trackRef.current?.offsetHeight;
+    setIsAnimating(true);
   }, [isAnimating]);
 
   // Autoplay. The timer is keyed to `tick` rather than to `next`/`position`, so
@@ -105,18 +125,25 @@ export default function TestimonialsCarousel({
   // on or crossed the carousel.
   const [tick, setTick] = useState(0);
   const isPausedRef = useRef(isPaused);
-  isPausedRef.current = isPaused;
+  const nextRef = useRef(next);
+
+  // Keep the refs in sync with committed state so the timer below always reads
+  // current values without having to list them as dependencies.
+  useEffect(() => {
+    isPausedRef.current = isPaused;
+    nextRef.current = next;
+  }, [isPaused, next]);
 
   useEffect(() => {
     if (total <= 1 || autoPlayInterval <= 0) return;
 
     const timer = setTimeout(() => {
-      if (!isPausedRef.current) next();
+      if (!isPausedRef.current) nextRef.current();
       setTick((t) => t + 1);
     }, autoPlayInterval);
 
     return () => clearTimeout(timer);
-  }, [tick, total, autoPlayInterval, next]);
+  }, [tick, total, autoPlayInterval]);
 
   if (total === 0) return null;
 
@@ -141,6 +168,7 @@ export default function TestimonialsCarousel({
               travelling rightward instead of rewinding across every slide. */}
           <div className="overflow-hidden rounded-2xl">
             <div
+              ref={trackRef}
               className={`flex items-start ${
                 isAnimating ? "transition-transform duration-500 ease-in-out" : ""
               }`}
