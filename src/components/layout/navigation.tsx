@@ -41,7 +41,7 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop Navigation - Normal */}
-      <nav className="hidden min-[1650px]:flex items-center">
+      <nav className="hidden min-[1800px]:flex items-center">
         <ul className="flex items-center gap-[4vw]">
           {menuItems.map((item) => (
             <li
@@ -105,7 +105,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Button */}
       <button
-        className="hidden max-[1649px]:flex min-h-[44px] min-w-[44px] p-3 items-center justify-center"
+        className="flex min-[1800px]:hidden min-h-[44px] min-w-[44px] p-3 items-center justify-center"
         onClick={() => setIsMobileMenuOpen(true)}
         aria-label="Open menu"
         aria-expanded={isMobileMenuOpen}
