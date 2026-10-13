@@ -934,6 +934,30 @@
         ]
       }
     },
+    "statistics": {
+      "stats": [
+        {
+          "value": 15000,
+          "prefix": "+",
+          "title": "Families\nsupported"
+        },
+        {
+          "value": 10,
+          "suffix": "min",
+          "title": "Our response\ntime"
+        },
+        {
+          "value": 20,
+          "prefix": "+",
+          "title": "Years of\nexperience"
+        },
+        {
+          "value": 24,
+          "suffix": "h",
+          "title": "Available\nto support"
+        }
+      ]
+    },
     "services5": {
       "services": [
         {

@@ -934,6 +934,30 @@
         ]
       }
     },
+    "statistics": {
+      "stats": [
+        {
+          "value": 15000,
+          "prefix": "+",
+          "title": "Famílias\napoiadas"
+        },
+        {
+          "value": 10,
+          "suffix": "min",
+          "title": "O nosso tempo\nde resposta"
+        },
+        {
+          "value": 20,
+          "prefix": "+",
+          "title": "Anos de\nexperiência"
+        },
+        {
+          "value": 24,
+          "suffix": "h",
+          "title": "Disponíveis\npara apoiar"
+        }
+      ]
+    },
     "services5": {
       "services": [
         {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/hero";
 import Confianca from "@/components/sections/confianca";
+import Statistics from "@/components/sections/statistics";
 import Service21 from "@/components/sections/service21";
 import Services5 from "@/components/sections/services5";
 import AppointmentForm from "@/components/forms/appointment-form";
@@ -52,6 +53,14 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
         }>;
       };
     };
+    statistics?: {
+      stats?: Array<{
+        value?: number;
+        title?: string;
+        prefix?: string;
+        suffix?: string;
+      }>;
+    };
     services5?: {
       services?: Array<{ title?: string }>;
     };
@@ -76,6 +85,14 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
     description: "",
     link: "#",
   }));
+
+  // Prepare stats for Statistics component
+  const statisticsData = physiotherapyMessages?.statistics?.stats?.map((stat) => ({
+    value: stat.value ?? 0,
+    title: stat.title || "",
+    prefix: stat.prefix,
+    suffix: stat.suffix,
+  })) || [];
 
   // Prepare services for Service21 component
   const service21Data = physiotherapyMessages?.service21?.services?.map((service) => ({
@@ -109,6 +126,11 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
         description={physiotherapyMessages?.confianca?.description}
         pillar={physiotherapyMessages?.confianca?.pillar}
         howWeWork={physiotherapyMessages?.confianca?.howWeWork}
+      />
+      <Statistics
+        statistics={statisticsData}
+        showButtons={false}
+        variant="grid"
       />
       <Services5 services={services5Data} />
 
