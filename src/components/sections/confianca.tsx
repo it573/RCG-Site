@@ -80,7 +80,7 @@ export default function Confianca({
 
           {/* Step 5 - Full Width */}
           {howWeWork.steps && howWeWork.steps[4] && (
-            <div className="mt-8 bg-teal-50 p-6 rounded-lg border border-teal-200 shadow-sm">
+            <div className="mt-8 bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
               <h4 className="text-xl font-bold text-teal-600 mb-3">
                 {howWeWork.steps[4].title}
               </h4>
