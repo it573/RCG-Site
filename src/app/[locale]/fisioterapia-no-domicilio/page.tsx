@@ -5,6 +5,7 @@ import Statistics from "@/components/sections/statistics";
 import Service21 from "@/components/sections/service21";
 import Services5 from "@/components/sections/services5";
 import AppointmentForm from "@/components/forms/appointment-form";
+import TestimonialsCarousel from "@/components/sections/testimonials-carousel";
 import { ServiceJsonLd } from "@/components/ai-service-json-ld";
 import { getMessages } from 'next-intl/server';
 
@@ -67,6 +68,27 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
     form?: { title?: string };
     metadata?: { description?: string }
   };
+
+  // Testimonials are shared with the "livro de elogios" page (testemunhos)
+  const testimonialsMessages = messages.testimonials as {
+    carousel?: { title?: string; cta?: string };
+    praisedBy?: string;
+    testimonials?: Array<{
+      id?: number;
+      title?: string;
+      subtitle?: string;
+      content?: string;
+      author?: string;
+    }>;
+  };
+
+  const testimonialsData = (testimonialsMessages?.testimonials || []).map((t, index) => ({
+    id: t.id ?? index + 1,
+    title: t.title || "",
+    subtitle: t.subtitle,
+    content: t.content || "",
+    author: t.author || "",
+  }));
 
   // Prepare services for Services5 component
   // Order must match the services5 titles in the message files
@@ -133,6 +155,13 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
         variant="grid"
       />
       <Services5 services={services5Data} />
+
+      <TestimonialsCarousel
+        title={testimonialsMessages?.carousel?.title || "O que dizem os nossos clientes"}
+        testimonials={testimonialsData}
+        praisedByLabel={testimonialsMessages?.praisedBy || "Elogiado por"}
+        ctaLabel={testimonialsMessages?.carousel?.cta || "Ver todos os testemunhos"}
+      />
 
       <section className="py-20" style={{ background: '#fed7aa' }}>
         <div className="container mx-auto px-4 max-w-[1140px]">

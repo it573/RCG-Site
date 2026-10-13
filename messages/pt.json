@@ -835,6 +835,10 @@
       "title": "Veja quem já nos elogiou",
       "recentCount": "mais recentes de 43"
     },
+    "carousel": {
+      "title": "O que dizem os nossos clientes",
+      "cta": "Ver todos os testemunhos"
+    },
     "testimonials": [
       {
         "id": 1,

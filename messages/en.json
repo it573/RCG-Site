@@ -835,6 +835,10 @@
       "title": "See who has already praised us",
       "recentCount": "most recent of 43"
     },
+    "carousel": {
+      "title": "What our clients say",
+      "cta": "See all testimonials"
+    },
     "testimonials": [
       {
         "id": 1,
