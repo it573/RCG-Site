@@ -4,8 +4,8 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import PreservingLink from "@/components/ui/preserving-link";
 
-// Keep in sync with the duration-500 class on the slide track
-const TRANSITION_MS = 500;
+// Keep in sync with the duration-[1500ms] class on the slide track
+const TRANSITION_MS = 1500;
 
 export interface CarouselTestimonial {
   id: number;
@@ -30,7 +30,7 @@ export default function TestimonialsCarousel({
   praisedByLabel,
   ctaLabel,
   ctaHref = "/testemunhos",
-  autoPlayInterval = 8000,
+  autoPlayInterval = 15000,
 }: TestimonialsCarouselProps) {
   // Track position may reach `total` (a clone of the first slide) so the loop
   // from the last slide back to the first keeps moving rightward.
@@ -184,7 +184,7 @@ export default function TestimonialsCarousel({
             <div
               ref={trackRef}
               className={`flex items-start ${
-                isAnimating ? "transition-transform duration-500 ease-in-out" : ""
+                isAnimating ? "transition-transform duration-[1500ms] ease-in-out" : ""
               }`}
               style={{ transform: `translateX(-${position * 100}%)` }}
             >
