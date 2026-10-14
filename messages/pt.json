@@ -882,11 +882,11 @@
   },
   "physiotherapy": {
     "metadata": {
-      "title": "Fisioterapia ao Domicílio em Portugal | Reabilitar em Casa",
-      "description": "Fisioterapia ao domicílio com fisioterapeutas qualificados e certificados. Reabilitação motora, recuperação pós-operatória e fisioterapia respiratória no conforto do seu lar, com cobertura nacional.",
+      "title": "Fisioterapia em Casa em Portugal | Reabilitar em Casa",
+      "description": "Fisioterapia em casa com fisioterapeutas qualificados e certificados. Reabilitação motora, recuperação pós-operatória e fisioterapia respiratória no conforto do seu lar, com cobertura nacional.",
       "keywords": [
-        "fisioterapia ao domicílio",
         "fisioterapia em casa",
+        "fisioterapia ao domicílio",
         "fisioterapeuta domicílio",
         "reabilitação motora",
         "recuperação pós-operatória",
@@ -895,7 +895,7 @@
       ]
     },
     "hero": {
-      "title": "Fisioterapia ao Domicílio",
+      "title": "Fisioterapia em Casa",
       "description": "Pioneiros em Cuidados de Saúde no Domicílio em Portugal"
     },
     "service21": {
@@ -904,7 +904,7 @@
       "services": [
         {
           "title": "Tratamento sem Deslocações",
-          "description": "A fisioterapia ao domicílio permite iniciar ou dar continuidade a um plano de reabilitação sem o desgaste das deslocações a uma clínica. O fisioterapeuta avalia o contexto real em que vive, adapta os exercícios ao seu espaço e envolve a família no processo de recuperação. Para quem tem mobilidade reduzida, dores intensas ou se encontra em recuperação pós-operatória, cuidar em casa é frequentemente a resposta mais segura e mais eficaz."
+          "description": "A fisioterapia em casa permite iniciar ou dar continuidade a um plano de reabilitação sem o desgaste das deslocações a uma clínica. O fisioterapeuta avalia o contexto real em que vive, adapta os exercícios ao seu espaço e envolve a família no processo de recuperação. Para quem tem mobilidade reduzida, dores intensas ou se encontra em recuperação pós-operatória, cuidar em casa é frequentemente a resposta mais segura e mais eficaz."
         }
       ]
     },

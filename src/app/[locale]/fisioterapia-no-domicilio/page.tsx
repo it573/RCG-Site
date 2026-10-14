@@ -15,15 +15,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const metadataMessages = messages.physiotherapy?.metadata as { title?: string; description?: string; keywords?: string[] };
 
   return {
-    title: metadataMessages?.title || "Fisioterapia ao Domicílio",
-    description: metadataMessages?.description || "Fisioterapia ao domicílio com fisioterapeutas qualificados e certificados, no conforto do seu lar.",
-    keywords: metadataMessages?.keywords || ["fisioterapia ao domicílio", "fisioterapeuta domicílio", "reabilitação motora"],
+    title: metadataMessages?.title || "Fisioterapia em Casa",
+    description: metadataMessages?.description || "Fisioterapia em casa com fisioterapeutas qualificados e certificados, no conforto do seu lar.",
+    keywords: metadataMessages?.keywords || ["fisioterapia em casa", "fisioterapia ao domicílio", "fisioterapeuta domicílio", "reabilitação motora"],
     alternates: {
       canonical: `https://www.reabilitar-em-casa.com/fisioterapia-no-domicilio`,
     },
     openGraph: {
-      title: metadataMessages?.title || "Fisioterapia ao Domicílio",
-      description: metadataMessages?.description || "Fisioterapia ao domicílio com fisioterapeutas qualificados e certificados, no conforto do seu lar.",
+      title: metadataMessages?.title || "Fisioterapia em Casa",
+      description: metadataMessages?.description || "Fisioterapia em casa com fisioterapeutas qualificados e certificados, no conforto do seu lar.",
       url: `https://www.reabilitar-em-casa.com/fisioterapia-no-domicilio`,
     },
   };
@@ -125,12 +125,12 @@ export default async function FisioterapiaNoDomicilioPage({ params }: { params: 
   return (
     <>
       <ServiceJsonLd
-        serviceName={locale === 'pt' ? 'Fisioterapia ao Domicílio' : 'Home Physiotherapy'}
-        description={physiotherapyMessages?.metadata?.description || "Fisioterapia ao domicílio com fisioterapeutas qualificados e certificados, no conforto do seu lar."}
+        serviceName={locale === 'pt' ? 'Fisioterapia em Casa' : 'Home Physiotherapy'}
+        description={physiotherapyMessages?.metadata?.description || "Fisioterapia em casa com fisioterapeutas qualificados e certificados, no conforto do seu lar."}
         url={`/fisioterapia-no-domicilio`}
       />
       <Hero
-        title={physiotherapyMessages?.hero?.title || "Fisioterapia ao Domicílio"}
+        title={physiotherapyMessages?.hero?.title || "Fisioterapia em Casa"}
         description={physiotherapyMessages?.hero?.description || "Fisioterapeutas Qualificados e Certificados"}
         showForm={true}
         formCampaign="FISIO"
