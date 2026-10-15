@@ -47,6 +47,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    // Proxy the Salesforce Sites client form so it is served under our domain.
+    // The Visualforce page loads assets and posts back to /cliente/* and /apexpages/*.
+    const salesforceSite = "https://reabilitaremcasa.my.salesforce-sites.com";
+    return {
+      beforeFiles: [
+        { source: "/cliente", destination: `${salesforceSite}/cliente` },
+        { source: "/cliente/:path*", destination: `${salesforceSite}/cliente/:path*` },
+        { source: "/apexpages/:path*", destination: `${salesforceSite}/apexpages/:path*` },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
 };
 
 export default withNextIntl(nextConfig);

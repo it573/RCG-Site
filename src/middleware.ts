@@ -9,5 +9,6 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+  // cliente and apexpages are proxied to Salesforce Sites (see next.config.ts rewrites)
+  matcher: ['/((?!api|_next|_vercel|cliente|apexpages|.*\\..*).*)']
 };
